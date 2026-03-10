@@ -450,11 +450,14 @@ Utilise les vraies données FRED et Finnhub fournies comme base factuelle."""
 
     for attempt in range(3):
         try:
-            msg = client.messages.create(
+            raw = ""
+            with client.messages.stream(
                 model=ANTHROPIC_MODEL, max_tokens=32000,
                 system=system, messages=[{"role":"user","content":user}]
-            )
-            raw   = msg.content[0].text
+            ) as stream:
+                for text in stream.text_stream:
+                    raw += text
+            print(f"[2/6] Streaming terminé — {len(raw)} caractères reçus")
             match = re.search(r'\{[\s\S]*\}', raw)
             if not match:
                 print(f"[2/6] ⚠️ Pas de JSON (essai {attempt+1}/3)")
