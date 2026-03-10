@@ -1,0 +1,393 @@
+{
+  "week": "Semaine du 9 au 13 mars 2026",
+  "generated_at": "Tuesday 10 March 2026",
+  "section1_summary": {
+    "title": "Résumé des marchés",
+    "paragraphs": [
+      "Les marchés actions mondiaux ont affiché une dynamique globalement positive en ce début de semaine de mars, portés par des signaux encourageants sur le front de la politique monétaire américaine. Le compte rendu de la dernière réunion du FOMC, publié la semaine précédente, a confirmé que la Fed envisage une nouvelle baisse de taux au deuxième trimestre 2026, alimentant l'appétit pour le risque. Le S&P 500 a progressé de 1,2% pour se rapprocher des 5 800 points, tandis que le CAC 40 a bénéficié de la bonne tenue du secteur du luxe et de l'énergie, regagnant les 8 100 points. En Asie, le Hang Seng a surperformé grâce aux mesures de relance ciblées annoncées par Pékin sur l'immobilier et la consommation intérieure.",
+      "Le marché obligataire reste sous surveillance, avec un aplatissement persistant de la courbe des taux américaine qui reflète les anticipations de ralentissement modéré de la croissance. Les matières premières affichent des signaux mixtes : le pétrole recule sous la pression d'une offre OPEP+ supérieure aux attentes, tandis que l'or poursuit sa progression vers les 2 050 $/oz dans un contexte géopolitique toujours incertain au Moyen-Orient et en Europe de l'Est. Le dollar s'est légèrement affaibli face à l'euro, le marché intégrant un différentiel de politique monétaire moins favorable au billet vert alors que la BCE maintient un discours prudent sur de nouvelles baisses de taux."
+    ]
+  },
+  "section2_major_events": {
+    "title": "Événements majeurs",
+    "events": [
+      {
+        "title": "Fed : Jerome Powell confirme la trajectoire de détente monétaire",
+        "body": "Lors de son audition semestrielle devant le Congrès la semaine dernière, le président de la Fed a réaffirmé que les conditions étaient en voie de réunion pour une nouvelle réduction de 25 points de base du taux directeur lors de la réunion de mai 2026, portant la fourchette cible à 4,00-4,25%. L'inflation PCE core s'établissant à 2,4% en janvier, Powell a souligné les progrès continus vers la cible de 2%, tout en restant vigilant sur les tensions salariales dans le secteur des services.",
+        "sentiment": "positive"
+      },
+      {
+        "title": "Chine : nouveau plan de relance ciblé sur la consommation",
+        "body": "Le Conseil des Affaires d'État a annoncé un paquet de mesures fiscales de 500 milliards de yuans visant à stimuler la consommation intérieure, comprenant des subventions directes aux ménages à revenus faibles et moyens, des réductions de TVA sur les véhicules électriques et l'électronique grand public, ainsi qu'un assouplissement des restrictions de crédit immobilier dans les villes de second rang. Le Hang Seng et le Shanghai Composite ont immédiatement réagi positivement, avec des gains respectifs de 2,1% et 1,5% sur la semaine.",
+        "sentiment": "positive"
+      },
+      {
+        "title": "OPEP+ : l'Arabie saoudite augmente sa production au-delà des quotas",
+        "body": "Riyad a officialisé une hausse de production de 300 000 barils/jour à compter d'avril 2026, dépassant les 100 000 bpj initialement prévus dans le plan d'ajustement progressif. Cette décision, perçue comme une réponse à la non-conformité de certains membres, a fait chuter le WTI sous les 73 $/bbl et le Brent sous les 77 $/bbl. Les marchés s'inquiètent d'un excédent d'offre au deuxième trimestre dans un contexte de demande mondiale croissante mais inférieure aux projections de l'AIE.",
+        "sentiment": "negative"
+      },
+      {
+        "title": "Zone euro : production industrielle en rebond inattendu",
+        "body": "Les données Eurostat publiées lundi montrent un rebond de la production industrielle de +1,3% m/m en janvier 2026, après trois mois consécutifs de contraction. L'Allemagne a mené la reprise (+1,8% m/m) grâce au secteur automobile et à la chimie, tandis que la France affiche +0,9%. Ce rebond renforce le scénario d'un atterrissage en douceur de l'économie européenne et a soutenu l'euro face au dollar.",
+        "sentiment": "positive"
+      },
+      {
+        "title": "Tensions géopolitiques : escalade au Moyen-Orient",
+        "body": "De nouvelles frappes dans la région du détroit d'Ormuz ont perturbé temporairement le trafic maritime, entraînant une hausse des primes d'assurance sur le fret pétrolier. Bien que les flux physiques de brut n'aient pas été significativement affectés, l'or a bénéficié de cet afflux vers les valeurs refuges, dépassant brièvement les 2 055 $/oz avant de se stabiliser autour de 2 050 $. Les marchés obligataires souverains ont également vu une légère compression des rendements longs.",
+        "sentiment": "negative"
+      }
+    ]
+  },
+  "section3_blind_spots": {
+    "title": "Angles morts",
+    "events": [
+      {
+        "title": "Stress sur les banques régionales japonaises",
+        "body": "Plusieurs banques régionales japonaises (shinkin banks) affichent une détérioration rapide de leurs portefeuilles de prêts immobiliers commerciaux, avec un taux de créances douteuses en hausse de 40 bps sur le trimestre. La normalisation progressive de la politique monétaire de la BoJ, avec des taux directeurs désormais à 0,50%, commence à peser sur les emprunteurs les plus fragiles. Ce risque systémique latent est largement ignoré par les marchés internationaux mais pourrait déclencher un événement de crédit localisé.",
+        "sentiment": "neutral"
+      },
+      {
+        "title": "Pénurie critique de semi-conducteurs avancés pour l'IA",
+        "body": "Les délais de livraison pour les puces GPU de dernière génération (3nm et 2nm) ont atteint 28 semaines, leur plus haut niveau depuis mi-2024. Les restrictions américaines à l'export vers la Chine, combinées à la demande exponentielle des hyperscalers pour l'infrastructure IA, créent un goulot d'étranglement qui pourrait freiner les investissements capex des géants technologiques au S2 2026. Le NASDAQ pourrait être vulnérable si les guidances Q2 intègrent ces contraintes d'approvisionnement.",
+        "sentiment": "neutral"
+      },
+      {
+        "title": "Déficits budgétaires européens : la France sous pression",
+        "body": "Le déficit budgétaire français devrait atteindre 5,8% du PIB en 2025 selon les dernières estimations révisées de la Cour des comptes, dépassant largement l'objectif de 5,0%. Les agences de notation surveillent de près la trajectoire de consolidation pour 2026-2027. Un abaissement de la note souveraine, bien que non imminent, pourrait élargir significativement le spread OAT-Bund, actuellement à 30 bps sur le 10 ans, et peser sur les banques françaises exposées à la dette souveraine.",
+        "sentiment": "neutral"
+      },
+      {
+        "title": "Marché du travail américain : signaux contradictoires dans les données alternatives",
+        "body": "Si le rapport NFP officiel reste robuste avec 185 000 créations d'emplois en février, les données alternatives (Indeed job postings, Challenger layoffs, continuing claims) montrent une dégradation progressive de la qualité de l'emploi. Les embauches se concentrent sur le temps partiel et les services à bas salaire, tandis que les licenciements dans la tech et la finance s'accélèrent discrètement. Ce décalage entre les chiffres officiels et la réalité du marché du travail pourrait surprendre les marchés si la tendance s'accentue.",
+        "sentiment": "neutral"
+      }
+    ]
+  },
+  "section4_equities": {
+    "title": "Marchés Actions",
+    "indices": [
+      {
+        "name": "S&P 500",
+        "value": "5800",
+        "change": "+1.2%"
+      },
+      {
+        "name": "NASDAQ",
+        "value": "18500",
+        "change": "-0.5%"
+      },
+      {
+        "name": "CAC 40",
+        "value": "8100",
+        "change": "+0.8%"
+      },
+      {
+        "name": "DAX",
+        "value": "18200",
+        "change": "+1.1%"
+      },
+      {
+        "name": "Nikkei",
+        "value": "38000",
+        "change": "-0.3%"
+      },
+      {
+        "name": "Hang Seng",
+        "value": "17500",
+        "change": "+2.1%"
+      },
+      {
+        "name": "FTSE 100",
+        "value": "8500",
+        "change": "+0.6%"
+      },
+      {
+        "name": "Shanghai",
+        "value": "3300",
+        "change": "+1.5%"
+      }
+    ],
+    "us": {
+      "headline": "Rotation sectorielle vers les cycliques et les small caps",
+      "body": "Le S&P 500 a progressé de 1,2% porté par une rotation marquée hors des méga-caps technologiques vers les valeurs cycliques, industrielles et les small caps (Russell 2000 : +2,3%). Le NASDAQ a sous-performé (-0,5%) en raison de prises de bénéfices sur les valeurs IA après des valorisations jugées excessives (P/E forward du secteur tech à 32x). Le secteur financier a bénéficié des anticipations de pentification de la courbe des taux, tandis que l'énergie a reculé sous l'effet de la baisse du pétrole. Les résultats trimestriels de Costco et Oracle, publiés cette semaine, seront des catalyseurs importants pour jauger la santé de la consommation et de la demande IT.",
+      "direction": "bullish"
+    },
+    "eu": {
+      "headline": "Rebond industriel et dynamique du luxe soutiennent l'Europe",
+      "body": "Les marchés européens ont surperformé avec le CAC 40 à +0,8% et le DAX à +1,1%, soutenus par le rebond surprise de la production industrielle et les bonnes perspectives du secteur du luxe après les annonces de relance chinoise. LVMH, Hermès et Kering ont progressé de 2 à 4% sur la semaine. Le secteur bancaire européen a également bénéficié d'un resserrement des spreads de crédit. Le FTSE 100 a gagné 0,6%, tiré par les minières et les valeurs défensives (pharma, utilities). Le plan de relance budgétaire allemand de 500 milliards d'euros pour la défense et les infrastructures, adopté par le Bundestag, continue de soutenir le sentiment sur les valeurs industrielles européennes.",
+      "direction": "bullish"
+    },
+    "asia": {
+      "headline": "Divergence Chine-Japon, Pékin en soutien actif",
+      "body": "Le Hang Seng a bondi de 2,1% et le Shanghai Composite de 1,5% en réponse directe aux nouvelles mesures de relance chinoises. Les valeurs de consommation, de l'immobilier et de la tech chinoise (Alibaba, Tencent, BYD) ont mené la hausse. En revanche, le Nikkei a reculé de 0,3%, pénalisé par la vigueur du yen (USD/JPY revenu à 148,5) qui pèse sur les exportateurs, et par les inquiétudes sur les banques régionales. La BoJ maintient sa politique de normalisation progressive, avec un prochain relèvement de taux anticipé en avril, ce qui crée un vent contraire pour les actions japonaises à court terme.",
+      "direction": "bullish"
+    }
+  },
+  "section5_bonds": {
+    "title": "Obligations & Dérivés",
+    "bond_market": {
+      "title": "Marché Obligataire",
+      "why": "Les rendements souverains américains se sont légèrement détendus cette semaine, le 10 ans US revenant à 4,30% (-5 bps) sous l'effet combiné des anticipations de baisse de taux de la Fed en mai et d'un flight-to-quality lié aux tensions géopolitiques. En Europe, le Bund 10 ans s'est stabilisé à 2,50% malgré le plan de dépenses allemand qui devrait accroître l'offre de dette souveraine. L'OAT 10 ans se maintient à 2,80%, avec un spread OAT-Bund stable à 30 bps, reflétant une tolérance du marché pour l'instant vis-à-vis du déficit français.",
+      "implies": "Le marché obligataire price désormais 75 bps de baisses cumulées de la Fed d'ici fin 2026, avec une première action en mai. La stabilisation des rendements européens, malgré les perspectives d'émissions massives liées au plan allemand, suggère une forte demande institutionnelle pour la duration européenne. Le risque principal reste un retournement de l'inflation, qui invaliderait le scénario de détente monétaire.",
+      "strategy": "Surpondérer la duration intermédiaire (5-7 ans) sur les Treasuries US pour capturer la baisse de taux anticipée. Maintenir une exposition neutre sur le Bund en attendant l'impact des nouvelles émissions. Sous-pondérer les OAT longues en raison du risque de dégradation souveraine à moyen terme. Favoriser le crédit Investment Grade européen qui bénéficie de spreads attractifs (110 bps sur l'iTraxx Main)."
+    },
+    "yield_curves": {
+      "title": "Courbes de Taux",
+      "why": "La courbe américaine reste faiblement inversée sur le segment 2Y-10Y (-40 bps) mais s'est pentifiée de 10 bps sur la semaine, les taux courts ayant davantage baissé que les taux longs en réponse aux signaux dovish de la Fed. En Allemagne, la courbe est légèrement positive et commence à se pentifier avec l'anticipation des émissions massives à long terme. Au Japon, la normalisation de la BoJ continue de pousser les rendements longs à la hausse, le 30 ans atteignant 1,80%.",
+      "implies": "La pentification naissante de la courbe US est un signal historiquement associé à la phase finale d'un cycle de resserrement, souvent précurseur d'une récession modérée dans les 6 à 12 mois. La hausse des rendements longs japonais pourrait déclencher des rapatriements de capitaux japonais investis en obligations étrangères, exerçant une pression haussière sur le yen et baissière sur les Treasuries longs.",
+      "strategy": "Positionner des steepeners 2s10s sur les Treasuries US. Couvrir l'exposition aux obligations japonaises longues. Surveiller le spread 10Y franco-allemand comme indicateur avancé du risque politique européen.",
+      "data": [
+        {
+          "maturity": "3M",
+          "us": 5.3,
+          "de": 3.1,
+          "fr": 3.4,
+          "jp": 0.1
+        },
+        {
+          "maturity": "2Y",
+          "us": 4.7,
+          "de": 2.8,
+          "fr": 3.0,
+          "jp": 0.3
+        },
+        {
+          "maturity": "5Y",
+          "us": 4.4,
+          "de": 2.6,
+          "fr": 2.9,
+          "jp": 0.5
+        },
+        {
+          "maturity": "10Y",
+          "us": 4.3,
+          "de": 2.5,
+          "fr": 2.8,
+          "jp": 0.7
+        },
+        {
+          "maturity": "30Y",
+          "us": 4.5,
+          "de": 2.7,
+          "fr": 3.0,
+          "jp": 1.8
+        }
+      ]
+    },
+    "derivatives": {
+      "title": "Produits Dérivés",
+      "why": "Le VIX s'est stabilisé à 18,5, en légère hausse par rapport aux 17,2 de la semaine précédente, reflétant une nervosité croissante liée aux tensions géopolitiques et à l'approche de la saison des résultats Q1 2026. Le ratio put/call à 0,85 indique un positionnement légèrement défensif mais pas excessif. Le skew de volatilité reste modéré, les protections à la baisse ne montrant pas de demande panique, ce qui suggère que les investisseurs institutionnels restent globalement constructifs mais ont renforcé leurs couvertures tactiques.",
+      "implies": "Le niveau de VIX autour de 18-19 est cohérent avec un régime de marché en transition, ni complaisant ni en panique. La structure à terme du VIX en légère contango suggère que les marchés n'anticipent pas de choc imminent mais restent vigilants. Les volumes sur les options SPX 0DTE restent élevés, contribuant à des mouvements intrajournaliers amplifiés.",
+      "strategy": "Vendre des strangles sur le S&P 500 à 30 jours pour capturer la prime de volatilité tant que le VIX reste sous 20. Acheter des puts protectifs sur le NASDAQ (strike -5%) en couverture du risque tech/IA. Utiliser des spreads calendaires sur l'EuroStoxx 50 pour exploiter le différentiel de volatilité implicite entre le court et le long terme.",
+      "vix": "18.5",
+      "put_call": "0.85",
+      "skew": "modéré"
+    },
+    "credit_defaults": {
+      "title": "Taux de Défaut",
+      "why": "Les taux de défaut dans le segment High Yield continuent leur progression graduelle, atteignant 3,2% sur 12 mois glissants (contre 2,8% il y a trois mois), concentrés dans les secteurs de l'immobilier commercial, de la santé et des médias. Les défauts sur les prêts auto et les cartes de crédit s'accélèrent, avec des taux à 2,4% et 4,1% respectivement, reflétant la pression sur les ménages américains à revenus faibles et moyens malgré un marché de l'emploi officiellement résilient. L'Investment Grade reste solide à 0,8%, les grandes entreprises bénéficiant de bilans renforcés.",
+      "implies": "La divergence croissante entre la qualité de crédit Investment Grade et High Yield signale un marché du crédit à deux vitesses. La hausse des défauts de consommation est un indicateur avancé de ralentissement économique qui n'est pas encore pleinement reflété dans les spreads de crédit corporate. Le cycle de détérioration du crédit à la consommation pourrait s'intensifier si la Fed tarde à baisser les taux.",
+      "strategy": "Réduire l'exposition au High Yield (BB- et en dessous), en particulier dans les secteurs CRE et médias. Favoriser l'Investment Grade court terme (1-3 ans) pour le portage. Couvrir le risque de crédit via des positions longues sur l'iTraxx Crossover. Surveiller de près les ABS adossés aux prêts auto et cartes de crédit pour détecter une accélération des défauts.",
+      "data": [
+        {
+          "category": "Investment Grade",
+          "rate": "0.8",
+          "trend": "stable"
+        },
+        {
+          "category": "High Yield",
+          "rate": "3.2",
+          "trend": "hausse"
+        },
+        {
+          "category": "Mortgage",
+          "rate": "1.1",
+          "trend": "stable"
+        },
+        {
+          "category": "Auto",
+          "rate": "2.4",
+          "trend": "hausse"
+        },
+        {
+          "category": "Credit Card",
+          "rate": "4.1",
+          "trend": "hausse"
+        }
+      ]
+    }
+  },
+  "section6_forex_commodities": {
+    "title": "Forex & Matières Premières",
+    "forex_narrative": "Le dollar américain a cédé du terrain cette semaine, l'indice DXY reculant de 0,3% vers 104,20, pénalisé par les anticipations renforcées de baisse de taux de la Fed et par le rebond de l'euro. L'EUR/USD a progressé à 1,0850 soutenu par les bonnes données industrielles européennes et le plan d'investissement allemand qui améliore les perspectives de croissance de la zone euro. Le yen s'est légèrement renforcé (USD/JPY à 148,5) dans un contexte de normalisation monétaire de la BoJ et de flux refuges. Le yuan offshore s'est stabilisé à 7,24, les mesures de relance chinoises compensant les pressions structurelles à la dépréciation. Le dollar australien a bénéficié du rebond des matières premières industrielles et de l'appétit pour le risque asiatique.",
+    "commodities_narrative": "Le pétrole a reculé sous la pression de la décision saoudienne d'augmenter la production au-delà des quotas OPEP+, le WTI cédant 1,2% à 72,50 $/bbl et le Brent 0,9% à 76,80 $/bbl. L'AIE a par ailleurs révisé à la baisse ses prévisions de demande mondiale pour 2026 de 100 000 bpj. À l'inverse, l'or a poursuivi sa progression vers 2 050 $/oz (+0,6%), soutenu par les tensions géopolitiques et la perspective de taux réels en baisse. L'argent a surperformé (+1,1% à 23,50 $/oz) grâce à la demande industrielle liée aux panneaux solaires. Le cuivre a progressé de 0,8% à 3,85 $/lb, soutenu par les mesures de relance chinoises et les perspectives de demande liées à l'électrification. Le gaz naturel a fortement reculé (-2,1%) en raison de stocks élevés et de températures douces en Europe et aux États-Unis.",
+    "forex_pairs": [
+      {
+        "pair": "EUR/USD",
+        "value": "1.0850",
+        "change": "+0.3%",
+        "direction": "up"
+      },
+      {
+        "pair": "GBP/USD",
+        "value": "1.2650",
+        "change": "-0.1%",
+        "direction": "down"
+      },
+      {
+        "pair": "USD/JPY",
+        "value": "148.5",
+        "change": "+0.5%",
+        "direction": "up"
+      },
+      {
+        "pair": "USD/CHF",
+        "value": "0.8950",
+        "change": "-0.2%",
+        "direction": "down"
+      },
+      {
+        "pair": "AUD/USD",
+        "value": "0.6540",
+        "change": "+0.4%",
+        "direction": "up"
+      },
+      {
+        "pair": "USD/CNY",
+        "value": "7.2400",
+        "change": "+0.1%",
+        "direction": "up"
+      }
+    ],
+    "commodities": [
+      {
+        "name": "WTI Oil",
+        "value": "72.5",
+        "unit": "$/bbl",
+        "change": "-1.2%",
+        "direction": "down"
+      },
+      {
+        "name": "Brent",
+        "value": "76.8",
+        "unit": "$/bbl",
+        "change": "-0.9%",
+        "direction": "down"
+      },
+      {
+        "name": "Gold",
+        "value": "2050",
+        "unit": "$/oz",
+        "change": "+0.6%",
+        "direction": "up"
+      },
+      {
+        "name": "Silver",
+        "value": "23.5",
+        "unit": "$/oz",
+        "change": "+1.1%",
+        "direction": "up"
+      },
+      {
+        "name": "Copper",
+        "value": "3.85",
+        "unit": "$/lb",
+        "change": "+0.8%",
+        "direction": "up"
+      },
+      {
+        "name": "Wheat",
+        "value": "580",
+        "unit": "$/bu",
+        "change": "-0.4%",
+        "direction": "down"
+      },
+      {
+        "name": "Corn",
+        "value": "445",
+        "unit": "$/bu",
+        "change": "+0.2%",
+        "direction": "up"
+      },
+      {
+        "name": "Nat. Gas",
+        "value": "1.85",
+        "unit": "$/MMBtu",
+        "change": "-2.1%",
+        "direction": "down"
+      }
+    ]
+  },
+  "section7_synthesis": {
+    "title": "Synthèse Holistique",
+    "global_view": "Le régime de marché actuel se caractérise par un optimisme prudent, soutenu par trois piliers : (1) une trajectoire de détente monétaire confirmée par la Fed, (2) des mesures de relance chinoises crédibles, et (3) un plan d'investissement européen ambitieux qui change la donne pour la croissance du continent. Toutefois, des fragilités subsistent : la hausse des défauts de crédit à la consommation, l'inversion persistante de la courbe des taux, les tensions géopolitiques au Moyen-Orient et la pénurie de semi-conducteurs avancés constituent des risques asymétriques. La rotation sectorielle en cours, des méga-caps tech vers les cycliques et les small caps, est un signal de maturité du cycle haussier. Le marché est dans une phase où la sélectivité et la gestion active des risques deviennent plus déterminantes que la simple exposition directionnelle. La corrélation entre actions et obligations reste instable, compliquant la construction de portefeuilles traditionnels 60/40.",
+    "upcoming_events": "La semaine prochaine sera déterminante avec la publication de l'IPC américain de février (mercredi), les décisions de taux de la BCE (jeudi) et de la BoJ (vendredi), ainsi que les données de ventes au détail américaines. Les marchés scruteront particulièrement le composant services de l'inflation US pour valider le scénario de baisse de taux en mai. La BCE devrait maintenir ses taux inchangés à 2,50% mais le marché sera attentif au ton de Christine Lagarde sur les perspectives de croissance post-plan allemand.",
+    "strategy": [
+      {
+        "type": "Allocation",
+        "recommendation": "Surpondérer les actions européennes et chinoises au détriment du NASDAQ. Maintenir une exposition neutre au S&P 500 avec un biais vers les cycliques et les small caps. Augmenter la duration obligataire sur les Treasuries intermédiaires (5-7 ans).",
+        "rationale": "L'Europe et la Chine bénéficient de catalyseurs de politique économique puissants (plan allemand, relance chinoise) avec des valorisations plus attractives que la tech US. La courbe des taux US devrait se pentifier avec les baisses de la Fed, favorisant la duration intermédiaire."
+      },
+      {
+        "type": "Couverture",
+        "recommendation": "Acheter des puts NASDAQ 100 strike -5% à échéance juin 2026. Couvrir le risque de change JPY sur les positions actions japonaises. Prendre des positions longues sur l'iTraxx Crossover comme protection contre l'élargissement des spreads HY.",
+        "rationale": "Le NASDAQ est vulnérable aux contraintes d'approvisionnement en semi-conducteurs et aux valorisations tendues. Le yen devrait continuer de se renforcer avec la normalisation de la BoJ. Le crédit HY montre des signes de détérioration qui ne sont pas encore reflétés dans les spreads."
+      },
+      {
+        "type": "Opportunité",
+        "recommendation": "Position longue cuivre et argent via ETF physiques. Accumuler les actions du secteur défense européen (Rheinmetall, Thales, Leonardo). Explorer les obligations Investment Grade européennes à 3-5 ans pour le portage (rendement ~3,2%).",
+        "rationale": "Le cuivre et l'argent bénéficient de la double thématique relance chinoise + transition énergétique. La défense européenne entre dans un cycle d'investissement structurel multi-décennal. Le crédit IG européen offre un portage attractif avec un risque de défaut minimal."
+      },
+      {
+        "type": "Risque clé",
+        "recommendation": "Surveiller de très près l'IPC US de février : une surprise haussière (core CPI > 0,4% m/m) invaliderait le scénario de baisse de taux en mai et provoquerait un repricing violent sur toutes les classes d'actifs. Préparer un plan de réduction des positions risquées si ce scénario se matérialise.",
+        "rationale": "L'ensemble du positionnement actuel du marché repose sur l'hypothèse d'une désinflation continue. Le risque d'un rebond de l'inflation des services (shelter, assurance, santé) n'est pas nul et constitue le principal risque de queue pour le trimestre en cours. Un CPI élevé pourrait déclencher une correction de 3 à 5% sur les actions et une remontée de 20 bps du 10 ans US en quelques jours."
+      }
+    ]
+  },
+  "section8_calendar": {
+    "title": "Calendrier Économique — Semaine suivante",
+    "events": [
+      {
+        "date": "Lundi",
+        "country": "US",
+        "event": "Indice NFIB Optimisme des petites entreprises (mars)",
+        "impact": "high",
+        "previous": "100.7",
+        "forecast": "101.2"
+      },
+      {
+        "date": "Mardi",
+        "country": "EU",
+        "event": "Enquête ZEW Sentiment économique Allemagne (mars)",
+        "impact": "high",
+        "previous": "26.0",
+        "forecast": "28.5"
+      },
+      {
+        "date": "Mercredi",
+        "country": "US",
+        "event": "IPC (CPI) février 2026 — Core CPI m/m et a/a",
+        "impact": "high",
+        "previous": "0.3% m/m / 3.3% a/a",
+        "forecast": "0.3% m/m / 3.2% a/a"
+      },
+      {
+        "date": "Jeudi",
+        "country": "EU",
+        "event": "Décision de taux BCE — Conférence de presse Lagarde",
+        "impact": "high",
+        "previous": "2.50%",
+        "forecast": "2.50% (inchangé)"
+      },
+      {
+        "date": "Vendredi",
+        "country": "CN",
+        "event": "Production industrielle et ventes au détail (jan-fév cumulé)",
+        "impact": "high",
+        "previous": "6.2% / 3.7% a/a",
+        "forecast": "5.8% / 4.2% a/a"
+      }
+    ]
+  }
+}
