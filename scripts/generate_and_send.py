@@ -1,8 +1,7 @@
 """
 Weekly Market Brief — Script d'automatisation
 Appelé chaque vendredi à 19h (Panama) par GitHub Actions.
-Un seul appel Claude → JSON → PDF → Email.
-Utilise le refresh token Gmail (ne expire jamais).
+Refresh token → access token → Claude → JSON → PDF → Email + sauvegarde JSON
 """
 
 import os, json, base64, re, requests
@@ -12,6 +11,7 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 from io import BytesIO
+from pathlib import Path
 
 import anthropic
 from reportlab.lib.pagesizes import A4
@@ -24,7 +24,6 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import mm
 from reportlab.lib.enums import TA_CENTER
 
-# ─── Configuration (depuis les secrets GitHub) ───────────────────────────────
 ANTHROPIC_API_KEY   = os.environ["ANTHROPIC_API_KEY"]
 ANTHROPIC_MODEL     = os.environ.get("ANTHROPIC_MODEL", "claude-opus-4-6")
 GMAIL_REFRESH_TOKEN = os.environ["GMAIL_REFRESH_TOKEN"]
@@ -38,51 +37,33 @@ DATE_FR = NOW.strftime("%A %d %B %Y")
 WEEK_N  = NOW.strftime("S%W")
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-#  ÉTAPE 0 : Obtenir un access token frais via le refresh token
-#  Le refresh token ne expire jamais → il génère un nouveau access token à chaque fois
-# ══════════════════════════════════════════════════════════════════════════════
 def get_fresh_access_token() -> str:
-    print("[0/4] Renouvellement du token Gmail...")
-    resp = requests.post(
-        "https://oauth2.googleapis.com/token",
-        data={
-            "client_id":     GMAIL_CLIENT_ID,
-            "client_secret": GMAIL_CLIENT_SECRET,
-            "refresh_token": GMAIL_REFRESH_TOKEN,
-            "grant_type":    "refresh_token",
-        }
-    )
+    print("[0/5] Renouvellement du token Gmail...")
+    resp = requests.post("https://oauth2.googleapis.com/token", data={
+        "client_id": GMAIL_CLIENT_ID, "client_secret": GMAIL_CLIENT_SECRET,
+        "refresh_token": GMAIL_REFRESH_TOKEN, "grant_type": "refresh_token",
+    })
     if resp.status_code != 200:
-        raise RuntimeError(f"Impossible de renouveler le token Gmail : {resp.text}")
-    token = resp.json()["access_token"]
-    print("[0/4] ✅ Token Gmail renouvelé avec succès")
-    return token
+        raise RuntimeError(f"Token Gmail impossible : {resp.text}")
+    print("[0/5] ✅ Token renouvelé")
+    return resp.json()["access_token"]
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-#  ÉTAPE 1 : Appel Claude (unique) → JSON complet
-# ══════════════════════════════════════════════════════════════════════════════
 def generate_report_json() -> dict:
-    print(f"[1/4] Appel Claude ({ANTHROPIC_MODEL})...")
+    print(f"[1/5] Appel Claude ({ANTHROPIC_MODEL})...")
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-
-    system = (
-        f"Tu es un analyste financier senior de premier plan. "
-        f"Tu produis un rapport hebdomadaire professionnel et actionnable. "
-        f"Date : {DATE_FR} ({WEEK_N} {NOW.year}). "
-        f"Réponds UNIQUEMENT en JSON valide, sans texte autour, sans balises markdown."
-    )
-
+    system = (f"Tu es un analyste financier senior. Rapport hebdomadaire professionnel. "
+              f"Date : {DATE_FR} ({WEEK_N} {NOW.year}). "
+              f"Réponds UNIQUEMENT en JSON valide, sans texte autour, sans balises markdown.")
     user = f"""Génère un rapport hebdomadaire complet des marchés financiers en français pour la semaine du {DATE_FR}.
 
-JSON attendu (toutes clés obligatoires, valeurs réelles et cohérentes avec les marchés actuels) :
+JSON (toutes clés obligatoires, valeurs réelles et cohérentes) :
 {{
   "week": "Semaine du X au Y mois {NOW.year}",
   "generated_at": "{DATE_FR}",
-  "section1_summary": {{"title":"Résumé des marchés","paragraphs":["§1 dense","§2"]}},
+  "section1_summary": {{"title":"Résumé des marchés","paragraphs":["§1","§2"]}},
   "section2_major_events": {{"title":"Événements majeurs","events":[{{"title":"...","body":"...","sentiment":"positive|negative|neutral"}}]}},
-  "section3_blind_spots":  {{"title":"Angles morts","events":[{{"title":"...","body":"...","sentiment":"neutral"}}]}},
+  "section3_blind_spots": {{"title":"Angles morts","events":[{{"title":"...","body":"...","sentiment":"neutral"}}]}},
   "section4_equities": {{
     "title":"Marchés Actions",
     "indices":[
@@ -157,7 +138,7 @@ JSON attendu (toutes clés obligatoires, valeurs réelles et cohérentes avec le
     ]
   }}
 }}
-Remplis TOUTES les valeurs avec de vraies données actuelles. Rapport professionnel, dense et actionnable."""
+Remplis TOUTES les valeurs avec de vraies données actuelles. Professionnel, dense, actionnable."""
 
     msg = client.messages.create(
         model=ANTHROPIC_MODEL, max_tokens=8000,
@@ -166,17 +147,23 @@ Remplis TOUTES les valeurs avec de vraies données actuelles. Rapport profession
     raw   = msg.content[0].text
     match = re.search(r'\{[\s\S]*\}', raw)
     if not match:
-        raise ValueError("Aucun JSON valide dans la réponse Claude")
+        raise ValueError("Aucun JSON dans la réponse Claude")
     report = json.loads(match.group())
-    print("[1/4] ✅ Rapport JSON généré avec succès")
+    print("[1/5] ✅ Rapport JSON généré")
     return report
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-#  ÉTAPE 2 : Génération PDF (ReportLab)
-# ══════════════════════════════════════════════════════════════════════════════
+def save_json(report: dict):
+    """Sauvegarde le JSON dans data/latest-report.json pour affichage sur le site."""
+    print("[2/5] Sauvegarde du JSON...")
+    Path("data").mkdir(exist_ok=True)
+    with open("data/latest-report.json", "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
+    print("[2/5] ✅ JSON sauvegardé dans data/latest-report.json")
+
+
 def generate_pdf(report: dict) -> bytes:
-    print("[2/4] Génération du PDF...")
+    print("[3/5] Génération du PDF...")
     buffer = BytesIO()
     doc = SimpleDocTemplate(buffer, pagesize=A4,
         rightMargin=14*mm, leftMargin=14*mm,
@@ -190,9 +177,7 @@ def generate_pdf(report: dict) -> bytes:
     BLUE  = colors.HexColor('#7B9CFF')
     YELLOW= colors.HexColor('#FBBF24')
 
-    def ps(name, **kw):
-        return ParagraphStyle(name, **kw)
-
+    def ps(name, **kw): return ParagraphStyle(name, **kw)
     S_T  = ps('t',  fontSize=22, textColor=LIGHT, fontName='Helvetica-Bold', alignment=TA_CENTER, spaceAfter=4)
     S_W  = ps('w',  fontSize=9,  textColor=GOLD,  fontName='Helvetica', alignment=TA_CENTER, spaceAfter=2)
     S_SB = ps('sb', fontSize=8,  textColor=MUTED, fontName='Helvetica', alignment=TA_CENTER, spaceAfter=16)
@@ -203,50 +188,39 @@ def generate_pdf(report: dict) -> bytes:
     S_D  = ps('d',  fontSize=6.5,textColor=MUTED, fontName='Helvetica', alignment=TA_CENTER)
 
     story = []
-
-    def hr(c=GOLD, t=0.5):
-        return HRFlowable(width='100%', thickness=t, color=c, spaceAfter=5, spaceBefore=2)
-
+    def hr(c=GOLD, t=0.5): return HRFlowable(width='100%', thickness=t, color=c, spaceAfter=5, spaceBefore=2)
     def sec(num, title):
         story.append(Spacer(1, 4*mm))
         story.append(Paragraph(f"{str(num).zfill(2)}  {title}", S_SC))
         story.append(hr())
-
     def ingredient(obj, c=GOLD):
         if not obj: return
         story.append(Paragraph(obj.get('title',''), ps('it', fontSize=8, textColor=c, fontName='Helvetica-Bold', spaceAfter=3)))
         for label, key in [('Pourquoi','why'),('Ce que ça induit','implies'),('Stratégie','strategy')]:
             story.append(Paragraph(label, S_BL))
             story.append(Paragraph(obj.get(key,'—'), S_BD))
-
     def tbl(data, cols):
         t = Table(data, colWidths=cols)
         t.setStyle(TableStyle([
             ('BACKGROUND',(0,0),(-1,0),colors.HexColor('#1A1A24')),
-            ('TEXTCOLOR',(0,0),(-1,0),GOLD),
-            ('FONTNAME',(0,0),(-1,0),'Helvetica-Bold'),
+            ('TEXTCOLOR',(0,0),(-1,0),GOLD),('FONTNAME',(0,0),(-1,0),'Helvetica-Bold'),
             ('FONTSIZE',(0,0),(-1,-1),7.5),
             ('ROWBACKGROUNDS',(0,1),(-1,-1),[colors.HexColor('#111118'),colors.HexColor('#15151E')]),
             ('GRID',(0,0),(-1,-1),0.3,colors.HexColor('#2A2A3A')),
-            ('PADDING',(0,0),(-1,-1),5),
-            ('TEXTCOLOR',(0,1),(-1,-1),MUTED),
+            ('PADDING',(0,0),(-1,-1),5),('TEXTCOLOR',(0,1),(-1,-1),MUTED),
         ]))
         return t
 
-    # Couverture
     story += [Spacer(1,30*mm), Paragraph("MARKET BRIEF", S_T),
               Paragraph(report.get('week',''), S_W),
               Paragraph(f"Généré le {report.get('generated_at', DATE_FR)}", S_SB),
               hr(GOLD, 2), Spacer(1,60*mm),
-              Paragraph("Rapport produit par IA (Claude — Anthropic). Non contractuel.", S_D),
-              PageBreak()]
+              Paragraph("Rapport produit par IA (Claude — Anthropic). Non contractuel.", S_D), PageBreak()]
 
-    # S1
     s1 = report.get('section1_summary',{})
     sec(1, s1.get('title','Résumé'))
     for p in s1.get('paragraphs',[]): story.append(Paragraph(p, S_BD))
 
-    # S2
     s2 = report.get('section2_major_events',{})
     sec(2, s2.get('title','Événements majeurs'))
     for ev in s2.get('events',[]):
@@ -255,7 +229,6 @@ def generate_pdf(report: dict) -> bytes:
         story.append(Paragraph(ev.get('body',''), S_BD))
         story.append(hr(c, 0.3))
 
-    # S3
     s3 = report.get('section3_blind_spots',{})
     sec(3, s3.get('title','Angles morts'))
     for ev in s3.get('events',[]):
@@ -264,8 +237,6 @@ def generate_pdf(report: dict) -> bytes:
         story.append(hr(BLUE, 0.3))
 
     story.append(PageBreak())
-
-    # S4
     s4 = report.get('section4_equities',{})
     sec(4, s4.get('title','Marchés Actions'))
     idx = s4.get('indices',[])
@@ -275,8 +246,7 @@ def generate_pdf(report: dict) -> bytes:
             c = GREEN if (i.get('change','') or '').startswith('+') else RED
             data.append([i.get('name',''), i.get('value',''),
                 Paragraph(i.get('change',''), ps('ic', fontSize=8, textColor=c, fontName='Helvetica-Bold'))])
-        story.append(tbl(data,[70*mm,50*mm,50*mm]))
-        story.append(Spacer(1,4*mm))
+        story.append(tbl(data,[70*mm,50*mm,50*mm])); story.append(Spacer(1,4*mm))
     for key, label in [('us','US'),('eu','Europe'),('asia','Asie')]:
         reg = s4.get(key,{})
         dc  = {'bullish':GREEN,'bearish':RED,'neutral':YELLOW}.get(reg.get('direction',''), GOLD)
@@ -285,8 +255,6 @@ def generate_pdf(report: dict) -> bytes:
         story.append(Paragraph(reg.get('body',''), S_BD))
 
     story.append(PageBreak())
-
-    # S5
     s5 = report.get('section5_bonds',{})
     sec(5, s5.get('title','Obligations & Dérivés'))
     ingredient(s5.get('bond_market'), GOLD)
@@ -296,8 +264,7 @@ def generate_pdf(report: dict) -> bytes:
         data = [['Maturité','US','DE','FR','JP']]
         for d in yc:
             data.append([d.get('maturity',''),f"{d.get('us','')}%",f"{d.get('de','')}%",f"{d.get('fr','')}%",f"{d.get('jp','')}%"])
-        story.append(tbl(data,[30*mm]*5))
-        story.append(Spacer(1,4*mm))
+        story.append(tbl(data,[30*mm]*5)); story.append(Spacer(1,4*mm))
     ingredient(s5.get('derivatives'), YELLOW)
     der = s5.get('derivatives',{})
     story.append(Paragraph(f"VIX : {der.get('vix','—')}  |  Put/Call : {der.get('put_call','—')}  |  Skew : {der.get('skew','—')}", S_BD))
@@ -312,8 +279,6 @@ def generate_pdf(report: dict) -> bytes:
         story.append(tbl(data,[80*mm,35*mm,55*mm]))
 
     story.append(PageBreak())
-
-    # S6
     s6 = report.get('section6_forex_commodities',{})
     sec(6, s6.get('title','Forex & Commodités'))
     story.append(Paragraph('Dynamiques Forex', S_BL))
@@ -325,8 +290,7 @@ def generate_pdf(report: dict) -> bytes:
             c = GREEN if p.get('direction')=='up' else RED
             data.append([p.get('pair',''),p.get('value',''),
                 Paragraph(p.get('change',''), ps('fc', fontSize=8, textColor=c, fontName='Helvetica-Bold'))])
-        story.append(tbl(data,[50*mm,55*mm,65*mm]))
-        story.append(Spacer(1,4*mm))
+        story.append(tbl(data,[50*mm,55*mm,65*mm])); story.append(Spacer(1,4*mm))
     story.append(Paragraph('Dynamiques Commodités', S_BL))
     story.append(Paragraph(s6.get('commodities_narrative','—'), S_BD))
     cm = s6.get('commodities',[])
@@ -339,8 +303,6 @@ def generate_pdf(report: dict) -> bytes:
         story.append(tbl(data,[50*mm,60*mm,60*mm]))
 
     story.append(PageBreak())
-
-    # S7
     s7 = report.get('section7_synthesis',{})
     sec(7, s7.get('title','Synthèse'))
     story.append(Paragraph("Vue d'ensemble", S_BL))
@@ -354,7 +316,6 @@ def generate_pdf(report: dict) -> bytes:
         story.append(Paragraph(st.get('rationale',''), S_BD))
         story.append(hr(GREEN, 0.3))
 
-    # S8
     s8 = report.get('section8_calendar',{})
     sec(8, s8.get('title','Calendrier'))
     cal = s8.get('events',[])
@@ -370,22 +331,17 @@ def generate_pdf(report: dict) -> bytes:
 
     doc.build(story)
     pdf = buffer.getvalue()
-    print(f"[2/4] ✅ PDF généré ({len(pdf)//1024} KB)")
+    print(f"[3/5] ✅ PDF généré ({len(pdf)//1024} KB)")
     return pdf
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-#  ÉTAPE 3 : Construction email HTML
-# ══════════════════════════════════════════════════════════════════════════════
 def build_email_html(report: dict) -> str:
     s4 = report.get('section4_equities',{})
     s7 = report.get('section7_synthesis',{})
     rows = ''.join([
-        f'<tr>'
-        f'<td style="padding:6px 10px;border-bottom:1px solid #2a2a3a;font-family:monospace;font-size:13px;color:#e8e8f0">{i["name"]}</td>'
+        f'<tr><td style="padding:6px 10px;border-bottom:1px solid #2a2a3a;font-family:monospace;font-size:13px;color:#e8e8f0">{i["name"]}</td>'
         f'<td style="padding:6px 10px;border-bottom:1px solid #2a2a3a;font-family:monospace;color:#e8e8f0">{i["value"]}</td>'
-        f'<td style="padding:6px 10px;border-bottom:1px solid #2a2a3a;font-family:monospace;color:{"#4ade80" if (i.get("change","") or "").startswith("+") else "#f87171"}">{i["change"]}</td>'
-        f'</tr>'
+        f'<td style="padding:6px 10px;border-bottom:1px solid #2a2a3a;font-family:monospace;color:{"#4ade80" if (i.get("change","") or "").startswith("+") else "#f87171"}">{i["change"]}</td></tr>'
         for i in s4.get('indices',[])
     ])
     strats = ''.join([
@@ -395,10 +351,7 @@ def build_email_html(report: dict) -> str:
         f'<div style="color:#6b6b80;font-size:12px">{s["rationale"]}</div></div>'
         for s in s7.get('strategy',[])
     ])
-    paras = ''.join([
-        f'<p style="color:#9090a8;font-size:13px;line-height:1.7;margin:0 0 8px">{p}</p>'
-        for p in report.get('section1_summary',{}).get('paragraphs',[])
-    ])
+    paras = ''.join([f'<p style="color:#9090a8;font-size:13px;line-height:1.7;margin:0 0 8px">{p}</p>' for p in report.get('section1_summary',{}).get('paragraphs',[])])
     return f"""<!DOCTYPE html><html><head><meta charset="UTF-8"></head>
 <body style="background:#0a0a0f;color:#e8e8f0;font-family:Arial,sans-serif;margin:0;padding:20px">
 <div style="max-width:620px;margin:0 auto">
@@ -407,67 +360,49 @@ def build_email_html(report: dict) -> str:
   <h1 style="font-family:Georgia,serif;font-size:26px;margin:0 0 4px">Weekly <span style="color:#c8a96e">Market</span> Brief</h1>
   <p style="color:#6b6b80;font-size:11px;margin:0 0 22px">Généré automatiquement le {report.get('generated_at', DATE_FR)}</p>
   <div style="background:#111118;border:1px solid #2a2a3a;border-radius:8px;padding:15px;margin-bottom:18px">
-    <div style="color:#c8a96e;font-size:10px;font-family:monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:9px">Résumé</div>
-    {paras}
+    <div style="color:#c8a96e;font-size:10px;font-family:monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:9px">Résumé</div>{paras}
   </div>
   <div style="background:#111118;border:1px solid #2a2a3a;border-radius:8px;padding:15px;margin-bottom:18px">
     <div style="color:#c8a96e;font-size:10px;font-family:monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:9px">Indices</div>
-    <table style="width:100%;border-collapse:collapse">
-      <thead><tr>
-        <th style="text-align:left;padding:5px 10px;color:#6b6b80;font-size:10px;border-bottom:1px solid #2a2a3a">Indice</th>
-        <th style="text-align:left;padding:5px 10px;color:#6b6b80;font-size:10px;border-bottom:1px solid #2a2a3a">Valeur</th>
-        <th style="text-align:left;padding:5px 10px;color:#6b6b80;font-size:10px;border-bottom:1px solid #2a2a3a">Variation</th>
-      </tr></thead>
-      <tbody>{rows}</tbody>
-    </table>
+    <table style="width:100%;border-collapse:collapse"><thead><tr>
+      <th style="text-align:left;padding:5px 10px;color:#6b6b80;font-size:10px;border-bottom:1px solid #2a2a3a">Indice</th>
+      <th style="text-align:left;padding:5px 10px;color:#6b6b80;font-size:10px;border-bottom:1px solid #2a2a3a">Valeur</th>
+      <th style="text-align:left;padding:5px 10px;color:#6b6b80;font-size:10px;border-bottom:1px solid #2a2a3a">Variation</th>
+    </tr></thead><tbody>{rows}</tbody></table>
   </div>
   <div style="background:#111118;border:1px solid #2a2a3a;border-radius:8px;padding:15px;margin-bottom:18px">
-    <div style="color:#c8a96e;font-size:10px;font-family:monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:9px">Stratégies</div>
-    {strats}
+    <div style="color:#c8a96e;font-size:10px;font-family:monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:9px">Stratégies</div>{strats}
   </div>
   <p style="color:#3a3a4a;font-size:10px;text-align:center">📎 Rapport complet en PDF joint · GitHub Actions + Claude API · Non contractuel</p>
   <div style="background:#c8a96e;height:2px;margin-top:18px"></div>
 </div></body></html>"""
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-#  ÉTAPE 4 : Envoi email via Gmail API
-# ══════════════════════════════════════════════════════════════════════════════
 def send_email(report: dict, pdf: bytes, access_token: str):
-    print(f"[3/4] Envoi email à {EMAIL_TO}...")
+    print(f"[4/5] Envoi email à {EMAIL_TO}...")
     week = report.get('week','Rapport hebdomadaire')
-
     msg = MIMEMultipart('mixed')
-    msg['From']    = f"MarketBrief <{EMAIL_FROM}>"
-    msg['To']      = EMAIL_TO
+    msg['From'] = f"MarketBrief <{EMAIL_FROM}>"; msg['To'] = EMAIL_TO
     msg['Subject'] = f"{week} — MarketBrief"
     msg.attach(MIMEText(build_email_html(report), 'html', 'utf-8'))
-
     pdf_part = MIMEBase('application','pdf')
-    pdf_part.set_payload(pdf)
-    encoders.encode_base64(pdf_part)
-    pdf_part.add_header('Content-Disposition','attachment',
-        filename=f"marketbrief-{week.replace(' ','-').lower()}.pdf")
+    pdf_part.set_payload(pdf); encoders.encode_base64(pdf_part)
+    pdf_part.add_header('Content-Disposition','attachment',filename=f"marketbrief-{week.replace(' ','-').lower()}.pdf")
     msg.attach(pdf_part)
-
     raw  = base64.urlsafe_b64encode(msg.as_bytes()).decode('utf-8')
-    resp = requests.post(
-        'https://gmail.googleapis.com/gmail/v1/users/me/messages/send',
+    resp = requests.post('https://gmail.googleapis.com/gmail/v1/users/me/messages/send',
         headers={'Authorization':f'Bearer {access_token}','Content-Type':'application/json'},
-        json={'raw': raw}
-    )
+        json={'raw': raw})
     if resp.status_code not in (200, 201):
         raise RuntimeError(f"Gmail API {resp.status_code}: {resp.text}")
-    print(f"[3/4] ✅ Email envoyé à {EMAIL_TO}")
+    print(f"[4/5] ✅ Email envoyé à {EMAIL_TO}")
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-#  MAIN
-# ══════════════════════════════════════════════════════════════════════════════
 if __name__ == '__main__':
     print(f"\n{'='*60}\n  WEEKLY MARKET BRIEF — {DATE_FR}\n{'='*60}\n")
-    token  = get_fresh_access_token()   # Refresh token → access token frais
-    report = generate_report_json()     # 1 seul appel Claude
-    pdf    = generate_pdf(report)       # PDF depuis le même JSON
-    send_email(report, pdf, token)      # Email + PDF joint
-    print(f"\n[4/4] ✅ Brief envoyé avec succès !\n{'='*60}\n")
+    token  = get_fresh_access_token()
+    report = generate_report_json()
+    save_json(report)          # ← nouveau : sauvegarde pour le site web
+    pdf    = generate_pdf(report)
+    send_email(report, pdf, token)
+    print(f"\n[5/5] ✅ Brief envoyé et publié !\n{'='*60}\n")
