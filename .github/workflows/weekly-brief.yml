@@ -27,13 +27,15 @@ jobs:
 
       - name: Generate report, PDF and send email
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          ANTHROPIC_MODEL: ${{ secrets.ANTHROPIC_MODEL }}
+          ANTHROPIC_API_KEY:   ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL:     ${{ secrets.ANTHROPIC_MODEL }}
           GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
-          GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_ID:     ${{ secrets.GMAIL_CLIENT_ID }}
           GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
-          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
-          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_FROM:          ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO:            ${{ secrets.EMAIL_TO }}
+          FINNHUB_API_KEY:     ${{ secrets.FINNHUB_API_KEY }}
+          FRED_API_KEY:        ${{ secrets.FRED_API_KEY }}
         run: python scripts/generate_and_send.py
 
       - name: Commit latest report JSON to repo
@@ -45,4 +47,4 @@ jobs:
           git push
 
       - name: Done
-        run: echo "✅ Weekly Market Brief généré, envoyé et publié !"
+        run: echo "✅ Weekly Market Brief v3 généré, envoyé et publié !"
