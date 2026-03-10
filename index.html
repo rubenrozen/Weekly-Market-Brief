@@ -3,627 +3,778 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Weekly Market Brief</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<title>Market Brief — Intelligence Hebdomadaire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg:#0a0a0f;--surface:#111118;--surface2:#1a1a24;--border:#2a2a3a;
-    --accent:#c8a96e;--accent2:#7b9cff;--green:#4ade80;--red:#f87171;--yellow:#fbbf24;
-    --text:#e8e8f0;--muted:#6b6b80;
-    --font-display:'Playfair Display',serif;--font-mono:'DM Mono',monospace;--font-body:'DM Sans',sans-serif;
+    --gold:    #B8965A;
+    --gold-lt: #D4AF7A;
+    --bg:      #07070D;
+    --bg2:     #0D0D16;
+    --bg3:     #12121C;
+    --border:  #1E1E2E;
+    --text:    #C8C8D8;
+    --muted:   #525268;
+    --green:   #3DB87A;
+    --red:     #C85454;
+    --blue:    #5B7FD4;
+    --amber:   #C89A3D;
   }
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6;min-height:100vh}
 
-  /* SETTINGS */
-  #settings-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:1000;align-items:center;justify-content:center}
-  #settings-overlay.open{display:flex}
-  .settings-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:2rem;width:min(520px,92vw);max-height:90vh;overflow-y:auto}
-  .settings-box h2{font-family:var(--font-display);font-size:1.3rem;color:var(--accent);margin-bottom:1.5rem}
-  .settings-section{border-top:1px solid var(--border);padding-top:1rem;margin-top:1rem}
-  .settings-section-title{font-family:var(--font-mono);font-size:.68rem;color:var(--accent2);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.8rem}
-  .settings-box label{display:block;font-family:var(--font-mono);font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem}
-  .settings-box input,.settings-box select{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:.6rem .8rem;color:var(--text);font-family:var(--font-mono);font-size:.84rem;margin-bottom:.9rem;outline:none}
-  .settings-box input:focus,.settings-box select:focus{border-color:var(--accent)}
-  .toggle-row{display:flex;align-items:center;gap:.8rem;margin-bottom:.9rem}
-  .toggle{position:relative;width:38px;height:20px;flex-shrink:0}
-  .toggle input{opacity:0;width:0;height:0}
-  .toggle-slider{position:absolute;inset:0;background:var(--border);border-radius:20px;cursor:pointer;transition:.25s}
-  .toggle-slider:before{content:'';position:absolute;width:14px;height:14px;left:3px;top:3px;background:var(--muted);border-radius:50%;transition:.25s}
-  .toggle input:checked+.toggle-slider{background:rgba(200,169,110,.3)}
-  .toggle input:checked+.toggle-slider:before{transform:translateX(18px);background:var(--accent)}
-  .toggle-label{font-family:var(--font-mono);font-size:.78rem;color:var(--text)}
-  .info-box{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:.75rem;margin-bottom:.9rem;font-size:.74rem;color:var(--muted);font-family:var(--font-mono);line-height:1.65}
+  * { margin:0; padding:0; box-sizing:border-box; }
 
-  /* BUTTONS */
-  .btn{padding:.55rem 1.3rem;border-radius:6px;border:none;cursor:pointer;font-family:var(--font-mono);font-size:.78rem;font-weight:500;letter-spacing:.04em;transition:all .18s}
-  .btn-primary{background:var(--accent);color:#000}.btn-primary:hover{background:#d4b87a}
-  .btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border);margin-left:.4rem}.btn-ghost:hover{color:var(--text);border-color:var(--muted)}
-  .btn-danger{background:rgba(248,113,113,.12);color:var(--red);border:1px solid rgba(248,113,113,.3);margin-left:.4rem}
-  .btn-blue{background:rgba(123,156,255,.15);color:var(--accent2);border:1px solid rgba(123,156,255,.3)}.btn-blue:hover{background:rgba(123,156,255,.25)}
+  html { scroll-behavior: smooth; }
 
-  /* HEADER */
-  header{border-bottom:1px solid var(--border);padding:.9rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(10,10,15,.96);backdrop-filter:blur(10px);z-index:100}
-  .brand{font-family:var(--font-display);font-size:1.05rem;color:var(--accent);letter-spacing:.02em}
-  .brand span{color:var(--muted);font-weight:400}
-  .header-actions{display:flex;gap:.45rem;align-items:center}
-  .date-badge{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);border:1px solid var(--border);padding:.28rem .65rem;border-radius:4px}
-  .status-dot{width:7px;height:7px;border-radius:50%;background:var(--muted);display:inline-block;margin-right:.35rem}
-  .status-dot.live{background:var(--green);animation:pulse 2s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-  .email-pill{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--font-mono);font-size:.68rem;padding:.22rem .6rem;border-radius:20px;border:1px solid var(--border);color:var(--muted)}
-  .email-pill.on{border-color:rgba(74,222,128,.4);color:var(--green);background:rgba(74,222,128,.06)}
-  .email-pill.sending{border-color:rgba(123,156,255,.4);color:var(--accent2)}
-  .email-pill.err{border-color:rgba(248,113,113,.4);color:var(--red)}
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
 
-  /* TOAST */
-  #toast{position:fixed;bottom:2rem;right:2rem;z-index:2000;display:flex;flex-direction:column;gap:.5rem;pointer-events:none}
-  .toast-item{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:.8rem 1.1rem;font-family:var(--font-mono);font-size:.76rem;max-width:320px;display:flex;align-items:flex-start;gap:.6rem;animation:slideIn .25s ease;pointer-events:all}
-  .toast-item.success{border-left:3px solid var(--green)}
-  .toast-item.error{border-left:3px solid var(--red)}
-  .toast-item.info{border-left:3px solid var(--accent2)}
-  @keyframes slideIn{from{transform:translateX(40px);opacity:0}to{transform:translateX(0);opacity:1}}
+  /* Noise texture overlay */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: .4;
+  }
 
-  /* LAYOUT */
-  main{max-width:1400px;margin:0 auto;padding:2rem}
-  #loading-state,#empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:1rem;text-align:center}
-  #loading-state{display:none}
-  .loader-ring{width:46px;height:46px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .85s linear infinite}
-  @keyframes spin{to{transform:rotate(360deg)}}
-  .empty-title{font-family:var(--font-display);font-size:2rem;color:var(--accent);margin-bottom:.5rem}
-  .empty-sub{color:var(--muted);max-width:380px;font-size:.88rem}
-  .loading-text{font-family:var(--font-mono);font-size:.78rem;color:var(--muted)}
-  #progress-log{font-family:var(--font-mono);font-size:.72rem;color:var(--accent2);max-width:480px;text-align:left;max-height:180px;overflow-y:auto;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:.75rem;width:100%}
-  #report-content{display:none}
-  .report-header{text-align:center;padding:3rem 0 2rem;border-bottom:1px solid var(--border);margin-bottom:3rem}
-  .report-week{font-family:var(--font-mono);font-size:.72rem;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;margin-bottom:.8rem}
-  .report-title{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,3.8rem);font-weight:900;line-height:1.1;margin-bottom:1rem}
-  .report-title span{color:var(--accent)}
-  .report-subtitle{color:var(--muted);font-size:.88rem;font-family:var(--font-mono)}
-  .report-actions{display:flex;gap:.6rem;justify-content:center;margin-top:1.5rem;flex-wrap:wrap}
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); opacity: .5; }
 
-  /* COMPONENTS */
-  .section{margin-bottom:4rem}
-  .section-header{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.4rem;padding-bottom:.75rem;border-bottom:1px solid var(--border)}
-  .section-num{font-family:var(--font-mono);font-size:.68rem;color:var(--accent);letter-spacing:.1em}
-  .section-title{font-family:var(--font-display);font-size:1.35rem;font-weight:700}
-  .card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.2rem 1.4rem}
-  .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.9rem;margin-bottom:1.4rem}
-  .metric-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:.9rem 1.1rem}
-  .metric-label{font-family:var(--font-mono);font-size:.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.25rem}
-  .metric-value{font-family:var(--font-mono);font-size:1.25rem;font-weight:500}
-  .metric-change{font-family:var(--font-mono);font-size:.75rem;margin-top:.18rem}
-  .up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--muted)}
-  .event-list{display:flex;flex-direction:column;gap:.75rem}
-  .event-item{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:.95rem 1.1rem}
-  .event-item.blind-spot{border-left-color:var(--accent2)}
-  .event-title{font-weight:500;margin-bottom:.25rem;font-size:.93rem}
-  .event-body{color:var(--muted);font-size:.86rem}
-  .region-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:.9rem}
-  .region-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.1rem}
-  .region-badge{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.45rem}
-  .region-title{font-family:var(--font-display);font-size:1.05rem;margin-bottom:.6rem}
-  .region-body{font-size:.86rem;color:var(--muted);line-height:1.65}
-  .chart-wrap{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.1rem;margin-bottom:.9rem}
-  .chart-title{font-family:var(--font-mono);font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem}
-  .chart-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:.9rem}
-  @media(max-width:860px){.chart-grid-2{grid-template-columns:1fr}}
-  .gauge-row{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:.9rem}
-  .gauge-item{flex:1;min-width:120px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:.75rem;text-align:center}
-  .gauge-label{font-family:var(--font-mono);font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem}
-  .gauge-val{font-family:var(--font-mono);font-size:1.45rem;font-weight:500}
-  .gauge-sub{font-family:var(--font-mono);font-size:.67rem;color:var(--muted);margin-top:.18rem}
-  .asset-row{display:flex;align-items:center;gap:.75rem;padding:.55rem 0;border-bottom:1px solid var(--border)}
-  .asset-row:last-child{border-bottom:none}
-  .asset-name{font-family:var(--font-mono);font-size:.8rem;width:80px;flex-shrink:0}
-  .asset-bar-wrap{flex:1;height:5px;background:var(--border);border-radius:3px;overflow:hidden}
-  .asset-bar{height:100%;border-radius:3px}
-  .asset-val{font-family:var(--font-mono);font-size:.8rem;width:85px;text-align:right}
-  .asset-chg{font-family:var(--font-mono);font-size:.73rem;width:55px;text-align:right}
-  .cal-table{width:100%;border-collapse:collapse}
-  .cal-table th{font-family:var(--font-mono);font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);text-align:left;padding:.45rem .75rem;border-bottom:1px solid var(--border)}
-  .cal-table td{padding:.65rem .75rem;font-size:.83rem;border-bottom:1px solid rgba(42,42,58,.5);vertical-align:top}
-  .cal-table tr:hover td{background:var(--surface2)}
-  .impact-high{color:var(--red);font-family:var(--font-mono);font-size:.68rem}
-  .impact-med{color:var(--yellow);font-family:var(--font-mono);font-size:.68rem}
-  .country-tag{display:inline-block;font-family:var(--font-mono);font-size:.62rem;background:var(--surface2);border:1px solid var(--border);border-radius:3px;padding:.08rem .38rem;color:var(--accent)}
-  .synthesis-card{background:linear-gradient(135deg,rgba(200,169,110,.06) 0%,rgba(123,156,255,.04) 100%);border:1px solid rgba(200,169,110,.2);border-radius:12px;padding:1.7rem;margin-bottom:1.4rem}
-  .strategy-card{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--green);border-radius:0 10px 10px 0;padding:1.1rem 1.3rem;margin-bottom:.75rem}
-  .prose{color:var(--muted);font-size:.88rem;line-height:1.75}
-  .prose strong{color:var(--text);font-weight:500}
-  .prose p{margin-bottom:.75rem}
-  .error-box{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.3);border-radius:8px;padding:.9rem 1.1rem;color:var(--red);font-family:var(--font-mono);font-size:.8rem;margin:1rem 0}
-  ::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+  /* ── Loading ── */
+  #loading {
+    position: fixed; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 18px;
+    background: var(--bg); z-index: 100;
+    transition: opacity .6s ease;
+  }
+  #loading.hide { opacity: 0; pointer-events: none; }
+  .load-mark {
+    width: 40px; height: 40px;
+    border: 1px solid var(--border);
+    border-top-color: var(--gold);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .load-text {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; letter-spacing: 3px;
+    color: var(--muted); text-transform: uppercase;
+  }
+
+  /* ── No report ── */
+  #no-report {
+    display: none;
+    position: fixed; inset: 0;
+    align-items: center; justify-content: center;
+    flex-direction: column; gap: 14px;
+    background: var(--bg);
+  }
+  #no-report.show { display: flex; }
+  .no-report-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 300;
+    color: var(--gold-lt); letter-spacing: 1px;
+  }
+  .no-report-sub {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; color: var(--muted);
+    letter-spacing: 2px; text-transform: uppercase;
+  }
+
+  /* ── Layout ── */
+  #app { 
+    position: relative; z-index: 1;
+    max-width: 980px; margin: 0 auto;
+    padding: 0 28px 80px;
+    opacity: 0; transition: opacity .8s ease;
+  }
+  #app.visible { opacity: 1; }
+
+  /* ── Header ── */
+  header {
+    padding: 52px 0 36px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 48px;
+    display: flex; align-items: flex-end; justify-content: space-between;
+  }
+  .header-left {}
+  .header-classification {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px; letter-spacing: 4px;
+    color: var(--gold); text-transform: uppercase;
+    margin-bottom: 10px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .header-classification::before {
+    content: '';
+    display: inline-block; width: 5px; height: 5px;
+    background: var(--gold); border-radius: 50%;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px; font-weight: 300;
+    color: #E8E8F4; letter-spacing: -0.5px;
+    line-height: 1;
+  }
+  h1 em { font-style: italic; color: var(--gold-lt); }
+  .header-week {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; color: var(--muted);
+    letter-spacing: 1px; margin-top: 10px;
+  }
+  .header-right { text-align: right; }
+  .header-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px; font-weight: 300;
+    font-style: italic; color: var(--muted);
+  }
+
+  /* ── Nav pills ── */
+  nav {
+    display: flex; gap: 2px; flex-wrap: wrap;
+    margin-bottom: 52px;
+  }
+  nav a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted); text-decoration: none;
+    padding: 6px 12px; border: 1px solid transparent;
+    transition: all .2s;
+  }
+  nav a:hover {
+    color: var(--gold-lt);
+    border-color: var(--border);
+    background: var(--bg2);
+  }
+
+  /* ── Section ── */
+  section {
+    margin-bottom: 64px;
+    opacity: 0; transform: translateY(16px);
+    animation: fadeUp .5s ease forwards;
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  section:nth-child(1)  { animation-delay: .1s; }
+  section:nth-child(2)  { animation-delay: .18s; }
+  section:nth-child(3)  { animation-delay: .26s; }
+  section:nth-child(4)  { animation-delay: .34s; }
+  section:nth-child(5)  { animation-delay: .42s; }
+  section:nth-child(6)  { animation-delay: .50s; }
+  section:nth-child(7)  { animation-delay: .58s; }
+  section:nth-child(8)  { animation-delay: .66s; }
+
+  .sec-header {
+    display: flex; align-items: baseline; gap: 16px;
+    margin-bottom: 24px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .sec-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px; color: var(--gold);
+    letter-spacing: 2px;
+  }
+  .sec-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 300;
+    color: #D8D8EC; letter-spacing: .3px;
+  }
+
+  /* ── Summary ── */
+  .summary-text {
+    font-size: 14px; line-height: 1.85;
+    color: var(--text);
+    max-width: 740px;
+    margin-bottom: 12px;
+  }
+
+  /* ── Events ── */
+  .events-grid {
+    display: grid; gap: 1px;
+  }
+  .event-card {
+    background: var(--bg2);
+    border-left: 2px solid var(--border);
+    padding: 18px 22px;
+    transition: border-color .2s;
+    position: relative;
+  }
+  .event-card:hover { border-left-color: var(--gold); }
+  .event-card.positive { border-left-color: var(--green); }
+  .event-card.negative { border-left-color: var(--red); }
+  .event-card.neutral  { border-left-color: var(--muted); }
+  .event-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px; font-weight: 600;
+    color: #E0E0EE; margin-bottom: 6px;
+  }
+  .event-body {
+    font-size: 13px; color: var(--muted); line-height: 1.7;
+  }
+  .sentiment-tag {
+    position: absolute; top: 18px; right: 22px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8px; letter-spacing: 2px; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px;
+  }
+  .sentiment-tag.positive { background: rgba(61,184,122,.12); color: var(--green); }
+  .sentiment-tag.negative { background: rgba(200,84,84,.12); color: var(--red); }
+  .sentiment-tag.neutral  { background: rgba(82,82,104,.15); color: var(--muted); }
+
+  /* ── Indices table ── */
+  .indices-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin-bottom: 36px;
+  }
+  .index-cell {
+    background: var(--bg2);
+    padding: 14px 18px;
+    transition: background .2s;
+  }
+  .index-cell:hover { background: var(--bg3); }
+  .index-name {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px; color: var(--muted);
+    letter-spacing: 1px; text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  .index-value {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px; color: var(--text);
+    font-weight: 500;
+  }
+  .index-change {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; margin-top: 3px;
+    font-weight: 400;
+  }
+  .index-change.up   { color: var(--green); }
+  .index-change.down { color: var(--red); }
+
+  /* ── Region cards ── */
+  .regions-grid {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 1px;
+    background: var(--border);
+  }
+  .region-card {
+    background: var(--bg2); padding: 20px 22px;
+  }
+  .region-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8px; letter-spacing: 3px; text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .region-label.bullish { color: var(--green); }
+  .region-label.bearish { color: var(--red); }
+  .region-label.neutral { color: var(--amber); }
+  .region-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px; font-weight: 600; color: #D8D8EC;
+    margin-bottom: 8px; line-height: 1.3;
+  }
+  .region-body { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+  /* ── Ingredient blocks ── */
+  .ingredient {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 22px 26px;
+    margin-bottom: 1px;
+  }
+  .ingredient-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 16px;
+  }
+  .ingredient-rows { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+  .ingredient-field {}
+  .field-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 5px;
+  }
+  .field-value { font-size: 12.5px; color: var(--text); line-height: 1.6; }
+
+  /* ── Yield table ── */
+  .data-table {
+    width: 100%; border-collapse: collapse;
+    margin-bottom: 24px;
+  }
+  .data-table th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted); text-align: left;
+    padding: 8px 14px; border-bottom: 1px solid var(--border);
+  }
+  .data-table td {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; color: var(--text);
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(30,30,46,.6);
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:hover td { background: var(--bg3); }
+  .data-table td.us-col { color: var(--blue); }
+  .data-table td.up   { color: var(--green); }
+  .data-table td.down { color: var(--red); }
+  .data-table td.stable { color: var(--amber); }
+  .data-table td.hausse { color: var(--red); }
+  .data-table td.baisse { color: var(--green); }
+
+  /* ── VIX bar ── */
+  .vix-row {
+    display: flex; gap: 32px; align-items: center;
+    padding: 16px 26px; background: var(--bg2);
+    border: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+  .vix-item {}
+  .vix-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8px; color: var(--muted);
+    letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .vix-value {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px; font-weight: 500;
+  }
+  .vix-value.low    { color: var(--green); }
+  .vix-value.mid    { color: var(--amber); }
+  .vix-value.high   { color: var(--red); }
+
+  /* ── Forex/Commodities ── */
+  .pair-grid {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 1px;
+    background: var(--border); margin-bottom: 24px;
+  }
+  .pair-cell {
+    background: var(--bg2); padding: 14px 18px;
+    transition: background .2s;
+  }
+  .pair-cell:hover { background: var(--bg3); }
+  .pair-name {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; color: var(--muted); margin-bottom: 4px;
+  }
+  .pair-value {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px; color: var(--text); font-weight: 500;
+  }
+  .pair-change {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; margin-top: 2px;
+  }
+  .pair-change.up   { color: var(--green); }
+  .pair-change.down { color: var(--red); }
+
+  .narrative-text {
+    font-size: 13px; color: var(--muted);
+    line-height: 1.8; max-width: 680px;
+    margin-bottom: 20px; padding-left: 14px;
+    border-left: 1px solid var(--border);
+  }
+
+  /* ── Synthesis ── */
+  .strategy-list { display: grid; gap: 1px; }
+  .strategy-card {
+    background: var(--bg2);
+    display: grid; grid-template-columns: 120px 1fr 1fr;
+    gap: 0; align-items: stretch;
+  }
+  .strategy-type {
+    background: var(--bg3);
+    display: flex; align-items: center; justify-content: center;
+    padding: 18px 12px; text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--green); border-right: 1px solid var(--border);
+  }
+  .strategy-rec {
+    padding: 18px 20px;
+    border-right: 1px solid var(--border);
+  }
+  .strategy-rec-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px; font-weight: 600; color: #D8D8EC;
+    margin-bottom: 4px;
+  }
+  .strategy-rationale {
+    padding: 18px 20px;
+    font-size: 12px; color: var(--muted); line-height: 1.6;
+  }
+
+  /* ── Calendar ── */
+  .calendar-table { width: 100%; border-collapse: collapse; }
+  .calendar-table th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted); text-align: left;
+    padding: 8px 16px; border-bottom: 1px solid var(--border);
+  }
+  .calendar-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(30,30,46,.5);
+    font-size: 12.5px; color: var(--text);
+  }
+  .calendar-table td:first-child {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; color: var(--muted);
+  }
+  .calendar-table td.country {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; color: var(--gold);
+  }
+  .calendar-table tr:hover td { background: var(--bg3); }
+  .impact-high { color: var(--red); font-family:'IBM Plex Mono',monospace; font-size:8px; letter-spacing:2px; }
+  .impact-med  { color: var(--amber); font-family:'IBM Plex Mono',monospace; font-size:8px; letter-spacing:2px; }
+
+  /* ── Footer ── */
+  footer {
+    margin-top: 80px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-left {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .footer-right {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px; font-style: italic; color: var(--muted);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    h1 { font-size: 28px; }
+    .indices-grid { grid-template-columns: repeat(2,1fr); }
+    .regions-grid { grid-template-columns: 1fr; }
+    .ingredient-rows { grid-template-columns: 1fr; }
+    .pair-grid { grid-template-columns: repeat(2,1fr); }
+    .strategy-card { grid-template-columns: 1fr; }
+    .strategy-type { border-right: none; border-bottom: 1px solid var(--border); padding: 10px; }
+    .strategy-rec { border-right: none; border-bottom: 1px solid var(--border); }
+    header { flex-direction: column; gap: 16px; }
+    .header-right { text-align: left; }
+  }
 </style>
 </head>
 <body>
 
-<div id="toast"></div>
-
-<!-- SETTINGS -->
-<div id="settings-overlay">
-  <div class="settings-box">
-    <h2>⚙ Paramètres</h2>
-    <label>Clé API Anthropic</label>
-    <input type="password" id="api-key-input" placeholder="sk-ant-api03-…"/>
-    <label>Modèle Claude</label>
-    <select id="model-select">
-      <option value="claude-opus-4-6">Claude Opus 4.6 ✦ recommandé</option>
-      <option value="claude-opus-4-5">Claude Opus 4.5</option>
-      <option value="claude-sonnet-4-6">Claude Sonnet 4.6</option>
-      <option value="claude-sonnet-4-5">Claude Sonnet 4.5</option>
-      <option value="claude-haiku-4-5-20251001">Claude Haiku 4.5</option>
-    </select>
-    <label>Langue</label>
-    <select id="lang-select"><option value="fr" selected>Français</option><option value="en">English</option></select>
-
-    <div class="settings-section">
-      <div class="settings-section-title">📧 Notification Email</div>
-      <div class="toggle-row">
-        <label class="toggle"><input type="checkbox" id="email-enabled"><span class="toggle-slider"></span></label>
-        <span class="toggle-label">Envoyer le rapport par email après génération</span>
-      </div>
-      <label>Votre adresse Gmail (expéditeur)</label>
-      <input type="email" id="email-from" placeholder="votre@gmail.com"/>
-      <label>Destinataire(s) — virgule pour plusieurs</label>
-      <input type="text" id="email-to" placeholder="vous@example.com, collegue@example.com"/>
-      <label>Token OAuth2 Gmail (optionnel — voir guide ci-dessous)</label>
-      <input type="password" id="gmail-key" placeholder="ya29.xxx…"/>
-      <div class="info-box">
-        <strong style="color:var(--accent)">Sans token Gmail</strong> → le PDF est téléchargé automatiquement. Vous pouvez l'envoyer manuellement.<br><br>
-        <strong style="color:var(--accent2)">Avec token Gmail</strong> → envoi automatique. Pour obtenir un token :<br>
-        1. Allez sur <em>console.cloud.google.com</em><br>
-        2. Créez un projet → activez "Gmail API"<br>
-        3. Créez des identifiants OAuth2 → copiez le token ici<br><br>
-        ⚠️ Les tokens expirent après 1h. Pour un usage durable, utilisez un refresh token.
-      </div>
-    </div>
-
-    <div style="display:flex;gap:.4rem;margin-top:.5rem;flex-wrap:wrap">
-      <button class="btn btn-primary" onclick="saveSettings()">Enregistrer</button>
-      <button class="btn btn-ghost" onclick="closeSettings()">Annuler</button>
-      <button class="btn btn-danger" onclick="clearData()">Réinitialiser</button>
-    </div>
-    <p style="margin-top:1rem;font-size:.7rem;color:var(--muted);font-family:var(--font-mono)">Clés stockées uniquement dans votre navigateur (localStorage).</p>
-  </div>
+<!-- Loading -->
+<div id="loading">
+  <div class="load-mark"></div>
+  <div class="load-text">Chargement du brief</div>
 </div>
 
-<!-- HEADER -->
-<header>
-  <div class="brand">MARKET<span>BRIEF</span></div>
-  <div class="header-actions">
-    <div class="date-badge" id="header-date">—</div>
-    <div class="email-pill" id="email-pill">✉ email off</div>
-    <button class="btn btn-ghost" onclick="openSettings()" style="padding:.28rem .65rem;font-size:.7rem">⚙</button>
-    <button class="btn btn-primary" onclick="generateReport()" style="padding:.28rem .9rem;font-size:.7rem">
-      <span class="status-dot" id="status-dot"></span>Générer
-    </button>
-  </div>
-</header>
+<!-- No report yet -->
+<div id="no-report">
+  <div class="no-report-title">Aucun rapport disponible</div>
+  <div class="no-report-sub">Le premier brief sera publié vendredi à 19h</div>
+</div>
 
-<main>
-  <div id="empty-state">
-    <div>
-      <div class="empty-title">Weekly Market Brief</div>
-      <p class="empty-sub" style="margin-bottom:1.2rem">Un seul appel Claude → rapport HTML interactif + PDF envoyé par email.</p>
-      <button class="btn btn-primary" onclick="openSettings()" style="margin-right:.4rem">⚙ Configurer</button>
-      <button class="btn btn-ghost" onclick="generateReport()">Générer →</button>
+<!-- Main app -->
+<div id="app">
+
+  <header>
+    <div class="header-left">
+      <div class="header-classification">Intelligence financière confidentielle</div>
+      <h1>Weekly <em>Market</em> Brief</h1>
+      <div class="header-week" id="hdr-week"></div>
     </div>
-  </div>
-
-  <div id="loading-state">
-    <div class="loader-ring"></div>
-    <div class="loading-text">Un seul appel Claude en cours…</div>
-    <div id="progress-log"></div>
-  </div>
-
-  <div id="report-content">
-    <div class="report-header">
-      <div class="report-week" id="report-week-label">—</div>
-      <div class="report-title">Weekly <span>Market</span> Brief</div>
-      <div class="report-subtitle" id="report-date-sub">—</div>
-      <div class="report-actions">
-        <button class="btn btn-ghost" onclick="downloadPDF()" style="font-size:.75rem">⬇ PDF</button>
-        <button class="btn btn-blue" onclick="sendEmailManual()" style="font-size:.75rem">✉ Envoyer par email</button>
-        <button class="btn btn-ghost" onclick="generateReport()" style="font-size:.75rem">↺ Régénérer</button>
-      </div>
+    <div class="header-right">
+      <div class="header-date" id="hdr-date"></div>
     </div>
-    <div id="report-body"></div>
-  </div>
-</main>
+  </header>
+
+  <nav id="nav-bar">
+    <a href="#s1">Résumé</a>
+    <a href="#s2">Événements</a>
+    <a href="#s3">Angles morts</a>
+    <a href="#s4">Actions</a>
+    <a href="#s5">Obligations</a>
+    <a href="#s6">Forex & Matières</a>
+    <a href="#s7">Synthèse</a>
+    <a href="#s8">Calendrier</a>
+  </nav>
+
+  <div id="content"></div>
+
+  <footer>
+    <div class="footer-left">Généré par Claude API (Anthropic) · Automatisation GitHub Actions</div>
+    <div class="footer-right">Document non contractuel — à des fins d'information uniquement</div>
+  </footer>
+
+</div>
 
 <script>
-// ── Storage ──────────────────────────────────────────────────────────────────
-const S={get:k=>localStorage.getItem('mb_'+k)||'',set:(k,v)=>localStorage.setItem('mb_'+k,v)};
-function getSettings(){return{apiKey:S.get('api_key'),model:S.get('model')||'claude-opus-4-6',lang:S.get('lang')||'fr',emailEnabled:S.get('email_on')==='1',emailFrom:S.get('email_from'),emailTo:S.get('email_to'),gmailKey:S.get('gmail_key')}}
-function saveSettings(){
-  const key=document.getElementById('api-key-input').value.trim();
-  if(!key){alert('Veuillez entrer une clé API.');return}
-  S.set('api_key',key);S.set('model',document.getElementById('model-select').value);
-  S.set('lang',document.getElementById('lang-select').value);
-  S.set('email_on',document.getElementById('email-enabled').checked?'1':'0');
-  S.set('email_from',document.getElementById('email-from').value.trim());
-  S.set('email_to',document.getElementById('email-to').value.trim());
-  S.set('gmail_key',document.getElementById('gmail-key').value.trim());
-  closeSettings();updateEmailPill();toast('Paramètres sauvegardés ✓','success');
-}
-function clearData(){if(!confirm('Réinitialiser ?'))return;localStorage.clear();location.reload()}
-function openSettings(){
-  const s=getSettings();
-  document.getElementById('api-key-input').value=s.apiKey;
-  document.getElementById('model-select').value=s.model;
-  document.getElementById('lang-select').value=s.lang;
-  document.getElementById('email-enabled').checked=s.emailEnabled;
-  document.getElementById('email-from').value=s.emailFrom;
-  document.getElementById('email-to').value=s.emailTo;
-  document.getElementById('gmail-key').value=s.gmailKey;
-  document.getElementById('settings-overlay').classList.add('open');
-}
-function closeSettings(){document.getElementById('settings-overlay').classList.remove('open')}
-document.getElementById('settings-overlay').addEventListener('click',e=>{if(e.target===document.getElementById('settings-overlay'))closeSettings()});
+const $ = id => document.getElementById(id);
 
-// ── Toast ────────────────────────────────────────────────────────────────────
-function toast(msg,type='info',ms=4500){
-  const el=document.createElement('div');el.className='toast-item '+type;el.textContent=msg;
-  document.getElementById('toast').appendChild(el);setTimeout(()=>el.remove(),ms);
+function chgClass(c) {
+  if (!c) return '';
+  return (c.startsWith('+')) ? 'up' : 'down';
 }
 
-// ── Dates ────────────────────────────────────────────────────────────────────
-const NOW=new Date();
-document.getElementById('header-date').textContent=NOW.toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'});
-function frDate(d){return d.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}
-function isoWeek(d){const j=new Date(d.getFullYear(),0,4);return 'S'+Math.ceil(((d-j)/86400000+j.getDay()+1)/7)}
-
-// ── Email pill ───────────────────────────────────────────────────────────────
-function updateEmailPill(){
-  const s=getSettings(),p=document.getElementById('email-pill');
-  if(s.emailEnabled&&s.emailTo){p.className='email-pill on';p.textContent='✉ '+s.emailTo.split(',')[0].trim()}
-  else{p.className='email-pill';p.textContent='✉ email off'}
+function sentTag(s) {
+  const map = { positive:'Positif', negative:'Négatif', neutral:'Neutre' };
+  return `<span class="sentiment-tag ${s}">${map[s]||s}</span>`;
 }
-updateEmailPill();
 
-// ── Restore cache ────────────────────────────────────────────────────────────
-let lastReport=null;
-try{const cr=S.get('last_report'),cd=S.get('last_date');if(cr&&cd&&(NOW-new Date(cd))/86400000<7){lastReport=JSON.parse(cr);renderReport(lastReport,false)}}catch(e){}
+function renderS1(d) {
+  return `<section id="s1">
+    <div class="sec-header">
+      <span class="sec-num">01</span>
+      <span class="sec-title">${d.title}</span>
+    </div>
+    ${(d.paragraphs||[]).map(p=>`<p class="summary-text">${p}</p>`).join('')}
+  </section>`;
+}
 
-// ── Progress ─────────────────────────────────────────────────────────────────
-function logProgress(msg){const el=document.getElementById('progress-log');el.innerHTML+=`<div>→ ${msg}</div>`;el.scrollTop=el.scrollHeight}
+function renderEvents(num, d) {
+  return `<section id="s${num}">
+    <div class="sec-header">
+      <span class="sec-num">${String(num).padStart(2,'0')}</span>
+      <span class="sec-title">${d.title}</span>
+    </div>
+    <div class="events-grid">
+      ${(d.events||[]).map(ev=>`
+        <div class="event-card ${ev.sentiment||'neutral'}">
+          ${sentTag(ev.sentiment||'neutral')}
+          <div class="event-title">${ev.title}</div>
+          <div class="event-body">${ev.body}</div>
+        </div>`).join('')}
+    </div>
+  </section>`;
+}
 
-// ── GENERATE ─────────────────────────────────────────────────────────────────
-async function generateReport(){
-  const s=getSettings();
-  if(!s.apiKey){openSettings();return}
-  document.getElementById('empty-state').style.display='none';
-  document.getElementById('report-content').style.display='none';
-  document.getElementById('loading-state').style.display='flex';
-  document.getElementById('progress-log').innerHTML='';
-  document.getElementById('status-dot').className='status-dot live';
+function renderS4(d) {
+  const dirClass = {'bullish':'bullish','bearish':'bearish','neutral':'neutral'};
+  return `<section id="s4">
+    <div class="sec-header">
+      <span class="sec-num">04</span>
+      <span class="sec-title">${d.title}</span>
+    </div>
+    <div class="indices-grid">
+      ${(d.indices||[]).map(i=>`
+        <div class="index-cell">
+          <div class="index-name">${i.name}</div>
+          <div class="index-value">${i.value}</div>
+          <div class="index-change ${chgClass(i.change)}">${i.change}</div>
+        </div>`).join('')}
+    </div>
+    <div class="regions-grid">
+      ${['us','eu','asia'].map(k=>{
+        const r = d[k]||{};
+        return `<div class="region-card">
+          <div class="region-label ${r.direction||'neutral'}">${k==='us'?'États-Unis':k==='eu'?'Europe':'Asie'} · ${(r.direction||'').toUpperCase()}</div>
+          <div class="region-headline">${r.headline||''}</div>
+          <div class="region-body">${r.body||''}</div>
+        </div>`;
+      }).join('')}
+    </div>
+  </section>`;
+}
 
-  logProgress('Connexion à Claude ('+s.model+')…');
-  const dateStr=frDate(NOW),weekStr=isoWeek(NOW),lang=s.lang==='fr'?'français':'English';
+function ingredientBlock(obj, colorVar='var(--gold)') {
+  if (!obj) return '';
+  return `<div class="ingredient">
+    <div class="ingredient-title" style="color:${colorVar}">${obj.title||''}</div>
+    <div class="ingredient-rows">
+      <div class="ingredient-field">
+        <div class="field-label">Pourquoi</div>
+        <div class="field-value">${obj.why||'—'}</div>
+      </div>
+      <div class="ingredient-field">
+        <div class="field-label">Ce que ça induit</div>
+        <div class="field-value">${obj.implies||'—'}</div>
+      </div>
+      <div class="ingredient-field">
+        <div class="field-label">Stratégie</div>
+        <div class="field-value">${obj.strategy||'—'}</div>
+      </div>
+    </div>
+  </div>`;
+}
 
-  const sys=`Tu es un analyste financier senior de premier plan. Tu produis un rapport hebdomadaire professionnel et actionnable. Date : ${dateStr} (${weekStr} ${NOW.getFullYear()}). Réponds UNIQUEMENT en JSON valide, sans texte autour, sans balises markdown.`;
+function renderS5(d) {
+  const yc = (d.yield_curves||{}).data||[];
+  const dd = (d.credit_defaults||{}).data||[];
+  const der = d.derivatives||{};
+  const vix = parseFloat(der.vix)||0;
+  const vixClass = vix < 15 ? 'low' : vix < 25 ? 'mid' : 'high';
 
-  const user=`Génère un rapport hebdomadaire complet des marchés financiers en ${lang} pour la semaine du ${dateStr}.
-JSON attendu (toutes clés obligatoires, valeurs réelles et cohérentes) :
-{"week":"Semaine du X au Y mois AAAA","generated_at":"date heure","section1_summary":{"title":"Résumé des marchés","paragraphs":["§1","§2"]},"section2_major_events":{"title":"Événements majeurs","events":[{"title":"...","body":"...","sentiment":"positive|negative|neutral"}]},"section3_blind_spots":{"title":"Angles morts","events":[{"title":"...","body":"...","sentiment":"positive|negative|neutral"}]},"section4_equities":{"title":"Marchés Actions","indices":[{"name":"S&P 500","value":"5800","change":"+1.2%"},{"name":"NASDAQ","value":"18500","change":"-0.5%"},{"name":"CAC 40","value":"8100","change":"+0.8%"},{"name":"DAX","value":"18200","change":"+1.1%"},{"name":"Nikkei","value":"38000","change":"-0.3%"},{"name":"Hang Seng","value":"17500","change":"+2.1%"},{"name":"FTSE 100","value":"8500","change":"+0.6%"},{"name":"Shanghai","value":"3300","change":"+1.5%"}],"us":{"headline":"...","body":"...","direction":"bullish|bearish|neutral"},"eu":{"headline":"...","body":"...","direction":"bullish|bearish|neutral"},"asia":{"headline":"...","body":"...","direction":"bullish|bearish|neutral"}},"section5_bonds":{"title":"Obligations & Dérivés","bond_market":{"title":"Marché Obligataire","why":"...","implies":"...","strategy":"..."},"yield_curves":{"title":"Courbes de Taux","why":"...","implies":"...","strategy":"...","data":[{"maturity":"3M","us":5.3,"de":3.1,"fr":3.4,"jp":0.1},{"maturity":"2Y","us":4.7,"de":2.8,"fr":3.0,"jp":0.3},{"maturity":"5Y","us":4.4,"de":2.6,"fr":2.9,"jp":0.5},{"maturity":"10Y","us":4.3,"de":2.5,"fr":2.8,"jp":0.7},{"maturity":"30Y","us":4.5,"de":2.7,"fr":3.0,"jp":1.8}]},"derivatives":{"title":"Produits Dérivés","why":"...","implies":"...","strategy":"...","vix":"18.5","put_call":"0.85","skew":"modéré"},"credit_defaults":{"title":"Taux de Défaut","why":"...","implies":"...","strategy":"...","data":[{"category":"Investment Grade","rate":"0.8","trend":"stable"},{"category":"High Yield","rate":"3.2","trend":"hausse"},{"category":"Mortgage","rate":"1.1","trend":"stable"},{"category":"Auto","rate":"2.4","trend":"hausse"},{"category":"Credit Card","rate":"4.1","trend":"hausse"}]}},"section6_forex_commodities":{"title":"Forex & Matières Premières","forex_narrative":"...","commodities_narrative":"...","forex_pairs":[{"pair":"EUR/USD","value":"1.0850","change":"+0.3%","direction":"up"},{"pair":"GBP/USD","value":"1.2650","change":"-0.1%","direction":"down"},{"pair":"USD/JPY","value":"148.5","change":"+0.5%","direction":"up"},{"pair":"USD/CHF","value":"0.8950","change":"-0.2%","direction":"down"},{"pair":"AUD/USD","value":"0.6540","change":"+0.4%","direction":"up"},{"pair":"USD/CNY","value":"7.2400","change":"+0.1%","direction":"up"}],"commodities":[{"name":"WTI Oil","value":"72.5","unit":"$/bbl","change":"-1.2%","direction":"down"},{"name":"Brent","value":"76.8","unit":"$/bbl","change":"-0.9%","direction":"down"},{"name":"Gold","value":"2050","unit":"$/oz","change":"+0.6%","direction":"up"},{"name":"Silver","value":"23.5","unit":"$/oz","change":"+1.1%","direction":"up"},{"name":"Copper","value":"3.85","unit":"$/lb","change":"+0.8%","direction":"up"},{"name":"Wheat","value":"580","unit":"$/bu","change":"-0.4%","direction":"down"},{"name":"Corn","value":"445","unit":"$/bu","change":"+0.2%","direction":"up"},{"name":"Nat. Gas","value":"1.85","unit":"$/MMBtu","change":"-2.1%","direction":"down"}]},"section7_synthesis":{"title":"Synthèse Holistique","global_view":"...","upcoming_events":"...","strategy":[{"type":"Allocation","recommendation":"...","rationale":"..."},{"type":"Couverture","recommendation":"...","rationale":"..."},{"type":"Opportunité","recommendation":"...","rationale":"..."},{"type":"Risque clé","recommendation":"...","rationale":"..."}]},"section8_calendar":{"title":"Calendrier Économique — Semaine suivante","events":[{"date":"Lundi 10 mars","country":"US","event":"...","impact":"high","previous":"...","forecast":"..."}]}}`;
+  return `<section id="s5">
+    <div class="sec-header">
+      <span class="sec-num">05</span>
+      <span class="sec-title">${d.title}</span>
+    </div>
+    ${ingredientBlock(d.bond_market, 'var(--gold)')}
+    ${ingredientBlock(d.yield_curves, 'var(--blue)')}
+    ${yc.length ? `<table class="data-table">
+      <thead><tr><th>Maturité</th><th>US</th><th>DE</th><th>FR</th><th>JP</th></tr></thead>
+      <tbody>${yc.map(r=>`<tr>
+        <td>${r.maturity}</td>
+        <td class="us-col">${r.us}%</td>
+        <td>${r.de}%</td><td>${r.fr}%</td><td>${r.jp}%</td>
+      </tr>`).join('')}</tbody>
+    </table>` : ''}
+    <div class="vix-row">
+      <div class="vix-item">
+        <div class="vix-label">VIX</div>
+        <div class="vix-value ${vixClass}">${der.vix||'—'}</div>
+      </div>
+      <div class="vix-item">
+        <div class="vix-label">Put / Call</div>
+        <div class="vix-value mid">${der.put_call||'—'}</div>
+      </div>
+      <div class="vix-item">
+        <div class="vix-label">Skew</div>
+        <div class="vix-value mid">${der.skew||'—'}</div>
+      </div>
+    </div>
+    ${ingredientBlock(d.derivatives, 'var(--amber)')}
+    ${ingredientBlock(d.credit_defaults, 'var(--red)')}
+    ${dd.length ? `<table class="data-table">
+      <thead><tr><th>Catégorie</th><th>Taux</th><th>Tendance</th></tr></thead>
+      <tbody>${dd.map(r=>`<tr>
+        <td>${r.category}</td>
+        <td class="us-col">${r.rate}%</td>
+        <td class="${r.trend}">${r.trend}</td>
+      </tr>`).join('')}</tbody>
+    </table>` : ''}
+  </section>`;
+}
 
-  try{
-    logProgress('Envoi requête (appel unique)…');
-    const resp=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':s.apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:s.model,max_tokens:8000,system:sys,messages:[{role:'user',content:user}]})});
-    if(!resp.ok){const e=await resp.json().catch(()=>({}));throw new Error(e.error?.message||'HTTP '+resp.status)}
-    logProgress('Réponse reçue — parsing…');
-    const data=await resp.json();
-    const raw=data.content?.[0]?.text||'';
-    const m=raw.match(/\{[\s\S]*\}/);
-    if(!m)throw new Error('Aucun JSON valide dans la réponse');
-    const report=JSON.parse(m[0]);
-    S.set('last_report',JSON.stringify(report));S.set('last_date',NOW.toISOString());
-    lastReport=report;
-    logProgress('Rendu HTML du rapport…');
-    renderReport(report,true);
-    if(s.emailEnabled&&s.emailTo){logProgress('Préparation email + PDF…');await sendEmail(report,s)}
-  }catch(err){
-    document.getElementById('loading-state').style.display='none';
-    document.getElementById('empty-state').style.display='flex';
-    document.getElementById('status-dot').className='status-dot';
-    const b=document.createElement('div');b.className='error-box';b.innerHTML=`<strong>Erreur :</strong> ${err.message}`;
-    document.querySelector('#empty-state').appendChild(b);console.error(err);
+function renderS6(d) {
+  return `<section id="s6">
+    <div class="sec-header">
+      <span class="sec-num">06</span>
+      <span class="sec-title">${d.title}</span>
+    </div>
+    <p class="narrative-text">${d.forex_narrative||''}</p>
+    <div class="pair-grid">
+      ${(d.forex_pairs||[]).map(p=>`
+        <div class="pair-cell">
+          <div class="pair-name">${p.pair}</div>
+          <div class="pair-value">${p.value}</div>
+          <div class="pair-change ${p.direction==='up'?'up':'down'}">${p.change}</div>
+        </div>`).join('')}
+    </div>
+    <p class="narrative-text">${d.commodities_narrative||''}</p>
+    <div class="pair-grid">
+      ${(d.commodities||[]).map(c=>`
+        <div class="pair-cell">
+          <div class="pair-name">${c.name} <span style="color:var(--muted);font-size:9px">${c.unit}</span></div>
+          <div class="pair-value">${c.value}</div>
+          <div class="pair-change ${c.direction==='up'?'up':'down'}">${c.change}</div>
+        </div>`).join('')}
+    </div>
+  </section>`;
+}
+
+function renderS7(d) {
+  return `<section id="s7">
+    <div class="sec-header">
+      <span class="sec-num">07</span>
+      <span class="sec-title">${d.title}</span>
+    </div>
+    <p class="narrative-text" style="max-width:100%;font-size:14px;color:var(--text);line-height:1.85">${d.global_view||''}</p>
+    <p class="narrative-text" style="margin-top:16px">${d.upcoming_events||''}</p>
+    <div class="strategy-list" style="margin-top:24px">
+      ${(d.strategy||[]).map(s=>`
+        <div class="strategy-card">
+          <div class="strategy-type">${s.type}</div>
+          <div class="strategy-rec">
+            <div class="strategy-rec-title">${s.recommendation}</div>
+          </div>
+          <div class="strategy-rationale">${s.rationale}</div>
+        </div>`).join('')}
+    </div>
+  </section>`;
+}
+
+function renderS8(d) {
+  return `<section id="s8">
+    <div class="sec-header">
+      <span class="sec-num">08</span>
+      <span class="sec-title">${d.title}</span>
+    </div>
+    <table class="calendar-table">
+      <thead><tr>
+        <th>Jour</th><th>Pays</th><th>Événement</th><th>Impact</th><th>Précédent</th><th>Prévision</th>
+      </tr></thead>
+      <tbody>
+        ${(d.events||[]).map(ev=>`<tr>
+          <td>${ev.date}</td>
+          <td class="country">${ev.country}</td>
+          <td>${ev.event}</td>
+          <td><span class="${ev.impact==='high'?'impact-high':'impact-med'}">${ev.impact==='high'?'FORT':'MOYEN'}</span></td>
+          <td style="color:var(--muted)">${ev.previous||'—'}</td>
+          <td style="color:var(--text)">${ev.forecast||'—'}</td>
+        </tr>`).join('')}
+      </tbody>
+    </table>
+  </section>`;
+}
+
+async function init() {
+  try {
+    const resp = await fetch('./data/latest-report.json?v=' + Date.now());
+    if (!resp.ok) throw new Error('No report');
+    const r = await resp.json();
+
+    $('hdr-week').textContent  = r.week || '';
+    $('hdr-date').textContent  = 'Généré le ' + (r.generated_at || '');
+
+    const s = r.section1_summary         || {};
+    const s2= r.section2_major_events    || {};
+    const s3= r.section3_blind_spots     || {};
+    const s4= r.section4_equities        || {};
+    const s5= r.section5_bonds           || {};
+    const s6= r.section6_forex_commodities|| {};
+    const s7= r.section7_synthesis       || {};
+    const s8= r.section8_calendar        || {};
+
+    $('content').innerHTML =
+      renderS1(s) +
+      renderEvents(2, s2) +
+      renderEvents(3, s3) +
+      renderS4(s4) +
+      renderS5(s5) +
+      renderS6(s6) +
+      renderS7(s7) +
+      renderS8(s8);
+
+    $('loading').classList.add('hide');
+    setTimeout(() => { $('app').classList.add('visible'); }, 100);
+
+  } catch(e) {
+    $('loading').classList.add('hide');
+    $('no-report').classList.add('show');
   }
 }
 
-// ── PDF BUILD (jsPDF, 100% navigateur) ───────────────────────────────────────
-async function buildPDFDoc(report){
-  if(!window.jspdf)throw new Error('jsPDF non chargé');
-  const{jsPDF}=window.jspdf;
-  const doc=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
-  const W=210,ML=14,MR=14,TW=W-ML-MR;
-  const GOLD=[200,169,110],DARK=[17,17,24],LIGHT=[232,232,240],MUTED=[107,107,128],GREEN=[74,222,128],RED=[248,113,113],BLUE=[123,156,255],YELLOW=[251,191,36];
-  let y=0;
-
-  function newPage(){
-    doc.addPage();y=20;
-    doc.setFillColor(...DARK);doc.rect(0,0,W,12,'F');
-    doc.setTextColor(...GOLD);doc.setFontSize(7);doc.setFont('helvetica','bold');
-    doc.text('MARKETBRIEF — RAPPORT HEBDOMADAIRE',ML,8);
-    doc.setTextColor(...MUTED);doc.text(report.week||'',W-MR,8,{align:'right'});
-  }
-  function checkY(n=20){if(y+n>278)newPage()}
-  function sectionTitle(num,title){
-    checkY(14);
-    doc.setFillColor(...GOLD);doc.rect(ML,y,3,8,'F');
-    doc.setTextColor(...GOLD);doc.setFontSize(7);doc.setFont('helvetica','normal');
-    doc.text(String(num).padStart(2,'0'),ML+5,y+5.5);
-    doc.setTextColor(...LIGHT);doc.setFontSize(13);doc.setFont('helvetica','bold');
-    doc.text(title,ML+14,y+6);y+=12;
-    doc.setDrawColor(...[42,42,58]);doc.line(ML,y,W-MR,y);y+=5;
-  }
-  function para(text,{size=9,color=MUTED,bold=false,maxW=TW,indent=0}={}){
-    doc.setTextColor(...color);doc.setFontSize(size);doc.setFont('helvetica',bold?'bold':'normal');
-    const lines=doc.splitTextToSize(text||'—',maxW-indent);
-    const h=lines.length*(size*0.4+1.5)+2;checkY(h);
-    doc.text(lines,ML+indent,y);y+=h;
-  }
-  function eventBlock(ev,accentColor){
-    const tl=doc.splitTextToSize(ev.title||'',TW-8);
-    const bl=doc.splitTextToSize(ev.body||'',TW-8);
-    const bh=Math.max(14,tl.length*4+bl.length*3.5+8);checkY(bh+3);
-    doc.setFillColor(25,25,36);doc.roundedRect(ML,y,TW,bh,1,1,'F');
-    doc.setFillColor(...accentColor);doc.rect(ML,y,2,bh,'F');
-    doc.setTextColor(...LIGHT);doc.setFontSize(9);doc.setFont('helvetica','bold');
-    doc.text(tl,ML+5,y+4.5);
-    doc.setTextColor(...MUTED);doc.setFontSize(8);doc.setFont('helvetica','normal');
-    doc.text(bl,ML+5,y+tl.length*4+4);y+=bh+3;
-  }
-  function miniTable(headers,rows,colW){
-    checkY(10+rows.length*7);
-    doc.setFillColor(26,26,36);doc.rect(ML,y,TW,7,'F');
-    doc.setTextColor(...GOLD);doc.setFontSize(7);doc.setFont('helvetica','bold');
-    let cx=ML+2;headers.forEach((h,i)=>{doc.text(h,cx,y+5);cx+=colW[i]});y+=7;
-    rows.forEach((row,ri)=>{
-      checkY(7);
-      if(ri%2===0){doc.setFillColor(17,17,24);doc.rect(ML,y,TW,6,'F')}
-      doc.setFont('helvetica','normal');doc.setFontSize(7.5);cx=ML+2;
-      row.forEach((cell,i)=>{
-        const col=typeof cell==='object'?cell.color:MUTED;
-        const txt=typeof cell==='object'?cell.text:cell;
-        doc.setTextColor(...(col||MUTED));doc.text(String(txt||'—'),cx,y+4.5);cx+=colW[i];
-      });y+=6;
-    });y+=4;
-  }
-  function ingredient(obj,color){
-    if(!obj)return;
-    const items=[['Pourquoi : ',obj.why],['Implications : ',obj.implies],['Stratégie : ',obj.strategy]];
-    let totalH=8;
-    const tl=doc.splitTextToSize(obj.title||'',TW-4);totalH+=tl.length*4;
-    items.forEach(([l,v])=>{totalH+=doc.splitTextToSize((l+(v||'')),TW-8).length*3.5+5});
-    checkY(totalH+4);
-    doc.setFillColor(17,17,24);doc.roundedRect(ML,y,TW,totalH,1,1,'F');
-    doc.setTextColor(...color);doc.setFontSize(8);doc.setFont('helvetica','bold');
-    doc.text(tl,ML+4,y+5);y+=tl.length*4+2;
-    items.forEach(([label,val])=>{
-      doc.setTextColor(...LIGHT);doc.setFontSize(7.5);doc.setFont('helvetica','bold');
-      doc.text(label,ML+4,y+3.5);
-      doc.setTextColor(...MUTED);doc.setFont('helvetica','normal');
-      const vl=doc.splitTextToSize(val||'—',TW-8);doc.text(vl,ML+4,y+7);
-      y+=vl.length*3.5+5;
-    });y+=3;
-  }
-
-  // COVER
-  doc.setFillColor(...DARK);doc.rect(0,0,W,297,'F');
-  doc.setFillColor(...GOLD);doc.rect(0,0,W,4,'F');
-  doc.setTextColor(...GOLD);doc.setFontSize(30);doc.setFont('helvetica','bold');
-  doc.text('MARKET',W/2,88,{align:'center'});
-  doc.setTextColor(...LIGHT);doc.text('BRIEF',W/2,112,{align:'center'});
-  doc.setFontSize(10);doc.setFont('helvetica','normal');doc.setTextColor(...MUTED);
-  doc.text('Rapport hebdomadaire des marchés financiers',W/2,126,{align:'center'});
-  doc.setFillColor(26,26,36);doc.roundedRect(W/2-46,136,92,13,2,2,'F');
-  doc.setTextColor(...GOLD);doc.setFontSize(8.5);doc.setFont('helvetica','bold');
-  doc.text(report.week||'',W/2,144.5,{align:'center'});
-  doc.setTextColor(...MUTED);doc.setFontSize(7.5);doc.setFont('helvetica','normal');
-  doc.text('Généré le '+(report.generated_at||frDate(NOW)),W/2,157,{align:'center'});
-  doc.setFontSize(6.5);doc.setTextColor(55,55,70);
-  const disc=doc.splitTextToSize('Ce rapport est produit par intelligence artificielle (Claude API — Anthropic) à des fins d\'information uniquement. Il ne constitue pas un conseil en investissement.',140);
-  doc.text(disc,W/2,270,{align:'center'});
-  doc.setFillColor(...GOLD);doc.rect(0,293,W,4,'F');
-
-  // S1
-  newPage();
-  const s1=report.section1_summary||{};sectionTitle(1,s1.title||'Résumé');
-  (s1.paragraphs||[]).forEach(p=>para(p));
-
-  // S2
-  checkY(20);const s2=report.section2_major_events||{};sectionTitle(2,s2.title||'Événements');
-  (s2.events||[]).forEach(ev=>eventBlock(ev,ev.sentiment==='positive'?GREEN:ev.sentiment==='negative'?RED:GOLD));
-
-  // S3
-  checkY(20);const s3=report.section3_blind_spots||{};sectionTitle(3,s3.title||'Angles morts');
-  (s3.events||[]).forEach(ev=>eventBlock(ev,BLUE));
-
-  // S4
-  newPage();const s4=report.section4_equities||{};sectionTitle(4,s4.title||'Actions');
-  miniTable(['Indice','Valeur','Variation'],[...(s4.indices||[]).map(i=>[i.name,i.value,{text:i.change,color:(i.change||'').startsWith('+')?GREEN:RED}])],[60,50,62]);
-  [['us','🇺🇸 États-Unis'],['eu','🇪🇺 Europe'],['asia','🌏 Asie']].forEach(([key,label])=>{
-    const reg=s4[key]||{},dc={bullish:GREEN,bearish:RED,neutral:YELLOW}[reg.direction]||GOLD;
-    const tl=doc.splitTextToSize(label+' · '+reg.headline,TW-6),bl=doc.splitTextToSize(reg.body||'—',TW-6);
-    const bh=tl.length*4+bl.length*3.5+10;checkY(bh+3);
-    doc.setFillColor(17,17,24);doc.roundedRect(ML,y,TW,bh,1,1,'F');
-    doc.setTextColor(...dc);doc.setFontSize(8);doc.setFont('helvetica','bold');doc.text(tl,ML+4,y+5);
-    doc.setTextColor(...MUTED);doc.setFontSize(8);doc.setFont('helvetica','normal');doc.text(bl,ML+4,y+tl.length*4+3);
-    y+=bh+4;
-  });
-
-  // S5
-  newPage();const s5=report.section5_bonds||{};sectionTitle(5,s5.title||'Obligations');
-  ingredient(s5.bond_market,GOLD);ingredient(s5.yield_curves,BLUE);
-  const ycData=s5.yield_curves?.data||[];
-  if(ycData.length)miniTable(['Maturité','US','DE','FR','JP'],ycData.map(d=>[d.maturity,d.us+'%',d.de+'%',d.fr+'%',d.jp+'%']),[30,30,30,30,30]);
-  ingredient(s5.derivatives,YELLOW);
-  const der=s5.derivatives||{},vix=parseFloat(der.vix||0),vc=vix<15?GREEN:vix<25?YELLOW:RED;
-  checkY(14);doc.setFillColor(17,17,24);doc.roundedRect(ML,y,TW,12,1,1,'F');
-  [[`VIX: ${der.vix||'—'}`,vc],[`Put/Call: ${der.put_call||'—'}`,MUTED],[`Skew: ${der.skew||'—'}`,MUTED]].forEach(([t,c],i)=>{doc.setTextColor(...c);doc.setFontSize(9);doc.setFont('helvetica','bold');doc.text(t,ML+4+i*60,y+7.5)});y+=15;
-  ingredient(s5.credit_defaults,RED);
-  const dd=s5.credit_defaults?.data||[];
-  if(dd.length)miniTable(['Catégorie','Taux','Tendance'],dd.map(d=>[d.category,d.rate+'%',{text:d.trend,color:d.trend==='hausse'?RED:d.trend==='baisse'?GREEN:YELLOW}]),[80,35,55]);
-
-  // S6
-  newPage();const s6=report.section6_forex_commodities||{};sectionTitle(6,s6.title||'Forex & Commodités');
-  para('Forex',{size:8.5,color:GOLD,bold:true});para(s6.forex_narrative||'—');y+=2;
-  miniTable(['Paire','Valeur','Variation'],(s6.forex_pairs||[]).map(p=>[p.pair,p.value,{text:p.change,color:p.direction==='up'?GREEN:RED}]),[50,50,55]);
-  para('Matières Premières',{size:8.5,color:GOLD,bold:true});para(s6.commodities_narrative||'—');y+=2;
-  miniTable(['Actif','Valeur','Variation'],(s6.commodities||[]).map(c=>[c.name,c.value+' '+c.unit,{text:c.change,color:c.direction==='up'?GREEN:RED}]),[50,60,45]);
-
-  // S7
-  newPage();const s7=report.section7_synthesis||{};sectionTitle(7,s7.title||'Synthèse');
-  para('Vue d\'ensemble',{size:8.5,color:GOLD,bold:true});para(s7.global_view||'—');y+=3;
-  para('Événements à venir',{size:8.5,color:GOLD,bold:true});para(s7.upcoming_events||'—');y+=4;
-  para('Stratégies recommandées',{size:8.5,color:GOLD,bold:true});
-  (s7.strategy||[]).forEach(st=>{
-    const ll=doc.splitTextToSize(st.recommendation||'',TW-6),rl=doc.splitTextToSize(st.rationale||'',TW-6);
-    const bh=ll.length*4+rl.length*3.5+10;checkY(bh+3);
-    doc.setFillColor(17,17,24);doc.roundedRect(ML,y,TW,bh,1,1,'F');
-    doc.setFillColor(...GREEN);doc.rect(ML,y,2,bh,'F');
-    doc.setTextColor(...GREEN);doc.setFontSize(7);doc.setFont('helvetica','bold');doc.text(st.type||'',ML+5,y+4);
-    doc.setTextColor(...LIGHT);doc.setFontSize(8.5);doc.setFont('helvetica','bold');doc.text(ll,ML+5,y+8);
-    doc.setTextColor(...MUTED);doc.setFontSize(8);doc.setFont('helvetica','normal');doc.text(rl,ML+5,y+ll.length*4+6);
-    y+=bh+4;
-  });
-
-  // S8
-  newPage();const s8=report.section8_calendar||{};sectionTitle(8,s8.title||'Calendrier');
-  miniTable(['Date','Pays','Événement','Impact','Précédent','Prévision'],(s8.events||[]).map(ev=>[ev.date,ev.country,ev.event,{text:ev.impact==='high'?'FORT':'MOYEN',color:ev.impact==='high'?RED:YELLOW},ev.previous||'—',ev.forecast||'—']),[28,16,60,18,18,18]);
-
-  // Footer on all pages
-  const pc=doc.getNumberOfPages();
-  for(let i=1;i<=pc;i++){
-    doc.setPage(i);doc.setFillColor(10,10,15);doc.rect(0,290,W,7,'F');
-    doc.setTextColor(55,55,70);doc.setFontSize(6.5);doc.setFont('helvetica','normal');
-    doc.text('MARKETBRIEF — Rapport IA non contractuel',ML,295);
-    doc.text(`Page ${i} / ${pc}`,W-MR,295,{align:'right'});
-  }
-  return doc;
-}
-
-async function downloadPDF(){
-  const r=lastReport||(() => {try{return JSON.parse(S.get('last_report'))}catch(e){return null}})();
-  if(!r){toast('Générez d\'abord un rapport.','error');return}
-  toast('Génération du PDF…','info');
-  try{const doc=await buildPDFDoc(r);doc.save(`marketbrief-${(r.week||'rapport').replace(/\s+/g,'-').toLowerCase()}.pdf`);toast('PDF téléchargé ✓','success')}
-  catch(e){toast('Erreur PDF : '+e.message,'error');console.error(e)}
-}
-
-// ── EMAIL (Gmail API) ─────────────────────────────────────────────────────────
-async function sendEmail(report,s){
-  const pill=document.getElementById('email-pill');
-  pill.className='email-pill sending';pill.textContent='✉ envoi en cours…';
-  try{
-    logProgress&&logProgress('Génération PDF (depuis le même JSON)…');
-    const doc=await buildPDFDoc(report);
-    const b64=doc.output('datauristring').split(',')[1];
-    const week=report.week||'Rapport hebdomadaire';
-    const htmlBody=buildEmailHTML(report);
-    const boundary='mb_'+Date.now();
-    const raw=[
-      `From: MarketBrief <${s.emailFrom}>`,`To: ${s.emailTo}`,
-      `Subject: ${week} — MarketBrief`,'MIME-Version: 1.0',
-      `Content-Type: multipart/mixed; boundary="${boundary}"`,'',
-      `--${boundary}`,'Content-Type: text/html; charset=UTF-8','Content-Transfer-Encoding: base64','',
-      btoa(unescape(encodeURIComponent(htmlBody))),'',
-      `--${boundary}`,`Content-Type: application/pdf; name="marketbrief.pdf"`,
-      'Content-Transfer-Encoding: base64',`Content-Disposition: attachment; filename="marketbrief.pdf"`,'',
-      b64,`--${boundary}--`
-    ].join('\r\n');
-    const encoded=btoa(raw).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
-    const resp=await fetch('https://gmail.googleapis.com/gmail/v1/users/me/messages/send',{method:'POST',headers:{'Authorization':'Bearer '+s.gmailKey,'Content-Type':'application/json'},body:JSON.stringify({raw:encoded})});
-    if(!resp.ok){const e=await resp.json().catch(()=>({}));throw new Error(e.error?.message||'Gmail HTTP '+resp.status)}
-    pill.className='email-pill on';pill.textContent='✉ envoyé ✓';
-    toast('Email envoyé avec PDF joint à '+s.emailTo+' ✓','success',6000);
-  }catch(err){
-    pill.className='email-pill err';pill.textContent='✉ erreur';
-    toast('Email échoué ('+err.message+') — PDF téléchargé à la place.','error',8000);
-    console.error('Email:',err);await downloadPDF();
-  }
-}
-
-async function sendEmailManual(){
-  const s=getSettings();
-  if(!s.emailTo){openSettings();return}
-  const r=lastReport||(() => {try{return JSON.parse(S.get('last_report'))}catch(e){return null}})();
-  if(!r){toast('Générez d\'abord un rapport.','error');return}
-  await sendEmail(r,s);
-}
-
-function buildEmailHTML(r){
-  const s4=r.section4_equities||{},s7=r.section7_synthesis||{};
-  const idxRows=(s4.indices||[]).map(i=>{const up=(i.change||'').startsWith('+');return`<tr><td style="padding:6px 10px;border-bottom:1px solid #2a2a3a;font-family:monospace;font-size:13px;color:#e8e8f0">${i.name}</td><td style="padding:6px 10px;border-bottom:1px solid #2a2a3a;font-family:monospace;font-size:13px;color:#e8e8f0">${i.value}</td><td style="padding:6px 10px;border-bottom:1px solid #2a2a3a;font-family:monospace;font-size:13px;color:${up?'#4ade80':'#f87171'}">${i.change}</td></tr>`}).join('');
-  const strats=(s7.strategy||[]).map(st=>`<div style="border-left:3px solid #4ade80;padding:8px 12px;margin:6px 0;background:#1a1a24;border-radius:0 6px 6px 0"><div style="color:#4ade80;font-family:monospace;font-size:10px;text-transform:uppercase;margin-bottom:3px">${st.type}</div><div style="color:#e8e8f0;font-size:13px;font-weight:bold;margin-bottom:3px">${st.recommendation}</div><div style="color:#6b6b80;font-size:12px">${st.rationale}</div></div>`).join('');
-  return`<!DOCTYPE html><html><head><meta charset="UTF-8"></head><body style="background:#0a0a0f;color:#e8e8f0;font-family:Arial,sans-serif;margin:0;padding:20px"><div style="max-width:620px;margin:0 auto"><div style="background:#c8a96e;height:4px;border-radius:2px;margin-bottom:22px"></div><div style="font-family:Georgia,serif;font-size:10px;color:#c8a96e;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">${r.week||''}</div><h1 style="font-family:Georgia,serif;font-size:26px;margin:0 0 4px;color:#e8e8f0">Weekly <span style="color:#c8a96e">Market</span> Brief</h1><p style="color:#6b6b80;font-size:11px;margin:0 0 22px">Généré le ${r.generated_at||frDate(NOW)}</p><div style="background:#111118;border:1px solid #2a2a3a;border-radius:8px;padding:15px;margin-bottom:18px"><div style="color:#c8a96e;font-size:10px;font-family:monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:9px">Résumé des marchés</div>${(r.section1_summary?.paragraphs||[]).map(p=>`<p style="color:#9090a8;font-size:13px;line-height:1.7;margin:0 0 8px">${p}</p>`).join('')}</div><div style="background:#111118;border:1px solid #2a2a3a;border-radius:8px;padding:15px;margin-bottom:18px"><div style="color:#c8a96e;font-size:10px;font-family:monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:9px">Indices</div><table style="width:100%;border-collapse:collapse"><thead><tr><th style="text-align:left;padding:5px 10px;color:#6b6b80;font-size:10px;font-family:monospace;border-bottom:1px solid #2a2a3a">Indice</th><th style="text-align:left;padding:5px 10px;color:#6b6b80;font-size:10px;font-family:monospace;border-bottom:1px solid #2a2a3a">Valeur</th><th style="text-align:left;padding:5px 10px;color:#6b6b80;font-size:10px;font-family:monospace;border-bottom:1px solid #2a2a3a">Variation</th></tr></thead><tbody>${idxRows}</tbody></table></div><div style="background:#111118;border:1px solid #2a2a3a;border-radius:8px;padding:15px;margin-bottom:18px"><div style="color:#c8a96e;font-size:10px;font-family:monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:9px">Stratégies de la semaine</div>${strats}</div><p style="color:#3a3a4a;font-size:10px;text-align:center;margin-top:20px">📎 Rapport complet joint en PDF — Document produit par IA, non contractuel.</p><div style="background:#c8a96e;height:2px;border-radius:1px;margin-top:18px"></div></div></body></html>`;
-}
-
-// ── HTML RENDER ───────────────────────────────────────────────────────────────
-function renderReport(r,isNew=false){
-  lastReport=r;
-  document.getElementById('empty-state').style.display='none';
-  document.getElementById('loading-state').style.display='none';
-  document.getElementById('report-content').style.display='block';
-  document.getElementById('status-dot').className='status-dot';
-  document.getElementById('report-week-label').textContent=r.week||'';
-  document.getElementById('report-date-sub').textContent='Généré le '+(r.generated_at||frDate(NOW));
-  const body=document.getElementById('report-body');body.innerHTML='';
-  [renderS1,renderS2,renderS3,renderS4,renderS5,renderS6,renderS7,renderS8].forEach((fn,i)=>body.appendChild(fn(r['section'+(i+1)+'_'+(i===0?'summary':i===1?'major_events':i===2?'blind_spots':i===3?'equities':i===4?'bonds':i===5?'forex_commodities':i===6?'synthesis':'calendar')])));
-  setTimeout(()=>drawCharts(r),60);
-  if(isNew)toast('Rapport généré ✓','success');
-}
-function ms(num,title){const s=document.createElement('div');s.className='section';s.innerHTML=`<div class="section-header"><span class="section-num">${String(num).padStart(2,'0')}</span><span class="section-title">${title}</span></div>`;return s}
-function renderS1(d){const s=ms(1,d?.title||'Résumé');s.innerHTML+=`<div class="card prose">${(d?.paragraphs||['—']).map(p=>`<p>${p}</p>`).join('')}</div>`;return s}
-function renderS2(d){const s=ms(2,d?.title||'Événements majeurs');s.innerHTML+=`<div class="event-list">${(d?.events||[]).map(e=>`<div class="event-item" style="border-left-color:${e.sentiment==='positive'?'var(--green)':e.sentiment==='negative'?'var(--red)':'var(--accent)'}"><div class="event-title">${e.title}</div><div class="event-body">${e.body}</div></div>`).join('')}</div>`;return s}
-function renderS3(d){const s=ms(3,d?.title||'Angles morts');s.innerHTML+=`<div class="event-list">${(d?.events||[]).map(e=>`<div class="event-item blind-spot"><div class="event-title">${e.title}</div><div class="event-body">${e.body}</div></div>`).join('')}</div>`;return s}
-function renderS4(d){
-  const s=ms(4,d?.title||'Marchés Actions');
-  const idxHtml=(d?.indices||[]).map(i=>{const up=(i.change||'').startsWith('+');return`<div class="metric-card"><div class="metric-label">${i.name}</div><div class="metric-value">${i.value}</div><div class="metric-change ${up?'up':'down'}">${i.change}</div></div>`}).join('');
-  const dc={bullish:'var(--green)',bearish:'var(--red)',neutral:'var(--yellow)'};
-  const regHtml=['us','eu','asia'].map(k=>{const r=d?.[k]||{};return`<div class="region-card"><div class="region-badge" style="color:${dc[r.direction]||'var(--accent)'}">{{${k==='us'?'🇺🇸 États-Unis':k==='eu'?'🇪🇺 Europe':'🌏 Asie'}}} · ${r.direction||'—'}</div><div class="region-title">${r.headline||'—'}</div><div class="region-body">${r.body||'—'}</div></div>`.replace('{{','').replace('}}','')}).join('');
-  s.innerHTML+=`<div class="card-grid">${idxHtml}</div><div class="chart-wrap"><div class="chart-title">Performance hebdo des indices</div><canvas id="chart-indices" height="80"></canvas></div><div class="region-grid">${regHtml}</div>`;return s;
-}
-function ingBlock(obj,colorVar){if(!obj)return'';return`<div class="card" style="margin-bottom:.9rem;border-left:3px solid ${colorVar}"><div style="font-family:var(--font-mono);font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.45rem">${obj.title||''}</div><div style="margin-bottom:.4rem"><strong style="font-size:.73rem;color:var(--text)">Pourquoi on en est là</strong><div class="prose" style="font-size:.84rem">${obj.why||'—'}</div></div><div style="margin-bottom:.4rem"><strong style="font-size:.73rem;color:var(--text)">Ce que ça induit</strong><div class="prose" style="font-size:.84rem">${obj.implies||'—'}</div></div><div><strong style="font-size:.73rem;color:var(--accent)">Stratégie</strong><div class="prose" style="font-size:.84rem">${obj.strategy||'—'}</div></div></div>`}
-function renderS5(d){
-  const s=ms(5,d?.title||'Obligations & Dérivés');
-  const der=d?.derivatives||{},vix=parseFloat(der.vix||0),vc=vix<15?'var(--green)':vix<25?'var(--yellow)':'var(--red)';
-  const defBars=(d?.credit_defaults?.data||[]).map(item=>{const v=parseFloat(item.rate||0),tc=item.trend==='hausse'?'var(--red)':item.trend==='baisse'?'var(--green)':'var(--yellow)';return`<div class="asset-row"><div class="asset-name">${item.category}</div><div class="asset-bar-wrap"><div class="asset-bar" style="width:${Math.min(v*10,100)}%;background:${tc}"></div></div><div class="asset-val" style="color:${tc}">${v}%</div><div class="asset-chg neutral">${item.trend}</div></div>`}).join('');
-  s.innerHTML+=`<div class="chart-grid-2">${ingBlock(d?.bond_market,'var(--accent)')}${ingBlock(d?.yield_curves,'var(--accent2)')}</div><div class="chart-wrap"><div class="chart-title">Courbes de Taux (US · DE · FR · JP)</div><canvas id="chart-yields" height="120"></canvas></div><div class="chart-grid-2"><div>${ingBlock(d?.derivatives,'var(--yellow)')}<div class="gauge-row"><div class="gauge-item"><div class="gauge-label">VIX</div><div class="gauge-val" style="color:${vc}">${der.vix||'—'}</div><div class="gauge-sub">Volatilité</div></div><div class="gauge-item"><div class="gauge-label">Put/Call</div><div class="gauge-val">${der.put_call||'—'}</div><div class="gauge-sub">Ratio options</div></div><div class="gauge-item"><div class="gauge-label">Skew</div><div class="gauge-val">${der.skew||'—'}</div><div class="gauge-sub">Asymétrie</div></div></div></div><div>${ingBlock(d?.credit_defaults,'var(--red)')}<div class="card">${defBars}</div></div></div>`;return s;
-}
-function renderS6(d){
-  const s=ms(6,d?.title||'Forex & Matières Premières');
-  function ar(item){const up=item.direction==='up',col=up?'var(--green)':'var(--red)';return`<div class="asset-row"><div class="asset-name">${item.pair||item.name}</div><div class="asset-bar-wrap"><div class="asset-bar" style="width:${up?65:35}%;background:${col}"></div></div><div class="asset-val">${item.value}<span style="font-size:.68rem;color:var(--muted)"> ${item.unit||''}</span></div><div class="asset-chg" style="color:${col}">${item.change}</div></div>`}
-  s.innerHTML+=`<div class="chart-grid-2"><div class="card prose" style="padding:1.1rem"><strong>Dynamiques Forex</strong><br><br>${d?.forex_narrative||'—'}</div><div class="card prose" style="padding:1.1rem"><strong>Dynamiques Commodités</strong><br><br>${d?.commodities_narrative||'—'}</div></div><div class="chart-wrap"><div class="chart-title">Forex — Paires majeures</div>${(d?.forex_pairs||[]).map(ar).join('')}</div><div class="chart-wrap"><div class="chart-title">Commodités</div>${(d?.commodities||[]).map(ar).join('')}</div><div class="chart-grid-2"><div class="chart-wrap"><div class="chart-title">Forex — Variation %</div><canvas id="chart-forex" height="200"></canvas></div><div class="chart-wrap"><div class="chart-title">Commodités — Variation %</div><canvas id="chart-commo" height="200"></canvas></div></div>`;return s;
-}
-function renderS7(d){
-  const s=ms(7,d?.title||'Synthèse');
-  const strats=(d?.strategy||[]).map(st=>`<div class="strategy-card"><div style="font-family:var(--font-mono);font-size:.68rem;color:var(--green);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem">${st.type}</div><div style="font-weight:500;margin-bottom:.25rem">${st.recommendation}</div><div class="prose" style="font-size:.84rem">${st.rationale}</div></div>`).join('');
-  s.innerHTML+=`<div class="synthesis-card prose"><strong>Vue d'ensemble</strong><br><br>${d?.global_view||'—'}<br><br><strong>Événements à venir</strong><br><br>${d?.upcoming_events||'—'}</div><div style="font-family:var(--font-mono);font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem">Stratégie recommandée</div>${strats}`;return s;
-}
-function renderS8(d){
-  const s=ms(8,d?.title||'Calendrier');
-  const rows=(d?.events||[]).map(ev=>`<tr><td style="font-family:var(--font-mono);font-size:.76rem;color:var(--muted);white-space:nowrap">${ev.date}</td><td><span class="country-tag">${ev.country}</span></td><td>${ev.event}</td><td class="${ev.impact==='high'?'impact-high':'impact-med'}">${ev.impact==='high'?'●●● FORT':'●● MOYEN'}</td><td style="font-family:var(--font-mono);font-size:.76rem;color:var(--muted)">${ev.previous||'—'}</td><td style="font-family:var(--font-mono);font-size:.76rem;color:var(--accent)">${ev.forecast||'—'}</td></tr>`).join('');
-  s.innerHTML+=`<div class="card" style="overflow-x:auto"><table class="cal-table"><thead><tr><th>Date</th><th>Pays</th><th>Événement</th><th>Impact</th><th>Précédent</th><th>Prévision</th></tr></thead><tbody>${rows}</tbody></table></div>`;return s;
-}
-
-// ── CHARTS ────────────────────────────────────────────────────────────────────
-function drawCharts(r){
-  Chart.defaults.color='#6b6b80';Chart.defaults.borderColor='#2a2a3a';Chart.defaults.font.family="'DM Mono',monospace";Chart.defaults.font.size=11;
-  function bar(id,labels,vals){const ctx=document.getElementById(id);if(!ctx)return;new Chart(ctx,{type:'bar',data:{labels,datasets:[{data:vals,backgroundColor:vals.map(v=>v>=0?'rgba(74,222,128,.7)':'rgba(248,113,113,.7)'),borderRadius:4}]},options:{plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}}}})}
-  function hbar(id,labels,vals){const ctx=document.getElementById(id);if(!ctx)return;new Chart(ctx,{type:'bar',data:{labels,datasets:[{data:vals,backgroundColor:vals.map(v=>v>=0?'rgba(74,222,128,.7)':'rgba(248,113,113,.7)'),borderRadius:3}]},options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}}}})}
-  const s4=r.section4_equities||{},idx=s4.indices||[];
-  bar('chart-indices',idx.map(i=>i.name),idx.map(i=>parseFloat((i.change||'0').replace('%',''))));
-  const yc=r.section5_bonds?.yield_curves?.data||[],ycCtx=document.getElementById('chart-yields');
-  if(ycCtx)new Chart(ycCtx,{type:'line',data:{labels:yc.map(d=>d.maturity),datasets:[{label:'US',data:yc.map(d=>d.us),borderColor:'#7b9cff',backgroundColor:'transparent',tension:.3,pointRadius:4},{label:'DE',data:yc.map(d=>d.de),borderColor:'#c8a96e',backgroundColor:'transparent',tension:.3,pointRadius:4},{label:'FR',data:yc.map(d=>d.fr),borderColor:'#4ade80',backgroundColor:'transparent',tension:.3,pointRadius:4},{label:'JP',data:yc.map(d=>d.jp),borderColor:'#f87171',backgroundColor:'transparent',tension:.3,pointRadius:4}]},options:{plugins:{legend:{position:'top'}},scales:{y:{ticks:{callback:v=>v+'%'}}}}});
-  const fx=r.section6_forex_commodities?.forex_pairs||[],cm=r.section6_forex_commodities?.commodities||[];
-  hbar('chart-forex',fx.map(p=>p.pair),fx.map(p=>parseFloat((p.change||'0').replace('%',''))));
-  hbar('chart-commo',cm.map(c=>c.name),cm.map(c=>parseFloat((c.change||'0').replace('%',''))));
-}
+init();
 </script>
 </body>
 </html>
