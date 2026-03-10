@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +9,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
 :root {
-  --gold:#B8965A; --gold-lt:#D4AF7A; --gold-dim:rgba(184,150,90,.15);
-  --bg:#07070D; --bg2:#0D0D16; --bg3:#12121C; --bg4:#161620;
-  --border:#1E1E2E; --border2:#252535;
-  --text:#C8C8D8; --text2:#9898B0; --muted:#525268;
-  --green:#3DB87A; --green-dim:rgba(61,184,122,.12);
-  --red:#C85454; --red-dim:rgba(200,84,84,.12);
-  --blue:#5B7FD4; --blue-dim:rgba(91,127,212,.12);
-  --amber:#C89A3D; --amber-dim:rgba(200,154,61,.12);
-  --purple:#8B5CF6;
+  --gold:#B8965A;--gold-lt:#D4AF7A;--gold-dim:rgba(184,150,90,.15);
+  --bg:#07070D;--bg2:#0D0D16;--bg3:#12121C;--bg4:#161620;
+  --border:#1E1E2E;--border2:#252535;
+  --text:#C8C8D8;--text2:#9898B0;--muted:#525268;
+  --green:#3DB87A;--green-dim:rgba(61,184,122,.12);
+  --red:#C85454;--red-dim:rgba(200,84,84,.12);
+  --blue:#5B7FD4;--blue-dim:rgba(91,127,212,.12);
+  --amber:#C89A3D;--amber-dim:rgba(200,154,61,.12);
   --font-serif:'Cormorant Garamond',serif;
   --font-mono:'IBM Plex Mono',monospace;
   --font-sans:'Inter',sans-serif;
@@ -27,27 +26,21 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--font-sans);font-size:14px;line-height:1.7;font-weight:300;overflow-x:hidden}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");background-size:200px;pointer-events:none;z-index:0;opacity:.5}
 ::-webkit-scrollbar{width:2px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--gold)}
-
-/* ── Loading ── */
 #loading{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;background:var(--bg);z-index:100;transition:opacity .6s}
 #loading.hide{opacity:0;pointer-events:none}
 .spin{width:36px;height:36px;border:1px solid var(--border2);border-top-color:var(--gold);border-radius:50%;animation:spin 1s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .load-txt{font-family:var(--font-mono);font-size:9px;letter-spacing:3px;color:var(--muted);text-transform:uppercase}
-
-/* ── No report ── */
 #no-report{display:none;position:fixed;inset:0;align-items:center;justify-content:center;flex-direction:column;gap:12px;background:var(--bg)}
 #no-report.show{display:flex}
-
-/* ── Layout ── */
-#app{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 28px 100px;opacity:0;transition:opacity .8s}
+#app{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 28px 100px;opacity:0;transition:opacity .8s}
 #app.visible{opacity:1}
 
-/* ── Header ── */
+/* Header */
 header{padding:48px 0 32px;border-bottom:1px solid var(--border);margin-bottom:40px}
 .hdr-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px}
 .hdr-class{font-family:var(--font-mono);font-size:8px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px}
-.hdr-class::before{content:'';width:4px;height:4px;background:var(--gold);border-radius:50%;display:inline-block}
+.hdr-class::before{content:'';width:4px;height:4px;background:var(--gold);border-radius:50%}
 h1{font-family:var(--font-serif);font-size:48px;font-weight:300;color:#E8E8F4;letter-spacing:-.5px;line-height:1}
 h1 em{font-style:italic;color:var(--gold-lt)}
 .hdr-week{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:1px;margin-top:8px}
@@ -57,33 +50,33 @@ h1 em{font-style:italic;color:var(--gold-lt)}
 .temp-risk_on{background:var(--green-dim);color:var(--green);border:1px solid rgba(61,184,122,.3)}
 .temp-risk_off{background:var(--red-dim);color:var(--red);border:1px solid rgba(200,84,84,.3)}
 .temp-neutral{background:var(--amber-dim);color:var(--amber);border:1px solid rgba(200,154,61,.3)}
-.temp-label{font-size:11px;color:var(--muted);font-family:var(--font-sans);font-weight:300}
 
-/* ── Nav ── */
+/* Nav */
 nav{display:flex;gap:1px;flex-wrap:wrap;margin-bottom:48px;background:var(--border);border-radius:2px;overflow:hidden}
 nav a{font-family:var(--font-mono);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:8px 14px;background:var(--bg2);transition:all .2s;white-space:nowrap}
 nav a:hover{color:var(--gold-lt);background:var(--bg3)}
 
-/* ── Section ── */
+/* Sections */
 section{margin-bottom:72px;opacity:0;transform:translateY(12px);animation:fadeUp .5s ease forwards}
 @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
-section:nth-child(1){animation-delay:.08s}section:nth-child(2){animation-delay:.14s}
-section:nth-child(3){animation-delay:.20s}section:nth-child(4){animation-delay:.26s}
-section:nth-child(5){animation-delay:.32s}section:nth-child(6){animation-delay:.38s}
-section:nth-child(7){animation-delay:.44s}section:nth-child(8){animation-delay:.50s}
-section:nth-child(9){animation-delay:.56s}
+section:nth-child(1){animation-delay:.06s}section:nth-child(2){animation-delay:.10s}
+section:nth-child(3){animation-delay:.14s}section:nth-child(4){animation-delay:.18s}
+section:nth-child(5){animation-delay:.22s}section:nth-child(6){animation-delay:.26s}
+section:nth-child(7){animation-delay:.30s}section:nth-child(8){animation-delay:.34s}
+section:nth-child(9){animation-delay:.38s}section:nth-child(10){animation-delay:.42s}
+section:nth-child(11){animation-delay:.46s}
 
 .sec-hdr{display:flex;align-items:baseline;gap:14px;margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--border)}
 .sec-num{font-family:var(--font-mono);font-size:9px;color:var(--gold);letter-spacing:2px}
 .sec-title{font-family:var(--font-serif);font-size:26px;font-weight:300;color:#D8D8EC;letter-spacing:.3px}
 .sec-note{font-family:var(--font-mono);font-size:8px;color:var(--muted);margin-left:auto;letter-spacing:1px}
 
-/* ── Cards ── */
-.card{background:var(--bg2);border:1px solid var(--border);padding:20px 24px;margin-bottom:1px}
+/* Cards */
+.card{background:var(--bg2);border:1px solid var(--border);padding:20px 24px;margin-bottom:2px}
 .card:hover{border-color:var(--border2)}
 .card-title{font-family:var(--font-serif);font-size:17px;font-weight:600;color:#E0E0EE;margin-bottom:8px;line-height:1.3}
-.card-body{font-size:13px;color:var(--text2);line-height:1.8}
-.card-meta{margin-top:10px;display:flex;gap:12px;flex-wrap:wrap}
+.card-body{font-size:13px;color:var(--text2);line-height:1.85}
+.card-meta{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
 .meta-tag{font-family:var(--font-mono);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border-radius:2px}
 .meta-tag.positive{background:var(--green-dim);color:var(--green)}
 .meta-tag.negative{background:var(--red-dim);color:var(--red)}
@@ -92,229 +85,260 @@ section:nth-child(9){animation-delay:.56s}
 .sentiment-bar{position:absolute;top:0;left:0;width:3px;height:100%;border-radius:1px 0 0 1px}
 .card-relative{position:relative;padding-left:27px!important}
 
-/* ── Indices grid ── */
-.indices-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-bottom:32px}
-.idx-cell{background:var(--bg2);padding:14px 18px;cursor:default;transition:background .2s}
-.idx-cell:hover{background:var(--bg3)}
-.idx-name{font-family:var(--font-mono);font-size:8px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
-.idx-value{font-family:var(--font-mono);font-size:18px;color:var(--text);font-weight:500}
-.idx-chg{font-family:var(--font-mono);font-size:11px;margin-top:2px}
-.idx-ytd{font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:1px}
-.chg-up{color:var(--green)}.chg-down{color:var(--red)}
+/* ── HEATMAP ── */
+.heatmap-grid{display:grid;gap:2px;margin-bottom:20px}
+.heatmap-cell{position:relative;padding:12px 14px;border-radius:2px;overflow:hidden;cursor:default;transition:filter .2s}
+.heatmap-cell:hover{filter:brightness(1.15)}
+.hm-name{font-family:var(--font-mono);font-size:8.5px;letter-spacing:.5px;text-transform:uppercase;opacity:.85;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hm-value{font-family:var(--font-mono);font-size:16px;font-weight:500;line-height:1;color:#fff}
+.hm-pct{font-family:var(--font-mono);font-size:11px;font-weight:600;margin-top:3px;color:#fff}
+.hm-ytd{font-family:var(--font-mono);font-size:8px;opacity:.6;margin-top:2px;color:#fff}
 
-/* ── Sectors ── */
-.sectors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-bottom:32px}
-.sector-cell{background:var(--bg2);padding:10px 14px}
-.sector-name{font-size:11px;color:var(--text2);margin-bottom:3px}
-.sector-chg{font-family:var(--font-mono);font-size:13px;font-weight:500}
+/* Indices heatmap 4 cols */
+.hm-indices{grid-template-columns:repeat(4,1fr)}
+/* Sector heatmap 4 cols */
+.hm-sectors{grid-template-columns:repeat(4,1fr)}
+/* Forex heatmap 4 cols */
+.hm-forex{grid-template-columns:repeat(4,1fr)}
+/* Commodities heatmap */
+.hm-commo{grid-template-columns:repeat(6,1fr)}
+.hm-commo-sm{grid-template-columns:repeat(4,1fr)}
 
-/* ── Region cards ── */
+/* Heatmap colors */
+.hm-strong-up{background:rgba(61,184,122,.45)}
+.hm-up{background:rgba(61,184,122,.25)}
+.hm-slight-up{background:rgba(61,184,122,.12)}
+.hm-flat{background:rgba(82,82,104,.18)}
+.hm-slight-dn{background:rgba(200,84,84,.12)}
+.hm-dn{background:rgba(200,84,84,.25)}
+.hm-strong-dn{background:rgba(200,84,84,.45)}
+
+/* Regions */
 .regions{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
 .region{background:var(--bg2);padding:20px 22px}
 .region-label{font-family:var(--font-mono);font-size:8px;letter-spacing:3px;text-transform:uppercase;margin-bottom:4px}
 .region-label.bullish{color:var(--green)}.region-label.bearish{color:var(--red)}.region-label.neutral{color:var(--amber)}
 .region-headline{font-family:var(--font-serif);font-size:16px;font-weight:600;color:#D8D8EC;margin-bottom:8px;line-height:1.3}
-.region-body{font-size:12px;color:var(--muted);line-height:1.7}
-.region-kpis{margin-top:10px;display:flex;gap:8px}
+.region-body{font-size:12.5px;color:var(--muted);line-height:1.75}
+.region-kpis{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
 .kpi{font-family:var(--font-mono);font-size:8px;padding:3px 7px;border-radius:1px}
 .kpi.good{background:var(--green-dim);color:var(--green)}.kpi.bad{background:var(--red-dim);color:var(--red)}
 
-/* ── Data table ── */
+/* Data table */
 .data-table{width:100%;border-collapse:collapse;margin-bottom:20px;font-size:12.5px}
 .data-table th{font-family:var(--font-mono);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 14px;border-bottom:1px solid var(--border)}
 .data-table td{padding:10px 14px;border-bottom:1px solid rgba(30,30,46,.5);color:var(--text)}
 .data-table td.mono{font-family:var(--font-mono)}
 .data-table tr:hover td{background:var(--bg3)}
 .data-table td.up{color:var(--green);font-family:var(--font-mono)}
-.data-table td.down{color:var(--red);font-family:var(--font-mono)}
+.data-table td.dn{color:var(--red);font-family:var(--font-mono)}
 .data-table td.stable{color:var(--amber);font-family:var(--font-mono)}
-.data-table td.hausse{color:var(--red);font-family:var(--font-mono)}
-.data-table td.baisse{color:var(--green);font-family:var(--font-mono)}
+.data-table td.rising{color:var(--red);font-family:var(--font-mono)}
+.data-table td.falling{color:var(--green);font-family:var(--font-mono)}
 .data-table td.blue{color:var(--blue);font-family:var(--font-mono)}
 .data-table td.muted{color:var(--muted)}
 
-/* ── Ingredient ── */
-.ingredient{background:var(--bg2);border:1px solid var(--border);padding:20px 24px;margin-bottom:1px}
+/* Chart containers */
+.chart-wrap-outer{background:var(--bg2);border:1px solid var(--border);padding:20px 24px;margin-bottom:16px}
+.chart-title{font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.chart-wrap{position:relative;height:240px}
+.chart-duo{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-bottom:16px}
+.chart-duo .chart-wrap-outer{margin-bottom:0}
+
+/* Ingredient blocks */
+.ingredient{background:var(--bg2);border:1px solid var(--border);padding:20px 24px;margin-bottom:2px}
 .ingredient-title{font-family:var(--font-mono);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:14px}
 .ingredient-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
-.ing-field-label{font-family:var(--font-mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
-.ing-field-value{font-size:12.5px;color:var(--text);line-height:1.7}
+.ing-label{font-family:var(--font-mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.ing-val{font-size:12.5px;color:var(--text);line-height:1.75}
 
-/* ── Charts ── */
-.chart-container{background:var(--bg2);border:1px solid var(--border);padding:20px 24px;margin-bottom:16px}
-.chart-title{font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
-.chart-wrap{position:relative;height:220px}
-.charts-row{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-bottom:16px}
-
-/* ── VIX panel ── */
-.vix-panel{background:var(--bg2);border:1px solid var(--border);padding:20px 24px;margin-bottom:1px}
-.vix-gauges{display:flex;gap:24px;margin-bottom:16px}
-.vix-gauge{text-align:center;flex:1}
-.vix-gauge-val{font-family:var(--font-mono);font-size:32px;font-weight:500;line-height:1}
-.vix-gauge-label{font-family:var(--font-mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px}
-.signal-box{background:var(--bg3);border:1px solid var(--border2);padding:14px 20px;border-radius:2px;margin-top:12px}
-.signal-label{font-family:var(--font-mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
-.signal-val{font-size:13px;color:var(--text);line-height:1.6}
-
-/* ── Key levels ── */
-.key-levels{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:12px}
+/* VIX / Derivatives panel */
+.deriv-panel{background:var(--bg2);border:1px solid var(--border);padding:24px;margin-bottom:2px}
+.deriv-gauges{display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:start;margin-bottom:20px}
+.gauge-wrap{text-align:center}
+.gauge-label{font-family:var(--font-mono);font-size:8px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.gauge-canvas-wrap{position:relative;height:120px}
+.gauge-val{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:30px;font-weight:500;line-height:1;text-align:center}
+.gauge-sublabel{font-family:var(--font-mono);font-size:7px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+.deriv-kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.dkpi{background:var(--bg3);border:1px solid var(--border);padding:12px 16px;border-radius:1px}
+.dkpi-label{font-family:var(--font-mono);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.dkpi-val{font-family:var(--font-mono);font-size:24px;font-weight:500;line-height:1}
+.signal-box{background:var(--bg3);border:1px solid var(--border2);padding:14px 20px;margin-top:10px}
+.signal-lbl{font-family:var(--font-mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.signal-txt{font-size:13px;color:var(--text2);line-height:1.75}
+.key-levels{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:16px}
 .kl-cell{background:var(--bg2);padding:14px 16px}
 .kl-asset{font-family:var(--font-mono);font-size:9px;color:var(--gold);letter-spacing:1px;margin-bottom:8px}
 .kl-row{display:flex;justify-content:space-between;margin-bottom:3px}
-.kl-label{font-size:10px;color:var(--muted)}
+.kl-lbl{font-size:10px;color:var(--muted)}
 .kl-val{font-family:var(--font-mono);font-size:10px}
-.kl-support{color:var(--green)}.kl-resistance{color:var(--red)}.kl-strike{color:var(--blue)}
+.kl-s{color:var(--green)}.kl-r{color:var(--red)}.kl-k{color:var(--blue)}
 
-/* ── Pairs grid ── */
-.pairs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-bottom:16px}
-.pair-cell{background:var(--bg2);padding:14px 18px;transition:background .2s}
-.pair-cell:hover{background:var(--bg3)}
-.pair-name{font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-bottom:3px}
-.pair-value{font-family:var(--font-mono);font-size:20px;color:var(--text);font-weight:500}
-.pair-chg{font-family:var(--font-mono);font-size:11px;margin-top:2px}
-.pair-sr{font-family:var(--font-mono);font-size:8px;color:var(--muted);margin-top:4px}
+/* Narrative */
+.narrative{font-size:13px;color:var(--text2);line-height:1.87;max-width:860px;margin-bottom:20px;padding-left:14px;border-left:1px solid var(--border)}
 
-/* ── Commodities ── */
-.commo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-bottom:16px}
-.commo-cell{background:var(--bg2);padding:14px 16px}
-.commo-name{font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-bottom:2px}
-.commo-unit{font-family:var(--font-mono);font-size:7px;color:var(--muted)}
-.commo-value{font-family:var(--font-mono);font-size:16px;font-weight:500}
-.commo-drivers{font-size:10px;color:var(--muted);margin-top:4px;line-height:1.4}
+/* Commodity category */
+.cat-header{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-top:20px;border-top:1px solid var(--border)}
+.cat-icon{font-size:18px}
+.cat-name{font-family:var(--font-serif);font-size:20px;font-weight:400;color:#D8D8EC}
 
-/* ── Narrative ── */
-.narrative{font-size:13px;color:var(--text2);line-height:1.85;max-width:800px;margin-bottom:20px;padding-left:14px;border-left:1px solid var(--border)}
-
-/* ── Synthesis ── */
+/* Synthesis */
 .regime-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:2px;font-family:var(--font-mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-bottom:16px}
-.strategy-list{display:grid;gap:1px}
-.strat-card{background:var(--bg2);display:grid;grid-template-columns:140px 1fr 1fr;border:1px solid var(--border)}
+.strategy-list{display:grid;gap:2px}
+.strat-card{background:var(--bg2);display:grid;grid-template-columns:130px 1fr 1fr;border:1px solid var(--border)}
 .strat-type{background:var(--bg3);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 10px;text-align:center;border-right:1px solid var(--border)}
 .strat-type-name{font-family:var(--font-mono);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);margin-bottom:4px}
-.strat-conviction{font-family:var(--font-mono);font-size:7px;letter-spacing:1px;text-transform:uppercase}
-.strat-timeframe{font-family:var(--font-mono);font-size:7px;color:var(--muted);margin-top:4px}
+.strat-conv{font-family:var(--font-mono);font-size:7px;letter-spacing:1px;text-transform:uppercase}
+.strat-tf{font-family:var(--font-mono);font-size:7px;color:var(--muted);margin-top:4px}
 .strat-rec{padding:16px 20px;border-right:1px solid var(--border)}
 .strat-rec-title{font-family:var(--font-serif);font-size:16px;font-weight:600;color:#D8D8EC;margin-bottom:4px}
-.strat-rationale{padding:16px 20px;font-size:12px;color:var(--muted);line-height:1.7}
+.strat-rat{padding:16px 20px;font-size:12px;color:var(--muted);line-height:1.75}
 
-/* ── Calendar ── */
+/* Calendar */
 .cal-table{width:100%;border-collapse:collapse}
 .cal-table th{font-family:var(--font-mono);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 14px;border-bottom:1px solid var(--border)}
 .cal-table td{padding:11px 14px;border-bottom:1px solid rgba(30,30,46,.4);font-size:12.5px;color:var(--text);vertical-align:top}
 .cal-table tr:hover td{background:var(--bg3)}
 .cal-date{font-family:var(--font-mono);font-size:10px;color:var(--muted)}
 .cal-time{font-family:var(--font-mono);font-size:9px;color:var(--muted)}
-.cal-country{font-family:var(--font-mono);font-size:11px;color:var(--gold)}
+.cal-flag{font-size:14px}
 .cal-event{font-weight:400}
-.cal-context{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.5}
-.impact-high{font-family:var(--font-mono);font-size:8px;letter-spacing:1.5px;color:var(--red);text-transform:uppercase}
-.impact-medium{font-family:var(--font-mono);font-size:8px;letter-spacing:1.5px;color:var(--amber);text-transform:uppercase}
-.impact-low{font-family:var(--font-mono);font-size:8px;color:var(--muted);text-transform:uppercase}
+.cal-ctx{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.55}
+.imp-high{font-family:var(--font-mono);font-size:8px;letter-spacing:1.5px;color:var(--red);text-transform:uppercase}
+.imp-medium{font-family:var(--font-mono);font-size:8px;letter-spacing:1.5px;color:var(--amber);text-transform:uppercase}
+.imp-low{font-family:var(--font-mono);font-size:8px;color:var(--muted);text-transform:uppercase}
 .cal-val{font-family:var(--font-mono);font-size:11px;color:var(--text2)}
 
-/* ── Earnings ── */
-.earn-card{background:var(--bg2);border:1px solid var(--border);padding:16px 20px;margin-bottom:1px;display:grid;grid-template-columns:100px 1fr auto;gap:16px;align-items:start}
-.earn-left{}
+/* Earnings */
+.earn-card{background:var(--bg2);border:1px solid var(--border);padding:16px 20px;margin-bottom:2px;display:grid;grid-template-columns:90px 1fr auto;gap:16px;align-items:start}
 .earn-date{font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-bottom:3px}
-.earn-symbol{font-family:var(--font-mono);font-size:18px;font-weight:500;color:var(--gold)}
+.earn-symbol{font-family:var(--font-mono);font-size:20px;font-weight:500;color:var(--gold)}
 .earn-timing{font-family:var(--font-mono);font-size:8px;color:var(--muted);margin-top:2px}
-.earn-middle{}
 .earn-company{font-size:14px;color:var(--text);font-weight:400;margin-bottom:3px}
 .earn-sector{font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-bottom:6px}
-.earn-context{font-size:12px;color:var(--muted);line-height:1.6}
-.earn-right{text-align:right}
-.earn-est-label{font-family:var(--font-mono);font-size:8px;color:var(--muted);margin-bottom:2px}
+.earn-ctx{font-size:12px;color:var(--muted);line-height:1.6}
+.earn-est-lbl{font-family:var(--font-mono);font-size:8px;color:var(--muted);margin-bottom:2px}
 .earn-est-val{font-family:var(--font-mono);font-size:12px;color:var(--text)}
 
-/* ── Footer ── */
+/* Footer */
 footer{margin-top:80px;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
 .footer-l{font-family:var(--font-mono);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
 .footer-r{font-family:var(--font-serif);font-size:12px;font-style:italic;color:var(--muted)}
 
-/* ── Responsive ── */
+/* Responsive */
 @media(max-width:900px){
-  h1{font-size:32px}.indices-grid,.sectors-grid{grid-template-columns:repeat(2,1fr)}
+  h1{font-size:32px}
+  .hm-indices,.hm-sectors{grid-template-columns:repeat(2,1fr)}
+  .hm-commo{grid-template-columns:repeat(3,1fr)}
+  .hm-forex{grid-template-columns:repeat(2,1fr)}
   .regions,.ingredient-cols{grid-template-columns:1fr}
-  .pairs-grid,.commo-grid{grid-template-columns:repeat(2,1fr)}
-  .strat-card{grid-template-columns:1fr}.strat-type{border-right:none;border-bottom:1px solid var(--border)}
+  .strat-card{grid-template-columns:1fr}
+  .strat-type{border-right:none;border-bottom:1px solid var(--border)}
   .strat-rec{border-right:none;border-bottom:1px solid var(--border)}
-  .hdr-top{flex-direction:column;gap:16px}.hdr-right{text-align:left;align-items:flex-start}
-  .earn-card{grid-template-columns:1fr}.earn-right{text-align:left}
+  .hdr-top{flex-direction:column;gap:16px}
+  .hdr-right{text-align:left;align-items:flex-start}
+  .earn-card{grid-template-columns:1fr}
   .key-levels{grid-template-columns:1fr}
-  .charts-row{grid-template-columns:1fr}
+  .chart-duo{grid-template-columns:1fr}
+  .deriv-gauges{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
-
-<div id="loading"><div class="spin"></div><div class="load-txt">Chargement du brief</div></div>
-<div id="no-report"><div style="font-family:var(--font-serif);font-size:28px;color:var(--gold-lt)">Aucun rapport disponible</div><div style="font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-top:8px">Le premier brief sera publié vendredi à 19h</div></div>
+<div id="loading"><div class="spin"></div><div class="load-txt">Loading brief</div></div>
+<div id="no-report"><div style="font-family:var(--font-serif);font-size:28px;color:var(--gold-lt)">No report available</div><div style="font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-top:8px">First brief will be published Friday at 7pm</div></div>
 
 <div id="app">
   <header>
     <div class="hdr-top">
       <div>
-        <div class="hdr-class">Intelligence financière hebdomadaire</div>
+        <div class="hdr-class">Weekly Financial Intelligence</div>
         <h1>Weekly <em>Market</em> Brief</h1>
         <div class="hdr-week" id="hdr-week"></div>
       </div>
       <div class="hdr-right">
         <div id="hdr-temp"></div>
-        <div class="temp-label" id="hdr-temp-label"></div>
+        <div style="font-size:11px;color:var(--muted);font-family:var(--font-sans);font-weight:300" id="hdr-temp-label"></div>
         <div class="hdr-date" id="hdr-date"></div>
       </div>
     </div>
   </header>
 
   <nav>
-    <a href="#s1">Résumé</a><a href="#s2">Événements</a><a href="#s3">Angles morts</a>
-    <a href="#s4">Actions</a><a href="#s5">Obligations</a><a href="#s5d">Dérivés</a>
-    <a href="#s6">Forex & Matières</a><a href="#s7">Synthèse</a>
-    <a href="#s8">Calendrier éco.</a><a href="#s9">Résultats</a>
+    <a href="#s1">Overview</a><a href="#s2">Events</a><a href="#s3">Blind Spots</a>
+    <a href="#s4">Equities</a><a href="#s5">Bonds</a><a href="#s5d">Derivatives</a>
+    <a href="#s6">Forex</a><a href="#s7">Commodities</a><a href="#s8">Synthesis</a>
+    <a href="#s9">Eco. Calendar</a><a href="#s10">Earnings</a>
   </nav>
 
   <div id="content"></div>
 
   <footer>
-    <div class="footer-l">Données : Finnhub · FRED · Claude API (Anthropic)</div>
-    <div class="footer-r">Document non contractuel — information uniquement</div>
+    <div class="footer-l">Data: Finnhub · FRED · Claude API (Anthropic)</div>
+    <div class="footer-r">Not investment advice — for information purposes only</div>
   </footer>
 </div>
 
 <script>
-const CHART_DEFAULTS = {
-  color: '#525268',
-  borderColor: '#1E1E2E',
-  grid: { color: 'rgba(30,30,46,.6)', borderColor: 'transparent' },
-  ticks: { color: '#525268', font: { family: 'IBM Plex Mono', size: 9 } },
-};
-
-Chart.defaults.color = CHART_DEFAULTS.color;
+// ── Chart.js defaults ──────────────────────────────────────────────────────
+Chart.defaults.color = '#525268';
 Chart.defaults.font.family = 'IBM Plex Mono';
+const GRID = { color:'rgba(30,30,46,.7)', borderColor:'transparent' };
+const TICKS = { color:'#525268', font:{ family:'IBM Plex Mono', size:9 } };
 
-function cUp(v){ return (String(v)||'').startsWith('+') ? 'chg-up' : 'chg-down'; }
-function cDir(d){ return d==='up'||d==='bullish' ? 'chg-up' : d==='down'||d==='bearish' ? 'chg-down' : ''; }
-
-function sentTag(s, label){
-  const map = {positive:'Positif',negative:'Négatif',neutral:'Neutre'};
-  return `<span class="meta-tag ${s}">${label||map[s]||s}</span>`;
+// ── Helpers ────────────────────────────────────────────────────────────────
+function hmClass(n) {
+  const v = parseFloat(n) || 0;
+  if (v >= 2)   return 'hm-strong-up';
+  if (v >= 0.5) return 'hm-up';
+  if (v >= 0)   return 'hm-slight-up';
+  if (v >= -0.5)return 'hm-flat';
+  if (v >= -2)  return 'hm-slight-dn';
+  if (v >= -4)  return 'hm-dn';
+  return 'hm-strong-dn';
+}
+function sentTag(s, label) {
+  const m = { positive:'Positive', negative:'Negative', neutral:'Neutral' };
+  return `<span class="meta-tag ${s}">${label||m[s]||s}</span>`;
+}
+function convColor(c) {
+  return { high:'var(--green)', medium:'var(--amber)', low:'var(--muted)' }[c] || 'var(--muted)';
 }
 
-function renderS1(d){
+// ── Section builder helpers ────────────────────────────────────────────────
+function secHdr(num, title, note='') {
+  return `<div class="sec-hdr"><span class="sec-num">${String(num).padStart(2,'0')}</span><span class="sec-title">${title}</span>${note?`<span class="sec-note">${note}</span>`:''}</div>`;
+}
+function ingredientBlock(obj, color='var(--gold)') {
+  if (!obj) return '';
+  return `<div class="ingredient">
+    <div class="ingredient-title" style="color:${color}">${obj.title||''}</div>
+    <div class="ingredient-cols">
+      <div><div class="ing-label">Why we're here</div><div class="ing-val">${obj.why||'—'}</div></div>
+      <div><div class="ing-label">What it implies</div><div class="ing-val">${obj.implies||'—'}</div></div>
+      <div><div class="ing-label">Strategy</div><div class="ing-val">${obj.strategy||'—'}</div></div>
+    </div>
+  </div>`;
+}
+
+// ── S1 Overview ────────────────────────────────────────────────────────────
+function renderS1(d) {
   return `<section id="s1">
-    <div class="sec-hdr"><span class="sec-num">01</span><span class="sec-title">${d.title||''}</span></div>
-    ${(d.paragraphs||[]).map(p=>`<p style="font-size:14px;color:var(--text);line-height:1.85;margin-bottom:12px">${p}</p>`).join('')}
+    ${secHdr(1, d.title||'Market Overview')}
+    ${(d.paragraphs||[]).map(p=>`<p style="font-size:14px;color:var(--text);line-height:1.87;margin-bottom:14px">${p}</p>`).join('')}
   </section>`;
 }
 
-function renderEvents(id, num, d){
+// ── Events (S2, S3) ────────────────────────────────────────────────────────
+function renderEvents(id, num, d) {
   return `<section id="${id}">
-    <div class="sec-hdr"><span class="sec-num">${String(num).padStart(2,'0')}</span><span class="sec-title">${d.title||''}</span></div>
-    ${(d.events||[]).map(ev=>{
+    ${secHdr(num, d.title||'')}
+    ${(d.events||[]).map(ev => {
       const sc = ev.sentiment||'neutral';
-      const barColor = sc==='positive'?'var(--green)':sc==='negative'?'var(--red)':'var(--muted)';
+      const bc = sc==='positive'?'var(--green)':sc==='negative'?'var(--red)':'var(--muted)';
       return `<div class="card card-relative" style="margin-bottom:2px">
-        <div class="sentiment-bar" style="background:${barColor}"></div>
+        <div class="sentiment-bar" style="background:${bc}"></div>
         <div class="card-title">${ev.title||''}</div>
         <div class="card-body">${ev.body||''}</div>
         ${ev.why_ignored?`<div style="font-size:11px;color:var(--blue);margin-top:8px;font-style:italic">⚠ ${ev.why_ignored}</div>`:''}
@@ -328,34 +352,50 @@ function renderEvents(id, num, d){
   </section>`;
 }
 
-function renderS4(d){
-  const sectorColors = {up:'var(--green)',down:'var(--red)'};
+// ── S4 Equities ────────────────────────────────────────────────────────────
+function makeHeatmapCell(name, value, chgStr, chgNum, extra='') {
+  const cls = hmClass(chgNum);
+  return `<div class="heatmap-cell ${cls}">
+    <div class="hm-name">${name}</div>
+    <div class="hm-value">${value}</div>
+    <div class="hm-pct">${chgStr}</div>
+    ${extra?`<div class="hm-ytd">${extra}</div>`:''}
+  </div>`;
+}
+function parseChgNum(s) {
+  if (!s) return 0;
+  return parseFloat(String(s).replace('%','').replace(',','.')) || 0;
+}
+
+function renderS4(d) {
+  const idx = d.indices||[];
+  const sectors = d.sector_performance||[];
+
+  // Indices heatmap
+  const idxHeatmap = `<div class="heatmap-grid hm-indices" style="margin-bottom:24px">
+    ${idx.map(i => makeHeatmapCell(i.name, i.value, i.change, parseChgNum(i.change), i.ytd?`YTD ${i.ytd}`:'')).join('')}
+  </div>`;
+
+  // Sector heatmap
+  const secHeatmap = sectors.length ? `
+    <div style="font-family:var(--font-mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Sector Performance</div>
+    <div class="heatmap-grid hm-sectors" style="margin-bottom:28px">
+      ${sectors.map(s => makeHeatmapCell(s.sector, '', s.change, s.change_num ?? parseChgNum(s.change))).join('')}
+    </div>` : '';
+
   return `<section id="s4">
-    <div class="sec-hdr"><span class="sec-num">04</span><span class="sec-title">${d.title||''}</span></div>
-    <div class="indices-grid">
-      ${(d.indices||[]).map(i=>`
-        <div class="idx-cell">
-          <div class="idx-name">${i.name}</div>
-          <div class="idx-value">${i.value}</div>
-          <div class="idx-chg ${cUp(i.change)}">${i.change}</div>
-          ${i.ytd?`<div class="idx-ytd">YTD <span class="${cUp(i.ytd)}">${i.ytd}</span></div>`:''}
-        </div>`).join('')}
-    </div>
-    ${(d.sector_performance||[]).length ? `
-    <div style="font-family:var(--font-mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Performance sectorielle</div>
-    <div class="sectors-grid">
-      ${(d.sector_performance||[]).map(s=>`
-        <div class="sector-cell">
-          <div class="sector-name">${s.sector}</div>
-          <div class="sector-chg ${cDir(s.direction)}">${s.change}</div>
-        </div>`).join('')}
-    </div>` : ''}
+    ${secHdr(4, d.title||'Equity Markets')}
+    ${idxHeatmap}
+    ${secHeatmap}
     <div class="regions">
-      ${['us','eu','asia'].map(k=>{
+      ${['us','eu','asia'].map(k => {
         const r = d[k]||{};
-        const dc = {bullish:'bullish',bearish:'bearish',neutral:'neutral'}[r.direction]||'neutral';
+        const dir = r.direction||'neutral';
+        const dc = {bullish:'bullish',bearish:'bearish',neutral:'neutral'}[dir]||'neutral';
+        const flag = k==='us'?'🇺🇸':k==='eu'?'🇪🇺':'🌏';
+        const label = k==='us'?'United States':k==='eu'?'Europe':'Asia';
         return `<div class="region">
-          <div class="region-label ${dc}">${k==='us'?'🇺🇸 États-Unis':k==='eu'?'🇪🇺 Europe':'🌏 Asie'} · ${(r.direction||'').toUpperCase()}</div>
+          <div class="region-label ${dc}">${flag} ${label} · ${dir.toUpperCase()}</div>
           <div class="region-headline">${r.headline||''}</div>
           <div class="region-body">${r.body||''}</div>
           <div class="region-kpis">
@@ -368,260 +408,296 @@ function renderS4(d){
   </section>`;
 }
 
-function ingredientBlock(obj, color='var(--gold)'){
-  if(!obj) return '';
-  return `<div class="ingredient">
-    <div class="ingredient-title" style="color:${color}">${obj.title||''}</div>
-    <div class="ingredient-cols">
-      <div><div class="ing-field-label">Pourquoi on en est là</div><div class="ing-field-value">${obj.why||'—'}</div></div>
-      <div><div class="ing-field-label">Ce que ça induit</div><div class="ing-field-value">${obj.implies||'—'}</div></div>
-      <div><div class="ing-field-label">Stratégie</div><div class="ing-field-value">${obj.strategy||'—'}</div></div>
-    </div>
-  </div>`;
-}
-
-function renderYieldChart(data){
-  if(!data||!data.length) return '';
-  const id = 'chart-yield-' + Date.now();
-  setTimeout(()=>{
+// ── S5 Bonds ───────────────────────────────────────────────────────────────
+function renderYieldChart(data) {
+  if (!data||!data.length) return '';
+  const id = 'yc_' + Math.random().toString(36).slice(2);
+  setTimeout(() => {
     const ctx = document.getElementById(id);
-    if(!ctx) return;
+    if (!ctx) return;
     new Chart(ctx, {
       type:'line',
       data:{
         labels: data.map(d=>d.maturity),
         datasets:[
-          {label:'US', data:data.map(d=>d.us), borderColor:'#5B7FD4', backgroundColor:'transparent', pointRadius:3, tension:.3},
-          {label:'DE', data:data.map(d=>d.de), borderColor:'#C8A96E', backgroundColor:'transparent', pointRadius:3, tension:.3},
-          {label:'FR', data:data.map(d=>d.fr), borderColor:'#8B5CF6', backgroundColor:'transparent', pointRadius:3, tension:.3},
-          {label:'JP', data:data.map(d=>d.jp), borderColor:'#3DB87A', backgroundColor:'transparent', pointRadius:3, tension:.3},
-          {label:'UK', data:data.map(d=>d.uk), borderColor:'#C85454', backgroundColor:'transparent', pointRadius:3, tension:.3},
+          {label:'US',  data:data.map(d=>d.us),  borderColor:'#5B7FD4', backgroundColor:'transparent', pointRadius:3, tension:.35},
+          {label:'DE',  data:data.map(d=>d.de),  borderColor:'#C8A96E', backgroundColor:'transparent', pointRadius:3, tension:.35},
+          {label:'FR',  data:data.map(d=>d.fr),  borderColor:'#8B5CF6', backgroundColor:'transparent', pointRadius:3, tension:.35},
+          {label:'JP',  data:data.map(d=>d.jp),  borderColor:'#3DB87A', backgroundColor:'transparent', pointRadius:3, tension:.35},
+          {label:'UK',  data:data.map(d=>d.uk),  borderColor:'#C85454', backgroundColor:'transparent', pointRadius:3, tension:.35},
         ]
       },
       options:{
         responsive:true, maintainAspectRatio:false,
         plugins:{legend:{labels:{color:'#525268',font:{size:9},boxWidth:12}}},
         scales:{
-          x:{grid:CHART_DEFAULTS.grid, ticks:CHART_DEFAULTS.ticks},
-          y:{grid:CHART_DEFAULTS.grid, ticks:{...CHART_DEFAULTS.ticks, callback:v=>v+'%'}}
+          x:{grid:GRID, ticks:TICKS},
+          y:{grid:GRID, ticks:{...TICKS, callback:v=>v+'%'}, title:{display:true,text:'Yield (%)',color:'#525268',font:{size:8}}}
         }
       }
     });
-  }, 200);
-  return `<div class="chart-container"><div class="chart-title">Courbes de taux comparées (%)</div><div class="chart-wrap"><canvas id="${id}"></canvas></div></div>`;
-}
+  }, 250);
 
-function renderIndicesChart(indices){
-  if(!indices||!indices.length) return '';
-  const id = 'chart-idx-' + Date.now();
-  setTimeout(()=>{
-    const ctx = document.getElementById(id);
-    if(!ctx) return;
-    const vals = indices.map(i=>parseFloat((i.change||'0').replace('%','').replace(',','.')) || 0);
-    const colors = vals.map(v=>v>=0?'rgba(61,184,122,.7)':'rgba(200,84,84,.7)');
-    new Chart(ctx, {
+  // Short vs Long term comparison chart
+  const id2 = 'yc2_' + Math.random().toString(36).slice(2);
+  const shortData = data.filter(d=>d.short_term===true||['3M','6M','1Y','2Y'].includes(d.maturity));
+  const longData  = data.filter(d=>d.short_term===false||['5Y','10Y','30Y'].includes(d.maturity));
+  setTimeout(() => {
+    const ctx2 = document.getElementById(id2);
+    if (!ctx2) return;
+    const spread2s10s = data.find(d=>d.maturity==='2Y');
+    const spread10s   = data.find(d=>d.maturity==='10Y');
+    const s2 = spread2s10s?.us || 0;
+    const s10= spread10s?.us   || 0;
+    const spread = (s10 - s2).toFixed(2);
+    new Chart(ctx2, {
       type:'bar',
       data:{
-        labels: indices.map(i=>i.name),
-        datasets:[{label:'Variation hebdo (%)', data:vals, backgroundColor:colors, borderRadius:2}]
+        labels:['2Y/10Y US','2Y/30Y US'],
+        datasets:[{
+          label:'Spread (bps)',
+          data: [
+            ((data.find(d=>d.maturity==='10Y')?.us||0) - (data.find(d=>d.maturity==='2Y')?.us||0)).toFixed(2),
+            ((data.find(d=>d.maturity==='30Y')?.us||0) - (data.find(d=>d.maturity==='2Y')?.us||0)).toFixed(2),
+          ],
+          backgroundColor: d => parseFloat(d?.raw)<0 ? 'rgba(200,84,84,.6)':'rgba(61,184,122,.6)',
+          borderRadius:2
+        }]
       },
       options:{
         responsive:true, maintainAspectRatio:false,
-        plugins:{legend:{display:false}},
+        plugins:{legend:{display:false}, tooltip:{callbacks:{label:ctx=>`${ctx.parsed.y > 0?'+':''}${ctx.parsed.y}%`}}},
         scales:{
-          x:{grid:{color:'transparent'}, ticks:{...CHART_DEFAULTS.ticks, maxRotation:35}},
-          y:{grid:CHART_DEFAULTS.grid, ticks:{...CHART_DEFAULTS.ticks, callback:v=>v+'%'}}
+          x:{grid:{color:'transparent'}, ticks:TICKS},
+          y:{grid:GRID, ticks:{...TICKS,callback:v=>(v>0?'+':'')+v+'%'}, title:{display:true,text:'Short–Long Spread',color:'#525268',font:{size:8}}}
         }
       }
     });
-  }, 200);
-  return `<div class="chart-container"><div class="chart-title">Variation hebdomadaire des indices (%)</div><div class="chart-wrap"><canvas id="${id}"></canvas></div></div>`;
-}
+  }, 300);
 
-function renderVixGauge(vix){
-  const v = parseFloat(vix)||0;
-  const color = v<15?'var(--green)':v<25?'var(--amber)':'var(--red)';
-  const label = v<15?'FAIBLE — Complaisance':'Modéré — Vigilance requise';
-  const id = 'chart-vix-' + Date.now();
-  setTimeout(()=>{
-    const ctx = document.getElementById(id);
-    if(!ctx) return;
-    const pct = Math.min(v/50, 1);
-    new Chart(ctx, {
-      type:'doughnut',
-      data:{
-        datasets:[{
-          data:[pct*100, 100-pct*100],
-          backgroundColor:[v<15?'rgba(61,184,122,.8)':v<25?'rgba(200,154,61,.8)':'rgba(200,84,84,.8)', 'rgba(30,30,46,.4)'],
-          borderWidth:0, circumference:180, rotation:270
-        }]
-      },
-      options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}, tooltip:{enabled:false}}, cutout:'75%'}
-    });
-  }, 200);
-  return `<div style="position:relative;height:120px;width:160px;margin:0 auto">
-    <canvas id="${id}"></canvas>
-    <div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);text-align:center">
-      <div class="vix-gauge-val" style="color:${color}">${vix}</div>
-      <div style="font-family:var(--font-mono);font-size:7px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:2px">${label}</div>
-    </div>
+  return `<div class="chart-duo">
+    <div class="chart-wrap-outer"><div class="chart-title">Yield Curves — Comparative (%)</div><div class="chart-wrap"><canvas id="${id}"></canvas></div></div>
+    <div class="chart-wrap-outer"><div class="chart-title">Short vs Long Term Spread (US)</div><div class="chart-wrap"><canvas id="${id2}"></canvas></div></div>
   </div>`;
 }
 
-function renderS5(d){
+function renderVixGauge(vix) {
+  const v = parseFloat(String(vix).replace(/[^0-9.]/g,'')) || 0;
+  const color = v < 15 ? 'var(--green)' : v < 25 ? 'var(--amber)' : 'var(--red)';
+  const label = v < 15 ? 'Low — Complacency' : v < 25 ? 'Moderate' : 'Elevated — Fear';
+  const id = 'vix_' + Math.random().toString(36).slice(2);
+  setTimeout(() => {
+    const ctx = document.getElementById(id);
+    if (!ctx) return;
+    const pct = Math.min(Math.max(v,0)/60, 1);
+    new Chart(ctx, {
+      type:'doughnut',
+      data:{datasets:[{
+        data:[pct*100, 100-pct*100],
+        backgroundColor:[v<15?'rgba(61,184,122,.75)':v<25?'rgba(200,154,61,.75)':'rgba(200,84,84,.75)', 'rgba(30,30,46,.35)'],
+        borderWidth:0, circumference:180, rotation:270
+      }]},
+      options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false},tooltip:{enabled:false}}, cutout:'70%'}
+    });
+  }, 200);
+  return `<div class="gauge-label">VIX</div>
+    <div class="gauge-canvas-wrap" style="height:110px">
+      <canvas id="${id}"></canvas>
+      <div class="gauge-val" style="color:${color}">${vix||'—'}</div>
+    </div>
+    <div class="gauge-sublabel" style="color:${color}">${label}</div>`;
+}
+
+function renderS5(d) {
   const yc  = d.yield_curves||{};
   const der = d.derivatives_and_options||{};
   const dd  = (d.credit_defaults||{}).data||[];
-  const vix = parseFloat(der.vix)||0;
-  const vc  = vix<15?'var(--green)':vix<25?'var(--amber)':'var(--red)';
   const sig = der.market_signal||'neutral';
   const sc  = sig==='bullish'?'var(--green)':sig==='bearish'?'var(--red)':'var(--amber)';
-
-  const yieldChart = renderYieldChart(yc.data||[]);
-  const shapeLabels = {normale:'Normale ◐',inversée:'Inversée ⚠',plate:'Plate —',en_bosse:'En bosse ∩'};
+  const shapeLabels = {normal:'Normal ◐',inverted:'Inverted ⚠',flat:'Flat —',humped:'Humped ∩',normale:'Normal ◐',inversée:'Inverted ⚠',plate:'Flat —',en_bosse:'Humped ∩'};
 
   return `<section id="s5">
-    <div class="sec-hdr"><span class="sec-num">05</span><span class="sec-title">${d.title||'Obligations & Taux'}</span></div>
+    ${secHdr(5, d.title||'Bonds & Rates')}
     ${d.macro_context?`<p class="narrative">${d.macro_context}</p>`:''}
     ${ingredientBlock(d.bond_market, 'var(--gold)')}
-    ${ingredientBlock(d.yield_curves, 'var(--blue)')}
-    ${yieldChart}
-    ${yc.data&&yc.data.length?`<table class="data-table"><thead><tr><th>Maturité</th><th>US</th><th>DE</th><th>FR</th><th>JP</th><th>UK</th></tr></thead>
+    ${ingredientBlock(yc, 'var(--blue)')}
+    ${renderYieldChart(yc.data||[])}
+    ${yc.data&&yc.data.length?`<table class="data-table"><thead><tr><th>Maturity</th><th>US</th><th>DE</th><th>FR</th><th>JP</th><th>UK</th></tr></thead>
     <tbody>${yc.data.map(r=>`<tr>
       <td class="mono">${r.maturity}</td><td class="blue">${r.us}%</td>
       <td>${r.de}%</td><td>${r.fr}%</td><td>${r.jp}%</td><td>${r.uk||'—'}%</td>
     </tr>`).join('')}</tbody></table>`:''}
-    ${yc.shape?`<div style="font-family:var(--font-mono);font-size:9px;color:var(--amber);margin-bottom:6px">Forme de courbe : ${shapeLabels[yc.shape]||yc.shape}</div>`:''}
+    ${yc.shape?`<div style="font-family:var(--font-mono);font-size:9px;color:var(--amber);margin-bottom:6px">Curve shape: ${shapeLabels[yc.shape]||yc.shape}</div>`:''}
     ${yc.interpretation?`<p class="narrative">${yc.interpretation}</p>`:''}
 
-    <div id="s5d" style="margin-top:40px">
-    <div style="font-family:var(--font-serif);font-size:22px;color:#D8D8EC;margin-bottom:16px">Dérivés, Options & Futures</div>
+    <div id="s5d" style="margin-top:44px">
+      <div style="font-family:var(--font-serif);font-size:22px;color:#D8D8EC;margin-bottom:18px">Derivatives, Options & Futures</div>
 
-    <div class="vix-panel">
-      <div class="vix-gauges">
-        <div class="vix-gauge">
-          <div style="font-family:var(--font-mono);font-size:8px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">VIX</div>
-          ${renderVixGauge(der.vix||'—')}
+      <div class="deriv-panel">
+        <div class="deriv-gauges">
+          <div class="gauge-wrap">${renderVixGauge(der.vix||'—')}</div>
+          <div class="deriv-kpis">
+            <div class="dkpi">
+              <div class="dkpi-label">Put/Call Ratio</div>
+              <div class="dkpi-val" style="color:var(--text)">${der.put_call_ratio||'—'}</div>
+            </div>
+            <div class="dkpi">
+              <div class="dkpi-label">Volatility Skew</div>
+              <div class="dkpi-val" style="color:var(--text)">${der.skew||'—'}</div>
+            </div>
+            <div class="dkpi">
+              <div class="dkpi-label">Term Structure</div>
+              <div class="dkpi-val" style="color:var(--blue);font-size:16px;margin-top:4px">${der.term_structure||'—'}</div>
+            </div>
+            <div class="dkpi">
+              <div class="dkpi-label">Market Signal</div>
+              <div class="dkpi-val" style="color:${sc};font-size:16px;margin-top:4px">${(der.market_signal||'—').toUpperCase()}</div>
+            </div>
+          </div>
         </div>
-        <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start">
-          <div><div style="font-family:var(--font-mono);font-size:8px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Put/Call Ratio</div>
-            <div style="font-family:var(--font-mono);font-size:28px;font-weight:500;color:var(--text)">${der.put_call_ratio||'—'}</div></div>
-          <div><div style="font-family:var(--font-mono);font-size:8px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Skew</div>
-            <div style="font-family:var(--font-mono);font-size:28px;font-weight:500;color:var(--text)">${der.skew||'—'}</div></div>
-          <div><div style="font-family:var(--font-mono);font-size:8px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Structure à terme</div>
-            <div style="font-family:var(--font-mono);font-size:16px;font-weight:500;color:var(--blue)">${der.term_structure||'—'}</div></div>
-          <div><div style="font-family:var(--font-mono);font-size:8px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Signal marché</div>
-            <div style="font-family:var(--font-mono);font-size:16px;font-weight:500;color:${sc}">${(der.market_signal||'—').toUpperCase()}</div></div>
-        </div>
+        ${[
+          ['VIX Interpretation',       'vix_interpretation'],
+          ['Put/Call Analysis',         'put_call_interpretation'],
+          ['Volatility Skew Analysis',  'skew_interpretation'],
+          ['Term Structure',            'term_structure_interpretation'],
+          ['Futures Positioning (COT)', 'futures_positioning'],
+          ['Synthetic Market Signal',   'market_signal_explanation'],
+          ['Options Strategy',          'options_strategy'],
+        ].map(([lbl,key]) => der[key]?`<div class="signal-box"><div class="signal-lbl">${lbl}</div><div class="signal-txt">${der[key]}</div></div>`:'').join('')}
+        ${(der.key_levels||[]).length?`
+        <div style="font-family:var(--font-mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin:20px 0 10px">Key Levels</div>
+        <div class="key-levels">
+          ${(der.key_levels||[]).map(k=>`<div class="kl-cell">
+            <div class="kl-asset">${k.asset}</div>
+            <div class="kl-row"><span class="kl-lbl">Support</span><span class="kl-val kl-s">${k.support}</span></div>
+            <div class="kl-row"><span class="kl-lbl">Resistance</span><span class="kl-val kl-r">${k.resistance}</span></div>
+            <div class="kl-row"><span class="kl-lbl">Key Strike</span><span class="kl-val kl-k">${k.key_strike}</span></div>
+          </div>`).join('')}
+        </div>`:''
+        }
       </div>
-      ${der.vix_interpretation?`<div class="signal-box"><div class="signal-label">Interprétation VIX</div><div class="signal-val">${der.vix_interpretation}</div></div>`:''}
-      ${der.put_call_interpretation?`<div class="signal-box" style="margin-top:8px"><div class="signal-label">Analyse Put/Call</div><div class="signal-val">${der.put_call_interpretation}</div></div>`:''}
-      ${der.skew_interpretation?`<div class="signal-box" style="margin-top:8px"><div class="signal-label">Analyse du Skew</div><div class="signal-val">${der.skew_interpretation}</div></div>`:''}
-      ${der.term_structure_interpretation?`<div class="signal-box" style="margin-top:8px"><div class="signal-label">Structure à terme (Contango/Backwardation)</div><div class="signal-val">${der.term_structure_interpretation}</div></div>`:''}
-      ${der.futures_positioning?`<div class="signal-box" style="margin-top:8px"><div class="signal-label">Positionnement Futures (COT Report)</div><div class="signal-val">${der.futures_positioning}</div></div>`:''}
-      ${der.market_signal_explanation?`<div class="signal-box" style="margin-top:8px;border-color:${sc};background:var(--bg3)"><div class="signal-label" style="color:${sc}">Signal synthétique</div><div class="signal-val">${der.market_signal_explanation}</div></div>`:''}
-      ${der.options_strategy?`<div class="signal-box" style="margin-top:8px"><div class="signal-label">Stratégie d'Options recommandée</div><div class="signal-val">${der.options_strategy}</div></div>`:''}
     </div>
 
-    ${(der.key_levels||[]).length?`
-    <div style="font-family:var(--font-mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin:20px 0 10px">Niveaux Clés</div>
-    <div class="key-levels">
-      ${(der.key_levels||[]).map(k=>`
-        <div class="kl-cell">
-          <div class="kl-asset">${k.asset}</div>
-          <div class="kl-row"><span class="kl-label">Support</span><span class="kl-val kl-support">${k.support}</span></div>
-          <div class="kl-row"><span class="kl-label">Résistance</span><span class="kl-val kl-resistance">${k.resistance}</span></div>
-          <div class="kl-row"><span class="kl-label">Strike clé</span><span class="kl-val kl-strike">${k.key_strike}</span></div>
-        </div>`).join('')}
-    </div>`:''}</div>
-
     ${ingredientBlock(d.credit_defaults, 'var(--red)')}
-    ${dd.length?`<table class="data-table"><thead><tr><th>Catégorie</th><th>Défaut</th><th>Tendance</th><th>Spread (bps)</th><th>Δ Spread</th></tr></thead>
+    ${dd.length?`<table class="data-table"><thead><tr><th>Category</th><th>Default Rate</th><th>Trend</th><th>Spread (bps)</th><th>Spread Δ</th></tr></thead>
     <tbody>${dd.map(r=>`<tr>
       <td>${r.category}</td><td class="blue">${r.rate}%</td>
-      <td class="${r.trend==='hausse'?'hausse':r.trend==='baisse'?'baisse':'stable'}">${r.trend}</td>
+      <td class="${r.trend==='rising'||r.trend==='hausse'?'rising':r.trend==='falling'||r.trend==='baisse'?'falling':'stable'}">${r.trend}</td>
       <td class="mono">${r.spread||'—'}</td>
-      <td class="${r.spread_trend==='élargissement'?'hausse':r.spread_trend==='compression'?'baisse':'stable'}">${r.spread_trend||'—'}</td>
+      <td class="${r.spread_trend==='widening'||r.spread_trend==='élargissement'?'rising':r.spread_trend==='compression'?'falling':'stable'}">${r.spread_trend||'—'}</td>
     </tr>`).join('')}</tbody></table>`:''}
   </section>`;
 }
 
-function renderS6(d){
+// ── S6 Forex ───────────────────────────────────────────────────────────────
+function renderS6(d) {
   const dxy = d.dollar_index||{};
+  const pairs = d.pairs || d.forex_pairs || [];
+
+  // Forex heatmap
+  const fxHeatmap = `<div class="heatmap-grid hm-forex" style="margin-bottom:20px">
+    ${pairs.map(p => {
+      const cn = p.change_num ?? parseChgNum(p.change);
+      return `<div class="heatmap-cell ${hmClass(cn)}">
+        <div class="hm-name">${p.pair}</div>
+        <div class="hm-value" style="font-size:15px">${p.value}</div>
+        <div class="hm-pct">${p.change}</div>
+        ${p.support?`<div class="hm-ytd">S: ${p.support} R: ${p.resistance}</div>`:''}
+      </div>`;
+    }).join('')}
+  </div>`;
+
   return `<section id="s6">
-    <div class="sec-hdr"><span class="sec-num">06</span><span class="sec-title">${d.title||''}</span></div>
+    ${secHdr(6, d.title||'Foreign Exchange Markets')}
     ${dxy.value?`<div style="margin-bottom:16px">
       <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:4px">Dollar Index (DXY)</div>
-      <div style="font-family:var(--font-mono);font-size:28px;font-weight:500;color:var(--text)">${dxy.value} <span class="idx-chg ${cUp(dxy.change)}" style="font-size:16px">${dxy.change||''}</span></div>
+      <div style="font-family:var(--font-mono);font-size:28px;font-weight:500">${dxy.value} <span style="font-size:16px;color:${(dxy.change||'').startsWith('-')?'var(--red)':'var(--green)'}">${dxy.change||''}</span></div>
       ${dxy.interpretation?`<p class="narrative" style="margin-top:8px">${dxy.interpretation}</p>`:''}
     </div>`:''}
-    <p class="narrative">${d.forex_narrative||''}</p>
-    <div class="pairs-grid">
-      ${(d.forex_pairs||[]).map(p=>`
-        <div class="pair-cell">
-          <div class="pair-name">${p.pair}</div>
-          <div class="pair-value">${p.value}</div>
-          <div class="pair-chg ${cDir(p.direction)}">${p.change}</div>
-          ${(p.support||p.resistance)?`<div class="pair-sr">${p.support?'S: '+p.support:''} ${p.resistance?'R: '+p.resistance:''}</div>`:''}
-          ${p.analysis?`<div style="font-size:10px;color:var(--muted);margin-top:5px;line-height:1.5">${p.analysis}</div>`:''}
-        </div>`).join('')}
-    </div>
-    <p class="narrative" style="margin-top:8px">${d.commodities_narrative||''}</p>
-    <div class="commo-grid">
-      ${(d.commodities||[]).map(c=>`
-        <div class="commo-cell">
-          <div class="commo-name">${c.name} <span class="commo-unit">${c.unit}</span></div>
-          <div class="commo-value ${cDir(c.direction)}">${c.value}</div>
-          <div class="pair-chg ${cDir(c.direction)}" style="font-size:11px">${c.change}</div>
-          ${(c.drivers||[]).length?`<div class="commo-drivers">${c.drivers.join(' · ')}</div>`:''}
-        </div>`).join('')}
-    </div>
+    <p class="narrative">${d.narrative||d.forex_narrative||''}</p>
+    ${fxHeatmap}
+    ${pairs.some(p=>p.analysis)?`<div style="margin-top:8px">${pairs.map(p=>p.analysis?`<div style="font-size:12.5px;color:var(--muted);line-height:1.75;padding:6px 0 6px 14px;border-left:1px solid var(--border2);margin-bottom:6px"><span style="font-family:var(--font-mono);font-size:9px;color:var(--gold)">${p.pair}</span> — ${p.analysis}</div>`:'').join('')}</div>`:''}
   </section>`;
 }
 
-function renderS7(d){
-  const r = d.regime||'neutral';
-  const regimeLabels = {risk_on:'RISK ON',risk_off:'RISK OFF',transition:'TRANSITION',stagflation:'STAGFLATION ⚠',goldilocks:'GOLDILOCKS'};
-  const regimeColor  = {risk_on:'var(--green)',risk_off:'var(--red)',stagflation:'var(--red)',goldilocks:'var(--green)',transition:'var(--amber)'}[r]||'var(--amber)';
-  const convColor    = c => ({haute:'var(--green)',moyenne:'var(--amber)',basse:'var(--muted)'}[c]||'var(--muted)');
+// ── S7 Commodities ─────────────────────────────────────────────────────────
+function renderCommoCategory(cat, icon, name) {
+  if (!cat||!cat.items) return '';
+  const items = cat.items||[];
+  const heatmap = `<div class="heatmap-grid hm-commo" style="margin-bottom:16px">
+    ${items.map(c => {
+      const cn = c.change_num ?? parseChgNum(c.change);
+      const drivers = (c.drivers||[]).join(' · ');
+      return `<div class="heatmap-cell ${hmClass(cn)}">
+        <div class="hm-name">${c.name}</div>
+        <div class="hm-value" style="font-size:13px">${c.value}<span style="font-size:8px;opacity:.7"> ${c.unit||''}</span></div>
+        <div class="hm-pct">${c.change}</div>
+        ${drivers?`<div class="hm-ytd" style="font-size:7px;margin-top:3px">${drivers}</div>`:''}
+      </div>`;
+    }).join('')}
+  </div>`;
+
+  return `<div class="cat-header"><span class="cat-icon">${icon}</span><span class="cat-name">${name}</span></div>
+    ${cat.narrative?`<p class="narrative">${cat.narrative}</p>`:''}
+    ${heatmap}
+    ${items.some(c=>c.analysis)?`<div style="margin-top:4px">${items.map(c=>c.analysis?`<div style="font-size:12px;color:var(--muted);line-height:1.7;padding:5px 0 5px 12px;border-left:1px solid var(--border2);margin-bottom:5px"><span style="font-family:var(--font-mono);font-size:9px;color:var(--gold)">${c.name}</span> — ${c.analysis}</div>`:'').join('')}</div>`:''}`;
+}
+
+function renderS7(d) {
   return `<section id="s7">
-    <div class="sec-hdr"><span class="sec-num">07</span><span class="sec-title">${d.title||''}</span></div>
-    <div class="regime-badge" style="background:${regimeColor}1a;color:${regimeColor};border:1px solid ${regimeColor}44">${regimeLabels[r]||r.toUpperCase()}</div>
+    ${secHdr(7, d.title||'Commodities')}
+    ${renderCommoCategory(d.energy,   '⚡', 'Energy')}
+    ${renderCommoCategory(d.metals,   '🪨', 'Metals')}
+    ${renderCommoCategory(d.agricultural,'🌾','Agricultural')}
+  </section>`;
+}
+
+// ── S8 Synthesis ───────────────────────────────────────────────────────────
+function renderS8(d) {
+  const r = d.regime||'neutral';
+  const rLabels = {risk_on:'RISK ON',risk_off:'RISK OFF',transition:'TRANSITION',stagflation:'STAGFLATION ⚠',goldilocks:'GOLDILOCKS'};
+  const rColor  = {risk_on:'var(--green)',risk_off:'var(--red)',stagflation:'var(--red)',goldilocks:'var(--green)',transition:'var(--amber)'}[r]||'var(--amber)';
+  const convColor = c => ({high:'var(--green)',haute:'var(--green)',medium:'var(--amber)',moyenne:'var(--amber)',low:'var(--muted)',basse:'var(--muted)'}[c]||'var(--muted)');
+
+  return `<section id="s8">
+    ${secHdr(8, d.title||'Strategic Synthesis')}
+    <div class="regime-badge" style="background:${rColor}1a;color:${rColor};border:1px solid ${rColor}44">${rLabels[r]||r.toUpperCase()}</div>
     ${d.regime_description?`<p class="narrative">${d.regime_description}</p>`:''}
-    <p style="font-size:14px;color:var(--text);line-height:1.85;margin-bottom:16px">${d.global_view||''}</p>
-    ${d.macro_thesis?`<div style="margin-bottom:16px"><div style="font-family:var(--font-mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Thèse Macro 4-8 semaines</div>
+    <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:18px">${d.global_view||''}</p>
+    ${d.macro_thesis?`<div style="margin-bottom:18px"><div style="font-family:var(--font-mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Macro Thesis — 4-8 Weeks</div>
     <p class="narrative" style="border-left-color:var(--gold);max-width:100%">${d.macro_thesis}</p></div>`:''}
-    ${d.upcoming_events?`<div style="margin-bottom:24px"><div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">À surveiller</div>
+    ${d.upcoming_events?`<div style="margin-bottom:24px"><div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Key Events to Watch</div>
     <p class="narrative">${d.upcoming_events}</p></div>`:''}
-    <div style="font-family:var(--font-mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">Stratégies recommandées</div>
+    <div style="font-family:var(--font-mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">Recommended Strategies</div>
     <div class="strategy-list">
-      ${(d.strategy||[]).map(s=>`
-        <div class="strat-card">
-          <div class="strat-type">
-            <div class="strat-type-name">${s.type}</div>
-            <div class="strat-conviction" style="color:${convColor(s.conviction)}">${(s.conviction||'').toUpperCase()}</div>
-            <div class="strat-timeframe">${s.timeframe||''}</div>
-          </div>
-          <div class="strat-rec"><div class="strat-rec-title">${s.recommendation||''}</div></div>
-          <div class="strat-rationale">${s.rationale||''}</div>
-        </div>`).join('')}
+      ${(d.strategy||[]).map(s=>`<div class="strat-card">
+        <div class="strat-type">
+          <div class="strat-type-name">${s.type}</div>
+          <div class="strat-conv" style="color:${convColor(s.conviction)}">${(s.conviction||'').toUpperCase()}</div>
+          <div class="strat-tf">${s.timeframe||''}</div>
+        </div>
+        <div class="strat-rec"><div class="strat-rec-title">${s.recommendation||''}</div></div>
+        <div class="strat-rat">${s.rationale||''}</div>
+      </div>`).join('')}
     </div>
   </section>`;
 }
 
-function renderS8(d){
-  const impactClass = i => i==='high'?'impact-high':i==='medium'?'impact-medium':'impact-low';
-  const impactLabel = i => i==='high'?'FORT':i==='medium'?'MOYEN':'FAIBLE';
-  return `<section id="s8">
-    <div class="sec-hdr"><span class="sec-num">08</span><span class="sec-title">${d.title||''}</span>${d.note?`<span class="sec-note">${d.note}</span>`:''}</div>
+// ── S9 Economic Calendar ───────────────────────────────────────────────────
+function renderS9(d) {
+  const impCls = i => i==='high'?'imp-high':i==='medium'?'imp-medium':'imp-low';
+  const impLbl = i => i==='high'?'HIGH':i==='medium'?'MED.':'LOW';
+  return `<section id="s9">
+    ${secHdr(9, d.title||'Economic Calendar', d.note||'')}
+    ${(d.events||[]).length === 0 ? `<p style="color:var(--muted);font-family:var(--font-mono);font-size:11px">No events found for next week.</p>` : ''}
     <table class="cal-table">
-      <thead><tr><th>Date</th><th>Heure</th><th>Pays</th><th>Événement</th><th>Impact</th><th>Précédent</th><th>Prévision</th></tr></thead>
+      <thead><tr><th>Date</th><th>Time</th><th>Country</th><th>Event</th><th>Impact</th><th>Previous</th><th>Forecast</th></tr></thead>
       <tbody>${(d.events||[]).map(ev=>`<tr>
         <td><div class="cal-date">${ev.date||''}</div></td>
         <td><div class="cal-time">${ev.time||''}</div></td>
-        <td><div class="cal-country">${ev.flag||''} ${ev.country||''}</div></td>
-        <td><div class="cal-event">${ev.event||''}</div>${ev.context?`<div class="cal-context">${ev.context}</div>`:''}</td>
-        <td><span class="${impactClass(ev.impact)}">${impactLabel(ev.impact)}</span></td>
+        <td><div class="cal-flag">${ev.flag||''}</div><div style="font-family:var(--font-mono);font-size:10px;color:var(--gold)">${ev.country||''}</div></td>
+        <td><div class="cal-event">${ev.event||''}</div>${ev.context?`<div class="cal-ctx">${ev.context}</div>`:''}</td>
+        <td><span class="${impCls(ev.impact)}">${impLbl(ev.impact)}</span></td>
         <td><div class="cal-val">${ev.previous||'—'}</div></td>
         <td><div class="cal-val" style="color:var(--gold)">${ev.forecast||'—'}</div></td>
       </tr>`).join('')}</tbody>
@@ -629,77 +705,69 @@ function renderS8(d){
   </section>`;
 }
 
-function renderS9(d){
+// ── S10 Earnings Calendar ──────────────────────────────────────────────────
+function renderS10(d) {
   const ipColor = i => i==='high'?'var(--red)':i==='medium'?'var(--amber)':'var(--muted)';
-  return `<section id="s9">
-    <div class="sec-hdr"><span class="sec-num">09</span><span class="sec-title">${d.title||''}</span>${d.note?`<span class="sec-note">${d.note}</span>`:''}</div>
-    ${(d.earnings||[]).map(e=>`
-      <div class="earn-card">
-        <div class="earn-left">
-          <div class="earn-date">${e.date||''}</div>
-          <div class="earn-symbol">${e.symbol||''}</div>
-          <div class="earn-timing">${e.timing||''}</div>
-        </div>
-        <div class="earn-middle">
-          <div class="earn-company">${e.company||''}</div>
-          <div class="earn-sector">${e.sector||''}</div>
-          <div class="earn-context">${e.context||''}</div>
-        </div>
-        <div class="earn-right">
-          <div class="earn-est-label">BPA estim.</div>
-          <div class="earn-est-val">${e.eps_estimate||'—'}</div>
-          <div class="earn-est-label" style="margin-top:8px">CA estim.</div>
-          <div class="earn-est-val">${e.revenue_estimate||'—'}</div>
-          <div style="margin-top:10px"><span style="font-family:var(--font-mono);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:${ipColor(e.impact_potential)}">${(e.impact_potential||'').toUpperCase()}</span></div>
-        </div>
-      </div>`).join('')}
+  return `<section id="s10">
+    ${secHdr(10, d.title||'Earnings Calendar', d.note||'')}
+    ${(d.earnings||[]).length === 0 ? `<p style="color:var(--muted);font-family:var(--font-mono);font-size:11px">No major earnings found for next week.</p>` : ''}
+    ${(d.earnings||[]).map(e=>`<div class="earn-card">
+      <div>
+        <div class="earn-date">${e.date||''}</div>
+        <div class="earn-symbol">${e.symbol||''}</div>
+        <div class="earn-timing">${e.timing||''}</div>
+      </div>
+      <div>
+        <div class="earn-company">${e.company||''}</div>
+        <div class="earn-sector">${e.sector||''}</div>
+        <div class="earn-ctx">${e.context||''}</div>
+      </div>
+      <div style="text-align:right">
+        <div class="earn-est-lbl">EPS est.</div>
+        <div class="earn-est-val">${e.eps_estimate||'—'}</div>
+        <div class="earn-est-lbl" style="margin-top:8px">Revenue est.</div>
+        <div class="earn-est-val">${e.revenue_estimate||'—'}</div>
+        <div style="margin-top:10px"><span style="font-family:var(--font-mono);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:${ipColor(e.impact_potential)}">${(e.impact_potential||'').toUpperCase()}</span></div>
+      </div>
+    </div>`).join('')}
   </section>`;
 }
 
-async function init(){
+// ── INIT ───────────────────────────────────────────────────────────────────
+async function init() {
   try {
-    const resp = await fetch('./data/latest-report.json?v='+Date.now());
-    if(!resp.ok) throw new Error('No report');
+    const resp = await fetch('./data/latest-report.json?v=' + Date.now());
+    if (!resp.ok) throw new Error('No report');
     const r = await resp.json();
 
     const temp = r.market_temperature||'neutral';
-    const tempLabels = {risk_on:'RISK ON ▲',risk_off:'RISK OFF ▼',neutral:'NEUTRE ◆'};
-    document.getElementById('hdr-week').textContent = r.week||'';
-    document.getElementById('hdr-date').textContent = 'Généré le '+(r.generated_at||'');
-    document.getElementById('hdr-temp').innerHTML = `<div class="temperature-badge temp-${temp}">${tempLabels[temp]||temp}</div>`;
-    document.getElementById('hdr-temp-label').textContent = r.market_temperature_label||'';
+    const tempLabels = {risk_on:'RISK ON ▲',risk_off:'RISK OFF ▼',neutral:'NEUTRAL ◆'};
+    document.getElementById('hdr-week').textContent        = r.week||'';
+    document.getElementById('hdr-date').textContent        = 'Generated ' + (r.generated_at||'');
+    document.getElementById('hdr-temp-label').textContent  = r.market_temperature_label||'';
+    document.getElementById('hdr-temp').innerHTML          =
+      `<div class="temperature-badge temp-${temp}">${tempLabels[temp]||temp}</div>`;
 
     document.getElementById('content').innerHTML =
-      renderS1(r.section1_summary||{}) +
-      renderEvents('s2', 2, r.section2_major_events||{}) +
-      renderEvents('s3', 3, r.section3_blind_spots||{}) +
-      renderS4(r.section4_equities||{}) +
-      renderS5(r.section5_bonds||{}) +
-      renderS6(r.section6_forex_commodities||{}) +
-      renderS7(r.section7_synthesis||{}) +
-      renderS8(r.section8_economic_calendar||{}) +
-      renderS9(r.section9_earnings_calendar||{});
-
-    // Render indices chart after DOM is set
-    const idx = (r.section4_equities||{}).indices;
-    if(idx&&idx.length){
-      const chartHtml = renderIndicesChart(idx);
-      const s4 = document.getElementById('s4');
-      if(s4){
-        const chartDiv = document.createElement('div');
-        chartDiv.innerHTML = chartHtml;
-        s4.appendChild(chartDiv.firstChild);
-      }
-    }
+      renderS1(r.section1_summary||{})                          +
+      renderEvents('s2',2,r.section2_major_events||{})          +
+      renderEvents('s3',3,r.section3_blind_spots||{})           +
+      renderS4(r.section4_equities||{})                         +
+      renderS5(r.section5_bonds||{})                            +
+      renderS6(r.section6_forex||r.section6_forex_commodities||{}) +
+      renderS7(r.section7_commodities||{})                      +
+      renderS8(r.section8_synthesis||r.section7_synthesis||{})  +
+      renderS9(r.section9_economic_calendar||r.section8_economic_calendar||{}) +
+      renderS10(r.section10_earnings_calendar||r.section9_earnings_calendar||{});
 
     document.getElementById('loading').classList.add('hide');
-    setTimeout(()=>{ document.getElementById('app').classList.add('visible'); }, 80);
+    setTimeout(() => document.getElementById('app').classList.add('visible'), 80);
   } catch(e) {
+    console.error(e);
     document.getElementById('loading').classList.add('hide');
     document.getElementById('no-report').classList.add('show');
   }
 }
-
 init();
 </script>
 </body>
