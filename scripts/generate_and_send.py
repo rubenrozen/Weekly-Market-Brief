@@ -142,7 +142,7 @@ Remplis TOUTES les valeurs avec de vraies données actuelles. Professionnel, den
 
     for attempt in range(3):
         msg = client.messages.create(
-            model=ANTHROPIC_MODEL, max_tokens=8000,
+            model=ANTHROPIC_MODEL, max_tokens=16000,
             system=system, messages=[{"role":"user","content":user}]
         )
         raw = msg.content[0].text
