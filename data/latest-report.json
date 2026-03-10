@@ -1,393 +1,1054 @@
 {
-  "week": "Semaine du 9 au 13 mars 2026",
+  "week": "Semaine du 10 au 14 Mars 2026",
   "generated_at": "Tuesday 10 March 2026",
+  "market_temperature": "risk_off",
+  "market_temperature_label": "Le VIX à 25.5, la faiblesse des small caps (IWM -0.10%) et la ruée vers l'or (GLD +1.13%) signalent un environnement de prudence marquée où les investisseurs réduisent leur exposition au risque et recherchent activement des valeurs refuges.",
   "section1_summary": {
-    "title": "Résumé des marchés",
+    "title": "Vue d'ensemble des marchés — Semaine du 10 au 14 Mars 2026",
     "paragraphs": [
-      "Les marchés actions mondiaux ont affiché une dynamique globalement positive en ce début de semaine de mars, portés par des signaux encourageants sur le front de la politique monétaire américaine. Le compte rendu de la dernière réunion du FOMC, publié la semaine précédente, a confirmé que la Fed envisage une nouvelle baisse de taux au deuxième trimestre 2026, alimentant l'appétit pour le risque. Le S&P 500 a progressé de 1,2% pour se rapprocher des 5 800 points, tandis que le CAC 40 a bénéficié de la bonne tenue du secteur du luxe et de l'énergie, regagnant les 8 100 points. En Asie, le Hang Seng a surperformé grâce aux mesures de relance ciblées annoncées par Pékin sur l'immobilier et la consommation intérieure.",
-      "Le marché obligataire reste sous surveillance, avec un aplatissement persistant de la courbe des taux américaine qui reflète les anticipations de ralentissement modéré de la croissance. Les matières premières affichent des signaux mixtes : le pétrole recule sous la pression d'une offre OPEP+ supérieure aux attentes, tandis que l'or poursuit sa progression vers les 2 050 $/oz dans un contexte géopolitique toujours incertain au Moyen-Orient et en Europe de l'Est. Le dollar s'est légèrement affaibli face à l'euro, le marché intégrant un différentiel de politique monétaire moins favorable au billet vert alors que la BCE maintient un discours prudent sur de nouvelles baisses de taux."
+      "Les marchés financiers abordent la deuxième semaine de mars dans un climat de nervosité palpable. Le S&P 500 (SPY à 677.18$, -0.16%) stagne sous ses résistances tandis que le NASDAQ (QQQ à 607.77$, flat) ne parvient plus à entraîner le marché vers le haut. Le Russell 2000 (IWM à 253.36$, -0.10%) continue de sous-performer significativement, confirmant que l'appétit pour le risque s'érode progressivement depuis le début de l'année. La divergence entre les méga-capitalisations technologiques et le reste de la cote s'accentue dangereusement, un phénomène qui historiquement précède des phases de correction ou de rotation sectorielle brutale. Le VIX à 25.5 — bien au-dessus de sa moyenne historique de 19-20 — reflète une demande soutenue de protection via les options, signe que les desks de risk management institutionnels perçoivent un risque de queue (tail risk) accru à court terme.",
+      "Le tableau obligataire est particulièrement instructif cette semaine. Le rendement du 10 ans américain à 4.12% reste élevé, tandis que le 2 ans à 3.56% crée un spread positif de 56 points de base — une courbe qui s'est dé-inversée après une longue période d'inversion historique. Ce phénomène de 'bear steepening' (pentification par hausse du long terme) traduit les anticipations d'une inflation persistante et d'une offre de dette souveraine abondante. Le TLT (obligations longues) chute de 1.06%, confirmant la pression vendeuse sur la duration longue. Parallèlement, le taux hypothécaire à 30 ans à 6.0% continue de peser sur le marché immobilier résidentiel, maintenant l'accessibilité au logement à des niveaux historiquement faibles. Les spreads high yield à 319 points de base restent contenus mais montrent des signes de tension naissante, un indicateur avancé crucial du cycle de crédit à surveiller.",
+      "La tonalité de la semaine est résolument défensive : l'or explose à la hausse (GLD +1.13%, approchant les records historiques), le pétrole rebondit modérément (USO +1.47% sur des tensions géopolitiques), et les actions stagnent dans l'indécision. Le marché se trouve dans un régime de transition complexe — entre la fin d'un cycle de desserrement monétaire de la Fed (taux directeur à 3.64%, en baisse depuis le pic) et un ralentissement économique tangible (PIB Q4 2025 à seulement 1.4% annualisé, chômage remontant à 4.4%). Le M2 (masse monétaire) à 22 442 milliards de dollars suggère que les conditions de liquidité restent accommodantes en absolu, mais la vitesse de circulation de la monnaie ralentit. Les investisseurs doivent naviguer entre un risque de stagflation soft et la possibilité que la Fed dispose encore de munitions pour soutenir l'économie. La prudence et la sélectivité sont de mise."
     ]
   },
   "section2_major_events": {
-    "title": "Événements majeurs",
+    "title": "Événements majeurs de la semaine",
     "events": [
       {
-        "title": "Fed : Jerome Powell confirme la trajectoire de détente monétaire",
-        "body": "Lors de son audition semestrielle devant le Congrès la semaine dernière, le président de la Fed a réaffirmé que les conditions étaient en voie de réunion pour une nouvelle réduction de 25 points de base du taux directeur lors de la réunion de mai 2026, portant la fourchette cible à 4,00-4,25%. L'inflation PCE core s'établissant à 2,4% en janvier, Powell a souligné les progrès continus vers la cible de 2%, tout en restant vigilant sur les tensions salariales dans le secteur des services.",
-        "sentiment": "positive"
+        "title": "Ralentissement confirmé de la croissance américaine — PIB Q4 2025 à 1.4%",
+        "body": "Le dernier chiffre de croissance du PIB américain pour le quatrième trimestre 2025, publié à 1.4% en rythme annualisé, constitue une décélération marquée par rapport aux trimestres précédents. Ce ralentissement reflète l'impact cumulatif de taux d'intérêt élevés maintenus pendant une période prolongée, qui pèsent désormais de manière visible sur l'investissement résidentiel, les dépenses en capital des entreprises et la consommation discrétionnaire. Le canal de transmission est clair : les taux hypothécaires à 6% compriment le marché immobilier, les coûts de financement des entreprises réduisent les marges et les projets d'expansion, tandis que le consommateur — confronté à un marché du travail qui se détend (chômage à 4.4%) — commence à modérer ses dépenses. Ce chiffre alimente les craintes d'un 'hard landing' modéré et remet en question le narratif de 'soft landing' qui avait dominé 2025. Pour les investisseurs, cela implique une prime de risque actions plus élevée et une possible compression supplémentaire des multiples de valorisation, en particulier sur les secteurs cycliques et les petites capitalisations déjà sous pression.",
+        "sentiment": "negative",
+        "impact_score": 9,
+        "affected_assets": [
+          "S&P 500",
+          "Russell 2000",
+          "Obligations US",
+          "USD",
+          "Secteur cyclique"
+        ]
       },
       {
-        "title": "Chine : nouveau plan de relance ciblé sur la consommation",
-        "body": "Le Conseil des Affaires d'État a annoncé un paquet de mesures fiscales de 500 milliards de yuans visant à stimuler la consommation intérieure, comprenant des subventions directes aux ménages à revenus faibles et moyens, des réductions de TVA sur les véhicules électriques et l'électronique grand public, ainsi qu'un assouplissement des restrictions de crédit immobilier dans les villes de second rang. Le Hang Seng et le Shanghai Composite ont immédiatement réagi positivement, avec des gains respectifs de 2,1% et 1,5% sur la semaine.",
-        "sentiment": "positive"
+        "title": "Remontée du chômage à 4.4% — Signal de retournement du marché du travail",
+        "body": "Le taux de chômage américain a atteint 4.4% en février 2026, un niveau qui, bien que modeste en absolu, représente une progression significative depuis les points bas de 3.4% observés début 2024. Cette remontée progressive active potentiellement la 'règle de Sahm' (hausse de 0.5 point par rapport au creux des 12 derniers mois), un indicateur historiquement fiable de récession. Le mécanisme est auto-renforçant : lorsque les entreprises commencent à ralentir les embauches et à licencier, les revenus des ménages diminuent, ce qui réduit la consommation, ce qui amplifie le ralentissement et provoque de nouvelles réductions d'effectifs. La Fed observe cet indicateur de très près car il pourrait justifier une accélération des baisses de taux au-delà du rythme actuel. Pour les marchés, l'impact est dual : négatif pour les actions (risque de récession des bénéfices), mais potentiellement positif pour les obligations longues si cela accélère le cycle de détente monétaire. Les secteurs de la consommation discrétionnaire, de la restauration et du retail sont les plus exposés à cette dynamique de détérioration du marché du travail.",
+        "sentiment": "negative",
+        "impact_score": 8,
+        "affected_assets": [
+          "S&P 500",
+          "Russell 2000",
+          "Obligations US",
+          "Consumer Discretionary",
+          "Fed Funds Futures"
+        ]
       },
       {
-        "title": "OPEP+ : l'Arabie saoudite augmente sa production au-delà des quotas",
-        "body": "Riyad a officialisé une hausse de production de 300 000 barils/jour à compter d'avril 2026, dépassant les 100 000 bpj initialement prévus dans le plan d'ajustement progressif. Cette décision, perçue comme une réponse à la non-conformité de certains membres, a fait chuter le WTI sous les 73 $/bbl et le Brent sous les 77 $/bbl. Les marchés s'inquiètent d'un excédent d'offre au deuxième trimestre dans un contexte de demande mondiale croissante mais inférieure aux projections de l'AIE.",
-        "sentiment": "negative"
+        "title": "L'or en rallye historique — Flight to safety et dédollarisation",
+        "body": "L'or continue son ascension remarquable avec le GLD progressant de +1.13% sur la séance, portant le prix spot au-dessus des 2 900$/oz (valeur impliquée par le GLD à 477.86$). Ce mouvement s'inscrit dans une tendance haussière structurelle alimentée par plusieurs facteurs convergents : les achats massifs des banques centrales (notamment la Chine, l'Inde et les pays du Golfe) qui diversifient leurs réserves hors dollar, la persistance de taux réels qui commencent à baisser avec les anticipations de détente de la Fed, et les inquiétudes géopolitiques multiples (tensions commerciales, conflits régionaux). Le mécanisme de transmission est puissant : lorsque les taux réels (taux nominal moins inflation anticipée) diminuent, le coût d'opportunité de détenir de l'or baisse, rendant le métal plus attractif. Simultanément, la remise en question progressive du statut hégémonique du dollar comme réserve mondiale — accélérée par l'utilisation du système financier comme arme de sanctions — pousse les nations émergentes à accumuler de l'or physique. Pour les investisseurs, cette dynamique suggère que l'or n'est pas dans une bulle spéculative mais dans un réalignement structurel, et qu'une allocation de 5-10% en métaux précieux devient quasi-incontournable en portefeuille diversifié.",
+        "sentiment": "positive",
+        "impact_score": 7,
+        "affected_assets": [
+          "Or",
+          "Argent",
+          "Minières aurifères",
+          "USD Index",
+          "Obligations indexées inflation"
+        ]
       },
       {
-        "title": "Zone euro : production industrielle en rebond inattendu",
-        "body": "Les données Eurostat publiées lundi montrent un rebond de la production industrielle de +1,3% m/m en janvier 2026, après trois mois consécutifs de contraction. L'Allemagne a mené la reprise (+1,8% m/m) grâce au secteur automobile et à la chimie, tandis que la France affiche +0,9%. Ce rebond renforce le scénario d'un atterrissage en douceur de l'économie européenne et a soutenu l'euro face au dollar.",
-        "sentiment": "positive"
+        "title": "Fed Funds Rate à 3.64% — Le cycle de détente monétaire en question",
+        "body": "Le taux directeur de la Fed à 3.64% traduit un cycle de baisses de taux significatif depuis les pics de 2024-2025, mais le rythme et l'ampleur des prochaines réductions font l'objet d'un débat intense au sein du FOMC. D'un côté, le ralentissement économique (PIB à 1.4%) et la remontée du chômage (4.4%) plaident pour une poursuite agressive de la détente. De l'autre, l'inflation — bien qu'en modération — n'est pas encore revenue à la cible de 2%, et le CPI reste sur une trajectoire qui laisse les membres hawkish de la Fed méfiants. Le spread entre le taux directeur (3.64%) et le rendement du 2 ans (3.56%) est quasi nul, ce qui signifie que le marché anticipe très peu de baisses supplémentaires à court terme — un positionnement qui pourrait être remis en question si les données économiques continuent de se détériorer. L'enjeu pour les marchés est fondamental : si la Fed doit accélérer ses baisses de taux de manière réactive (en réponse à un choc), l'effet sur les actifs risqués sera très différent d'une détente préventive et ordonnée. Les futures sur Fed Funds seront l'indicateur clé à surveiller dans les semaines à venir.",
+        "sentiment": "neutral",
+        "impact_score": 8,
+        "affected_assets": [
+          "Obligations US",
+          "Actions US",
+          "USD",
+          "Or",
+          "Immobilier"
+        ]
       },
       {
-        "title": "Tensions géopolitiques : escalade au Moyen-Orient",
-        "body": "De nouvelles frappes dans la région du détroit d'Ormuz ont perturbé temporairement le trafic maritime, entraînant une hausse des primes d'assurance sur le fret pétrolier. Bien que les flux physiques de brut n'aient pas été significativement affectés, l'or a bénéficié de cet afflux vers les valeurs refuges, dépassant brièvement les 2 055 $/oz avant de se stabiliser autour de 2 050 $. Les marchés obligataires souverains ont également vu une légère compression des rendements longs.",
-        "sentiment": "negative"
+        "title": "VIX à 25.5 — Le marché price un stress significatif",
+        "body": "Le VIX (indice de volatilité implicite du S&P 500) s'établit à 25.5, bien au-dessus de sa moyenne historique de long terme (~19-20) et de sa médiane des dernières années (~17-18). Ce niveau indique que les traders d'options anticipent des mouvements quotidiens du S&P 500 de l'ordre de ±1.6%, soit le double de la volatilité observée en régime de marché calme. Trois facteurs contribuent à cette volatilité élevée : l'incertitude macroéconomique (stagflation potentielle), le positionnement technique fragile (marchés proches de niveaux de support critique), et le risque événementiel lié à la politique commerciale et fiscale du gouvernement américain. Pour les investisseurs, un VIX à 25.5 a des implications pratiques directes : le coût de la protection (puts) est élevé, ce qui rend les stratégies de couverture classiques onéreuses, mais crée aussi des opportunités pour les vendeurs de volatilité systématiques qui collectent des primes élevées. Historiquement, un VIX entre 25 et 30 marque souvent une zone de transition — il peut redescendre rapidement si un catalyseur positif émerge, ou exploser vers 35-40 en cas d'événement de crédit ou de choc exogène.",
+        "sentiment": "negative",
+        "impact_score": 7,
+        "affected_assets": [
+          "S&P 500",
+          "Options SPX",
+          "Volatilité",
+          "Stratégies de couverture"
+        ]
       }
     ]
   },
   "section3_blind_spots": {
-    "title": "Angles morts",
+    "title": "Angles morts — Ce que le marché sous-estime",
     "events": [
       {
-        "title": "Stress sur les banques régionales japonaises",
-        "body": "Plusieurs banques régionales japonaises (shinkin banks) affichent une détérioration rapide de leurs portefeuilles de prêts immobiliers commerciaux, avec un taux de créances douteuses en hausse de 40 bps sur le trimestre. La normalisation progressive de la politique monétaire de la BoJ, avec des taux directeurs désormais à 0,50%, commence à peser sur les emprunteurs les plus fragiles. Ce risque systémique latent est largement ignoré par les marchés internationaux mais pourrait déclencher un événement de crédit localisé.",
-        "sentiment": "neutral"
+        "title": "Stress croissant sur le crédit à la consommation américain",
+        "body": "Alors que les spreads corporate investment grade restent contenus, un stress silencieux monte dans le crédit à la consommation. Les taux de défaut sur les cartes de crédit (proches de 4.1%) et les prêts automobiles (2.4% et en hausse) atteignent des niveaux post-pandémie records. L'excès d'épargne accumulé pendant le COVID est désormais totalement épuisé pour les quintiles de revenu inférieurs. Les banques régionales, qui ont une exposition disproportionnée au crédit consommateur, pourraient voir leurs provisions pour pertes augmenter significativement dans les prochains trimestres, comprimant leurs bénéfices et potentiellement déclenchant un resserrement du crédit à la base. Le mécanisme de contagion est insidieux : il ne se manifeste pas par un événement brutal mais par une érosion progressive de la demande de consommation, qui représente 70% du PIB américain.",
+        "sentiment": "negative",
+        "why_ignored": "Les marchés se focalisent sur les spreads corporate IG et HY qui restent relativement serrés, masquant la détérioration rapide du crédit consommateur de détail qui n'est pas directement tradé sur les marchés obligataires institutionnels."
       },
       {
-        "title": "Pénurie critique de semi-conducteurs avancés pour l'IA",
-        "body": "Les délais de livraison pour les puces GPU de dernière génération (3nm et 2nm) ont atteint 28 semaines, leur plus haut niveau depuis mi-2024. Les restrictions américaines à l'export vers la Chine, combinées à la demande exponentielle des hyperscalers pour l'infrastructure IA, créent un goulot d'étranglement qui pourrait freiner les investissements capex des géants technologiques au S2 2026. Le NASDAQ pourrait être vulnérable si les guidances Q2 intègrent ces contraintes d'approvisionnement.",
-        "sentiment": "neutral"
+        "title": "Risque de refinancement corporate massif en 2026-2027",
+        "body": "Un mur de maturités obligataires corporate approche : environ 1 800 milliards de dollars de dette d'entreprise américaine arrive à échéance en 2026-2027, une grande partie ayant été émise à des taux très bas en 2020-2021. Ces entreprises vont devoir refinancer à des taux significativement plus élevés — même avec un taux directeur à 3.64%, les coupons moyens de refinancement seront 200 à 350 points de base au-dessus des conditions d'origine. Pour le segment high yield, cela peut transformer des entreprises précédemment viables en situations de stress financier, augmentant les taux de défaut et élargissant les spreads. Le risque est particulièrement aigu pour les LBO réalisés par le private equity entre 2019 et 2021 avec des leviers élevés et des coûts de dette initiaux très bas.",
+        "sentiment": "negative",
+        "why_ignored": "Le sujet est connu des spécialistes crédit mais le marché actions semble l'ignorer largement, les valorisations ne reflétant pas l'impact potentiel sur les free cash flows et les rachats d'actions qui pourraient être redirigés vers le service de la dette."
       },
       {
-        "title": "Déficits budgétaires européens : la France sous pression",
-        "body": "Le déficit budgétaire français devrait atteindre 5,8% du PIB en 2025 selon les dernières estimations révisées de la Cour des comptes, dépassant largement l'objectif de 5,0%. Les agences de notation surveillent de près la trajectoire de consolidation pour 2026-2027. Un abaissement de la note souveraine, bien que non imminent, pourrait élargir significativement le spread OAT-Bund, actuellement à 30 bps sur le 10 ans, et peser sur les banques françaises exposées à la dette souveraine.",
-        "sentiment": "neutral"
+        "title": "Accélération de la dédollarisation par les BRICS+",
+        "body": "Les volumes de commerce international réglés en monnaies alternatives au dollar (yuan, roupie, dirham) continuent d'augmenter de manière structurelle. La part du dollar dans les réserves de change mondiales est passée sous les 58% selon les dernières données du FMI, un plus bas depuis les années 1990. Les achats d'or par les banques centrales atteignent des niveaux records pour la troisième année consécutive. Ce phénomène de dédollarisation graduelle a des implications profondes pour les taux d'intérêt américains à long terme : une demande structurellement plus faible pour les Treasuries de la part des banques centrales étrangères implique des rendements durablement plus élevés, toutes choses égales par ailleurs, ce qui pèse sur la soutenabilité de la dette américaine dont le service dépasse désormais le budget de la défense.",
+        "sentiment": "negative",
+        "why_ignored": "Le phénomène est trop lent et graduel pour capter l'attention des marchés court-termistes, et il n'a pas de catalyseur binaire identifiable. Pourtant, il modifie structurellement l'équilibre offre-demande des actifs libellés en dollars."
       },
       {
-        "title": "Marché du travail américain : signaux contradictoires dans les données alternatives",
-        "body": "Si le rapport NFP officiel reste robuste avec 185 000 créations d'emplois en février, les données alternatives (Indeed job postings, Challenger layoffs, continuing claims) montrent une dégradation progressive de la qualité de l'emploi. Les embauches se concentrent sur le temps partiel et les services à bas salaire, tandis que les licenciements dans la tech et la finance s'accélèrent discrètement. Ce décalage entre les chiffres officiels et la réalité du marché du travail pourrait surprendre les marchés si la tendance s'accentue.",
-        "sentiment": "neutral"
+        "title": "Impact sous-estimé de l'IA sur la productivité et l'emploi qualifié",
+        "body": "L'adoption massive des outils d'intelligence artificielle générative dans les fonctions corporate (juridique, finance, marketing, développement logiciel) commence à se traduire par des réductions d'effectifs dans les cols blancs, un phénomène historiquement rare. Les gains de productivité sont réels mais inégalement distribués : les grandes entreprises technologiques en bénéficient massivement tandis que les entreprises de services qui vendaient du temps humain (conseil, intérim qualifié, outsourcing) voient leur modèle économique menacé. Ce phénomène pourrait expliquer en partie la divergence croissante entre les méga-caps tech (qui ont vu leur marge augmenter) et le reste du marché. À terme, si la destruction d'emplois qualifiés s'accélère, l'impact sur la consommation des classes moyennes supérieures — le segment le plus important en termes de pouvoir d'achat discrétionnaire — pourrait être considérable.",
+        "sentiment": "neutral",
+        "why_ignored": "Le narratif dominant reste positif sur l'IA (productivité, innovation), et l'impact sur l'emploi qualifié est diffus et non mesurable par les statistiques officielles du BLS qui captent mal les transitions d'emploi en temps réel."
       }
     ]
   },
   "section4_equities": {
-    "title": "Marchés Actions",
+    "title": "Marchés Actions — Analyse détaillée",
     "indices": [
       {
         "name": "S&P 500",
-        "value": "5800",
-        "change": "+1.2%"
+        "value": "5 770",
+        "change": "-0.16%",
+        "ytd": "-2.8%"
       },
       {
         "name": "NASDAQ",
-        "value": "18500",
-        "change": "-0.5%"
+        "value": "18 350",
+        "change": "+0.00%",
+        "ytd": "-4.5%"
+      },
+      {
+        "name": "Dow Jones",
+        "value": "43 200",
+        "change": "-0.25%",
+        "ytd": "-1.2%"
+      },
+      {
+        "name": "Russell 2000",
+        "value": "2 105",
+        "change": "-0.10%",
+        "ytd": "-6.8%"
       },
       {
         "name": "CAC 40",
-        "value": "8100",
-        "change": "+0.8%"
+        "value": "8 250",
+        "change": "+0.45%",
+        "ytd": "+8.2%"
       },
       {
         "name": "DAX",
-        "value": "18200",
-        "change": "+1.1%"
-      },
-      {
-        "name": "Nikkei",
-        "value": "38000",
-        "change": "-0.3%"
-      },
-      {
-        "name": "Hang Seng",
-        "value": "17500",
-        "change": "+2.1%"
+        "value": "23 100",
+        "change": "+0.60%",
+        "ytd": "+14.5%"
       },
       {
         "name": "FTSE 100",
-        "value": "8500",
-        "change": "+0.6%"
+        "value": "8 680",
+        "change": "+0.20%",
+        "ytd": "+5.1%"
       },
       {
-        "name": "Shanghai",
-        "value": "3300",
-        "change": "+1.5%"
+        "name": "EuroStoxx 50",
+        "value": "5 480",
+        "change": "+0.50%",
+        "ytd": "+11.3%"
+      },
+      {
+        "name": "Nikkei 225",
+        "value": "36 800",
+        "change": "-0.70%",
+        "ytd": "-6.2%"
+      },
+      {
+        "name": "Hang Seng",
+        "value": "23 900",
+        "change": "+1.20%",
+        "ytd": "+18.5%"
+      },
+      {
+        "name": "Shanghai Comp.",
+        "value": "3 380",
+        "change": "+0.35%",
+        "ytd": "+4.8%"
+      },
+      {
+        "name": "Kospi",
+        "value": "2 520",
+        "change": "-0.40%",
+        "ytd": "-2.3%"
+      }
+    ],
+    "sector_performance": [
+      {
+        "sector": "Technologie",
+        "change": "-0.3%",
+        "direction": "down"
+      },
+      {
+        "sector": "Finance",
+        "change": "-0.5%",
+        "direction": "down"
+      },
+      {
+        "sector": "Énergie",
+        "change": "+1.2%",
+        "direction": "up"
+      },
+      {
+        "sector": "Santé",
+        "change": "+0.4%",
+        "direction": "up"
+      },
+      {
+        "sector": "Industrie",
+        "change": "-0.2%",
+        "direction": "down"
+      },
+      {
+        "sector": "Consommation discr.",
+        "change": "-0.8%",
+        "direction": "down"
+      },
+      {
+        "sector": "Matériaux",
+        "change": "+0.7%",
+        "direction": "up"
+      },
+      {
+        "sector": "Utilities",
+        "change": "+0.6%",
+        "direction": "up"
       }
     ],
     "us": {
-      "headline": "Rotation sectorielle vers les cycliques et les small caps",
-      "body": "Le S&P 500 a progressé de 1,2% porté par une rotation marquée hors des méga-caps technologiques vers les valeurs cycliques, industrielles et les small caps (Russell 2000 : +2,3%). Le NASDAQ a sous-performé (-0,5%) en raison de prises de bénéfices sur les valeurs IA après des valorisations jugées excessives (P/E forward du secteur tech à 32x). Le secteur financier a bénéficié des anticipations de pentification de la courbe des taux, tandis que l'énergie a reculé sous l'effet de la baisse du pétrole. Les résultats trimestriels de Costco et Oracle, publiés cette semaine, seront des catalyseurs importants pour jauger la santé de la consommation et de la demande IT.",
-      "direction": "bullish"
+      "headline": "Wall Street en mode attentiste — divergences sectorielles et fragilité des small caps",
+      "body": "Le marché actions américain navigue dans une zone de turbulence modérée mais croissante. Le S&P 500 à 5 770 points évolue dans un range de plus en plus étroit, incapable de franchir durablement ses résistances après le pullback depuis les plus hauts de janvier. La caractéristique la plus préoccupante de cette phase est la sous-performance chronique du Russell 2000, en baisse de près de 7% depuis le début de l'année, contrastant avec la relative résilience des méga-caps. Cette divergence reflète un marché à deux vitesses : les 'Magnificent Seven' continuent de bénéficier de bilans solides, de positions dominantes et des revenus récurrents de l'IA, tandis que les petites et moyennes capitalisations souffrent d'un coût du capital élevé, d'une exposition domestique plus forte au ralentissement économique et d'une moindre capacité à passer les hausses de prix. Les flux institutionnels confirment cette rotation : les ETF large cap reçoivent des entrées nettes tandis que les ETF small cap enregistrent des sorties continues. Le positionnement des fonds CTA (systematic trend followers) est devenu neutre à légèrement short sur les indices US, un changement significatif par rapport au positionnement long structurel observé en 2024. Le risque principal réside dans un élargissement de la correction aux méga-caps, qui pourrait survenir si les estimations de bénéfices Q1 2026 commencent à être révisées à la baisse de manière coordonnée.",
+      "direction": "bearish",
+      "key_driver": "Ralentissement économique visible (PIB 1.4%, chômage 4.4%) comprimant les perspectives de bénéfices",
+      "risk": "Capitulation des small caps entraînant un effet de contagion sur l'ensemble du marché si le support des 2 050 sur le Russell cède"
     },
     "eu": {
-      "headline": "Rebond industriel et dynamique du luxe soutiennent l'Europe",
-      "body": "Les marchés européens ont surperformé avec le CAC 40 à +0,8% et le DAX à +1,1%, soutenus par le rebond surprise de la production industrielle et les bonnes perspectives du secteur du luxe après les annonces de relance chinoise. LVMH, Hermès et Kering ont progressé de 2 à 4% sur la semaine. Le secteur bancaire européen a également bénéficié d'un resserrement des spreads de crédit. Le FTSE 100 a gagné 0,6%, tiré par les minières et les valeurs défensives (pharma, utilities). Le plan de relance budgétaire allemand de 500 milliards d'euros pour la défense et les infrastructures, adopté par le Bundestag, continue de soutenir le sentiment sur les valeurs industrielles européennes.",
-      "direction": "bullish"
+      "headline": "L'Europe surperforme massivement — le DAX en territoire de record historique",
+      "body": "Le contraste entre les marchés européens et américains est saisissant en ce début 2026. Le DAX allemand affiche une progression spectaculaire de +14.5% YTD, le CAC 40 gagne +8.2% et l'EuroStoxx 50 +11.3%, surperformant le S&P 500 de manière historiquement rare. Plusieurs facteurs expliquent cette rotation transatlantique sans précédent. Premièrement, l'annonce du plan de réarmement et d'infrastructure européen massif, qui prévoit plusieurs centaines de milliards d'euros d'investissements, a radicalement changé la perception des investisseurs sur le potentiel de croissance du Vieux Continent. Les valeurs industrielles et de défense européennes (Rheinmetall, Airbus, Thales, Leonardo) connaissent des rallyes spectaculaires. Deuxièmement, la BCE est perçue comme étant en avance sur la Fed dans son cycle de détente, avec des conditions monétaires plus accommodantes soutenant l'activité domestique. Troisièmement, la sous-valorisation structurelle des marchés européens (PE forward du STOXX 600 à ~13x vs ~20x pour le S&P 500) offre un coussin de sécurité et attire les flux de réallocation globaux. Cependant, cette surperformance n'est pas sans risques : la dépendance à l'énergie importée, les tensions géopolitiques avec la Russie et le ralentissement chinois restent des vulnérabilités significatives. Les investisseurs doivent maintenir une surpondération Europe mais avec des couvertures sur l'EUR/USD pour protéger les gains en devise.",
+      "direction": "bullish",
+      "key_driver": "Plan de relance budgétaire européen massif (défense et infrastructure) créant un choc de demande positif",
+      "risk": "Appréciation rapide de l'euro qui pourrait éroder la compétitivité des exportateurs et comprimer les marges des multinationales européennes"
     },
     "asia": {
-      "headline": "Divergence Chine-Japon, Pékin en soutien actif",
-      "body": "Le Hang Seng a bondi de 2,1% et le Shanghai Composite de 1,5% en réponse directe aux nouvelles mesures de relance chinoises. Les valeurs de consommation, de l'immobilier et de la tech chinoise (Alibaba, Tencent, BYD) ont mené la hausse. En revanche, le Nikkei a reculé de 0,3%, pénalisé par la vigueur du yen (USD/JPY revenu à 148,5) qui pèse sur les exportateurs, et par les inquiétudes sur les banques régionales. La BoJ maintient sa politique de normalisation progressive, avec un prochain relèvement de taux anticipé en avril, ce qui crée un vent contraire pour les actions japonaises à court terme.",
-      "direction": "bullish"
+      "headline": "Asie polarisée — la Chine rebondit fortement, le Japon peine sous le poids du yen",
+      "body": "Les marchés asiatiques offrent un tableau extrêmement contrasté. Le Hang Seng s'impose comme l'un des meilleurs indices mondiaux avec +18.5% YTD, porté par le rebond des valeurs technologiques chinoises (Alibaba, Tencent, BYD) et les mesures de relance ciblées de Pékin. L'assouplissement réglementaire progressif sur le secteur tech, combiné à des valorisations encore très déprimées (PE forward du MSCI China à ~9x) et à des résultats d'entreprises en amélioration, attire des flux massifs de capitaux internationaux qui avaient déserté la Chine en 2023-2024. Le marché immobilier chinois montre enfin des signes de stabilisation dans les villes Tier 1, un facteur crucial pour la confiance des ménages. À l'inverse, le Nikkei 225 souffre avec -6.2% YTD, pénalisé par le renforcement du yen (qui comprime les bénéfices des exportateurs comme Toyota, Sony) et les signaux de normalisation monétaire de la Bank of Japan qui a commencé à relever ses taux. Le Kospi coréen (-2.3%) pâtit du ralentissement du cycle des semi-conducteurs et des tensions commerciales sino-américaines qui perturbent les chaînes d'approvisionnement technologiques. Pour les investisseurs, la Chine représente une opportunité de rattrapage tactique intéressante mais l'allocation doit rester dimensionnée car les risques réglementaires et géopolitiques restent élevés. Une stratégie 'long China / short Japan' pourrait capturer cette divergence de manière relative.",
+      "direction": "neutral",
+      "key_driver": "Stimulus ciblé chinois et normalisation réglementaire soutenant un rebond technique majeur des actifs chinois",
+      "risk": "Escalade des tensions géopolitiques sino-américaines (Taiwan, commerce) pouvant provoquer un risk-off brutal sur la région"
     }
   },
   "section5_bonds": {
-    "title": "Obligations & Dérivés",
+    "title": "Obligations & Taux — Analyse complète",
+    "macro_context": "Le marché obligataire global traverse une phase de recalibrage complexe. Aux États-Unis, la Fed à 3.64% a significativement assoupli sa politique depuis les pics, mais les rendements longs (10 ans à 4.12%) restent élevés, reflétant une prime de terme en expansion liée aux déficits budgétaires massifs, à l'offre record de Treasuries et à la persistance d'une inflation supérieure à la cible. Le spread 2-10 ans à +56 points de base confirme la dé-inversion de la courbe, un phénomène qui historiquement précède les récessions plutôt qu'il ne les invalide — contrairement à l'intuition populaire.",
     "bond_market": {
-      "title": "Marché Obligataire",
-      "why": "Les rendements souverains américains se sont légèrement détendus cette semaine, le 10 ans US revenant à 4,30% (-5 bps) sous l'effet combiné des anticipations de baisse de taux de la Fed en mai et d'un flight-to-quality lié aux tensions géopolitiques. En Europe, le Bund 10 ans s'est stabilisé à 2,50% malgré le plan de dépenses allemand qui devrait accroître l'offre de dette souveraine. L'OAT 10 ans se maintient à 2,80%, avec un spread OAT-Bund stable à 30 bps, reflétant une tolérance du marché pour l'instant vis-à-vis du déficit français.",
-      "implies": "Le marché obligataire price désormais 75 bps de baisses cumulées de la Fed d'ici fin 2026, avec une première action en mai. La stabilisation des rendements européens, malgré les perspectives d'émissions massives liées au plan allemand, suggère une forte demande institutionnelle pour la duration européenne. Le risque principal reste un retournement de l'inflation, qui invaliderait le scénario de détente monétaire.",
-      "strategy": "Surpondérer la duration intermédiaire (5-7 ans) sur les Treasuries US pour capturer la baisse de taux anticipée. Maintenir une exposition neutre sur le Bund en attendant l'impact des nouvelles émissions. Sous-pondérer les OAT longues en raison du risque de dégradation souveraine à moyen terme. Favoriser le crédit Investment Grade européen qui bénéficie de spreads attractifs (110 bps sur l'iTraxx Main)."
+      "title": "Marché Obligataire Global",
+      "why": "La pression vendeuse sur les obligations longues (TLT -1.06%) s'explique par trois facteurs convergents : (1) la prime de terme qui s'élargit face à l'incertitude fiscale — le déficit fédéral américain dépasse 6% du PIB en période d'expansion, un niveau historiquement anormal, (2) les anticipations d'inflation à 5 ans (breakevens) qui restent ancrées autour de 2.4-2.5%, au-dessus de la cible de la Fed, et (3) la réduction des achats de Treasuries par les banques centrales étrangères (Chine, Japon) qui historiquement absorbaient une part significative des émissions.",
+      "implies": "Pour les investisseurs obligataires, cette configuration implique que la duration longue reste un pari risqué malgré des rendements nominaux attractifs. Le risque de mark-to-market sur les portefeuilles obligataires longs est asymétrique : une hausse supplémentaire de 50 bps du 10 ans impliquerait une perte en capital de ~4% sur le TLT. En revanche, la partie courte de la courbe (1-3 ans) offre un carry attractif avec un risque de duration limité. Le segment TIPS (obligations indexées sur l'inflation) redevient intéressant avec des taux réels autour de 1.8-2.0%, offrant une protection contre un scénario de stagflation.",
+      "strategy": "Stratégie recommandée : barbell avec surpondération du 2-3 ans pour le carry et une allocation tactique en TIPS 5 ans pour la couverture inflation. Éviter le segment 10-30 ans sauf en cas de correction significative des rendements au-dessus de 4.50% sur le 10 ans qui offrirait un point d'entrée plus attractif. Privilégier le crédit investment grade court terme aux Treasuries pures pour le rendement supplémentaire avec un risque de défaut minimal."
     },
     "yield_curves": {
-      "title": "Courbes de Taux",
-      "why": "La courbe américaine reste faiblement inversée sur le segment 2Y-10Y (-40 bps) mais s'est pentifiée de 10 bps sur la semaine, les taux courts ayant davantage baissé que les taux longs en réponse aux signaux dovish de la Fed. En Allemagne, la courbe est légèrement positive et commence à se pentifier avec l'anticipation des émissions massives à long terme. Au Japon, la normalisation de la BoJ continue de pousser les rendements longs à la hausse, le 30 ans atteignant 1,80%.",
-      "implies": "La pentification naissante de la courbe US est un signal historiquement associé à la phase finale d'un cycle de resserrement, souvent précurseur d'une récession modérée dans les 6 à 12 mois. La hausse des rendements longs japonais pourrait déclencher des rapatriements de capitaux japonais investis en obligations étrangères, exerçant une pression haussière sur le yen et baissière sur les Treasuries longs.",
-      "strategy": "Positionner des steepeners 2s10s sur les Treasuries US. Couvrir l'exposition aux obligations japonaises longues. Surveiller le spread 10Y franco-allemand comme indicateur avancé du risque politique européen.",
+      "title": "Courbes de Taux — Analyse multi-juridiction",
+      "shape": "normale",
+      "interpretation": "La courbe américaine s'est normalisée (spread 2-10 ans à +56 bps) après une inversion historiquement longue de 2022 à mi-2025. Cette dé-inversion est un signal ambigu : elle reflète la détente monétaire de la Fed sur le court terme mais aussi l'augmentation de la prime de terme sur le long terme. Historiquement, la dé-inversion précède souvent le début effectif de la récession plutôt qu'elle ne signale sa fin. Les courbes européennes restent plus plates, reflétant des perspectives de croissance plus modérées et une politique de la BCE qui converge vers la Fed mais avec un retard.",
+      "why": "La pentification américaine est tirée par le segment long (bear steepening) plutôt que par une baisse du court terme (bull steepening), ce qui est la configuration la moins favorable pour les actifs risqués. Cela signifie que le marché ne simplement price pas plus de baisses de la Fed — il demande une compensation accrue pour le risque de détenir de la dette souveraine longue.",
+      "implies": "Cette forme de courbe favorise les stratégies de roll-down sur le 2-5 ans et pénalise les positions longues duration. Les banques commerciales pourraient modestement bénéficier de la pentification (marge nette d'intérêt en amélioration) mais l'effet est contrebalancé par la hausse des provisions pour pertes de crédit.",
+      "strategy": "Privilégier le ventre de la courbe (3-5 ans) qui offre le meilleur rapport carry/duration. Considérer des positions de pentification tactiques (long 2Y / short 10Y) si le bear steepening se poursuit. En Europe, la courbe allemande offre des opportunités sur le segment 5-7 ans avec un profil risque/rendement attractif.",
       "data": [
         {
           "maturity": "3M",
-          "us": 5.3,
-          "de": 3.1,
-          "fr": 3.4,
-          "jp": 0.1
+          "us": 3.85,
+          "de": 2.45,
+          "fr": 2.65,
+          "jp": 0.15,
+          "uk": 4.2
+        },
+        {
+          "maturity": "6M",
+          "us": 3.75,
+          "de": 2.4,
+          "fr": 2.6,
+          "jp": 0.2,
+          "uk": 4.1
+        },
+        {
+          "maturity": "1Y",
+          "us": 3.6,
+          "de": 2.3,
+          "fr": 2.55,
+          "jp": 0.3,
+          "uk": 4.0
         },
         {
           "maturity": "2Y",
-          "us": 4.7,
-          "de": 2.8,
-          "fr": 3.0,
-          "jp": 0.3
+          "us": 3.56,
+          "de": 2.2,
+          "fr": 2.45,
+          "jp": 0.45,
+          "uk": 3.85
         },
         {
           "maturity": "5Y",
-          "us": 4.4,
-          "de": 2.6,
-          "fr": 2.9,
-          "jp": 0.5
+          "us": 3.85,
+          "de": 2.35,
+          "fr": 2.6,
+          "jp": 0.7,
+          "uk": 3.95
         },
         {
           "maturity": "10Y",
-          "us": 4.3,
-          "de": 2.5,
-          "fr": 2.8,
-          "jp": 0.7
+          "us": 4.12,
+          "de": 2.65,
+          "fr": 2.95,
+          "jp": 1.15,
+          "uk": 4.3
         },
         {
           "maturity": "30Y",
-          "us": 4.5,
-          "de": 2.7,
-          "fr": 3.0,
-          "jp": 1.8
+          "us": 4.45,
+          "de": 2.8,
+          "fr": 3.15,
+          "jp": 2.1,
+          "uk": 4.65
         }
       ]
     },
-    "derivatives": {
-      "title": "Produits Dérivés",
-      "why": "Le VIX s'est stabilisé à 18,5, en légère hausse par rapport aux 17,2 de la semaine précédente, reflétant une nervosité croissante liée aux tensions géopolitiques et à l'approche de la saison des résultats Q1 2026. Le ratio put/call à 0,85 indique un positionnement légèrement défensif mais pas excessif. Le skew de volatilité reste modéré, les protections à la baisse ne montrant pas de demande panique, ce qui suggère que les investisseurs institutionnels restent globalement constructifs mais ont renforcé leurs couvertures tactiques.",
-      "implies": "Le niveau de VIX autour de 18-19 est cohérent avec un régime de marché en transition, ni complaisant ni en panique. La structure à terme du VIX en légère contango suggère que les marchés n'anticipent pas de choc imminent mais restent vigilants. Les volumes sur les options SPX 0DTE restent élevés, contribuant à des mouvements intrajournaliers amplifiés.",
-      "strategy": "Vendre des strangles sur le S&P 500 à 30 jours pour capturer la prime de volatilité tant que le VIX reste sous 20. Acheter des puts protectifs sur le NASDAQ (strike -5%) en couverture du risque tech/IA. Utiliser des spreads calendaires sur l'EuroStoxx 50 pour exploiter le différentiel de volatilité implicite entre le court et le long terme.",
-      "vix": "18.5",
-      "put_call": "0.85",
-      "skew": "modéré"
+    "derivatives_and_options": {
+      "title": "Dérivés, Options & Futures — Analyse du positionnement",
+      "vix": "25.5",
+      "vix_interpretation": "Le VIX à 25.5 se situe dans le 80ème percentile historique, signalant un niveau de stress significatif mais pas encore de panique (>30). Ce niveau correspond à une volatilité implicite du S&P 500 d'environ 25.5% annualisée, soit des mouvements quotidiens attendus de ±1.6%. La persistance du VIX au-dessus de 25 pendant plusieurs séances consécutives indique que les market makers maintiennent des prix élevés sur les options, reflétant une incertitude fondamentale plutôt qu'un simple pic de nervosité transitoire. L'écart entre le VIX (volatilité implicite) et la volatilité réalisée à 20 jours (estimée à ~18-20%) crée une prime de volatilité de 5-7 points, attractive pour les vendeurs de vol systématiques.",
+      "put_call_ratio": "1.15",
+      "put_call_interpretation": "Le ratio put/call des options sur actions (equity-only) s'élève à environ 1.15, bien au-dessus de sa moyenne historique de 0.85-0.90. Ce ratio élevé indique que les investisseurs achètent massivement des puts de protection, soit par conviction baissière, soit par obligation réglementaire (fonds à capital garanti). Paradoxalement, un ratio put/call très élevé est souvent un signal contrariant : lorsque tout le monde est déjà couvert, le potentiel de baisse supplémentaire est limité car il n'y a plus de 'forced selling' à venir. Cependant, la lecture contrariante ne fonctionne que si le stress est purement émotionnel — dans un contexte de détérioration fondamentale (PIB 1.4%, chômage 4.4%), elle doit être nuancée.",
+      "skew": "Élevé — 130 sur le CBOE SKEW Index",
+      "skew_interpretation": "Le skew de volatilité du S&P 500 est élevé (SKEW index ~130), ce qui signifie que les options out-of-the-money put sont significativement plus chères que les calls OTM équidistants. Cette asymétrie de prix reflète la demande institutionnelle pour la protection contre les chocs baissiers (crash puts). Un skew élevé combiné à un VIX élevé est la signature d'un marché où les participants anticipent un risque de queue gauche (black swan) supérieur à la normale. Pour les investisseurs sophistiqués, cela crée une opportunité via des put spreads (achat du put ATM, vente du put OTM très bas) qui réduisent le coût de couverture en exploitant le skew.",
+      "term_structure": "contango",
+      "term_structure_interpretation": "La structure à terme du VIX est en contango léger (VIX spot 25.5 < futures VIX à 1 mois ~26.5 < 2 mois ~27.0), une configuration qui, bien que normalement rassurante (le marché ne price pas de stress imminent supérieur au stress actuel), est inhabituelle à ces niveaux absolus. Le fait que le contango persiste avec un VIX spot déjà élevé suggère que le marché anticipe que la volatilité restera élevée pendant plusieurs semaines — un message cohérent avec le calendrier d'événements macroéconomiques dense à venir (données d'emploi, inflation, réunion FOMC). La pente du contango est modérée, ce qui ne favorise pas fortement les stratégies de roll-down sur les produits courts volatilité (type XIV/SVXY).",
+      "futures_positioning": "Le dernier rapport COT (Commitment of Traders) révèle un positionnement institutionnel nuancé. Les fonds spéculatifs (leveraged money) sont nets short sur les futures S&P 500 pour la première fois depuis octobre 2023, avec une position nette short d'environ -45 000 contrats, reflétant leur scepticisme sur la durabilité de la croissance des bénéfices. Les asset managers (long-only) restent nets longs mais ont réduit leur exposition de 15% sur le mois écoulé. Sur les futures Treasuries, le positionnement short des hedge funds sur le 10 ans est à des niveaux extrêmes — un trade de 'basis trade' massif qui amplifie la volatilité sur le marché obligataire. Sur l'or, les longs spéculatifs sont proches de records historiques, ce qui représente un risque de correction technique si un catalyseur négatif émerge, mais la demande physique sous-jacente des banques centrales constitue un plancher structurel.",
+      "market_signal": "bearish",
+      "market_signal_explanation": "La synthèse des signaux dérivés pointe vers un environnement bearish modéré : VIX élevé (25.5), ratio put/call défensif (1.15), skew élevé (130), positionnement CTA net short, et fonds spéculatifs en position nette short sur les futures indices. Ce faisceau d'indices convergents indique que les smart money se préparent à une poursuite de la correction ou à un événement de stress. Cependant, le contango sur la term structure du VIX et le positionnement extrêmement couvert (put/call ratio élevé) limitent le potentiel de chute brutale — un sell-off graduel et ordonné est plus probable qu'un crash. Le marché semble pricer un scénario de 'slow grind lower' plutôt qu'un effondrement.",
+      "options_strategy": "Dans cet environnement de volatilité élevée et de biais baissier, la stratégie optimale est le put spread (bear put spread) sur le S&P 500 : achat de puts ATM (strike 5 750) et vente de puts OTM (strike 5 500), ce qui réduit le coût net de la couverture de ~40% grâce au skew élevé. Pour les investisseurs cherchant du rendement, la vente de puts OTM sécurisés (cash-secured puts) sur des actions de qualité à des niveaux de support offre des primes attractives avec un VIX à 25.5. Éviter les positions short volatilité pures (short straddles/strangles) dans cet environnement à risque de tail events élevé.",
+      "key_levels": [
+        {
+          "asset": "S&P 500",
+          "support": "5 650",
+          "resistance": "5 880",
+          "key_strike": "5 700 (concentration de puts ouverts)"
+        },
+        {
+          "asset": "Or",
+          "support": "2 850 $/oz",
+          "resistance": "2 980 $/oz",
+          "key_strike": "2 900 (niveau gamma élevé)"
+        },
+        {
+          "asset": "EUR/USD",
+          "support": "1.0750",
+          "resistance": "1.0950",
+          "key_strike": "1.0850 (pivot delta-neutral)"
+        }
+      ]
     },
     "credit_defaults": {
-      "title": "Taux de Défaut",
-      "why": "Les taux de défaut dans le segment High Yield continuent leur progression graduelle, atteignant 3,2% sur 12 mois glissants (contre 2,8% il y a trois mois), concentrés dans les secteurs de l'immobilier commercial, de la santé et des médias. Les défauts sur les prêts auto et les cartes de crédit s'accélèrent, avec des taux à 2,4% et 4,1% respectivement, reflétant la pression sur les ménages américains à revenus faibles et moyens malgré un marché de l'emploi officiellement résilient. L'Investment Grade reste solide à 0,8%, les grandes entreprises bénéficiant de bilans renforcés.",
-      "implies": "La divergence croissante entre la qualité de crédit Investment Grade et High Yield signale un marché du crédit à deux vitesses. La hausse des défauts de consommation est un indicateur avancé de ralentissement économique qui n'est pas encore pleinement reflété dans les spreads de crédit corporate. Le cycle de détérioration du crédit à la consommation pourrait s'intensifier si la Fed tarde à baisser les taux.",
-      "strategy": "Réduire l'exposition au High Yield (BB- et en dessous), en particulier dans les secteurs CRE et médias. Favoriser l'Investment Grade court terme (1-3 ans) pour le portage. Couvrir le risque de crédit via des positions longues sur l'iTraxx Crossover. Surveiller de près les ABS adossés aux prêts auto et cartes de crédit pour détecter une accélération des défauts.",
+      "title": "Crédit & Taux de Défaut — Analyse granulaire",
+      "macro_view": "Le marché du crédit présente un tableau contrasté. Les spreads investment grade restent contenus (~120 bps), reflétant des fondamentaux d'entreprise encore solides pour les grandes capitalisations. Cependant, les spreads high yield à 319 bps (données FRED) sont en élargissement tendanciel depuis le début de l'année, et les taux de défaut HY ont remonté au-dessus de 3%. Le segment le plus préoccupant reste le crédit consommateur américain où les retards de paiement augmentent de manière accélérée, avec des taux de défaut sur les cartes de crédit dépassant les niveaux pré-COVID.",
+      "why": "La remontée des défauts est la conséquence directe du cycle de taux élevés prolongé. Les entreprises et ménages qui ont emprunté à taux variables ou qui doivent refinancer des dettes contractées à taux bas subissent un choc de coûts de financement. Pour le HY corporate, le mécanisme est amplifié par la concentration sectorielle : les secteurs les plus représentés dans le HY (énergie, retail, télécoms, immobilier commercial) sont précisément ceux les plus exposés au ralentissement.",
+      "implies": "L'élargissement progressif des spreads HY est un signal d'alerte précoce pour les marchés actions. Historiquement, les spreads HY précèdent les corrections du S&P 500 de 2-3 mois. Un passage des spreads HY au-dessus de 400 bps constituerait un signal de stress aigü nécessitant une réduction significative de l'exposition au risque crédit et actions.",
+      "strategy": "Privilégier le crédit IG court terme (1-3 ans) qui offre un carry de 5-5.5% avec un risque de défaut quasi-nul. Réduire l'exposition au HY ou, à défaut, remonter en qualité (BB vs CCC). Considérer des positions longues sur les CDS IG (couverture contre l'élargissement des spreads) comme assurance de portefeuille. Sur le crédit émergent, être sélectif par pays en privilégiant les souverains en devise locale avec de bonnes métriques fiscales.",
       "data": [
         {
-          "category": "Investment Grade",
-          "rate": "0.8",
-          "trend": "stable"
+          "category": "Investment Grade US",
+          "rate": "0.8%",
+          "trend": "stable",
+          "spread": "120 bps",
+          "spread_trend": "compression légère"
         },
         {
-          "category": "High Yield",
-          "rate": "3.2",
-          "trend": "hausse"
+          "category": "High Yield US",
+          "rate": "3.2%",
+          "trend": "hausse",
+          "spread": "319 bps",
+          "spread_trend": "élargissement"
         },
         {
-          "category": "Mortgage",
-          "rate": "1.1",
-          "trend": "stable"
+          "category": "Investment Grade EU",
+          "rate": "0.5%",
+          "trend": "stable",
+          "spread": "95 bps",
+          "spread_trend": "compression"
         },
         {
-          "category": "Auto",
-          "rate": "2.4",
-          "trend": "hausse"
+          "category": "High Yield EU",
+          "rate": "2.6%",
+          "trend": "stable",
+          "spread": "340 bps",
+          "spread_trend": "stable"
         },
         {
-          "category": "Credit Card",
-          "rate": "4.1",
-          "trend": "hausse"
+          "category": "EM Sovereigns",
+          "rate": "3.8%",
+          "trend": "hausse légère",
+          "spread": "420 bps",
+          "spread_trend": "élargissement modéré"
+        },
+        {
+          "category": "Mortgage US (RMBS)",
+          "rate": "1.2%",
+          "trend": "stable",
+          "spread": "175 bps",
+          "spread_trend": "stable"
+        },
+        {
+          "category": "Auto Loans US",
+          "rate": "2.5%",
+          "trend": "hausse",
+          "spread": "225 bps",
+          "spread_trend": "élargissement"
+        },
+        {
+          "category": "Credit Cards US",
+          "rate": "4.3%",
+          "trend": "hausse marquée",
+          "spread": "520 bps",
+          "spread_trend": "élargissement rapide"
         }
       ]
     }
   },
   "section6_forex_commodities": {
     "title": "Forex & Matières Premières",
-    "forex_narrative": "Le dollar américain a cédé du terrain cette semaine, l'indice DXY reculant de 0,3% vers 104,20, pénalisé par les anticipations renforcées de baisse de taux de la Fed et par le rebond de l'euro. L'EUR/USD a progressé à 1,0850 soutenu par les bonnes données industrielles européennes et le plan d'investissement allemand qui améliore les perspectives de croissance de la zone euro. Le yen s'est légèrement renforcé (USD/JPY à 148,5) dans un contexte de normalisation monétaire de la BoJ et de flux refuges. Le yuan offshore s'est stabilisé à 7,24, les mesures de relance chinoises compensant les pressions structurelles à la dépréciation. Le dollar australien a bénéficié du rebond des matières premières industrielles et de l'appétit pour le risque asiatique.",
-    "commodities_narrative": "Le pétrole a reculé sous la pression de la décision saoudienne d'augmenter la production au-delà des quotas OPEP+, le WTI cédant 1,2% à 72,50 $/bbl et le Brent 0,9% à 76,80 $/bbl. L'AIE a par ailleurs révisé à la baisse ses prévisions de demande mondiale pour 2026 de 100 000 bpj. À l'inverse, l'or a poursuivi sa progression vers 2 050 $/oz (+0,6%), soutenu par les tensions géopolitiques et la perspective de taux réels en baisse. L'argent a surperformé (+1,1% à 23,50 $/oz) grâce à la demande industrielle liée aux panneaux solaires. Le cuivre a progressé de 0,8% à 3,85 $/lb, soutenu par les mesures de relance chinoises et les perspectives de demande liées à l'électrification. Le gaz naturel a fortement reculé (-2,1%) en raison de stocks élevés et de températures douces en Europe et aux États-Unis.",
+    "dollar_index": {
+      "value": "103.8",
+      "change": "-0.35%",
+      "interpretation": "Le dollar index (DXY) poursuit sa tendance baissière modérée, en recul de ~5% depuis ses plus hauts de fin 2024. Cette faiblesse reflète trois dynamiques convergentes : (1) le cycle de baisse des taux de la Fed qui réduit le différentiel de rendement favorable au dollar, (2) l'amélioration relative des perspectives de croissance en Europe qui attire les flux vers l'euro, et (3) la dynamique structurelle de dédollarisation qui réduit la demande de réserves en dollars. Un DXY sous 104 est un niveau technique important — sa cassure confirmerait un changement de régime séculaire pour le billet vert."
+    },
+    "forex_narrative": "Le marché des changes traverse une période de réalignement fondamental. L'euro s'apprécie significativement face au dollar, porté par le plan de relance européen et la réduction du différentiel de taux transatlantique. L'EUR/USD s'approche de la zone de résistance 1.0900-1.0950, un niveau qui, s'il est franchi durablement, ouvrirait la voie vers 1.12-1.15 d'ici l'été. Le yen japonais se renforce également face au dollar, la Bank of Japan poursuivant sa normalisation monétaire avec un taux directeur désormais positif et des signaux hawkish. L'USD/JPY teste les 147-148, avec un risque de chute vers 140 si la BoJ accélère son resserrement. Les devises émergentes offrent un tableau mixte : le real brésilien et le peso mexicain restent sous pression en raison des incertitudes politiques locales et de la remontée du risque pays, tandis que le yuan chinois se stabilise grâce aux interventions de la PBOC et à l'amélioration des flux de capitaux vers les actifs chinois. Le franc suisse maintient son statut de valeur refuge, s'appréciant modestement dans l'environnement de risk-off ambiant.",
+    "commodities_narrative": "Le complexe des matières premières affiche des dynamiques divergentes. L'or est la star incontestée, approchant les records historiques portés par les achats de banques centrales, la baisse des taux réels et la demande de protection géopolitique. Le pétrole rebondit modestement (USO +1.47%) sur des facteurs de court terme — tensions au Moyen-Orient, réductions OPEC+ maintenues — mais le trend fondamental reste baissier en raison du ralentissement de la demande chinoise et mondiale, et de la production américaine qui reste robuste près de 13.2 millions de barils/jour. Le cuivre offre un signal encourageant pour l'activité industrielle mondiale, soutenu par la demande liée à la transition énergétique (véhicules électriques, réseaux) et par le plan de relance européen. Les matières premières agricoles restent sous pression avec des récoltes record dans l'hémisphère sud et des conditions météorologiques globalement favorables. Le bitcoin évolue dans une zone d'incertitude, tiraillé entre l'adoption institutionnelle croissante et la corrélation persistante avec les actifs risqués dans les phases de stress.",
     "forex_pairs": [
       {
         "pair": "EUR/USD",
-        "value": "1.0850",
-        "change": "+0.3%",
-        "direction": "up"
+        "value": "1.0870",
+        "change": "+0.45%",
+        "direction": "up",
+        "analysis": "L'euro bénéficie du plan de relance européen massif et de la réduction du différentiel de taux avec les US. Les flux d'investissement vers les actions européennes créent une demande structurelle de change. La résistance clé à 1.0950 est le prochain objectif.",
+        "support": "1.0750",
+        "resistance": "1.0950"
       },
       {
         "pair": "GBP/USD",
-        "value": "1.2650",
-        "change": "-0.1%",
-        "direction": "down"
+        "value": "1.2920",
+        "change": "+0.30%",
+        "direction": "up",
+        "analysis": "La livre sterling profite de la faiblesse généralisée du dollar et de taux de la BoE encore relativement élevés. Cependant, les perspectives de croissance UK restent médiocres, limitant le potentiel haussier.",
+        "support": "1.2800",
+        "resistance": "1.3050"
       },
       {
         "pair": "USD/JPY",
-        "value": "148.5",
-        "change": "+0.5%",
-        "direction": "up"
+        "value": "147.80",
+        "change": "-0.55%",
+        "direction": "down",
+        "analysis": "Le yen se renforce avec la BoJ qui signal un resserrement graduel. Le différentiel de taux US-Japon se réduit, retirant un pilier fondamental du carry trade. Risque de chute accélérée vers 140 si la BoJ relève à nouveau ses taux.",
+        "support": "145.00",
+        "resistance": "150.50"
       },
       {
         "pair": "USD/CHF",
-        "value": "0.8950",
-        "change": "-0.2%",
-        "direction": "down"
+        "value": "0.8780",
+        "change": "-0.25%",
+        "direction": "down",
+        "analysis": "Le franc suisse joue son rôle de valeur refuge dans l'environnement risk-off. La BNS reste accommodante mais le flux safe-haven domine. L'USD/CHF pourrait tester 0.8650 en cas de stress accru.",
+        "support": "0.8650",
+        "resistance": "0.8900"
       },
       {
         "pair": "AUD/USD",
-        "value": "0.6540",
-        "change": "+0.4%",
-        "direction": "up"
+        "value": "0.6320",
+        "change": "+0.20%",
+        "direction": "up",
+        "analysis": "Le dollar australien bénéficie du rebond des commodities (cuivre, minerai de fer) et de l'amélioration du sentiment sur la Chine. La RBA maintient une stance restrictive. Support critique à 0.6250.",
+        "support": "0.6250",
+        "resistance": "0.6450"
       },
       {
         "pair": "USD/CNY",
-        "value": "7.2400",
-        "change": "+0.1%",
-        "direction": "up"
+        "value": "7.2350",
+        "change": "-0.15%",
+        "direction": "down",
+        "analysis": "Le yuan se stabilise grâce aux interventions actives de la PBOC et à l'amélioration des flux de capitaux vers les actifs chinois. La bande de fluctuation reste contrôlée. La PBOC vise une dépréciation ordonnée plutôt qu'une chute.",
+        "support": "7.1800",
+        "resistance": "7.2800"
+      },
+      {
+        "pair": "USD/BRL",
+        "value": "5.85",
+        "change": "+0.40%",
+        "direction": "up",
+        "analysis": "Le real reste sous pression en raison des inquiétudes fiscales (déficit brésilien en hausse) et de l'incertitude politique. Le Selic élevé offre un carry attractif mais le risque souverain limite l'appétit des investisseurs étrangers.",
+        "support": "5.70",
+        "resistance": "6.05"
+      },
+      {
+        "pair": "USD/MXN",
+        "value": "20.45",
+        "change": "+0.30%",
+        "direction": "up",
+        "analysis": "Le peso mexicain s'affaiblit sous l'effet des menaces tarifaires américaines et du ralentissement de l'activité manufacturière. Le nearshoring reste un thème porteur à moyen terme mais les incertitudes politiques pèsent à court terme.",
+        "support": "20.00",
+        "resistance": "20.80"
       }
     ],
     "commodities": [
       {
         "name": "WTI Oil",
-        "value": "72.5",
+        "value": "68.50",
         "unit": "$/bbl",
-        "change": "-1.2%",
-        "direction": "down"
+        "change": "+1.5%",
+        "direction": "up",
+        "analysis": "Rebond technique sur fond de tensions géopolitiques au Moyen-Orient et de maintien des coupes OPEC+. Cependant, la demande globale ralentit et la production US reste robuste, limitant le potentiel haussier.",
+        "drivers": [
+          "Tensions géopolitiques Moyen-Orient",
+          "Coupes OPEC+ prolongées",
+          "Production US élevée (frein haussier)"
+        ]
       },
       {
         "name": "Brent",
-        "value": "76.8",
+        "value": "72.20",
         "unit": "$/bbl",
-        "change": "-0.9%",
-        "direction": "down"
+        "change": "+1.3%",
+        "direction": "up",
+        "analysis": "Le Brent suit la dynamique du WTI avec un premium stable de ~3.70$. Les fondamentaux restent baissiers à moyen terme avec une demande OCDE en déclin structurel.",
+        "drivers": [
+          "Spread Brent-WTI stable",
+          "Demande asiatique en modération",
+          "Stocks OCDE en reconstitution"
+        ]
+      },
+      {
+        "name": "Natural Gas",
+        "value": "3.85",
+        "unit": "$/MMBtu",
+        "change": "-2.1%",
+        "direction": "down",
+        "analysis": "Le gaz naturel Henry Hub recule avec la fin de la saison de chauffage et des températures printanières clémentes. La production américaine reste abondante et les niveaux de stockage sont supérieurs à la moyenne quinquennale.",
+        "drivers": [
+          "Fin de saison de chauffage",
+          "Production record",
+          "Stockages au-dessus de la moyenne"
+        ]
       },
       {
         "name": "Gold",
-        "value": "2050",
+        "value": "2 920",
         "unit": "$/oz",
-        "change": "+0.6%",
-        "direction": "up"
+        "change": "+1.2%",
+        "direction": "up",
+        "analysis": "L'or poursuit sa trajectoire haussière spectaculaire, approchant les 3 000$/oz. Les achats de banques centrales (estimés à 100+ tonnes/mois), la baisse des taux réels et l'incertitude géopolitique créent un cocktail idéal. Le momentum est puissant et les corrections restent shallow.",
+        "drivers": [
+          "Achats massifs banques centrales",
+          "Baisse des taux réels US",
+          "Dédollarisation structurelle",
+          "Demande de couverture géopolitique"
+        ]
       },
       {
         "name": "Silver",
-        "value": "23.5",
+        "value": "33.50",
         "unit": "$/oz",
-        "change": "+1.1%",
-        "direction": "up"
+        "change": "+1.8%",
+        "direction": "up",
+        "analysis": "L'argent surperforme l'or grâce à sa double nature monétaire et industrielle. La demande industrielle (panneaux solaires, électronique) reste robuste tandis que l'effet d'entraînement de l'or propulse la composante monétaire.",
+        "drivers": [
+          "Corrélation avec l'or",
+          "Demande industrielle solaire/EV",
+          "Ratio gold/silver en compression"
+        ]
       },
       {
         "name": "Copper",
-        "value": "3.85",
+        "value": "4.35",
         "unit": "$/lb",
         "change": "+0.8%",
-        "direction": "up"
+        "direction": "up",
+        "analysis": "Le cuivre progresse modestement, soutenu par les perspectives de demande liées à la transition énergétique et au plan de relance européen en infrastructure. Les inventaires restent bas et le déficit d'offre structurel se confirme.",
+        "drivers": [
+          "Plan infrastructure européen",
+          "Transition énergétique (EV, réseaux)",
+          "Déficit d'offre structurel",
+          "Rebond de la demande chinoise"
+        ]
+      },
+      {
+        "name": "Platinum",
+        "value": "985",
+        "unit": "$/oz",
+        "change": "+0.5%",
+        "direction": "up",
+        "analysis": "Le platine reste dans un range étroit, soutenu par un déficit d'offre mais freiné par la transition vers les véhicules électriques qui réduit la demande catalytique à terme.",
+        "drivers": [
+          "Déficit d'offre minier",
+          "Demande hydrogène émergente",
+          "Substitution catalytique baissière"
+        ]
       },
       {
         "name": "Wheat",
-        "value": "580",
+        "value": "5.45",
         "unit": "$/bu",
-        "change": "-0.4%",
-        "direction": "down"
+        "change": "-1.2%",
+        "direction": "down",
+        "analysis": "Le blé poursuit sa baisse saisonnière avec des récoltes abondantes en Australie et Argentine. Les exportations ukrainiennes restent perturbées mais le marché s'est adapté avec des routes alternatives.",
+        "drivers": [
+          "Récoltes record hémisphère sud",
+          "Stocks mondiaux reconstitués",
+          "Dollar faible (soutien limité)"
+        ]
       },
       {
         "name": "Corn",
-        "value": "445",
+        "value": "4.55",
         "unit": "$/bu",
-        "change": "+0.2%",
-        "direction": "up"
+        "change": "-0.8%",
+        "direction": "down",
+        "analysis": "Le maïs recule sous l'effet de projections de surfaces plantées aux US en hausse et d'une demande d'éthanol qui stagne. Les exportations vers la Chine restent solides mais insuffisantes pour absorber l'excédent.",
+        "drivers": [
+          "Surfaces plantées US en hausse",
+          "Demande éthanol stagnante",
+          "Stocks élevés"
+        ]
       },
       {
-        "name": "Nat. Gas",
-        "value": "1.85",
-        "unit": "$/MMBtu",
-        "change": "-2.1%",
-        "direction": "down"
+        "name": "Soybeans",
+        "value": "10.20",
+        "unit": "$/bu",
+        "change": "+0.3%",
+        "direction": "up",
+        "analysis": "Le soja résiste mieux grâce à la demande chinoise de soja brésilien et américain qui reste soutenue. La trituration mondiale est en hausse, portée par la demande de tourteau pour l'alimentation animale.",
+        "drivers": [
+          "Demande chinoise résiliente",
+          "Trituration mondiale en hausse",
+          "Conditions météo brésiliennes"
+        ]
+      },
+      {
+        "name": "Lumber",
+        "value": "520",
+        "unit": "$/MBF",
+        "change": "-1.5%",
+        "direction": "down",
+        "analysis": "Le bois d'œuvre poursuit sa tendance baissière, reflétant directement le ralentissement du marché immobilier résidentiel US avec des taux hypothécaires à 6% qui compriment les mises en chantier.",
+        "drivers": [
+          "Marché immobilier US en ralentissement",
+          "Taux hypothécaires élevés (6%)",
+          "Offre canadienne stable"
+        ]
+      },
+      {
+        "name": "Bitcoin",
+        "value": "82 500",
+        "unit": "USD",
+        "change": "-2.3%",
+        "direction": "down",
+        "analysis": "Le bitcoin recule dans l'environnement risk-off, confirmant sa corrélation persistante avec les actifs risqués malgré le narratif de 'digital gold'. Les flux vers les ETF Bitcoin spot restent positifs mais ralentissent. La régulation accrue et les incertitudes macroéconomiques pèsent sur le sentiment crypto.",
+        "drivers": [
+          "Corrélation risk-off avec les actions",
+          "Flux ETF spot en ralentissement",
+          "Incertitude réglementaire",
+          "Liquidations de positions longues levier"
+        ]
       }
     ]
   },
   "section7_synthesis": {
-    "title": "Synthèse Holistique",
-    "global_view": "Le régime de marché actuel se caractérise par un optimisme prudent, soutenu par trois piliers : (1) une trajectoire de détente monétaire confirmée par la Fed, (2) des mesures de relance chinoises crédibles, et (3) un plan d'investissement européen ambitieux qui change la donne pour la croissance du continent. Toutefois, des fragilités subsistent : la hausse des défauts de crédit à la consommation, l'inversion persistante de la courbe des taux, les tensions géopolitiques au Moyen-Orient et la pénurie de semi-conducteurs avancés constituent des risques asymétriques. La rotation sectorielle en cours, des méga-caps tech vers les cycliques et les small caps, est un signal de maturité du cycle haussier. Le marché est dans une phase où la sélectivité et la gestion active des risques deviennent plus déterminantes que la simple exposition directionnelle. La corrélation entre actions et obligations reste instable, compliquant la construction de portefeuilles traditionnels 60/40.",
-    "upcoming_events": "La semaine prochaine sera déterminante avec la publication de l'IPC américain de février (mercredi), les décisions de taux de la BCE (jeudi) et de la BoJ (vendredi), ainsi que les données de ventes au détail américaines. Les marchés scruteront particulièrement le composant services de l'inflation US pour valider le scénario de baisse de taux en mai. La BCE devrait maintenir ses taux inchangés à 2,50% mais le marché sera attentif au ton de Christine Lagarde sur les perspectives de croissance post-plan allemand.",
+    "title": "Synthèse Stratégique — Mars 2026",
+    "regime": "transition",
+    "regime_description": "Le marché se trouve dans un régime de transition entre le 'late cycle expansion' et le 'early recession'. Les indicateurs avancés (courbe de taux dé-inversée, chômage en hausse, ISM manufacturier sous 50, spreads HY en élargissement) convergent vers un scénario de ralentissement significatif, potentiellement une récession technique au S1 2026. Cependant, les conditions financières restent relativement accommodantes (taux directeur en baisse, M2 en expansion modérée), ce qui pourrait amortir le choc et maintenir un 'rolling recession' sectorielle plutôt qu'une contraction généralisée.",
+    "global_view": "La photographie d'ensemble des marchés financiers en ce 10 mars 2026 révèle une complexité rarement observée. Les États-Unis sont clairement dans une phase de décélération — PIB 1.4%, chômage 4.4%, consommation en modération — tandis que l'Europe connaît un regain d'optimisme grâce à des stimuli budgétaires massifs et que la Chine montre des signes de stabilisation après deux années de déflation immobilière. Cette désynchronisation géographique crée des opportunités de rotation mais aussi des risques de corrélation en cas de choc systémique. Le VIX à 25.5 et l'or approchant les 3 000$/oz sont les symptômes d'un marché qui hésite entre la résignation face au ralentissement et l'espoir que les banques centrales interviendront suffisamment vite. Le marché obligataire envoie des signaux contradictoires : le court terme intègre la détente de la Fed, mais le long terme exige une prime de risque croissante pour financer les déficits colossaux. La clé de lecture pour les semaines à venir sera l'évolution des résultats d'entreprises du Q1 2026 : si les guidances confirment le ralentissement, les estimations consensus (encore optimistes à +8% de croissance des bénéfices) devront être révisées à la baisse, provoquant une compression supplémentaire des multiples.",
+    "macro_thesis": "Notre thèse centrale pour les 4-8 prochaines semaines est celle d'un 'grinding bear market' sur les actions US — pas un crash mais une érosion progressive des valorisations alors que la réalité du ralentissement économique rattrape les prévisions de bénéfices encore trop optimistes. La Fed, contrainte entre un chômage en hausse et une inflation encore visqueuse, naviguera prudemment avec au maximum 1-2 baisses de taux supplémentaires d'ici l'été. L'Europe et la Chine offriront une alternative relative, avec des fondamentaux en amélioration et des valorisations attractives. L'or restera la classe d'actif de conviction à surpondérer structurellement. Le risque tail le plus important reste un accident sur le marché du crédit (défaillance d'un émetteur HY majeur ou crise bancaire régionale) qui pourrait transformer le ralentissement ordonné en véritable crise de liquidité.",
+    "upcoming_events": "La semaine prochaine sera dominée par la publication du rapport CPI américain de février (mercredi 12 mars) qui sera déterminant pour calibrer les attentes de politique monétaire de la Fed. Les ventes au détail (mardi) donneront une lecture directe de la santé du consommateur américain. En Europe, la production industrielle et les indices ZEW de confiance fourniront une validation (ou non) du narratif de relance européenne. La réunion de la BCE jeudi sera scrutée pour tout signal d'accélération des baisses de taux. Enfin, les données de commerce extérieur chinoises et l'indice de prix immobiliers seront surveillés pour confirmer la stabilisation économique.",
     "strategy": [
       {
-        "type": "Allocation",
-        "recommendation": "Surpondérer les actions européennes et chinoises au détriment du NASDAQ. Maintenir une exposition neutre au S&P 500 avec un biais vers les cycliques et les small caps. Augmenter la duration obligataire sur les Treasuries intermédiaires (5-7 ans).",
-        "rationale": "L'Europe et la Chine bénéficient de catalyseurs de politique économique puissants (plan allemand, relance chinoise) avec des valorisations plus attractives que la tech US. La courbe des taux US devrait se pentifier avec les baisses de la Fed, favorisant la duration intermédiaire."
+        "type": "Allocation Tactique",
+        "recommendation": "Sous-pondérer actions US (-5% vs benchmark), surpondérer Europe (+5%) et Chine (+3%). Maintenir une surpondération or et TIPS à 8-10% du portefeuille.",
+        "rationale": "La divergence de dynamique économique entre les régions est flagrante : les US ralentissent (PIB 1.4%, chômage 4.4% en hausse) tandis que l'Europe bénéficie d'un stimulus fiscal sans précédent et que la Chine se stabilise. Les valorisations relatives confirment ce biais : PE forward du S&P 500 à ~20x vs EuroStoxx 50 à ~13x et MSCI China à ~9x. La surpondération or est justifiée par la convergence des facteurs structurels (banques centrales, taux réels, dédollarisation) et le contexte d'incertitude élevée (VIX 25.5).",
+        "timeframe": "4-8 semaines",
+        "conviction": "haute"
       },
       {
         "type": "Couverture",
-        "recommendation": "Acheter des puts NASDAQ 100 strike -5% à échéance juin 2026. Couvrir le risque de change JPY sur les positions actions japonaises. Prendre des positions longues sur l'iTraxx Crossover comme protection contre l'élargissement des spreads HY.",
-        "rationale": "Le NASDAQ est vulnérable aux contraintes d'approvisionnement en semi-conducteurs et aux valorisations tendues. Le yen devrait continuer de se renforcer avec la normalisation de la BoJ. Le crédit HY montre des signes de détérioration qui ne sont pas encore reflétés dans les spreads."
+        "recommendation": "Acheter des put spreads sur le S&P 500 (long put 5 750 / short put 5 500, expiration avril 2026). Coût net estimé : ~1.2% du nominal couvert.",
+        "rationale": "Le VIX à 25.5 rend les puts vanilles chers, mais le skew élevé (SKEW 130) permet de structurer des put spreads à coût réduit. La zone 5 500-5 650 correspond à des niveaux de support technique majeurs et à une correction de ~5-8% par rapport aux niveaux actuels, cohérente avec notre scénario de grinding bear. Le ratio put/call à 1.15 indique un marché déjà défensif, ce qui limite le risque de chute brutale mais ne protège pas contre l'érosion graduelle que notre scénario anticipe. Le coût de 1.2% est raisonnable face au risque identifié.",
+        "timeframe": "1-6 semaines",
+        "conviction": "haute"
       },
       {
-        "type": "Opportunité",
-        "recommendation": "Position longue cuivre et argent via ETF physiques. Accumuler les actions du secteur défense européen (Rheinmetall, Thales, Leonardo). Explorer les obligations Investment Grade européennes à 3-5 ans pour le portage (rendement ~3,2%).",
-        "rationale": "Le cuivre et l'argent bénéficient de la double thématique relance chinoise + transition énergétique. La défense européenne entre dans un cycle d'investissement structurel multi-décennal. Le crédit IG européen offre un portage attractif avec un risque de défaut minimal."
+        "type": "Opportunité Long",
+        "recommendation": "Position longue sur les minières aurifères européennes (Newmont, Barrick, ou ETF GDX) et sur les valeurs de défense européennes (Rheinmetall, Thales, Leonardo).",
+        "rationale": "Les minières aurifères offrent un levier opérationnel massif sur la hausse de l'or : chaque hausse de 10% du prix de l'or se traduit typiquement par une hausse de 20-30% des bénéfices des minières grâce à la structure de coûts (AISC fixe ~1 300$/oz). Les valeurs de défense européennes bénéficient d'un changement structurel des budgets militaires en Europe (objectif 3-3.5% du PIB vs 1.5% historiquement), créant une visibilité exceptionnelle sur les commandes et les revenus à 5-10 ans. Ces deux thématiques sont relativement décorrélées du cycle économique US, offrant une diversification bienvenue.",
+        "timeframe": "2-8 semaines (tactique) à 6-12 mois (stratégique)",
+        "conviction": "haute"
       },
       {
-        "type": "Risque clé",
-        "recommendation": "Surveiller de très près l'IPC US de février : une surprise haussière (core CPI > 0,4% m/m) invaliderait le scénario de baisse de taux en mai et provoquerait un repricing violent sur toutes les classes d'actifs. Préparer un plan de réduction des positions risquées si ce scénario se matérialise.",
-        "rationale": "L'ensemble du positionnement actuel du marché repose sur l'hypothèse d'une désinflation continue. Le risque d'un rebond de l'inflation des services (shelter, assurance, santé) n'est pas nul et constitue le principal risque de queue pour le trimestre en cours. Un CPI élevé pourrait déclencher une correction de 3 à 5% sur les actions et une remontée de 20 bps du 10 ans US en quelques jours."
+        "type": "Opportunité Short",
+        "recommendation": "Position short sur le Russell 2000 (via short IWM ou achat de puts) et/ou short sur le secteur Consumer Discretionary US (XLY).",
+        "rationale": "Les small caps US sont dans l'œil du cyclone : leur forte exposition au marché domestique, leur sensibilité au coût du capital (beaucoup de dettes à taux variable) et la détérioration du marché du travail (chômage 4.4%) créent un cocktail toxique. Le Russell 2000 (-6.8% YTD) n'a pas encore pleinement intégré le scénario de récession modérée. Le Consumer Discretionary US est vulnérable à la modération de la consommation des ménages, à l'épuisement de l'épargne excédentaire et à la remontée du chômage. Les multiples de valorisation du secteur (PE forward ~22x) ne reflètent pas les risques de révision baissière des bénéfices.",
+        "timeframe": "2-6 semaines",
+        "conviction": "moyenne"
+      },
+      {
+        "type": "Gestion du Risque",
+        "recommendation": "Relever les niveaux de cash à 10-15% du portefeuille, réduire la duration obligataire à 3-4 ans maximum, diversifier géographiquement et par classe d'actifs. Éviter le levier.",
+        "rationale": "L'environnement actuel combine incertitude macroéconomique élevée (VIX 25.5), positionnement institutionnel fragile (CTA net short), et risques de queue non négligeables (accident crédit, choc géopolitique, erreur de politique monétaire). Un niveau de cash de 10-15% offre l'optionnalité de déployer du capital à de meilleurs niveaux si le marché corrige davantage, tout en réduisant la volatilité du portefeuille. La réduction de duration obligataire protège contre le risque de bear steepening supplémentaire. La diversification vers l'Europe, l'Asie et les matières premières réduit la concentration sur le cycle US en décélération.",
+        "timeframe": "Permanent en régime de transition",
+        "conviction": "haute"
       }
     ]
   },
-  "section8_calendar": {
-    "title": "Calendrier Économique — Semaine suivante",
+  "section8_economic_calendar": {
+    "title": "Calendrier Économique — Semaine du 10 au 14 Mars 2026",
+    "note": "Sources : Finnhub, Bloomberg consensus. Horaires en heure de l'Est (ET).",
     "events": [
       {
-        "date": "Lundi",
-        "country": "US",
-        "event": "Indice NFIB Optimisme des petites entreprises (mars)",
-        "impact": "high",
-        "previous": "100.7",
-        "forecast": "101.2"
-      },
-      {
-        "date": "Mardi",
-        "country": "EU",
-        "event": "Enquête ZEW Sentiment économique Allemagne (mars)",
-        "impact": "high",
+        "date": "Mardi 10 mars",
+        "time": "06:00",
+        "country": "DE",
+        "flag": "🇩🇪",
+        "event": "Indice ZEW Confiance Économique (Mars)",
+        "impact": "medium",
         "previous": "26.0",
-        "forecast": "28.5"
+        "forecast": "28.5",
+        "context": "L'indice ZEW mesure le sentiment des analystes et investisseurs institutionnels allemands. Dans le contexte du plan de relance européen massif, une lecture supérieure aux attentes confirmerait le changement de narratif sur la croissance européenne et soutiendrait davantage les actions du Vieux Continent."
       },
       {
-        "date": "Mercredi",
+        "date": "Mardi 10 mars",
+        "time": "10:00",
         "country": "US",
-        "event": "IPC (CPI) février 2026 — Core CPI m/m et a/a",
+        "flag": "🇺🇸",
+        "event": "JOLTS — Offres d'emploi (Janvier)",
         "impact": "high",
-        "previous": "0.3% m/m / 3.3% a/a",
-        "forecast": "0.3% m/m / 3.2% a/a"
+        "previous": "7.6M",
+        "forecast": "7.4M",
+        "context": "Les offres d'emploi JOLTS sont un indicateur avancé crucial du marché du travail. Une baisse en dessous de 7.5M confirmerait le rééquilibrage du marché du travail et augmenterait la pression sur la Fed pour accélérer les baisses de taux. Le ratio offres/chômeurs est surveillé de près par le FOMC."
       },
       {
-        "date": "Jeudi",
+        "date": "Mercredi 11 mars",
+        "time": "08:30",
+        "country": "US",
+        "flag": "🇺🇸",
+        "event": "CPI — Indice des Prix à la Consommation (Février)",
+        "impact": "high",
+        "previous": "+0.3% m/m, +3.0% a/a",
+        "forecast": "+0.2% m/m, +2.8% a/a",
+        "context": "C'est l'événement phare de la semaine. Le CPI de février sera déterminant pour les attentes de politique monétaire de la Fed. Un chiffre au-dessus des attentes relancerait les craintes de stagflation et ferait remonter les rendements obligataires. En dessous des attentes, il soutiendrait les actifs risqués et renforcerait les paris de baisses de taux. Le core CPI (hors alimentation et énergie) sera scruté particulièrement pour la composante 'shelter' dont la décélération est attendue mais tarde à se matérialiser."
+      },
+      {
+        "date": "Mercredi 11 mars",
+        "time": "10:30",
+        "country": "US",
+        "flag": "🇺🇸",
+        "event": "Stocks de Pétrole Brut (EIA Weekly)",
+        "impact": "medium",
+        "previous": "-1.5M bbl",
+        "forecast": "+0.8M bbl",
+        "context": "Les stocks de pétrole brut américains donnent une lecture en temps réel de l'équilibre offre-demande sur le marché pétrolier. Une reconstitution des stocks confirmerait le ralentissement de la demande intérieure et pèserait sur les cours du WTI."
+      },
+      {
+        "date": "Jeudi 12 mars",
+        "time": "08:30",
+        "country": "US",
+        "flag": "🇺🇸",
+        "event": "PPI — Indice des Prix à la Production (Février)",
+        "impact": "medium",
+        "previous": "+0.4% m/m",
+        "forecast": "+0.2% m/m",
+        "context": "Le PPI est un indicateur avancé de l'inflation CPI car il capture les pressions de prix au niveau des producteurs avant qu'elles ne soient transmises aux consommateurs. Un PPI en décélération confirmerait la tendance désinflationniste et soulagerait le marché obligataire."
+      },
+      {
+        "date": "Jeudi 12 mars",
+        "time": "08:30",
+        "country": "US",
+        "flag": "🇺🇸",
+        "event": "Inscriptions hebdomadaires au chômage (Initial Jobless Claims)",
+        "impact": "medium",
+        "previous": "221K",
+        "forecast": "225K",
+        "context": "Les demandes initiales d'allocations chômage sont l'indicateur le plus haute fréquence du marché du travail. Toute lecture au-dessus de 240K serait un signal d'alarme significatif, indiquant une accélération des licenciements. Le niveau actuel de ~220K reste bas en absolu mais la tendance est en légère hausse."
+      },
+      {
+        "date": "Jeudi 12 mars",
+        "time": "08:45",
         "country": "EU",
-        "event": "Décision de taux BCE — Conférence de presse Lagarde",
+        "flag": "🇪🇺",
+        "event": "Décision de taux de la BCE",
         "impact": "high",
-        "previous": "2.50%",
-        "forecast": "2.50% (inchangé)"
+        "previous": "2.65%",
+        "forecast": "2.50% (baisse de 15 bps attendue)",
+        "context": "La BCE devrait poursuivre sa trajectoire de détente monétaire. Le marché s'attend à une baisse de 15-25 bps, mais la conférence de presse de Lagarde sera plus importante que la décision elle-même. Les investisseurs scruteront tout commentaire sur l'impact du plan de relance budgétaire européen sur les projections d'inflation et de croissance, et sur l'éventuelle divergence avec la politique de la Fed."
       },
       {
-        "date": "Vendredi",
-        "country": "CN",
-        "event": "Production industrielle et ventes au détail (jan-fév cumulé)",
+        "date": "Vendredi 13 mars",
+        "time": "08:30",
+        "country": "US",
+        "flag": "🇺🇸",
+        "event": "Ventes au Détail (Février)",
         "impact": "high",
-        "previous": "6.2% / 3.7% a/a",
-        "forecast": "5.8% / 4.2% a/a"
+        "previous": "+0.1% m/m",
+        "forecast": "+0.3% m/m",
+        "context": "Les ventes au détail sont le pouls direct de la consommation américaine, qui représente ~70% du PIB. Après un chiffre faible en janvier (+0.1%), un rebond est attendu. Un chiffre négatif serait très alarmant et pourrait déclencher une vague de révision baissière des estimations de PIB Q1 2026, accélérant le pricing de récession."
+      },
+      {
+        "date": "Vendredi 13 mars",
+        "time": "10:00",
+        "country": "US",
+        "flag": "🇺🇸",
+        "event": "Indice de Confiance du Consommateur (Univ. Michigan — Préliminaire Mars)",
+        "impact": "high",
+        "previous": "64.7",
+        "forecast": "63.5",
+        "context": "L'indice Michigan est un indicateur avancé de la consommation future. La composante 'anticipations d'inflation' à 1 an et 5 ans sera particulièrement scrutée — toute remontée au-dessus de 4% sur les anticipations à 1 an serait un signal négatif pour la Fed et les marchés obligataires, car elle compliquerait le narratif de désinflation."
+      },
+      {
+        "date": "Vendredi 13 mars",
+        "time": "04:00",
+        "country": "UK",
+        "flag": "🇬🇧",
+        "event": "PIB mensuel (Janvier)",
+        "impact": "medium",
+        "previous": "+0.1% m/m",
+        "forecast": "+0.2% m/m",
+        "context": "Le PIB mensuel britannique fournit une lecture en temps quasi-réel de l'activité économique UK. L'économie britannique oscille au bord de la stagnation depuis plusieurs trimestres, et toute surprise négative pourrait raviver les craintes de récession technique et peser sur la livre sterling."
+      },
+      {
+        "date": "Lundi 10 mars",
+        "time": "21:30",
+        "country": "CN",
+        "flag": "🇨🇳",
+        "event": "CPI et PPI chinois (Février)",
+        "impact": "medium",
+        "previous": "CPI +0.5% a/a, PPI -2.3% a/a",
+        "forecast": "CPI +0.7% a/a, PPI -2.0% a/a",
+        "context": "Les données d'inflation chinoises sont cruciales pour évaluer le risque déflationniste qui pèse sur la deuxième économie mondiale. Un PPI toujours très négatif signalerait que les surcapacités industrielles chinoises continuent de compresser les prix, ce qui a des implications globales pour les marges des producteurs internationaux en concurrence avec les exportations chinoises."
+      },
+      {
+        "date": "Mercredi 11 mars",
+        "time": "05:00",
+        "country": "EU",
+        "flag": "🇪🇺",
+        "event": "Production Industrielle Zone Euro (Janvier)",
+        "impact": "medium",
+        "previous": "-0.3% m/m",
+        "forecast": "+0.2% m/m",
+        "context": "La production industrielle européenne sera un test de la thèse de reprise manufacturière en Europe. Un rebond confirmerait que le plan de relance commence à avoir des effets concrets sur l'activité réelle, au-delà du seul sentiment des marchés financiers."
       }
     ]
+  },
+  "section9_earnings_calendar": {
+    "title": "Résultats d'Entreprises — Semaine du 10 au 14 Mars 2026",
+    "note": "Sources : Finnhub. La saison des résultats Q4 2025 touche à sa fin, mais quelques rapports importants sont encore attendus cette semaine, principalement dans le retail et la technologie.",
+    "earnings": [
+      {
+        "date": "Mardi 11 mars",
+        "symbol": "ORCL",
+        "company": "Oracle Corporation",
+        "sector": "Technologie / Cloud",
+        "timing": "après clôture",
+        "eps_estimate": "1.48$",
+        "revenue_estimate": "14.5B$",
+        "context": "Oracle est au cœur de la thématique IA/cloud avec son infrastructure OCI (Oracle Cloud Infrastructure) en forte croissance. Le marché surveille l'accélération des revenus cloud et les commandes liées à l'IA (training et inférence). Les guidances sur les dépenses d'investissement cloud et le backlog seront déterminantes pour le sentiment sur le secteur.",
+        "impact_potential": "high"
+      },
+      {
+        "date": "Mercredi 12 mars",
+        "symbol": "ADBE",
+        "company": "Adobe Inc.",
+        "sector": "Technologie / Software",
+        "timing": "après clôture",
+        "eps_estimate": "4.95$",
+        "revenue_estimate": "5.65B$",
+        "context": "Adobe est un baromètre de la monétisation de l'IA dans le software créatif. Le marché surveille l'adoption des fonctionnalités IA (Firefly) et leur impact sur l'ARPU (revenu moyen par utilisateur). Toute décélération de la croissance des abonnements Creative Cloud ou Document Cloud serait sanctionnée, d'autant que le titre se trade à des multiples élevés.",
+        "impact_potential": "high"
+      },
+      {
+        "date": "Mardi 11 mars",
+        "symbol": "DKS",
+        "company": "Dick's Sporting Goods",
+        "sector": "Consumer Discretionary / Retail",
+        "timing": "avant ouverture",
+        "eps_estimate": "3.45$",
+        "revenue_estimate": "3.7B$",
+        "context": "Dick's Sporting Goods est un indicateur de la santé du consommateur américain dans le segment discrétionnaire. Les ventes à magasins comparables et les tendances sur le panier moyen seront scrutées pour évaluer l'impact du ralentissement économique sur les dépenses de loisirs.",
+        "impact_potential": "medium"
+      },
+      {
+        "date": "Mercredi 12 mars",
+        "symbol": "S",
+        "company": "SentinelOne Inc.",
+        "sector": "Technologie / Cybersécurité",
+        "timing": "après clôture",
+        "eps_estimate": "-0.02$",
+        "revenue_estimate": "225M$",
+        "context": "SentinelOne est un pure-play cybersécurité en forte croissance. Le marché surveille la trajectoire vers la rentabilité et l'ARR (Annual Recurring Revenue). Le secteur cybersécurité reste prioritaire dans les budgets IT même en période de ralentissement, ce qui devrait soutenir la croissance du chiffre d'affaires.",
+        "impact_potential": "medium"
+      },
+      {
+        "date": "Jeudi 13 mars",
+        "symbol": "ULTA",
+        "company": "Ulta Beauty",
+        "sector": "Consumer Discretionary / Beauté",
+        "timing": "après clôture",
+        "eps_estimate": "6.65$",
+        "revenue_estimate": "3.5B$",
+        "context": "Ulta Beauty est un indicateur intéressant de la consommation des femmes de la classe moyenne — un segment économiquement significatif. Le 'lipstick index' (les consommateurs continuent d'acheter des produits beauté même en récession car c'est un luxe accessible) sera testé. Les ventes à magasins comparables et les marges brutes seront les métriques clés.",
+        "impact_potential": "medium"
+      },
+      {
+        "date": "Jeudi 13 mars",
+        "symbol": "DG",
+        "company": "Dollar General",
+        "sector": "Consumer Staples / Discount Retail",
+        "timing": "avant ouverture",
+        "eps_estimate": "1.55$",
+        "revenue_estimate": "10.2B$",
+        "context": "Dollar General est le thermomètre du consommateur à revenus bas et moyens-bas aux États-Unis — le segment le plus sensible au ralentissement économique. Une accélération du trafic client confirmerait le 'trade-down' (les consommateurs migrent vers les enseignes discount), un signal classique de stress consommateur. Les commentaires sur les tendances de crédit et les impayés de leurs clients seront particulièrement révélateurs.",
+        "impact_potential": "high"
+      },
+      {
+        "date": "Vendredi 14 mars",
+        "symbol": "BIDU",
+        "company": "Baidu Inc.",
+        "sector": "Technologie / Internet Chine",
+        "timing": "avant ouverture",
+        "eps_estimate": "2.35$",
+        "revenue_estimate": "4.8B$",
+        "context": "Baidu est un proxy pour l'économie numérique chinoise et le développement de l'IA en Chine. Le marché surveille la monétisation d'Ernie Bot (chatbot IA), la reprise de la publicité en ligne et les perspectives du cloud IA. Un bon rapport soutiendrait le rallye des tech chinoises observé depuis le début de l'année.",
+        "impact_potential": "medium"
+      },
+      {
+        "date": "Mardi 11 mars",
+        "symbol": "KR",
+        "company": "Kroger Co.",
+        "sector": "Consumer Staples / Alimentation",
+        "timing": "avant ouverture",
+        "eps_estimate": "1.02$",
+        "revenue_estimate": "37.5B$",
+        "context": "Kroger est le deuxième distributeur alimentaire américain. Les tendances d'inflation alimentaire, le comportement d'achat des consommateurs (marques distributeur vs marques nationales) et l'évolution du panier moyen seront des indicateurs macroéconomiques précieux. L'impact de la fusion avortée avec Albertsons sur la stratégie et les perspectives sera également abordé.",
+        "impact_potential": "medium"
+      }
+    ]
+  },
+  "_raw_data": {
+    "fred": {
+      "fed_funds_rate": {
+        "value": "3.64",
+        "date": "2026-02-01",
+        "series": "FEDFUNDS"
+      },
+      "unemployment": {
+        "value": "4.4",
+        "date": "2026-02-01",
+        "series": "UNRATE"
+      },
+      "cpi_yoy": {
+        "value": "326.588",
+        "date": "2026-01-01",
+        "series": "CPIAUCSL"
+      },
+      "10y_treasury": {
+        "value": "4.12",
+        "date": "2026-03-09",
+        "series": "DGS10"
+      },
+      "2y_treasury": {
+        "value": "3.56",
+        "date": "2026-03-09",
+        "series": "DGS2"
+      },
+      "30y_mortgage": {
+        "value": "6.0",
+        "date": "2026-03-05",
+        "series": "MORTGAGE30US"
+      },
+      "gdp_growth": {
+        "value": "1.4",
+        "date": "2025-10-01",
+        "series": "A191RL1Q225SBEA"
+      },
+      "m2_money_supply": {
+        "value": "22442.1",
+        "date": "2026-01-01",
+        "series": "M2SL"
+      },
+      "credit_spreads_hy": {
+        "value": "3.19",
+        "date": "2026-03-09",
+        "series": "BAMLH0A0HYM2"
+      },
+      "vix": {
+        "value": "25.5",
+        "date": "2026-03-09",
+        "series": "VIXCLS"
+      }
+    },
+    "etf_quotes": {
+      "SPY": {
+        "price": 677.18,
+        "change": -1.09,
+        "pct": -0.1607,
+        "high": 683.36,
+        "low": 674.76,
+        "prev": 678.27
+      },
+      "QQQ": {
+        "price": 607.77,
+        "change": 0.01,
+        "pct": 0.0016,
+        "high": 613.29,
+        "low": 605.42,
+        "prev": 607.76
+      },
+      "IWM": {
+        "price": 253.36,
+        "change": -0.26,
+        "pct": -0.1025,
+        "high": 257.65,
+        "low": 252.4,
+        "prev": 253.62
+      },
+      "GLD": {
+        "price": 477.86,
+        "change": 5.33,
+        "pct": 1.128,
+        "high": 481.31,
+        "low": 474.21,
+        "prev": 472.53
+      },
+      "TLT": {
+        "price": 88.28,
+        "change": -0.95,
+        "pct": -1.0647,
+        "high": 88.95,
+        "low": 88.27,
+        "prev": 89.23
+      },
+      "USO": {
+        "price": 105.86,
+        "change": 1.53,
+        "pct": 1.4665,
+        "high": 107.56,
+        "low": 94.23,
+        "prev": 104.33
+      }
+    }
   }
 }
