@@ -165,135 +165,140 @@ def collect_real_data() -> dict:
 #  CLAUDE : GÉNÉRATION DU RAPPORT
 # ══════════════════════════════════════════════════════════════════════════════
 def generate_report_json(real_data: dict) -> dict:
-    print(f"[2/6] Appel Claude ({ANTHROPIC_MODEL})...")
+    print(f"[2/6] Calling Claude ({ANTHROPIC_MODEL})...")
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
-    fred = real_data.get("fred", {})
+    fred    = real_data.get("fred", {})
     eco_cal = real_data.get("economic_calendar", {})
-    earnings = real_data.get("earnings_calendar", {})
-    etfs = real_data.get("etf_quotes", {})
+    earnings= real_data.get("earnings_calendar", {})
+    etfs    = real_data.get("etf_quotes", {})
 
-    # Préparer le contexte de données réelles
     fred_context = "\n".join([f"  - {k}: {v['value']} ({v['date']})" for k, v in fred.items()])
     etf_context  = "\n".join([f"  - {sym}: ${v['price']} ({v['pct']:+.2f}%)" if isinstance(v.get('pct'), float) else f"  - {sym}: ${v['price']}" for sym, v in etfs.items()])
-    
     eco_events_context = json.dumps(eco_cal.get("high_impact", [])[:15], ensure_ascii=False)
-    earnings_context   = json.dumps(earnings.get("major", [])[:10], ensure_ascii=False)
+    earnings_context   = json.dumps(earnings.get("all", [])[:20], ensure_ascii=False)
 
     system = (
-        f"Tu es un analyste financier senior de premier rang (ex-Goldman Sachs, hedge fund macro global). "
-        f"Tu produis un rapport hebdomadaire ultra-professionnel, dense, didactique et actionnable. "
-        f"Date : {DATE_FR} ({WEEK_N} {NOW.year}). "
-        f"Tu as accès aux données de marché réelles ci-dessous. Utilise-les comme base factuelle. "
-        f"Chaque section DOIT inclure : les causes profondes, les implications pour les investisseurs, "
-        f"et une stratégie concrète. Les analyses doivent être longues, développées, éducatives. "
-        f"Réponds UNIQUEMENT en JSON valide, sans texte autour, sans balises markdown."
+        f"You are a senior financial analyst (ex-Goldman Sachs, global macro hedge fund). "
+        f"You produce an ultra-professional, dense, educational, and actionable weekly market report. "
+        f"Date: {DATE_FR} (Week {WEEK_N}, {NOW.year}). "
+        f"You have access to real market data below. Use it as the factual base. "
+        f"Every section MUST include: root causes, investor implications, concrete strategy. "
+        f"Analyses must be long, developed, and educational. "
+        f"ALL text in the JSON must be in ENGLISH. "
+        f"Reply ONLY with valid JSON, no surrounding text, no markdown fences."
     )
 
-    user = f"""Génère un rapport hebdomadaire COMPLET et APPROFONDI des marchés financiers en français.
+    user = f"""Generate a COMPLETE and IN-DEPTH weekly financial markets report in ENGLISH.
 
-DONNÉES RÉELLES DISPONIBLES:
-=== FRED (Macro US) ===
+REAL DATA AVAILABLE:
+=== FRED (US Macro) ===
 {fred_context}
 
 === ETF Quotes ===
 {etf_context}
 
-=== Calendrier Économique (vrais événements) ===
+=== Economic Calendar (real events) ===
 {eco_events_context}
 
-=== Résultats d'Entreprises (vrais) ===
+=== Earnings Calendar (real) ===
 {earnings_context}
 
-INSTRUCTIONS IMPORTANTES:
-- Chaque analyse doit faire AU MOINS 3-4 paragraphes développés
-- Explique TOUJOURS les causes profondes et les mécanismes de transmission
-- Inclus des chiffres précis partout où c'est possible
-- La section dérivés doit analyser Put/Call ratio, contango/backwardation, skew, term structure
-- Le calendrier économique doit avoir AU MOINS 10 événements avec contexte et prévisions
-- Le calendrier résultats doit lister les entreprises majeures avec contexte et attentes
-- Sois didactique : explique les concepts pour un lecteur sophistiqué mais pas trader professionnel
+KEY INSTRUCTIONS:
+- Every analysis must have AT LEAST 4-5 developed paragraphs
+- ALWAYS explain root causes and transmission mechanisms
+- Include precise figures wherever possible
+- Derivatives section: provide ACTUAL numerical estimates for VIX, Put/Call ratio, skew
+- Economic calendar: AT LEAST 12 events with context and forecasts
+- Earnings calendar: list major companies with context and expectations
+- Be didactic: explain concepts for a sophisticated but non-professional-trader audience
+- Commodities: segregate by Energy / Metals / Agricultural with narrative per category
+- Synthesis global_view: MINIMUM 15-18 lines — this is the centerpiece of the report
+- ALL text must be in ENGLISH
 
-JSON attendu (TOUTES les clés obligatoires) :
+Expected JSON (ALL keys mandatory):
 {{
-  "week": "Semaine du X au Y {NOW.strftime('%B %Y')}",
+  "week": "Week of {NOW.strftime('%B %d')}–{(NOW + timedelta(days=6)).strftime('%B %d, %Y')}",
   "generated_at": "{DATE_FR}",
   "market_temperature": "risk_on|risk_off|neutral",
-  "market_temperature_label": "explication en 1 phrase",
+  "market_temperature_label": "one sentence explanation",
 
   "section1_summary": {{
-    "title": "Vue d'ensemble des marchés",
-    "paragraphs": ["§1 long et dense (5-6 lignes min)", "§2 long", "§3 synthèse et ton de la semaine"]
+    "title": "Market Overview",
+    "paragraphs": ["§1 dense 5-6 lines min", "§2 long", "§3 week tone and synthesis"]
   }},
 
   "section2_major_events": {{
-    "title": "Événements majeurs",
+    "title": "Major Events",
     "events": [
       {{
         "title": "...",
-        "body": "analyse longue et développée avec causes, mécanismes et implications (6-8 lignes minimum)",
+        "body": "long developed analysis with causes, mechanisms and implications (8-10 lines minimum)",
         "sentiment": "positive|negative|neutral",
         "impact_score": 8,
-        "affected_assets": ["S&P 500", "Obligations US"]
+        "affected_assets": ["S&P 500", "US Treasuries"]
       }}
     ]
   }},
 
   "section3_blind_spots": {{
-    "title": "Angles morts — Ce que le marché sous-estime",
+    "title": "Blind Spots — What the Market Underestimates",
     "events": [
       {{
         "title": "...",
-        "body": "analyse développée (5-6 lignes min)",
+        "body": "developed analysis (6-8 lines min)",
         "sentiment": "neutral",
-        "why_ignored": "raison pour laquelle c'est sous-médiatisé"
+        "why_ignored": "reason this is under-covered"
       }}
     ]
   }},
 
   "section4_equities": {{
-    "title": "Marchés Actions",
+    "title": "Equity Markets",
     "indices": [
-      {{"name":"S&P 500","value":"...","change":"...","ytd":"..."}},
-      {{"name":"NASDAQ","value":"...","change":"...","ytd":"..."}},
-      {{"name":"Dow Jones","value":"...","change":"...","ytd":"..."}},
-      {{"name":"Russell 2000","value":"...","change":"...","ytd":"..."}},
-      {{"name":"CAC 40","value":"...","change":"...","ytd":"..."}},
-      {{"name":"DAX","value":"...","change":"...","ytd":"..."}},
-      {{"name":"FTSE 100","value":"...","change":"...","ytd":"..."}},
-      {{"name":"EuroStoxx 50","value":"...","change":"...","ytd":"..."}},
-      {{"name":"Nikkei 225","value":"...","change":"...","ytd":"..."}},
-      {{"name":"Hang Seng","value":"...","change":"...","ytd":"..."}},
-      {{"name":"Shanghai Comp.","value":"...","change":"...","ytd":"..."}},
-      {{"name":"Kospi","value":"...","change":"...","ytd":"..."}}
+      {{"name":"S&P 500","value":"5,650","change":"+1.2%","ytd":"+4.1%"}},
+      {{"name":"NASDAQ","value":"17,800","change":"+1.8%","ytd":"+6.2%"}},
+      {{"name":"Dow Jones","value":"42,100","change":"+0.9%","ytd":"+2.8%"}},
+      {{"name":"Russell 2000","value":"2,050","change":"+0.6%","ytd":"-1.2%"}},
+      {{"name":"CAC 40","value":"8,200","change":"+1.1%","ytd":"+9.3%"}},
+      {{"name":"DAX","value":"22,800","change":"+2.3%","ytd":"+14.1%"}},
+      {{"name":"FTSE 100","value":"8,650","change":"+0.7%","ytd":"+6.5%"}},
+      {{"name":"EuroStoxx 50","value":"5,400","change":"+1.5%","ytd":"+10.2%"}},
+      {{"name":"Nikkei 225","value":"38,200","change":"-0.4%","ytd":"-5.1%"}},
+      {{"name":"Hang Seng","value":"23,400","change":"+2.1%","ytd":"+15.3%"}},
+      {{"name":"Shanghai Comp.","value":"3,380","change":"+0.8%","ytd":"+1.2%"}},
+      {{"name":"Kospi","value":"2,550","change":"+0.3%","ytd":"-2.4%"}}
     ],
     "sector_performance": [
-      {{"sector":"Technologie","change":"+2.1%","direction":"up"}},
-      {{"sector":"Finance","change":"+0.8%","direction":"up"}},
-      {{"sector":"Énergie","change":"-1.2%","direction":"down"}},
-      {{"sector":"Santé","change":"+0.3%","direction":"up"}},
-      {{"sector":"Industrie","change":"+0.5%","direction":"up"}},
-      {{"sector":"Consommation discr.","change":"-0.4%","direction":"down"}},
-      {{"sector":"Matériaux","change":"+0.7%","direction":"up"}},
-      {{"sector":"Utilities","change":"-0.2%","direction":"down"}}
+      {{"sector":"Technology","change":"+2.1%","direction":"up","change_num":2.1}},
+      {{"sector":"Financials","change":"+0.8%","direction":"up","change_num":0.8}},
+      {{"sector":"Energy","change":"-1.2%","direction":"down","change_num":-1.2}},
+      {{"sector":"Healthcare","change":"+0.3%","direction":"up","change_num":0.3}},
+      {{"sector":"Industrials","change":"+0.5%","direction":"up","change_num":0.5}},
+      {{"sector":"Consumer Discr.","change":"-0.4%","direction":"down","change_num":-0.4}},
+      {{"sector":"Materials","change":"+0.7%","direction":"up","change_num":0.7}},
+      {{"sector":"Utilities","change":"-0.2%","direction":"down","change_num":-0.2}},
+      {{"sector":"Real Estate","change":"-0.6%","direction":"down","change_num":-0.6}},
+      {{"sector":"Comm. Services","change":"+1.4%","direction":"up","change_num":1.4}},
+      {{"sector":"Cons. Staples","change":"-0.1%","direction":"down","change_num":-0.1}}
     ],
     "us": {{
       "headline": "...",
-      "body": "analyse longue US avec causes macros, flux institutionnels, positionnement (8-10 lignes)",
+      "body": "long US analysis: macro drivers, institutional flows, positioning, earnings (10-12 lines)",
       "direction": "bullish|bearish|neutral",
-      "key_driver": "facteur principal en 1 phrase",
-      "risk": "risque principal en 1 phrase"
+      "key_driver": "main factor in 1 sentence",
+      "risk": "main risk in 1 sentence"
     }},
     "eu": {{
       "headline": "...",
-      "body": "analyse longue UE (8-10 lignes)",
+      "body": "long EU analysis (10-12 lines)",
       "direction": "bullish|bearish|neutral",
       "key_driver": "...",
       "risk": "..."
     }},
     "asia": {{
       "headline": "...",
-      "body": "analyse longue Asie (8-10 lignes)",
+      "body": "long Asia analysis (10-12 lines)",
       "direction": "bullish|bearish|neutral",
       "key_driver": "...",
       "risk": "..."
@@ -301,152 +306,178 @@ JSON attendu (TOUTES les clés obligatoires) :
   }},
 
   "section5_bonds": {{
-    "title": "Obligations & Taux",
-    "macro_context": "contexte macro général des taux en 4-5 lignes",
+    "title": "Bonds & Rates",
+    "macro_context": "global macro rate context 5-6 lines",
     "bond_market": {{
-      "title": "Marché Obligataire Global",
-      "why": "explication longue des causes (4-5 lignes)",
-      "implies": "implications détaillées pour investisseurs (4-5 lignes)",
-      "strategy": "stratégie concrète et actionnable (3-4 lignes)"
+      "title": "Global Bond Market",
+      "why": "detailed explanation of causes (5-6 lines)",
+      "implies": "detailed implications for investors (5-6 lines)",
+      "strategy": "concrete actionable strategy (3-4 lines)"
     }},
     "yield_curves": {{
-      "title": "Courbes de Taux",
-      "shape": "normale|inversée|plate|en_bosse",
-      "interpretation": "ce que la forme de la courbe signale (3-4 lignes)",
+      "title": "Yield Curves",
+      "shape": "normal|inverted|flat|humped",
+      "interpretation": "what the curve shape signals (4-5 lines)",
       "why": "...", "implies": "...", "strategy": "...",
       "data": [
-        {{"maturity":"3M","us":5.3,"de":3.1,"fr":3.4,"jp":0.1,"uk":5.1}},
-        {{"maturity":"6M","us":5.2,"de":3.0,"fr":3.3,"jp":0.1,"uk":5.0}},
-        {{"maturity":"1Y","us":5.0,"de":2.9,"fr":3.2,"jp":0.2,"uk":4.9}},
-        {{"maturity":"2Y","us":4.7,"de":2.8,"fr":3.0,"jp":0.3,"uk":4.6}},
-        {{"maturity":"5Y","us":4.4,"de":2.6,"fr":2.9,"jp":0.5,"uk":4.3}},
-        {{"maturity":"10Y","us":4.3,"de":2.5,"fr":2.8,"jp":0.7,"uk":4.2}},
-        {{"maturity":"30Y","us":4.5,"de":2.7,"fr":3.0,"jp":1.8,"uk":4.6}}
+        {{"maturity":"3M","us":5.3,"de":3.1,"fr":3.4,"jp":0.1,"uk":5.1,"short_term":true}},
+        {{"maturity":"6M","us":5.2,"de":3.0,"fr":3.3,"jp":0.1,"uk":5.0,"short_term":true}},
+        {{"maturity":"1Y","us":5.0,"de":2.9,"fr":3.2,"jp":0.2,"uk":4.9,"short_term":true}},
+        {{"maturity":"2Y","us":4.7,"de":2.8,"fr":3.0,"jp":0.3,"uk":4.6,"short_term":true}},
+        {{"maturity":"5Y","us":4.4,"de":2.6,"fr":2.9,"jp":0.5,"uk":4.3,"short_term":false}},
+        {{"maturity":"10Y","us":4.3,"de":2.5,"fr":2.8,"jp":0.7,"uk":4.2,"short_term":false}},
+        {{"maturity":"30Y","us":4.5,"de":2.7,"fr":3.0,"jp":1.8,"uk":4.6,"short_term":false}}
       ]
     }},
     "derivatives_and_options": {{
-      "title": "Dérivés, Options & Futures",
-      "vix": "...",
-      "vix_interpretation": "ce que le niveau du VIX signale sur la perception du risque (3-4 lignes)",
-      "put_call_ratio": "...",
-      "put_call_interpretation": "analyse du ratio put/call et ce que le positionnement des options révèle (3-4 lignes)",
-      "skew": "...",
-      "skew_interpretation": "analyse du skew de volatilité et implications (3-4 lignes)",
+      "title": "Derivatives, Options & Futures",
+      "vix": "18.4",
+      "vix_interpretation": "VIX level analysis and what it signals about risk perception (4-5 lines)",
+      "put_call_ratio": "0.82",
+      "put_call_interpretation": "put/call ratio analysis and what options positioning reveals (4-5 lines)",
+      "skew": "-1.8%",
+      "skew_interpretation": "volatility skew analysis and implications (4-5 lines)",
       "term_structure": "contango|backwardation|flat",
-      "term_structure_interpretation": "analyse de la structure à terme et ce qu'elle révèle (3-4 lignes)",
-      "futures_positioning": "analyse du positionnement des fonds sur les futures (COT report, longs/shorts) (4-5 lignes)",
+      "term_structure_interpretation": "term structure analysis and what it reveals (4-5 lines)",
+      "futures_positioning": "fund positioning on futures analysis (COT report, longs/shorts) (5-6 lines)",
       "market_signal": "bullish|bearish|neutral",
-      "market_signal_explanation": "signal synthétique basé sur l'ensemble des dérivés (4-5 lignes)",
-      "options_strategy": "stratégie d'options recommandée selon l'environnement (3-4 lignes)",
+      "market_signal_explanation": "synthetic signal based on all derivatives (5-6 lines)",
+      "options_strategy": "recommended options strategy for current environment (4-5 lines)",
       "key_levels": [
-        {{"asset": "S&P 500", "support": "...", "resistance": "...", "key_strike": "..."}},
-        {{"asset": "Or", "support": "...", "resistance": "...", "key_strike": "..."}},
-        {{"asset": "EUR/USD", "support": "...", "resistance": "...", "key_strike": "..."}}
+        {{"asset": "S&P 500", "support": "5,480", "resistance": "5,720", "key_strike": "5,600"}},
+        {{"asset": "Gold", "support": "2,880", "resistance": "3,050", "key_strike": "3,000"}},
+        {{"asset": "EUR/USD", "support": "1.0650", "resistance": "1.0950", "key_strike": "1.0800"}}
       ]
     }},
     "credit_defaults": {{
-      "title": "Crédit & Taux de Défaut",
-      "macro_view": "vue macro du marché crédit (3-4 lignes)",
+      "title": "Credit & Default Rates",
+      "macro_view": "macro credit market view (4-5 lines)",
       "why": "...", "implies": "...", "strategy": "...",
       "data": [
-        {{"category":"Investment Grade US","rate":"0.8","trend":"stable","spread":"120","spread_trend":"compression"}},
-        {{"category":"High Yield US","rate":"3.2","trend":"hausse","spread":"380","spread_trend":"élargissement"}},
-        {{"category":"Investment Grade EU","rate":"0.6","trend":"stable","spread":"95","spread_trend":"compression"}},
-        {{"category":"High Yield EU","rate":"2.8","trend":"stable","spread":"340","spread_trend":"stable"}},
-        {{"category":"EM Sovereigns","rate":"4.1","trend":"hausse","spread":"450","spread_trend":"élargissement"}},
-        {{"category":"Mortgage US","rate":"1.1","trend":"stable","spread":"180","spread_trend":"stable"}},
-        {{"category":"Auto Loans US","rate":"2.4","trend":"hausse","spread":"220","spread_trend":"élargissement"}},
-        {{"category":"Credit Cards US","rate":"4.1","trend":"hausse","spread":"500","spread_trend":"élargissement"}}
+        {{"category":"US Investment Grade","rate":"0.8","trend":"stable","spread":"120","spread_trend":"compression"}},
+        {{"category":"US High Yield","rate":"3.2","trend":"rising","spread":"380","spread_trend":"widening"}},
+        {{"category":"EU Investment Grade","rate":"0.6","trend":"stable","spread":"95","spread_trend":"compression"}},
+        {{"category":"EU High Yield","rate":"2.8","trend":"stable","spread":"340","spread_trend":"stable"}},
+        {{"category":"EM Sovereigns","rate":"4.1","trend":"rising","spread":"450","spread_trend":"widening"}},
+        {{"category":"US Mortgages","rate":"1.1","trend":"stable","spread":"180","spread_trend":"stable"}},
+        {{"category":"US Auto Loans","rate":"2.4","trend":"rising","spread":"220","spread_trend":"widening"}},
+        {{"category":"US Credit Cards","rate":"4.1","trend":"rising","spread":"500","spread_trend":"widening"}}
       ]
     }}
   }},
 
-  "section6_forex_commodities": {{
-    "title": "Forex & Matières Premières",
-    "dollar_index": {{"value":"...","change":"...","interpretation":"analyse DXY et implications (3-4 lignes)"}},
-    "forex_narrative": "analyse longue des dynamiques forex globales (6-8 lignes)",
-    "commodities_narrative": "analyse longue des commodités (6-8 lignes)",
-    "forex_pairs": [
-      {{"pair":"EUR/USD","value":"...","change":"...","direction":"up|down","analysis":"contexte et drivers (2-3 lignes)","support":"...","resistance":"..."}},
-      {{"pair":"GBP/USD","value":"...","change":"...","direction":"up|down","analysis":"...","support":"...","resistance":"..."}},
-      {{"pair":"USD/JPY","value":"...","change":"...","direction":"up|down","analysis":"...","support":"...","resistance":"..."}},
-      {{"pair":"USD/CHF","value":"...","change":"...","direction":"up|down","analysis":"...","support":"...","resistance":"..."}},
-      {{"pair":"AUD/USD","value":"...","change":"...","direction":"up|down","analysis":"...","support":"...","resistance":"..."}},
-      {{"pair":"USD/CNY","value":"...","change":"...","direction":"up|down","analysis":"...","support":"...","resistance":"..."}},
-      {{"pair":"USD/BRL","value":"...","change":"...","direction":"up|down","analysis":"...","support":"...","resistance":"..."}},
-      {{"pair":"USD/MXN","value":"...","change":"...","direction":"up|down","analysis":"...","support":"...","resistance":"..."}}
-    ],
-    "commodities": [
-      {{"name":"WTI Oil","value":"...","unit":"$/bbl","change":"...","direction":"up|down","analysis":"...","drivers":["...", "..."]}},
-      {{"name":"Brent","value":"...","unit":"$/bbl","change":"...","direction":"up|down","analysis":"...","drivers":["...", "..."]}},
-      {{"name":"Natural Gas","value":"...","unit":"$/MMBtu","change":"...","direction":"up|down","analysis":"...","drivers":["...", "..."]}},
-      {{"name":"Gold","value":"...","unit":"$/oz","change":"...","direction":"up|down","analysis":"...","drivers":["...", "..."]}},
-      {{"name":"Silver","value":"...","unit":"$/oz","change":"...","direction":"up|down","analysis":"...","drivers":["...", "..."]}},
-      {{"name":"Copper","value":"...","unit":"$/lb","change":"...","direction":"up|down","analysis":"...","drivers":["...", "..."]}},
-      {{"name":"Platinum","value":"...","unit":"$/oz","change":"...","direction":"up|down","analysis":"...","drivers":["...", "..."]}},
-      {{"name":"Wheat","value":"...","unit":"$/bu","change":"...","direction":"up|down","analysis":"...","drivers":["...", "..."]}},
-      {{"name":"Corn","value":"...","unit":"$/bu","change":"...","direction":"up|down","analysis":"...","drivers":["...", "..."]}},
-      {{"name":"Soybeans","value":"...","unit":"$/bu","change":"...","direction":"up|down","analysis":"...","drivers":["...", "..."]}},
-      {{"name":"Lumber","value":"...","unit":"$/MBF","change":"...","direction":"up|down","analysis":"...","drivers":["...", "..."]}},
-      {{"name":"Bitcoin","value":"...","unit":"USD","change":"...","direction":"up|down","analysis":"...","drivers":["...", "..."]}}
+  "section6_forex": {{
+    "title": "Foreign Exchange Markets",
+    "dollar_index": {{"value":"104.2","change":"-0.4%","interpretation":"DXY analysis and implications for global markets (4-5 lines)"}},
+    "narrative": "in-depth analysis of global FX dynamics: dollar, rate differentials, central bank policy divergence, carry trades, geopolitical flows (8-10 lines)",
+    "pairs": [
+      {{"pair":"EUR/USD","value":"1.0820","change":"+0.3%","change_num":0.3,"direction":"up","analysis":"detailed context and drivers including ECB/Fed divergence, eurozone growth (3-4 lines)","support":"1.0650","resistance":"1.0950","weekly_high":"1.0890","weekly_low":"1.0750"}},
+      {{"pair":"GBP/USD","value":"1.2950","change":"-0.1%","change_num":-0.1,"direction":"down","analysis":"...","support":"1.2800","resistance":"1.3100","weekly_high":"...","weekly_low":"..."}},
+      {{"pair":"USD/JPY","value":"148.50","change":"+0.6%","change_num":0.6,"direction":"up","analysis":"...","support":"146.00","resistance":"151.00","weekly_high":"...","weekly_low":"..."}},
+      {{"pair":"USD/CHF","value":"0.8920","change":"+0.2%","change_num":0.2,"direction":"up","analysis":"...","support":"0.8800","resistance":"0.9050","weekly_high":"...","weekly_low":"..."}},
+      {{"pair":"AUD/USD","value":"0.6280","change":"-0.5%","change_num":-0.5,"direction":"down","analysis":"...","support":"0.6150","resistance":"0.6400","weekly_high":"...","weekly_low":"..."}},
+      {{"pair":"USD/CNY","value":"7.2350","change":"+0.1%","change_num":0.1,"direction":"up","analysis":"...","support":"7.1800","resistance":"7.3000","weekly_high":"...","weekly_low":"..."}},
+      {{"pair":"USD/BRL","value":"5.8500","change":"+0.8%","change_num":0.8,"direction":"up","analysis":"...","support":"5.7000","resistance":"6.0000","weekly_high":"...","weekly_low":"..."}},
+      {{"pair":"USD/MXN","value":"17.20","change":"-0.3%","change_num":-0.3,"direction":"down","analysis":"...","support":"16.80","resistance":"17.60","weekly_high":"...","weekly_low":"..."}}
     ]
   }},
 
-  "section7_synthesis": {{
-    "title": "Synthèse Stratégique",
+  "section7_commodities": {{
+    "title": "Commodities",
+    "energy": {{
+      "narrative": "in-depth energy market analysis: OPEC+ strategy, geopolitical supply disruptions, demand/consumption trends, refining margins, contango/backwardation in oil futures, natural gas seasonality and storage (8-10 lines)",
+      "items": [
+        {{"name":"WTI Crude","value":"71.50","unit":"$/bbl","change":"-1.2%","change_num":-1.2,"direction":"down","analysis":"3-4 line analysis","drivers":["OPEC+ compliance","US strategic reserve","demand China"]}},
+        {{"name":"Brent Crude","value":"75.20","unit":"$/bbl","change":"-0.9%","change_num":-0.9,"direction":"down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Natural Gas","value":"2.45","unit":"$/MMBtu","change":"+3.1%","change_num":3.1,"direction":"up","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Heating Oil","value":"2.58","unit":"$/gal","change":"-0.8%","change_num":-0.8,"direction":"down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Gasoline RBOB","value":"2.12","unit":"$/gal","change":"+0.5%","change_num":0.5,"direction":"up","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Uranium","value":"72.00","unit":"$/lb","change":"+2.3%","change_num":2.3,"direction":"up","analysis":"...","drivers":["...","..."]}}
+      ]
+    }},
+    "metals": {{
+      "narrative": "in-depth metals analysis: gold as safe haven and rate correlation, silver dual industrial/monetary role, copper as economic barometer (China PMI, infrastructure), platinum/palladium supply from Russia/South Africa, dollar impact on all metals (8-10 lines)",
+      "items": [
+        {{"name":"Gold","value":"2,950","unit":"$/oz","change":"+0.8%","change_num":0.8,"direction":"up","analysis":"3-4 line analysis","drivers":["real yields","central bank buying","USD"]}},
+        {{"name":"Silver","value":"32.50","unit":"$/oz","change":"+1.2%","change_num":1.2,"direction":"up","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Copper","value":"4.32","unit":"$/lb","change":"+2.1%","change_num":2.1,"direction":"up","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Platinum","value":"965","unit":"$/oz","change":"-0.3%","change_num":-0.3,"direction":"down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Palladium","value":"950","unit":"$/oz","change":"-1.4%","change_num":-1.4,"direction":"down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Aluminum","value":"2,450","unit":"$/t","change":"+0.9%","change_num":0.9,"direction":"up","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Nickel","value":"15,200","unit":"$/t","change":"-2.1%","change_num":-2.1,"direction":"down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Lithium","value":"10.80","unit":"$/kg","change":"-3.2%","change_num":-3.2,"direction":"down","analysis":"...","drivers":["...","..."]}}
+      ]
+    }},
+    "agricultural": {{
+      "narrative": "in-depth agricultural analysis: weather patterns (La Nina/El Nino impact), Black Sea corridor and geopolitical grain supply, biofuel demand competing with food use, USDA projections, South American harvest outlook, water scarcity and climate risk (8-10 lines)",
+      "items": [
+        {{"name":"Wheat","value":"540","unit":"¢/bu","change":"-0.8%","change_num":-0.8,"direction":"down","analysis":"3-4 line analysis","drivers":["Black Sea supply","US drought","demand Asia"]}},
+        {{"name":"Corn","value":"465","unit":"¢/bu","change":"+0.4%","change_num":0.4,"direction":"up","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Soybeans","value":"985","unit":"¢/bu","change":"+1.1%","change_num":1.1,"direction":"up","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Coffee","value":"385","unit":"¢/lb","change":"+4.2%","change_num":4.2,"direction":"up","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Sugar","value":"19.80","unit":"¢/lb","change":"-1.3%","change_num":-1.3,"direction":"down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Cotton","value":"68.50","unit":"¢/lb","change":"-0.6%","change_num":-0.6,"direction":"down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Lumber","value":"570","unit":"$/MBF","change":"+2.8%","change_num":2.8,"direction":"up","analysis":"...","drivers":["...","..."]}}
+      ]
+    }}
+  }},
+
+  "section8_synthesis": {{
+    "title": "Strategic Synthesis",
     "regime": "risk_on|risk_off|transition|stagflation|goldilocks",
-    "regime_description": "description du régime de marché actuel (4-5 lignes)",
-    "global_view": "synthèse holistique très développée (8-10 lignes)",
-    "macro_thesis": "thèse macro principale pour les 4-8 prochaines semaines (5-6 lignes)",
-    "upcoming_events": "événements clés à surveiller la semaine prochaine (4-5 lignes)",
+    "regime_description": "detailed description of current market regime (5-6 lines)",
+    "global_view": "VERY LONG holistic synthesis: interconnection between rates/equities/dollar/commodities, institutional flows, macro backdrop, policy outlook, positioning, historical analogies, tail risks — MINIMUM 15 sentences, this must be the most comprehensive section of the report",
+    "macro_thesis": "main macro thesis for the next 4-8 weeks (6-8 lines)",
+    "upcoming_events": "key events to watch next week with context (5-6 lines)",
     "strategy": [
-      {{"type":"Allocation Tactique","recommendation":"...","rationale":"développé (4-5 lignes)","timeframe":"1-4 semaines","conviction":"haute|moyenne|basse"}},
-      {{"type":"Couverture","recommendation":"...","rationale":"développé (4-5 lignes)","timeframe":"...","conviction":"..."}},
-      {{"type":"Opportunité Long","recommendation":"...","rationale":"développé (4-5 lignes)","timeframe":"...","conviction":"..."}},
-      {{"type":"Opportunité Short","recommendation":"...","rationale":"développé (4-5 lignes)","timeframe":"...","conviction":"..."}},
-      {{"type":"Gestion du Risque","recommendation":"...","rationale":"développé (4-5 lignes)","timeframe":"...","conviction":"..."}}
+      {{"type":"Tactical Allocation","recommendation":"...","rationale":"developed 5-6 lines","timeframe":"1-4 weeks","conviction":"high|medium|low"}},
+      {{"type":"Hedging","recommendation":"...","rationale":"developed 5-6 lines","timeframe":"...","conviction":"..."}},
+      {{"type":"Long Opportunity","recommendation":"...","rationale":"developed 5-6 lines","timeframe":"...","conviction":"..."}},
+      {{"type":"Short Opportunity","recommendation":"...","rationale":"developed 5-6 lines","timeframe":"...","conviction":"..."}},
+      {{"type":"Risk Management","recommendation":"...","rationale":"developed 5-6 lines","timeframe":"...","conviction":"..."}}
     ]
   }},
 
-  "section8_economic_calendar": {{
-    "title": "Calendrier Économique — Semaine prochaine",
-    "note": "Sources : Finnhub, Bloomberg consensus",
+  "section9_economic_calendar": {{
+    "title": "Economic Calendar — Next Week",
+    "note": "Sources: Finnhub, Bloomberg consensus",
     "events": [
       {{
-        "date": "Lundi 17 mars",
-        "time": "14:30",
+        "date": "Monday March 17",
+        "time": "08:30",
         "country": "US",
         "flag": "🇺🇸",
         "event": "...",
         "impact": "high|medium|low",
         "previous": "...",
         "forecast": "...",
-        "context": "pourquoi cet indicateur est important cette semaine (2-3 lignes)"
+        "context": "why this indicator matters this week (2-3 lines)"
       }}
     ]
   }},
 
-  "section9_earnings_calendar": {{
-    "title": "Résultats d'Entreprises — Semaine prochaine",
-    "note": "Sources : Finnhub",
+  "section10_earnings_calendar": {{
+    "title": "Earnings Calendar — Next Week",
+    "note": "Sources: Finnhub",
     "earnings": [
       {{
-        "date": "Lundi 17 mars",
+        "date": "Monday March 17",
         "symbol": "AAPL",
         "company": "Apple Inc.",
-        "sector": "Technologie",
-        "timing": "avant ouverture|après clôture",
-        "eps_estimate": "...",
-        "revenue_estimate": "...",
-        "context": "enjeux de ce rapport et ce que le marché surveille (2-3 lignes)",
+        "sector": "Technology",
+        "timing": "before open|after close",
+        "eps_estimate": "$2.34",
+        "revenue_estimate": "$124.3B",
+        "context": "what the market is watching and key issues for this report (2-3 lines)",
         "impact_potential": "high|medium|low"
       }}
     ]
   }}
 }}
 
-IMPORTANT: Génère des analyses LONGUES et DÉVELOPPÉES. Le rapport doit faire entre 15 000 et 25 000 caractères.
-Utilise les vraies données FRED et Finnhub fournies comme base factuelle."""
+IMPORTANT: Generate LONG and DEVELOPED analyses. Report must be 20,000–30,000 characters.
+Use real FRED and Finnhub data provided as factual base.
+ALL TEXT IN ENGLISH."""
 
     for attempt in range(3):
         try:
@@ -457,31 +488,31 @@ Utilise les vraies données FRED et Finnhub fournies comme base factuelle."""
             ) as stream:
                 for text in stream.text_stream:
                     raw += text
-            print(f"[2/6] Streaming terminé — {len(raw)} caractères reçus")
+            print(f"[2/6] Streaming complete — {len(raw)} characters received")
             match = re.search(r'\{[\s\S]*\}', raw)
             if not match:
-                print(f"[2/6] ⚠️ Pas de JSON (essai {attempt+1}/3)")
+                print(f"[2/6] ⚠️ No JSON found (attempt {attempt+1}/3)")
                 continue
             json_str = match.group()
             try:
                 report = json.loads(json_str)
-                print("[2/6] ✅ Rapport JSON généré")
+                print("[2/6] ✅ JSON report generated")
                 return report
             except json.JSONDecodeError as e:
-                print(f"[2/6] ⚠️ JSON invalide (essai {attempt+1}/3) : {e}")
-                # Réparation
+                print(f"[2/6] ⚠️ Invalid JSON (attempt {attempt+1}/3): {e}")
                 for end in range(len(json_str)-1, 0, -1):
                     if json_str[end] == '}':
                         try:
                             report = json.loads(json_str[:end+1])
-                            print("[2/6] ✅ JSON réparé")
+                            print("[2/6] ✅ JSON repaired")
                             return report
                         except:
                             continue
         except Exception as e:
-            print(f"[2/6] ⚠️ Erreur API (essai {attempt+1}/3) : {e}")
+            print(f"[2/6] ⚠️ API error (attempt {attempt+1}/3): {e}")
 
-    raise ValueError("Impossible de générer le rapport après 3 essais")
+    raise ValueError("Failed to generate report after 3 attempts")
+
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -737,49 +768,62 @@ def generate_pdf(report: dict) -> bytes:
 
     story.append(PageBreak())
 
-    # S6 - Forex & Commodités
-    s6 = report.get('section6_forex_commodities',{})
-    sec(6, s6.get('title','Forex & Matières Premières'))
+    # S6 - Forex
+    s6 = report.get('section6_forex',{})
+    sec(6, s6.get('title','Foreign Exchange Markets'))
     dxy = s6.get('dollar_index',{})
     if dxy:
-        c = GREEN if (dxy.get('change','') or '').startswith('+') else RED
-        story.append(Paragraph(f"Dollar Index (DXY) : {dxy.get('value','—')}  {dxy.get('change','')}", ps('dxy', fontSize=10, textColor=c, fontName='Helvetica-Bold', spaceAfter=4)))
+        col = GREEN if (dxy.get('change','') or '').startswith('+') else RED
+        story.append(Paragraph(f"Dollar Index (DXY): {dxy.get('value','—')}  {dxy.get('change','')}", ps('dxy', fontSize=10, textColor=col, fontName='Helvetica-Bold', spaceAfter=4)))
         if dxy.get('interpretation'):
             story.append(Paragraph(str(dxy['interpretation']), S_BD))
-    story.append(Paragraph('Dynamiques Forex', S_BL))
-    story.append(Paragraph(str(s6.get('forex_narrative','—')), S_BD))
-    fx = s6.get('forex_pairs',[])
+    story.append(Paragraph('FX Market Dynamics', S_BL))
+    story.append(Paragraph(str(s6.get('narrative', s6.get('forex_narrative','—'))), S_BD))
+    fx = s6.get('pairs', s6.get('forex_pairs',[]))
     if fx:
-        data = [['Paire','Valeur','Variation','Support','Résistance']]
+        data = [['Pair','Value','Change','Support','Resistance']]
         for p in fx:
-            c = GREEN if p.get('direction')=='up' else RED
+            col = GREEN if p.get('direction')=='up' else RED
             data.append([p.get('pair',''), p.get('value',''),
-                Paragraph(str(p.get('change','')), ps('fc', fontSize=8, textColor=c, fontName='Helvetica-Bold')),
+                Paragraph(str(p.get('change','')), ps('fc', fontSize=8, textColor=col, fontName='Helvetica-Bold')),
                 p.get('support','—'), p.get('resistance','—')])
         story.append(tbl(data,[28*mm,28*mm,28*mm,28*mm,28*mm]))
-        # Analyses individuelles
-        for p in fx[:4]:
+        for p in fx[:6]:
             if p.get('analysis'):
-                story.append(Paragraph(f"{p['pair']} : {p['analysis']}", ps('fa', fontSize=8, textColor=MUTED, fontName='Helvetica', spaceAfter=3, leftIndent=6)))
+                story.append(Paragraph(f"{p['pair']}: {p['analysis']}", ps('fa', fontSize=8, textColor=MUTED, fontName='Helvetica', spaceAfter=3, leftIndent=6)))
         story.append(Spacer(1,4*mm))
 
-    story.append(Paragraph('Dynamiques Commodités', S_BL))
-    story.append(Paragraph(str(s6.get('commodities_narrative','—')), S_BD))
-    cm = s6.get('commodities',[])
-    if cm:
-        data = [['Actif','Valeur','Variation','Drivers principaux']]
-        for c in cm:
-            col = GREEN if c.get('direction')=='up' else RED
-            drivers = ' · '.join(c.get('drivers',[])) if c.get('drivers') else '—'
-            data.append([c.get('name',''), f"{c.get('value','')} {c.get('unit','')}",
-                Paragraph(str(c.get('change','')), ps('cc', fontSize=8, textColor=col, fontName='Helvetica-Bold')),
-                Paragraph(drivers, ps('dr', fontSize=7, textColor=MUTED, fontName='Helvetica'))])
-        story.append(tbl(data,[28*mm,32*mm,24*mm,83*mm]))
+    story.append(PageBreak())
+
+    # S7 - Commodities
+    s7c = report.get('section7_commodities',{})
+    sec(7, s7c.get('title','Commodities'))
+    for cat_key, cat_label in [('energy','⚡ Energy'),('metals','🪨 Metals'),('agricultural','🌾 Agricultural')]:
+        cat = s7c.get(cat_key,{})
+        if not cat: continue
+        story.append(Paragraph(cat_label, ps('cl', fontSize=11, textColor=GOLD, fontName='Helvetica-Bold', spaceBefore=8, spaceAfter=4)))
+        story.append(hr(GOLD, 0.4))
+        if cat.get('narrative'):
+            story.append(Paragraph(str(cat['narrative']), S_BD))
+        items = cat.get('items',[])
+        if items:
+            data = [['Asset','Value','Change','Key Drivers']]
+            for item in items:
+                col = GREEN if item.get('direction')=='up' else RED
+                drivers = ' · '.join(item.get('drivers',[])) if item.get('drivers') else '—'
+                data.append([item.get('name',''), f"{item.get('value','')} {item.get('unit','')}",
+                    Paragraph(str(item.get('change','')), ps('ic2', fontSize=8, textColor=col, fontName='Helvetica-Bold')),
+                    Paragraph(drivers, ps('dr2', fontSize=7, textColor=MUTED, fontName='Helvetica'))])
+            story.append(tbl(data,[32*mm,30*mm,24*mm,81*mm]))
+            for item in items[:3]:
+                if item.get('analysis'):
+                    story.append(Paragraph(f"  {item['name']}: {item['analysis']}", ps('ca', fontSize=8, textColor=MUTED, fontName='Helvetica', spaceAfter=3, leftIndent=6)))
+        story.append(Spacer(1,4*mm))
 
     story.append(PageBreak())
 
     # S7 - Synthèse
-    s7 = report.get('section7_synthesis',{})
+    s7 = report.get('section8_synthesis',{})
     sec(7, s7.get('title','Synthèse Stratégique'))
     regime = s7.get('regime','neutral')
     regime_labels = {
@@ -810,13 +854,13 @@ def generate_pdf(report: dict) -> bytes:
     story.append(PageBreak())
 
     # S8 - Calendrier économique
-    s8 = report.get('section8_economic_calendar',{})
-    sec(8, s8.get('title','Calendrier Économique'))
+    s8 = report.get('section9_economic_calendar',{})
+    sec(8, s8.get('title','Economic Calendar'))
     if s8.get('note'):
         story.append(Paragraph(str(s8['note']), ps('n', fontSize=7, textColor=MUTED, fontName='Helvetica', spaceAfter=6)))
     cal = s8.get('events',[])
     if cal:
-        data = [['Date','Heure','Pays','Événement','Impact','Précédent','Prévision']]
+        data = [['Date','Time','Country','Event','Impact','Previous','Forecast']]
         for ev in cal:
             ic = RED if ev.get('impact')=='high' else (YELLOW if ev.get('impact')=='medium' else MUTED)
             flag = ev.get('flag','')
@@ -824,7 +868,7 @@ def generate_pdf(report: dict) -> bytes:
                 ev.get('date',''), ev.get('time',''),
                 f"{flag} {ev.get('country','')}",
                 Paragraph(str(ev.get('event','')), ps('ev', fontSize=7.5, textColor=LIGHT, fontName='Helvetica')),
-                Paragraph('FORT' if ev.get('impact')=='high' else ('MOY.' if ev.get('impact')=='medium' else 'FAIBLE'),
+                Paragraph('HIGH' if ev.get('impact')=='high' else ('MED.' if ev.get('impact')=='medium' else 'LOW'),
                     ps('imp', fontSize=7, textColor=ic, fontName='Helvetica-Bold')),
                 str(ev.get('previous','—')), str(ev.get('forecast','—'))
             ])
@@ -835,8 +879,8 @@ def generate_pdf(report: dict) -> bytes:
                 story.append(Paragraph(f"→ {ev.get('event','')} : {ev['context']}", ps('ctx', fontSize=7.5, textColor=MUTED, fontName='Helvetica', spaceAfter=3, leftIndent=6)))
 
     # S9 - Calendrier résultats
-    s9 = report.get('section9_earnings_calendar',{})
-    sec(9, s9.get('title','Résultats d\'Entreprises'))
+    s9 = report.get('section10_earnings_calendar',{})
+    sec(9, s9.get('title','Earnings Calendar'))
     if s9.get('note'):
         story.append(Paragraph(str(s9['note']), ps('n2', fontSize=7, textColor=MUTED, fontName='Helvetica', spaceAfter=6)))
     earnings_list = s9.get('earnings',[])
@@ -867,7 +911,7 @@ def generate_pdf(report: dict) -> bytes:
 # ══════════════════════════════════════════════════════════════════════════════
 def build_email_html(report: dict) -> str:
     s4 = report.get('section4_equities',{})
-    s7 = report.get('section7_synthesis',{})
+    s7 = report.get('section8_synthesis',{})
     temp = report.get('market_temperature','neutral')
     temp_c = '#4ade80' if temp=='risk_on' else '#f87171' if temp=='risk_off' else '#fbbf24'
     temp_label = {'risk_on':'RISK ON ▲','risk_off':'RISK OFF ▼','neutral':'NEUTRE ◆'}.get(temp, temp.upper())
@@ -902,11 +946,11 @@ def build_email_html(report: dict) -> str:
     </div>
   </div>
   <div style="background:#0d0d16;border:1px solid #1e1e2e;border-radius:6px;padding:16px;margin-bottom:16px">
-    <div style="color:#b8965a;font-size:9px;font-family:monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Résumé de la semaine</div>
+    <div style="color:#b8965a;font-size:9px;font-family:monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Weekly Summary</div>
     {paras}
   </div>
   <div style="background:#0d0d16;border:1px solid #1e1e2e;border-radius:6px;padding:16px;margin-bottom:16px">
-    <div style="color:#b8965a;font-size:9px;font-family:monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Indices clés</div>
+    <div style="color:#b8965a;font-size:9px;font-family:monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Key Indices</div>
     <table style="width:100%;border-collapse:collapse">
       <thead><tr>
         <th style="text-align:left;padding:5px 10px;color:#525268;font-size:9px;border-bottom:1px solid #1e1e2e">Indice</th>
@@ -916,10 +960,10 @@ def build_email_html(report: dict) -> str:
     </table>
   </div>
   <div style="background:#0d0d16;border:1px solid #1e1e2e;border-radius:6px;padding:16px;margin-bottom:16px">
-    <div style="color:#b8965a;font-size:9px;font-family:monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Stratégies de la semaine</div>
+    <div style="color:#b8965a;font-size:9px;font-family:monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Weekly Strategies</div>
     {strats}
   </div>
-  <p style="color:#2a2a3a;font-size:10px;text-align:center;margin-top:20px">📎 Rapport complet en PDF joint · Finnhub + FRED + Claude API · Non contractuel</p>
+  <p style="color:#2a2a3a;font-size:10px;text-align:center;margin-top:20px">📎 Rapport complet en Full report attached as PDF · Finnhub + FRED + Claude API · Not investment advice</p>
   <div style="background:#b8965a;height:2px;margin-top:16px"></div>
 </div></body></html>"""
 
