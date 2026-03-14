@@ -1,69 +1,80 @@
 {
-  "week": "Week of March 10–March 16, 2026",
-  "generated_at": "Tuesday 10 March 2026",
+  "week": "Week of March 14–March 20, 2026",
+  "generated_at": "Saturday 14 March 2026",
   "market_temperature": "risk_off",
-  "market_temperature_label": "Elevated volatility (VIX 25.5), steepening yield curve, and defensive rotation into gold signal a risk-off posture despite relatively contained equity losses.",
+  "market_temperature_label": "Elevated volatility (VIX 27.29), slowing GDP growth (0.7% Q4 2025), rising unemployment (4.4%), and broad-based equity declines signal a risk-off environment with growing recession anxiety.",
   "section1_summary": {
-    "title": "Market Overview",
+    "title": "Market Overview — Week S10, 2026",
     "paragraphs": [
-      "Markets opened the week of March 10, 2026 under a cloud of uncertainty, with the VIX sitting at 25.5 — well above the long-run median of ~18 — signaling that institutional hedging demand remains elevated. The S&P 500 (SPY $577.18, -0.16%) and Russell 2000 (IWM $253.36, -0.10%) posted marginal declines, while the NASDAQ (QQQ $507.77, flat) treaded water. The standout mover was gold (GLD $477.86, +1.13%), extending its relentless 2026 rally as real rates remain suppressed relative to inflation expectations and central bank buying continues at a historic pace. Treasuries sold off (TLT $88.28, -1.06%), reflecting a repricing of the long end as the 10-year yield climbed to 4.12% while the 2-year sat at 3.56%, producing a positive 56 basis point slope — the steepest normal curve we have seen in over two years. Crude oil (USO $105.86, +1.47%) bounced on renewed geopolitical supply anxiety, but the move lacks conviction given soft global demand indicators.",
-      "The macro backdrop is one of late-cycle deceleration. GDP growth for Q4 2025 printed at a sluggish 1.4%, unemployment has crept to 4.4% — up from the cycle low of 3.4% in early 2024 — and the Fed funds rate at 3.64% indicates the FOMC has already delivered roughly 175 basis points of easing from the 2024 peak. Yet inflation, as measured by the CPI index at 326.588 (January 2026), continues to run above the Fed's comfort zone. The M2 money supply at $22.44 trillion shows modest expansion but not enough to fuel another nominal GDP acceleration. High-yield credit spreads at 319 basis points are no longer tight by any means; they have widened from the sub-300 levels seen last year, hinting at growing credit stress in lower-rated issuers. Mortgage rates at 6.0% continue to suppress housing turnover and construction activity. This cocktail — slowing growth, sticky inflation, and elevated policy rates — is the textbook definition of a late-cycle squeeze, where monetary policy remains too tight for growth but not tight enough to fully defeat inflation.",
-      "The tone this week is cautious and defensive. The equity market is range-bound, caught between the support provided by ongoing Fed rate cuts and the headwind of deteriorating corporate earnings revisions. Gold's breakout to new highs and the steepening yield curve suggest the market is beginning to price a more sustained economic slowdown, potentially a mild recession in H2 2026. The bond market's message is unambiguous: the 10-year at 4.12% with a 2-year at 3.56% implies further Fed easing is expected, but term premium is being rebuilt as fiscal deficits remain enormous and Treasury supply overwhelms demand. Investors should position defensively, overweight quality and duration, hedge tail risk via options, and maintain elevated cash buffers. This is not a market that rewards complacency."
+      "The week ending March 14, 2026 delivered a sobering message across global asset classes: the post-pandemic growth cycle is maturing rapidly and the risk of a policy-induced slowdown is becoming the market's central preoccupation. The S&P 500 (SPY at $662.29, -0.57%) continued its grinding decline, with the NASDAQ-heavy QQQ falling in lockstep at -0.59% and the small-cap Russell 2000 (IWM $246.59, -0.33%) also red. The VIX surged to 27.29, a level not seen since mid-2024, clearly indicating that hedging demand is intensifying and that institutional investors are re-pricing risk premia higher. The 10-year Treasury yield settled at 4.27%, while the 2-year sits at 3.76%, producing a positively-sloped 2s10s spread of +51 basis points — a notable shift from the prolonged inversion that dominated 2023-2025, and historically a signal that the recession the curve 'predicted' may now be arriving. High-yield credit spreads at 317 bps are starting to widen from their tighter post-2024 levels, suggesting the credit cycle is turning.",
+      "The macroeconomic backdrop has deteriorated materially. Q4 2025 GDP growth printed a dismal 0.7% annualized, down sharply from the robust 2%+ pace of early 2025. Unemployment has crept to 4.4%, up from the cycle low of 3.4% in early 2024, confirming that the labor market is cooling meaningfully. The Fed funds rate at 3.64% reflects approximately 175 basis points of cumulative easing from the September 2024 peak of 5.33%, but the transmission lag of prior tightening is now fully asserting itself. The 30-year mortgage rate at 6.11% continues to suppress housing activity, while the CPI index reading of 327.46 (February 2026) suggests that while disinflation has progressed, the path back to 2% remains incomplete. M2 money supply at $22.44 trillion shows modest re-expansion after the historic contraction of 2022-2023, but not enough to meaningfully offset the drag from restrictive real rates. The macro picture is one of an economy caught between insufficient easing and stickier-than-desired inflation — a proto-stagflationary configuration.",
+      "The tone for the week was decidedly cautious. Gold (GLD $460.84) pulled back 1.29% in a profit-taking move after its recent surge toward all-time highs, but remains structurally bid as a portfolio hedge. Oil (USO $119.89, +1.27%) was the lone bright spot, supported by OPEC+ supply discipline and renewed Middle East tensions. Treasuries (TLT $86.54, -0.49%) failed to rally despite the risk-off tone, which is concerning — it suggests that duration is not yet a reliable safe haven, possibly due to lingering inflation concerns or fiscal supply worries. The overall market configuration is one of elevated uncertainty, fading growth momentum, a central bank caught in a dilemma between supporting growth and maintaining price stability, and investors rotating into cash and short-duration instruments. We rate the current regime as risk-off with transition characteristics, where the next 4-6 weeks will be decisive in determining whether this is a mid-cycle pause or the onset of something more pernicious."
     ]
   },
   "section2_major_events": {
-    "title": "Major Events",
+    "title": "Major Events of the Week",
     "events": [
       {
-        "title": "Yield Curve Re-Steepens to +56bps as Fed Easing Expectations Deepen",
-        "body": "The 2s10s spread has turned decisively positive at +56 basis points (10Y at 4.12%, 2Y at 3.56%), marking the most normal curve shape since early 2022. This re-steepening is a critical signal. Historically, the yield curve inverts before recessions and then re-steepens as the downturn actually begins — the so-called 'bull steepener' where the front end rallies faster than the back end as the Fed cuts rates. The front end at 3.56% is well below the current fed funds rate of 3.64%, indicating the market expects at least one more 25bp cut in the near term. At the long end, the 10-year at 4.12% has actually risen in recent weeks, reflecting rebuilding term premium driven by persistent fiscal deficits (the US is running a $2+ trillion annual deficit), heavy Treasury issuance, and lingering inflation concerns. The transmission mechanism is straightforward: banks benefit from a steeper curve (wider net interest margins), but the steepening itself is a warning that growth is decelerating fast enough to warrant aggressive easing. For equity investors, the re-steepening historically precedes the early stages of recession by 3-9 months. Bond investors should note that TLT's 1.06% decline this week reflects the back-end selloff, making long-duration positioning risky in the near term despite the eventual recession trade favoring duration. The key risk is that the steepening accelerates if the Fed signals faster cuts at its next meeting, which would further compress front-end yields while allowing term premium to rise on the long end.",
+        "title": "VIX Spikes to 27.29 — Fear Gauge Flashes Amber Warning",
+        "body": "The CBOE Volatility Index surged to 27.29 this week, its highest weekly close since the August 2024 Japan carry-trade unwind. This is not a transient spike driven by a single headline; rather, it reflects a structural repricing of risk across multiple asset classes. The VIX at this level implies expected daily S&P 500 moves of approximately ±1.7%, a dramatic increase from the sub-15 readings that characterized the complacency of early 2025. The root cause is multifaceted: deteriorating macro data (GDP slowing to 0.7%, unemployment rising to 4.4%), uncertainty about the Fed's next move, geopolitical tensions in the Middle East and around trade policy, and the mechanical effect of systematic strategies (CTA, vol-targeting funds) reducing equity exposure as realized volatility rises. The transmission mechanism is self-reinforcing: as the VIX rises, margin requirements increase, forcing leveraged players to deleverage, which creates further selling pressure. For investors, this environment demands active hedging. Put protection on the S&P 500 is expensive but necessary. The elevated VIX also creates opportunities for sophisticated volatility strategies — selling rich strangles against long gamma positions, or deploying put-spread collars on concentrated equity holdings. Historical analogies suggest that sustained VIX above 25 typically coincides with 5-15% equity drawdowns, so portfolio construction should prioritize capital preservation over alpha generation.",
         "sentiment": "negative",
         "impact_score": 9,
-        "affected_assets": [
-          "US Treasuries",
-          "S&P 500",
-          "Regional Banks",
-          "TLT",
-          "Gold"
-        ]
-      },
-      {
-        "title": "VIX Elevated at 25.5 — Institutional Hedging Demand Surges",
-        "body": "The CBOE Volatility Index at 25.5 is firmly in the 'elevated anxiety' zone, approximately 40% above its long-run median. This is not a panic reading (which would be 30+), but it reflects persistent demand for portfolio protection that has been building throughout Q1 2026. The root cause is threefold: first, economic data has been consistently disappointing relative to consensus, creating a pattern of negative surprises that keep hedging demand elevated. Second, the geopolitical backdrop — including trade tensions, Middle East instability, and ongoing Russia-Ukraine dynamics — adds a constant tail risk premium to options pricing. Third, and perhaps most importantly, we are entering a period of concentrated macro event risk with CPI, retail sales, and Fed communications all on the near-term calendar. The VIX term structure is likely in mild backwardation, meaning near-term implied volatility exceeds longer-dated vol — a classic sign that the market expects turbulence NOW rather than later. For institutional investors, the elevated VIX makes traditional put buying expensive; instead, put spreads or collar strategies offer better risk/reward. For volatility traders, selling premium at these levels can be profitable but requires disciplined risk management. The broader implication is that the S&P 500 is unlikely to break out of its trading range until VIX compresses below 20, which would require either a decisive positive macro surprise or a dovish Fed pivot that convinces the market the economic slowdown will be managed smoothly.",
-        "sentiment": "negative",
-        "impact_score": 8,
         "affected_assets": [
           "S&P 500",
           "NASDAQ",
-          "VIX futures",
-          "Options markets",
-          "Risk parity funds"
+          "Russell 2000",
+          "VIX Futures",
+          "Options Markets"
         ]
       },
       {
-        "title": "Gold Breaks Higher as Central Bank Buying and Real Rate Compression Converge",
-        "body": "Gold (GLD $477.86, +1.13%) continues its extraordinary 2026 run, pushing to fresh all-time highs in what has become one of the most consistent trends in global markets. The drivers are structural and self-reinforcing. Central banks — led by China's PBOC, the Reserve Bank of India, and several Middle Eastern sovereign wealth funds — have been accumulating gold reserves at a pace not seen since the 1960s, driven by a desire to diversify away from US dollar-denominated assets in a world of weaponized financial sanctions and growing fiscal concerns. Simultaneously, real interest rates (nominal yields minus inflation expectations) have been declining as the Fed cuts rates while inflation remains sticky, reducing the opportunity cost of holding a non-yielding asset like gold. The dollar's modest weakness (-0.4% on DXY this week) provides additional support. From a technical perspective, gold has broken above every resistance level, and the lack of any meaningful pullback since January suggests strong underlying demand that absorbs any dips. The transmission to other markets is notable: gold's strength is correlated with weakness in confidence in fiat currencies and government debt sustainability. For investors, gold remains a core portfolio diversifier; the recommended allocation has risen from the traditional 5% to 8-12% given the macro regime. Silver, copper, and mining equities (GDX) offer leveraged exposure to the gold bull market. The main risk to the trade is a sudden hawkish Fed surprise that drives real rates sharply higher, but with growth decelerating, this scenario appears unlikely in the near term.",
-        "sentiment": "positive",
-        "impact_score": 8,
-        "affected_assets": [
-          "Gold",
-          "Silver",
-          "GLD",
-          "GDX",
-          "USD"
-        ]
-      },
-      {
-        "title": "US Unemployment Rises to 4.4% — Labor Market Softening Accelerates",
-        "body": "The February 2026 unemployment rate of 4.4% represents a significant deterioration from the cycle trough of approximately 3.4% reached in 2023. This 100 basis point increase is not yet alarming in absolute terms — 4.4% is roughly in line with the long-run 'natural rate' — but the trajectory is deeply concerning. The Sahm Rule, which triggers a recession signal when the 3-month moving average of unemployment rises 0.5 percentage points above its 12-month low, has likely already been activated or is on the cusp. The root causes are multiple: the lagged effects of the Fed's aggressive 2022-2024 tightening cycle are still working through the economy, particularly in interest-rate-sensitive sectors like housing, commercial real estate, and small business formation. Technology layoffs, which began in 2023, have spread to financial services, consulting, and media. Government employment, which had been a stabilizer, is now contracting as states face budget pressures. The transmission mechanism to markets is straightforward: rising unemployment leads to reduced consumer spending (which is 70% of GDP), which leads to lower corporate earnings, which leads to equity market pressure. For the Fed, rising unemployment strengthens the case for continued rate cuts, but with inflation still above target, policymakers face a classic dual-mandate tension. Investors should position for further labor market deterioration by overweighting defensive sectors (healthcare, utilities, staples), increasing duration exposure in anticipation of more cuts, and reducing exposure to consumer discretionary and leveraged business models.",
+        "title": "GDP Growth Decelerates to 0.7% — Recession Risk Becomes Base Case Debate",
+        "body": "The Q4 2025 GDP growth print of just 0.7% annualized (released in prior weeks but continuing to dominate the macro narrative) represents a dramatic deceleration from the 2.5-3.0% growth rates enjoyed through mid-2025. This is the weakest growth quarter since the brief pandemic-era contractions and sits uncomfortably close to the zero bound that separates expansion from contraction. The root causes are clear: cumulative monetary tightening with a peak fed funds rate of 5.33% that prevailed for over a year (July 2023 to September 2024) is now fully transmitting through the economy with the characteristic 12-18 month lag. Despite 175 basis points of cuts bringing the rate to 3.64%, the real fed funds rate (nominal minus inflation) remains restrictive at approximately 1.5-2.0%. Consumer spending, which drove the post-pandemic boom, is fading as excess savings are depleted and credit card delinquencies rise. Business investment is contracting as CEO confidence surveys hit multi-year lows. The housing sector remains frozen by 6.11% mortgage rates. For investors, this data materially increases the probability of the Fed accelerating its easing cycle — futures markets are now pricing 75-100 bps of additional cuts by year-end. Duration exposure (5-7 year Treasuries) becomes attractive as the cutting cycle accelerates, but equity investors must grapple with whether earnings estimates (still projecting mid-single-digit growth for S&P 500 companies) are realistic in a sub-1% GDP world. We believe consensus EPS for 2026 will need to be revised down 5-10%, creating headwinds for index-level valuations.",
         "sentiment": "negative",
         "impact_score": 9,
         "affected_assets": [
           "S&P 500",
-          "Consumer Discretionary",
-          "Regional Banks",
           "US Treasuries",
-          "Fed Funds futures"
+          "Fed Funds Futures",
+          "USD",
+          "High Yield Credit"
+        ]
+      },
+      {
+        "title": "Yield Curve Normalization: 2s10s Spread Turns Positive at +51 bps",
+        "body": "After the longest inversion in modern history (July 2022 through roughly mid-2025), the 2s10s Treasury spread has decisively normalized, now sitting at +51 basis points (10Y at 4.27% minus 2Y at 3.76%). This normalization is occurring for the 'right' reasons — not because long-term rates are rising (which would signal inflation fears), but because short-term rates are falling as the market prices in an aggressive Fed easing cycle. The 2-year yield at 3.76% is already well below the current fed funds rate of 3.64% (technically very close, but the 2Y also reflects expectations for further cuts), indicating that the bond market expects the Fed to cut at least 2-3 more times before year-end. Historically, the steepening of the yield curve after a prolonged inversion has been a strong recession indicator — it typically occurs 3-12 months before an NBER-dated recession begins. The mechanism is that the curve steepens precisely because the market sees the central bank pivoting to aggressive easing in response to deteriorating fundamentals. For fixed-income investors, this is a powerful signal to extend duration from cash/money-market positions into intermediate-term Treasuries. A barbell strategy (2Y + 10Y) captures both the carry advantage and the duration appreciation if the Fed delivers the cuts the market expects. For equity investors, the steepening curve is a mixed signal: it supports interest-rate-sensitive sectors (REITs, utilities) but warns that the underlying economic fundamentals are weakening.",
+        "sentiment": "neutral",
+        "impact_score": 8,
+        "affected_assets": [
+          "US Treasuries",
+          "Mortgage REITs",
+          "Financials",
+          "Fed Funds Futures"
+        ]
+      },
+      {
+        "title": "Unemployment Rises to 4.4% — Labor Market Cooling Accelerates",
+        "body": "The February 2026 unemployment rate of 4.4% marks a full percentage point increase from the 3.4% cycle low and places the labor market firmly in 'cooling' territory. What makes this reading particularly concerning is the pace of deterioration: the Sahm Rule (which triggers a recession warning when the three-month average unemployment rate rises 0.5 percentage points above its 12-month low) was likely triggered or is on the verge of triggering. Historically, the Sahm Rule has a perfect track record — every time it has been triggered since 1970, a recession followed. The root cause is the lagged effect of monetary tightening on corporate hiring decisions: with borrowing costs elevated, capital expenditure plans have been curtailed, hiring freezes have spread from tech to financial services and manufacturing, and temp employment — a leading indicator — has been declining for months. The transmission to the broader economy is straightforward: rising unemployment reduces disposable income and consumer confidence, which in turn depresses spending (70% of US GDP), creating a negative feedback loop. For investors, the labor market data is the most important variable for the Fed's reaction function right now. Chair Powell has repeatedly emphasized the dual mandate, and a 4.4% unemployment rate provides ample cover for accelerated rate cuts. We expect the March FOMC to deliver a 25 bps cut with dovish forward guidance, potentially signaling a 50 bps cut at the May meeting if the data continues to deteriorate. Equity sectors with high labor cost sensitivity (restaurants, hospitality, retail) may paradoxically benefit from wage deceleration, but the demand destruction effect likely dominates.",
+        "sentiment": "negative",
+        "impact_score": 8,
+        "affected_assets": [
+          "S&P 500",
+          "Consumer Discretionary",
+          "Fed Funds Futures",
+          "US Dollar",
+          "High Yield Credit"
+        ]
+      },
+      {
+        "title": "Oil Prices Rally on Geopolitical Supply Risk and OPEC+ Discipline",
+        "body": "Crude oil was the standout performer this week, with USO rising 1.27% against a backdrop of broad asset weakness. The rally was driven by a confluence of supply-side factors: renewed tensions in the Middle East raised the specter of shipping disruptions in the Strait of Hormuz, while OPEC+ compliance with production cuts remained stronger than expected, with Saudi Arabia maintaining its voluntary 1 million barrel/day cut. Simultaneously, US strategic petroleum reserve (SPR) refilling has been slower than planned, reducing the buffer against supply shocks. On the demand side, China's modest recovery and the seasonal refinery ramp-up for spring/summer driving season provided a floor. However, the demand outlook remains clouded by the slowing global economy — the IEA has trimmed its 2026 demand growth forecast twice in the past quarter. The energy sector's outperformance within the equity market has been modest, suggesting investors are skeptical that the oil rally is sustainable. For portfolios, energy equities (particularly integrated majors with strong free cash flow yields and dividend coverage) offer a natural inflation hedge and portfolio diversification in the current risk-off environment. However, aggressive long positioning in crude futures is premature given the demand headwinds — a range-trading approach with tactical long entries near $65 WTI support is more appropriate.",
+        "sentiment": "neutral",
+        "impact_score": 6,
+        "affected_assets": [
+          "WTI Crude",
+          "Brent Crude",
+          "Energy Equities",
+          "Inflation Expectations"
         ]
       }
     ]
@@ -72,107 +83,113 @@
     "title": "Blind Spots — What the Market Underestimates",
     "events": [
       {
-        "title": "Commercial Real Estate (CRE) Maturity Wall Hitting in Q2-Q3 2026",
-        "body": "Approximately $1.5 trillion in commercial real estate loans are set to mature in 2026, with a heavy concentration in Q2 and Q3. Many of these loans were originated in 2021-2022 at ultra-low rates and are now rolling over into a 6%+ borrowing cost environment while property values — particularly in the office sector — have declined 25-40% from peak. Regional and mid-size banks hold a disproportionate share of this CRE exposure, and the combination of higher refinancing costs and lower property valuations will force write-downs, loan modifications, and potentially bank failures. The FDIC's problem bank list has been growing quietly but steadily. Unlike the 2008 crisis, this is a slow-motion deterioration rather than a sudden shock, which paradoxically makes it easier for markets to ignore until a catalytic event — such as a high-profile REIT bankruptcy or regional bank failure — forces repricing. Investors should monitor KRE (regional bank ETF), CMBS spreads, and FDIC quarterly banking profiles for early warning signs.",
+        "title": "M2 Money Supply Re-Expansion Could Reignite Inflation Later in 2026",
+        "body": "M2 money supply at $22.44 trillion has been quietly expanding since mid-2025 after the historic 4%+ contraction in 2022-2023. The market is laser-focused on the disinflation narrative and the growth slowdown, but the monetary base expansion — driven by the Fed's rate cuts reducing the opportunity cost of holding liquid deposits, bank lending starting to recover, and fiscal deficits remaining elevated above $1.5 trillion annually — could create a second wave of inflation by late 2026 or early 2027. The quantity theory of money (MV=PQ) with a lag of 12-18 months suggests that current M2 growth could push CPI back toward 3.5-4.0% just as the economy enters a recession, creating a true stagflationary trap. This would be catastrophic for 60/40 portfolios, as both stocks and bonds would sell off simultaneously. Investors should begin building TIPS positions and commodity exposure as insurance against this tail risk.",
         "sentiment": "negative",
-        "why_ignored": "CRE stress has been a 'known unknown' for 18+ months, creating narrative fatigue; the slow-burn nature of the crisis means there is no single headline event to catalyze attention, and major banks have so far avoided significant write-downs by extending and pretending."
+        "why_ignored": "The market is singularly focused on the growth slowdown and rate-cut narrative, with inflation viewed as a solved problem. M2 data releases receive minimal coverage in financial media compared to 2021-2022."
       },
       {
-        "title": "Japan's Yield Curve Control Exit May Trigger Global Rate Repricing",
-        "body": "The Bank of Japan has been gradually tightening monetary policy, and there are growing expectations that a formal abandonment of yield curve control — or a significant further upward adjustment in the 10-year JGB target — could occur in Q2 2026. Japan is the world's largest creditor nation and Japanese institutional investors (life insurers, pension funds, banks) hold approximately $3 trillion in foreign bonds, particularly US Treasuries and European government bonds. If Japanese yields rise sufficiently to attract domestic capital back home, the resulting repatriation flows could add significant upward pressure to global long-term interest rates. This is the 'Japanese whale' risk that bond market veterans have warned about for years. The yen's recent weakness suggests markets are not yet pricing this scenario, but BOJ Governor Ueda's increasingly hawkish rhetoric and Japan's persistent above-target inflation (3.2% CPI) suggest the window is closing. The transmission would be most acute in long-duration US Treasuries and European sovereigns, adding 15-30bps to yields in a disorderly scenario.",
+        "title": "Consumer Credit Deterioration Is More Advanced Than Headline Data Suggests",
+        "body": "While the unemployment rate at 4.4% gets the headlines, the underlying consumer credit data tells a more alarming story. Credit card delinquency rates have risen to their highest levels since 2011, auto loan 90+ day delinquencies are at decade highs, and subprime borrower distress metrics are flashing recession-level signals. The 'excess savings' buffer that sustained consumer spending through 2024-2025 is now fully depleted for the bottom 60% of the income distribution. Meanwhile, buy-now-pay-later (BNPL) delinquencies — which are poorly captured in traditional credit statistics — have surged as consumers used these products to maintain spending beyond their means. The credit card spread widening visible in the data (500 bps and rising) is the market's way of pricing this, but equities have not yet adjusted to the implication: consumer spending, which constitutes approximately 70% of GDP, is poised for a meaningful step-down in H1 2026. Retailers, restaurants, and travel companies are most exposed.",
         "sentiment": "negative",
-        "why_ignored": "Markets have been conditioned by decades of BOJ dovishness and 'Japanification' narratives; the gradual pace of BOJ tightening has prevented the kind of sudden move that would force repricing; and most global macro funds are under-positioned for a Japan-driven rate shock."
+        "why_ignored": "Consumer spending data has remained surprisingly resilient in aggregate, masking severe deterioration at the lower end of the income spectrum. Wall Street analysts focus on total retail sales rather than income-quintile breakdowns."
       },
       {
-        "title": "M2 Money Supply Expansion Suggests Inflation Re-Acceleration Risk in H2 2026",
-        "body": "M2 money supply has expanded to $22.44 trillion, resuming growth after contracting throughout 2023. The monetary quantity theory — while imperfect in the short run — has a strong long-run relationship with inflation: the massive M2 expansion of 2020-2021 led to the 2022-2023 inflation surge with a lag of approximately 12-18 months. If M2 continues to grow at its current pace, and especially if the Fed accelerates rate cuts (which would further boost money creation through the banking channel), the inflation pressures that the market believes are mostly behind us could re-emerge in late 2026 or early 2027. This would create an extremely difficult environment for both stocks and bonds — a 'stagflation lite' scenario where the Fed is caught between cutting rates to support growth and hiking to fight inflation. Gold's persistent strength may be an early signal that the 'smart money' is already positioning for this scenario.",
+        "title": "Japan's Yield Curve Control Exit Creates Global Duration Risk",
+        "body": "The Bank of Japan's continued normalization — with JGB 10-year yields now approaching 0.7% and rising — is gradually but relentlessly reducing the incentive for Japanese investors (the world's largest external creditors) to hold foreign bonds. Japanese life insurers and pension funds hold approximately $2.5 trillion in foreign assets, predominantly US Treasuries and European sovereign debt. As domestic yields become more attractive after decades of zero/negative rates, even modest portfolio rebalancing toward JGBs could create significant selling pressure in the US Treasury market — potentially 50-100 basis points of upward pressure on 10-year yields at a time when the US economy desperately needs lower long-term rates. This 'repatriation flow' risk is largely absent from market commentary, which focuses on Fed policy as the sole determinant of US yields. The BOJ's next policy meeting in April could be a catalyst if they signal further tightening.",
         "sentiment": "negative",
-        "why_ignored": "The consensus narrative is firmly that inflation has been defeated and the next move is always another cut; M2 growth is an old-school monetarist indicator that many modern macro analysts dismiss; and the market's attention is focused on near-term growth risks rather than medium-term inflation risks."
+        "why_ignored": "BOJ policy normalization has been gradual and lacks the dramatic headlines of Fed decisions. Most Western investors do not track Japanese institutional flow data closely."
+      },
+      {
+        "title": "US Fiscal Deficit Dynamics Could Trigger a Term Premium Shock",
+        "body": "The US federal deficit for fiscal year 2026 is tracking at approximately $1.8-2.0 trillion, driven by rising interest costs on the national debt (now exceeding $1 trillion annually), Social Security/Medicare entitlements, and sustained defense spending. The Treasury is increasingly reliant on shorter-term issuance (T-bills) to fund this deficit, creating rollover risk and maturity concentration. With foreign central bank demand for Treasuries stagnating (China has reduced its holdings by over $200 billion since 2022, and Japan may follow), the marginal buyer is increasingly domestic hedge funds engaging in basis trades — a leveraged and fragile source of demand. If any disruption causes these basis trades to unwind (as nearly happened in March 2020 and September 2019), the term premium could spike 50-100 bps virtually overnight. This 'Treasury market fragility' is a genuine systemic risk that receives intermittent attention but is not priced into volatility markets.",
+        "sentiment": "negative",
+        "why_ignored": "Fiscal sustainability is a slow-moving issue that rarely generates short-term trading signals. Market participants assume the Fed would intervene with emergency liquidity if Treasury market dysfunction emerged."
       }
     ]
   },
   "section4_equities": {
-    "title": "Equity Markets",
+    "title": "Equity Markets — Week of March 14, 2026",
     "indices": [
       {
         "name": "S&P 500",
-        "value": "5,577",
-        "change": "-0.16%",
-        "ytd": "+2.4%"
+        "value": "6,623",
+        "change": "-0.57%",
+        "ytd": "-3.8%"
       },
       {
         "name": "NASDAQ 100",
-        "value": "17,530",
-        "change": "+0.00%",
-        "ytd": "+1.8%"
+        "value": "5,937",
+        "change": "-0.59%",
+        "ytd": "-5.2%"
       },
       {
         "name": "Dow Jones",
-        "value": "41,650",
-        "change": "-0.22%",
-        "ytd": "+1.1%"
+        "value": "41,200",
+        "change": "-0.41%",
+        "ytd": "-2.1%"
       },
       {
         "name": "Russell 2000",
-        "value": "2,042",
-        "change": "-0.10%",
-        "ytd": "-3.5%"
+        "value": "2,466",
+        "change": "-0.33%",
+        "ytd": "-7.4%"
       },
       {
         "name": "CAC 40",
-        "value": "8,320",
-        "change": "+0.95%",
+        "value": "8,280",
+        "change": "+0.9%",
         "ytd": "+10.1%"
       },
       {
         "name": "DAX",
-        "value": "23,150",
-        "change": "+1.30%",
-        "ytd": "+15.2%"
+        "value": "23,100",
+        "change": "+1.4%",
+        "ytd": "+15.3%"
       },
       {
         "name": "FTSE 100",
         "value": "8,710",
-        "change": "+0.65%",
-        "ytd": "+7.0%"
+        "change": "+0.5%",
+        "ytd": "+7.2%"
       },
       {
         "name": "EuroStoxx 50",
-        "value": "5,480",
-        "change": "+1.10%",
+        "value": "5,450",
+        "change": "+1.1%",
         "ytd": "+11.5%"
       },
       {
         "name": "Nikkei 225",
         "value": "37,800",
-        "change": "-0.55%",
-        "ytd": "-6.3%"
+        "change": "-0.8%",
+        "ytd": "-5.8%"
       },
       {
         "name": "Hang Seng",
         "value": "23,600",
-        "change": "+1.85%",
-        "ytd": "+14.8%"
+        "change": "+1.8%",
+        "ytd": "+16.1%"
       },
       {
-        "name": "Shanghai Composite",
-        "value": "3,395",
-        "change": "+0.70%",
+        "name": "Shanghai Comp.",
+        "value": "3,390",
+        "change": "+0.6%",
         "ytd": "+1.8%"
       },
       {
         "name": "Kospi",
         "value": "2,530",
-        "change": "+0.25%",
-        "ytd": "-3.0%"
+        "change": "-0.2%",
+        "ytd": "-3.1%"
       }
     ],
     "sector_performance": [
       {
         "sector": "Technology",
-        "change": "+0.3%",
-        "direction": "up",
-        "change_num": 0.3
+        "change": "-0.9%",
+        "direction": "down",
+        "change_num": -0.9
       },
       {
         "sector": "Financials",
@@ -188,9 +205,9 @@
       },
       {
         "sector": "Healthcare",
-        "change": "+0.6%",
+        "change": "+0.4%",
         "direction": "up",
-        "change_num": 0.6
+        "change_num": 0.4
       },
       {
         "sector": "Industrials",
@@ -199,247 +216,247 @@
         "change_num": -0.3
       },
       {
-        "sector": "Consumer Discretionary",
-        "change": "-0.9%",
+        "sector": "Consumer Discr.",
+        "change": "-1.2%",
         "direction": "down",
-        "change_num": -0.9
+        "change_num": -1.2
       },
       {
         "sector": "Materials",
-        "change": "+0.4%",
-        "direction": "up",
-        "change_num": 0.4
-      },
-      {
-        "sector": "Utilities",
-        "change": "+0.7%",
-        "direction": "up",
-        "change_num": 0.7
-      },
-      {
-        "sector": "Real Estate",
-        "change": "-1.1%",
-        "direction": "down",
-        "change_num": -1.1
-      },
-      {
-        "sector": "Communication Services",
         "change": "+0.2%",
         "direction": "up",
         "change_num": 0.2
       },
       {
-        "sector": "Consumer Staples",
+        "sector": "Utilities",
+        "change": "+0.6%",
+        "direction": "up",
+        "change_num": 0.6
+      },
+      {
+        "sector": "Real Estate",
+        "change": "+0.3%",
+        "direction": "up",
+        "change_num": 0.3
+      },
+      {
+        "sector": "Comm. Services",
+        "change": "-0.7%",
+        "direction": "down",
+        "change_num": -0.7
+      },
+      {
+        "sector": "Cons. Staples",
         "change": "+0.5%",
         "direction": "up",
         "change_num": 0.5
       }
     ],
     "us": {
-      "headline": "US Equities Tread Water as Late-Cycle Dynamics Weigh on Sentiment",
-      "body": "The S&P 500 at approximately 5,577 is grinding sideways, unable to break to new highs despite continued (albeit slowing) rate cuts from the Federal Reserve. The fundamental challenge is an earnings growth deceleration: after a robust 2024 driven by the AI/technology boom, S&P 500 EPS growth expectations for 2026 have been revised down from +12% to approximately +6% as the economy slows. The Magnificent Seven stocks (Apple, Microsoft, Nvidia, Alphabet, Amazon, Meta, Tesla) that carried the market in 2023-2024 are facing their own growth maturation, and the equal-weight S&P 500 has significantly underperformed the cap-weighted index, revealing narrow market breadth that is a classic late-cycle warning. Institutional positioning data from CFTC shows net long positioning in S&P 500 futures has declined by approximately 18% since January, suggesting large allocators are reducing equity exposure. Systematic strategies (CTAs, risk parity) have also been reducing equity allocations as realized volatility picks up. The Russell 2000's underperformance (-3.5% YTD vs. S&P +2.4%) is particularly telling: small caps are more sensitive to domestic economic conditions and credit availability, and their weakness confirms the tightening financial conditions narrative. On the positive side, the steepening yield curve should eventually benefit financials (wider net interest margins), and the Fed's easing path provides a floor under valuations. However, the near-term risk/reward is skewed to the downside given the VIX at 25.5, high-yield spread widening, and unemployment trending higher. The key levels to watch are 5,400 support (200-day moving average area) and 5,750 resistance on the S&P 500. A break below 5,400 would likely trigger systematic selling and could produce a 5-8% correction.",
+      "headline": "US Equities Under Pressure as Growth Fears Trump Rate Cut Hopes",
+      "body": "US equity markets experienced their fourth consecutive week of losses, with the S&P 500 falling 0.57% to approximately 6,623 (implied by SPY at $662.29). The selling was broad-based, with 7 of 11 sectors declining, indicating this is not a rotation story but rather a fundamental de-risking event. The NASDAQ 100 underperformed slightly at -0.59%, as the mega-cap technology names that drove the 2023-2025 bull market face a triple threat: elevated valuations (still 25-28x forward P/E for the 'Magnificent Seven'), AI monetization skepticism after several quarters of massive capex with uncertain revenue returns, and the broader macro headwind of decelerating economic growth. The Russell 2000's relative resilience (-0.33%) is misleading — small caps have already corrected 7.4% year-to-date and are pricing in recessionary conditions more aggressively than large caps. Institutional flows data from EPFR shows continued equity fund outflows for the sixth consecutive week, with money flowing into money market funds and short-duration bond ETFs. CTA positioning has flipped net short on equity futures for the first time since October 2023. Volatility-control and risk-parity strategies are mechanically reducing equity allocations as the VIX sustains above 25. The defensive rotation is evident in sector performance: utilities (+0.6%), healthcare (+0.4%), and consumer staples (+0.5%) all outperformed, while cyclicals like consumer discretionary (-1.2%) and technology (-0.9%) led the declines. Looking ahead, the key question is whether Q1 2026 earnings season (beginning in mid-April) will confirm the slowdown or provide a positive surprise. Current consensus for S&P 500 Q1 EPS growth is approximately +5% year-over-year, a figure we believe is 3-5 percentage points too high given the GDP trajectory.",
       "direction": "bearish",
-      "key_driver": "Decelerating earnings growth and rising unemployment undermine equity valuations despite continued Fed easing.",
-      "risk": "A high-yield credit event or CRE-related bank failure could catalyze a sharp risk-off move in already fragile market conditions."
+      "key_driver": "GDP growth deceleration to 0.7% and rising unemployment are forcing a fundamental re-rating of corporate earnings expectations.",
+      "risk": "A sudden acceleration in the labor market deterioration triggering a 'hard landing' narrative that could drive a 10-15% correction from current levels."
     },
     "eu": {
-      "headline": "European Equities Outperform on Fiscal Expansion Hopes and Defense Spending Surge",
-      "body": "European equity markets have been the standout performers globally in 2026, with the DAX surging +15.2% YTD and the EuroStoxx 50 up +11.5%. This remarkable outperformance relative to US markets represents a significant rotation in global capital allocation and has several structural drivers. First, the European fiscal stance has shifted decisively from austerity to expansion, driven by the geopolitical imperative to increase defense spending. Germany's landmark decision to amend its constitutional debt brake to allow massive infrastructure and defense investment has been a game-changer, unlocking potentially €500 billion+ in fiscal stimulus over the coming years. This is a regime change for European macro: for the first time in a decade, fiscal policy is complementing (rather than working against) monetary policy. Second, the ECB has been more aggressive than the Fed in cutting rates, with the deposit rate now well below its 2024 peak, providing significant tailwind for European rate-sensitive sectors. Third, European banks — which were deeply unloved and undervalued — have rallied sharply as the steeper yield curve and improving loan demand boost earnings expectations. Fourth, the valuation gap between US and European equities was historically wide entering 2026, with Europe trading at roughly 13x forward earnings vs. 20x+ for the S&P 500, making the catch-up trade compelling for global allocators. The defense sector (Rheinmetall, BAE Systems, Leonardo, Thales) has been the single best-performing sub-sector, up 30-50% YTD. However, risks remain: the European economy is still growing below potential, China's slowdown impacts German exporters, and the Russia-Ukraine conflict continues to create uncertainty. The main risk for the trade is if US tariff threats against European exports materialize, which would hit the export-heavy DAX particularly hard.",
+      "headline": "European Equities Outperform on ECB Easing Optimism and Fiscal Stimulus",
+      "body": "European equity markets continued their remarkable outperformance relative to US peers, with the DAX gaining 1.4% and the EuroStoxx 50 rising 1.1% on the week. Year-to-date, the DAX is up a stunning 15.3%, making it one of the best-performing major indices globally. This European renaissance is driven by several structural factors that have shifted the investment thesis decisively. First, the ECB's more aggressive easing path — with the deposit rate already below the Fed's and expected to reach 2.0-2.25% by year-end — provides a more accommodative monetary backdrop. Second, Germany's historic fiscal pivot, with the constitutional debt brake reform passed in late 2025 enabling a massive infrastructure and defense spending program worth €500+ billion over the next decade, has fundamentally altered the growth outlook for Europe's largest economy. This fiscal impulse is directly benefiting industrials, construction, and defense stocks. Third, European valuations remain compelling — the EuroStoxx 50 trades at approximately 14x forward earnings versus 20x for the S&P 500, offering a meaningful discount even after the rally. Fourth, the weaker euro provides a tailwind for European exporters, who derive a significant share of revenues from the US and emerging markets. However, risks remain significant: the European consumer is under pressure from still-elevated inflation in services, the Ukraine conflict continues to weigh on sentiment, and any global recession would inevitably drag Europe down given its trade-dependent economy. We maintain a tactical overweight on European equities, favoring German industrials, European defense names (Rheinmetall, Leonardo, BAE Systems), and banks benefiting from the steeper yield curve.",
       "direction": "bullish",
-      "key_driver": "Germany's fiscal pivot toward massive infrastructure and defense spending represents a structural regime change for European growth expectations.",
-      "risk": "US trade protectionism and tariff escalation against European exports could reverse the capital rotation into Europe."
+      "key_driver": "Germany's fiscal expansion program and ECB's accelerated easing cycle creating a rare combination of monetary and fiscal stimulus.",
+      "risk": "A global recession triggered by US economic weakness could overwhelm Europe's domestic tailwinds given the continent's export dependence."
     },
     "asia": {
-      "headline": "Asian Markets Diverge: China Stimulus Lifts Hong Kong While Japan Struggles with Yen Strength Fears",
-      "body": "Asian equity markets present a tale of stark divergence this week. The Hang Seng has been one of the best-performing indices globally (+14.8% YTD), driven by Beijing's escalating stimulus measures including property market support, consumer spending incentives, and targeted technology sector subsidies. The PBOC has cut rates and reserve requirements multiple times, and there are growing expectations of a larger fiscal package targeting infrastructure and green energy. Chinese technology stocks (Alibaba, Tencent, BYD, Xiaomi) have rallied sharply from deeply oversold levels as regulatory fears recede and AI-related catalysts emerge. However, the sustainability of this rally is questioned: China's structural challenges — demographics, property market overhang, local government debt, and trade tensions with the US — have not been resolved, and previous stimulus-driven rallies have repeatedly faded. The Shanghai Composite's modest +1.8% YTD gain, compared to Hong Kong's +14.8%, reflects domestic investors' more cautious assessment. Japan's Nikkei 225 has been the major underperformer (-6.3% YTD), weighed down by yen appreciation expectations as the BOJ continues to tighten policy. Japanese exporters (Toyota, Sony, Hitachi) face margin compression if USD/JPY moves below 145, and the unwinding of the global yen carry trade creates a negative feedback loop where yen strength forces carry trade unwinding, which forces more yen buying, which causes more yen strength. Korea's Kospi (-3.0% YTD) is caught between China stimulus benefits (Samsung's memory chip exposure) and domestic political uncertainty. For investors, the opportunity lies in selective Chinese tech exposure (via KWEB or individual names) with tight stops, while Japan should be approached cautiously with currency-hedged instruments (DXJ) until the BOJ policy path becomes clearer.",
-      "direction": "neutral",
-      "key_driver": "China's accelerating stimulus campaign is the primary driver for Hong Kong/China exposure, while BOJ tightening creates headwinds for Japan.",
-      "risk": "An escalation in US-China trade tensions or a disorderly BOJ tightening that triggers global carry trade unwinding represent the primary tail risks."
+      "headline": "Divergent Asia: Hong Kong Surges on China Stimulus While Japan Struggles with Yen Strength",
+      "body": "Asian equity markets presented a starkly divergent picture this week. Hong Kong's Hang Seng rose 1.8% and is now up an extraordinary 16.1% year-to-date, making it the world's best-performing major index. This rally is being driven by aggressive Chinese policy stimulus — the PBOC has cut the RRR twice since December, the State Council has announced targeted fiscal support for property developers and local governments, and the technology sector has been rehabilitated in the eyes of regulators, with Alibaba, Tencent, and Baidu benefiting from eased regulatory pressure. The re-rating of Chinese tech from deeply discounted valuations (8-12x forward P/E) back toward fair value (15-18x) still has room to run. The Shanghai Composite's more modest +0.6% gain reflects the domestic A-share market's greater exposure to the struggling property sector and SOE-heavy index composition. Meanwhile, Japan's Nikkei fell 0.8% and is down 5.8% year-to-date, weighed down by the strengthening yen. As the BOJ normalizes policy (rates now at 0.5% and rising), the yen has appreciated meaningfully against the dollar, squeezing export earnings for automakers and electronics companies. Toyota, Sony, and other major exporters have seen significant earnings estimate revisions downward. The Kospi in South Korea fell 0.2%, impacted by weak semiconductor demand signals and political uncertainty following the constitutional crisis. For investors, the opportunity set in Asia is highly selective: China/Hong Kong offers deep value and momentum, Japan requires careful stock-picking focused on domestic demand plays rather than exporters, and Korea/Taiwan remain hostage to the global semiconductor cycle. We recommend an overweight on Hong Kong/China equities via KWEB or FXI, funded by an underweight on Japanese exporters.",
+      "direction": "bullish",
+      "key_driver": "China's comprehensive stimulus package (monetary, fiscal, and regulatory) is reigniting capital flows into deeply discounted Hong Kong-listed Chinese equities.",
+      "risk": "China property sector's structural decline may overwhelm stimulus efforts, and geopolitical tensions (Taiwan, trade) remain an ever-present tail risk."
     }
   },
   "section5_bonds": {
-    "title": "Bonds & Rates",
-    "macro_context": "The global rates landscape in March 2026 reflects a world where major central banks are at different stages of their policy cycles. The Federal Reserve, having cut from a peak fed funds rate of approximately 5.40% to the current 3.64%, is in an active easing mode but proceeding cautiously due to sticky inflation. The ECB has been more aggressive in cutting, reflecting Europe's weaker growth trajectory. The BOJ stands alone in tightening. This policy divergence is creating significant cross-currency flows and complicating the outlook for global bond markets. The US curve has re-steepened to +56bps (2s10s), the most positive slope since early 2022, suggesting the market is pricing in further easing and potentially the onset of economic recession. Meanwhile, the 30-year mortgage rate at 6.0% remains restrictive for housing and is a key transmission mechanism through which tight monetary policy continues to weigh on the real economy.",
+    "title": "Bonds & Rates — Deep Dive",
+    "macro_context": "The global rates landscape is in a pivotal transition phase. The Federal Reserve's easing cycle (fed funds at 3.64%, down 175 bps from the September 2024 peak) is now competing with deteriorating growth data that suggests the cuts are arriving too late to prevent economic damage. The 10-year Treasury at 4.27% reflects a tug-of-war between expectations for further rate cuts (pulling yields lower) and persistent fiscal supply concerns plus residual inflation stickiness (putting a floor under yields). The 2-year yield at 3.76% prices in significant additional easing — roughly 75-100 bps of cuts over the next 12 months. The yield curve has normalized decisively, with the 2s10s spread at +51 bps, a development that historically coincides with the early-to-mid stages of a recession. Globally, rates are diverging: the ECB is cutting faster, the BOJ is tightening, and emerging market central banks face the dilemma of supporting currencies versus supporting growth.",
     "bond_market": {
-      "title": "Global Bond Market",
-      "why": "US Treasury yields are being pulled in two directions. The front end (2Y at 3.56%) is rallying as markets price in additional Fed cuts — the 2Y yield is already below the current fed funds rate of 3.64%, reflecting at least one more 25bp cut priced in. The long end (10Y at 4.12%, 30Y likely around 4.35%) has been selling off due to three factors: (1) massive Treasury supply from $2+ trillion annual deficits, (2) rebuilding term premium as investors demand more compensation for holding long-duration government debt amid fiscal uncertainty, and (3) the potential for inflation to prove stickier than expected. The TLT's -1.06% weekly decline confirms the long-end weakness. European sovereign yields have generally declined, particularly in Germany where defense spending fiscal expansion has paradoxically supported Bunds as a safe haven within the eurozone periphery spread compression trade.",
-      "implies": "For fixed income investors, the steepening curve creates a barbell opportunity: short-duration bonds (1-3Y) offer attractive yields with lower duration risk, while ultra-long bonds (20-30Y) offer potential capital gains if a recession materializes and the Fed is forced into more aggressive easing. The middle of the curve (5-10Y) offers the worst risk/reward as it is most exposed to the tug-of-war between falling front-end rates and rising term premium at the back end. Credit markets are beginning to differentiate more aggressively between investment grade and high yield, with HY spreads at 319bps showing early signs of stress. Mortgage-backed securities remain under pressure at 6.0% 30Y mortgage rates, constraining refinancing activity and prepayments.",
-      "strategy": "Overweight short-duration investment-grade corporate bonds (1-3Y) for carry. Maintain a barbell approach with a selective 10-15% allocation to 20Y+ Treasuries as recession insurance. Avoid generic high-yield exposure; if taking HY risk, focus on BB-rated credits which have more cushion. Use TLT puts or put spreads to hedge long-duration positions against further term premium expansion."
+      "title": "Global Bond Market Analysis",
+      "why": "US Treasury yields have declined from their October 2023 highs (10Y peaked near 5.0%) but remain elevated in real terms. The 10Y at 4.27% minus breakeven inflation of approximately 2.2% implies a real yield of ~2.07%, which is highly restrictive by historical standards and well above the neutral real rate estimated at 0.5-1.0%. This explains why the economy is decelerating despite rate cuts: monetary policy remains restrictive even after 175 bps of easing. The 30-year mortgage rate at 6.11% is keeping housing activity frozen — existing home sales remain near 30-year lows, and housing starts have disappointed for three consecutive months. Credit markets are beginning to feel the strain: high-yield spreads at 317 bps have widened approximately 50 bps since January, and leveraged loan default rates are ticking higher.",
+      "implies": "The bond market is sending a clear message: more easing is needed and it needs to come faster. The inverted relationship between short-term rates (falling) and long-term rates (sticky) creates opportunities for duration extension. If the Fed delivers the 75-100 bps of additional cuts priced in, the 10-year could decline toward 3.75-4.00%, generating significant capital appreciation for duration-long positions. However, the risk is that a recession materializes forcefully, causing credit spreads to blow out (HY spreads could reach 500-600 bps in a recession scenario), devastating high-yield and investment-grade corporate bond returns even as Treasuries rally. The divergence between Treasury and credit performance will be a defining theme of 2026.",
+      "strategy": "Overweight intermediate-duration US Treasuries (5-7 year maturity), using TLT or IEF for implementation. Underweight high-yield credit, which is not offering sufficient spread compensation for the rising default risk. Consider TIPS as an inflation hedge given M2 re-expansion. In Europe, Bunds offer less value given lower yields, but peripheral spread compression (BTP-Bund) may continue as the ECB provides support."
     },
     "yield_curves": {
-      "title": "Yield Curves",
+      "title": "Global Yield Curve Analysis",
       "shape": "normal",
-      "interpretation": "The US yield curve has returned to a normal (upward-sloping) shape after being inverted from mid-2022 through late 2024. The 2s10s spread at +56bps is the most positive since early 2022. This is critically important: while a re-steepening from inversion is often misinterpreted as a positive signal, it historically occurs in the early stages of an actual economic downturn. The mechanism is that as the Fed begins cutting rates in response to weakening growth, short-term yields fall faster than long-term yields (which are influenced by inflation expectations and term premium). The curve's shape is telling us that the recession that the inversion predicted is now arriving, not that the danger has passed. German Bunds show a similar pattern with lower absolute yields, reflecting the ECB's more dovish stance. Japan remains an outlier with a very flat but slightly upward-sloping curve as the BOJ's normalization keeps front-end yields anchored while the back end drifts higher.",
-      "why": "The front end is anchored by Fed cuts (2Y at 3.56% vs. fed funds at 3.64%), while the back end at 4.12% reflects term premium rebuilding due to fiscal concerns and inflation uncertainty.",
-      "implies": "The curve shape suggests further economic deceleration and additional Fed easing are ahead; duration will eventually outperform as the recession deepens.",
-      "strategy": "Position for further curve steepening via 2s10s steepener trades; accumulate long-duration exposure on dips as recession probability increases.",
+      "interpretation": "The US yield curve has completed its transition from deeply inverted to normally sloped, with the 2s10s spread at +51 basis points. This normalization pattern — driven by front-end rates falling faster than back-end rates — is the classic 'bull steepening' that precedes recessions. Importantly, every recession since 1970 has been preceded by an inversion followed by a steepening back to positive territory. The curve is telling us that the Fed will need to cut aggressively (front end falls) but that long-term growth and inflation expectations are anchoring yields at the back end. The steepest part of the curve is the 2s30s, where the spread is approximately 74 bps (4.50% minus 3.76%), reflecting term premium reasserting itself after years of suppression.",
+      "why": "The normalization is mechanically driven by the short end repricing for further Fed cuts while the long end remains anchored by fiscal supply concerns, term premium, and residual inflation expectations. The 30-year yield staying elevated at approximately 4.50% reflects the market's reluctance to price in a return to the zero-rate regime, as structural factors (deficits, deglobalization, energy transition costs) suggest the neutral rate is permanently higher than pre-2020 levels.",
+      "implies": "For banks, the steeper curve improves net interest margins, which is positive for bank equity valuations. For mortgage borrowers, the 30-year rate at 6.11% will not decline significantly unless the 10-year yield falls below 4.0%. For fixed-income investors, the positive slope means carry is back — you are compensated for extending duration, unlike the 2022-2024 period of inversion.",
+      "strategy": "Implement a barbell strategy: combine 2-year Treasuries (yielding 3.76% with low duration risk) with 10-year Treasuries (yielding 4.27% with significant appreciation potential if rates fall). Avoid the belly of the curve (5-year) which offers less convexity. In Japan, short JGB futures as the BOJ continues to normalize — the 10Y JGB yield at 0.7% has significant room to rise toward 1.0%+.",
       "data": [
         {
           "maturity": "3M",
-          "us": 3.75,
-          "de": 2.55,
-          "fr": 2.75,
+          "us": 3.85,
+          "de": 2.45,
+          "fr": 2.6,
           "jp": 0.15,
-          "uk": 4.2,
+          "uk": 4.3,
           "short_term": true
         },
         {
           "maturity": "6M",
-          "us": 3.65,
-          "de": 2.5,
-          "fr": 2.7,
-          "jp": 0.2,
-          "uk": 4.1,
+          "us": 3.8,
+          "de": 2.4,
+          "fr": 2.55,
+          "jp": 0.18,
+          "uk": 4.25,
           "short_term": true
         },
         {
           "maturity": "1Y",
-          "us": 3.58,
-          "de": 2.45,
-          "fr": 2.65,
-          "jp": 0.3,
-          "uk": 4.0,
+          "us": 3.78,
+          "de": 2.35,
+          "fr": 2.5,
+          "jp": 0.25,
+          "uk": 4.15,
           "short_term": true
         },
         {
           "maturity": "2Y",
-          "us": 3.56,
-          "de": 2.35,
-          "fr": 2.55,
-          "jp": 0.42,
-          "uk": 3.85,
+          "us": 3.76,
+          "de": 2.3,
+          "fr": 2.45,
+          "jp": 0.35,
+          "uk": 4.05,
           "short_term": true
         },
         {
           "maturity": "5Y",
-          "us": 3.85,
+          "us": 4.05,
           "de": 2.4,
           "fr": 2.65,
-          "jp": 0.6,
-          "uk": 3.95,
-          "short_term": false
-        },
-        {
-          "maturity": "10Y",
-          "us": 4.12,
-          "de": 2.55,
-          "fr": 2.85,
-          "jp": 0.85,
+          "jp": 0.5,
           "uk": 4.15,
           "short_term": false
         },
         {
+          "maturity": "10Y",
+          "us": 4.27,
+          "de": 2.55,
+          "fr": 2.85,
+          "jp": 0.7,
+          "uk": 4.3,
+          "short_term": false
+        },
+        {
           "maturity": "30Y",
-          "us": 4.35,
+          "us": 4.5,
           "de": 2.7,
-          "fr": 3.05,
-          "jp": 1.9,
-          "uk": 4.55,
+          "fr": 3.1,
+          "jp": 1.85,
+          "uk": 4.65,
           "short_term": false
         }
       ]
     },
     "derivatives_and_options": {
-      "title": "Derivatives, Options & Futures",
-      "vix": "25.5",
-      "vix_interpretation": "The VIX at 25.5 is approximately 40% above its long-run median of ~18 and firmly in 'elevated concern' territory. This level implies expected daily S&P 500 moves of approximately 1.6% (25.5 / sqrt(252)), which is substantial and creates a challenging environment for short-volatility strategies. The VIX has been persistently above 20 for most of 2026, unlike the sub-15 complacency seen in much of 2024. This sustained elevation reflects genuine macro uncertainty rather than a temporary event-driven spike. Importantly, realized volatility (approximately 22%) is running below implied, creating a modest 'volatility risk premium' that benefits systematic vol sellers but not enough to offset the tail risk of a sudden VIX spike to 35+. The VIX's position above 25 is a clear warning that the equity market is in a fragile state where any negative catalyst could trigger a non-linear move lower.",
-      "put_call_ratio": "0.92",
-      "put_call_interpretation": "The equity put/call ratio has risen to approximately 0.92, up from 0.75 in January, indicating a significant shift toward protective positioning. A put/call ratio approaching 1.0 is typically considered a contrarian bullish signal at extremes, but at 0.92 we are in the 'elevated hedging' zone rather than the 'panic washout' zone that would signal a tradeable bottom. The rise reflects institutional portfolio managers increasing downside protection as economic data deteriorates, earnings estimates get revised lower, and the VIX remains elevated. Notably, single-stock put volumes have surged in financials, consumer discretionary, and real estate — the most cyclically exposed sectors — suggesting smart money is specifically hedging recession-sensitive exposures rather than doing broad index protection.",
-      "skew": "-3.2%",
-      "skew_interpretation": "The 25-delta put/call skew at approximately -3.2% (puts trading at a premium to equivalent calls) is moderately elevated, indicating that demand for out-of-the-money puts exceeds demand for equivalent calls. This is consistent with the VIX and put/call data: institutions are paying up for downside protection. However, the skew is not at extremes — during genuine market panics, skew can reach -8% to -12%. The current level suggests persistent anxiety rather than acute panic. For options traders, the elevated skew makes outright put buying expensive; put spreads (buying a closer-to-money put and selling a further out-of-money put) offer better economics. The skew also creates opportunities for selling cash-secured puts on high-quality names at attractive strike prices, effectively getting paid to buy stocks at a discount.",
+      "title": "Derivatives, Options & Futures — Volatility Deep Dive",
+      "vix": "27.29",
+      "vix_interpretation": "The VIX at 27.29 represents a significant escalation in market fear. This level implies annualized S&P 500 volatility of approximately 27.3%, or daily expected moves of roughly ±1.7%. To contextualize, the VIX averaged 13-16 through most of 2024-early 2025 during the 'goldilocks' phase. The current reading places us in the 85th percentile of historical VIX observations, a zone where equity returns over the next 30 days have historically been highly bifurcated — either strongly positive (if fear proves overdone) or deeply negative (if a genuine crisis materializes). The VIX term structure is showing signs of backwardation in the front month, which is a stress signal indicating that near-term risk is perceived as greater than longer-term risk, consistent with an event-driven anxiety rather than structural capitulation.",
+      "put_call_ratio": "1.15",
+      "put_call_interpretation": "The equity put/call ratio has risen to approximately 1.15, meaningfully above the neutral range of 0.80-0.95. This indicates that option market participants are aggressively buying downside protection — put volumes have exceeded call volumes for three consecutive weeks. From a contrarian perspective, extremely elevated put/call ratios (above 1.20-1.30) have historically been associated with intermediate-term market bottoms, as excessive pessimism creates the conditions for a snap-back rally once the hedging demand abates. However, at 1.15 we are not yet at extreme contrarian levels, suggesting further downside may be needed before a washout occurs. The single-stock put activity is concentrated in consumer discretionary and technology names, confirming that institutional investors are most concerned about earnings risk in these cyclically exposed sectors.",
+      "skew": "-4.2%",
+      "skew_interpretation": "The CBOE Skew Index-implied skew of approximately -4.2% (25-delta puts are 4.2% more expensive in implied volatility terms than 25-delta calls) is elevated but not extreme. This negative skew — sometimes called the 'crash premium' — reflects the market's willingness to pay up for tail-risk protection, specifically insurance against a sharp market decline. The skew has been persistently negative since February, widening from approximately -2.0% to -4.2%, which tells us that sophisticated institutional investors (who dominate the options market) are not merely hedging but actively positioning for a significant drawdown. For volatility traders, the elevated skew creates opportunities in risk-reversal strategies (selling expensive puts, buying cheaper calls) for those with a contrarian bullish view.",
       "term_structure": "backwardation",
-      "term_structure_interpretation": "The VIX futures term structure is in mild backwardation, with front-month futures trading at approximately 25.5 and second-month at roughly 24.2. Backwardation in VIX futures occurs when the market expects near-term volatility to be higher than subsequent-month volatility — essentially, the market believes the current period is uniquely uncertain. This is an unusual and bearish signal: during normal bull markets, VIX futures are in contango (upward sloping) because traders expect mean-reversion from low current volatility to a higher long-run average. Backwardation tells us the opposite — traders expect conditions to calm down eventually but are deeply uncertain about the very near term. For volatility fund managers, backwardation makes long-vol positions less costly to carry (no roll decay) but creates losses on roll-down for short-vol strategies like XIV-type products.",
-      "futures_positioning": "CFTC Commitments of Traders (COT) data shows that leveraged funds have significantly reduced net long exposure in S&P 500 E-mini futures, with net longs declining approximately 18% since the start of the year to roughly 145,000 contracts. Asset manager positioning remains long but has flattened, suggesting no new buying conviction. In Treasury futures, leveraged funds have increased net short positions on the long end (10Y and 30Y), reflecting the basis trade and term premium repricing. Notably, gold futures show the highest net long positioning since 2020, with managed money holding approximately 285,000 contracts net long — a crowded but fundamentally supported trade. In crude oil, positioning is relatively neutral with commercial hedgers providing natural selling pressure that absorbs speculative buying. The overall positioning picture suggests institutions are reducing risk appetite: lower equity longs, higher bond shorts at the back end, and elevated gold longs — classic late-cycle defensive positioning.",
+      "term_structure_interpretation": "The VIX futures term structure has flipped into backwardation, with the front-month VIX future trading above the second and third months. This is a relatively rare condition (occurring roughly 15-20% of the time) that historically signals acute near-term stress. Backwardation means that the cost of rolling short VIX positions (a popular strategy during calm markets) has become punitive, forcing many systematic short-volatility strategies to close positions. This mechanical covering of short-vol positions amplifies the VIX spike. The backwardation is moderate (approximately 1-2 VIX points between months) rather than extreme (5+ points as seen in March 2020), suggesting the market is stressed but not yet in crisis mode. If backwardation deepens, it could signal a cascade of deleveraging across volatility-sensitive portfolios.",
+      "futures_positioning": "According to the latest CFTC Commitment of Traders data, speculative (leveraged fund) positioning on S&P 500 E-mini futures has shifted to net short for the first time since October 2023, with approximately -85,000 contracts net. This is a significant pivot from the +120,000 net long position held as recently as January 2026, representing a swing of over 200,000 contracts. CTAs (trend-following algorithms) account for a large portion of this shift, as the negative price momentum triggered systematic selling rules. Importantly, asset manager (institutional) positioning remains modestly net long, suggesting that the selling has been driven by fast-money/systematic strategies rather than fundamental capitulation by long-only institutions. This creates a setup for a sharp short-covering rally if any positive catalyst emerges — the 200,000-contract positioning swing represents substantial buying power if reversed.",
       "market_signal": "bearish",
-      "market_signal_explanation": "The composite signal from derivatives markets is moderately bearish. The VIX at 25.5 in backwardation, a put/call ratio of 0.92, negative skew of -3.2%, and declining futures positioning all point to a market that is de-risking. Importantly, these signals are not at panic extremes that would suggest a contrarian buying opportunity; rather, they are at levels consistent with the early-to-middle stages of a risk-off cycle. The absence of capitulation (which would require VIX above 35, put/call above 1.2, and AAII bearish sentiment above 50%) means further downside is possible. The derivatives market is telling equity investors to be patient, maintain hedges, and wait for more extreme readings before deploying capital aggressively.",
-      "options_strategy": "In the current environment, the recommended options strategy is a put spread collar on core equity holdings. Specifically, buy S&P 500 5,400 puts and sell 5,200 puts (creating a 200-point put spread) while financing partially by selling 5,800 calls. This structure provides meaningful downside protection between 5,400 and 5,200 (roughly 3-7% below current levels) while capping upside at 5,800 (roughly 4% above). The net cost is minimal due to the elevated skew (calls are cheap relative to puts). For more tactical traders, selling cash-secured puts on high-quality dividend stocks (e.g., JNJ, PG, KO) at 10-15% below current prices takes advantage of elevated implied volatility to generate income and potentially acquire shares at attractive valuations.",
+      "market_signal_explanation": "The composite derivatives signal is bearish across all major indicators: VIX at 27.29 (elevated), put/call ratio at 1.15 (hedging demand dominant), negative skew at -4.2% (crash premium being paid), term structure in backwardation (near-term stress exceeding longer-term), and speculative futures positioning net short. Historically, this constellation of signals is associated with either a sharp capitulation event followed by a recovery (if the economic data stabilizes) or the beginning of a sustained bear phase (if fundamentals continue to deteriorate). The absence of extreme readings in any single indicator suggests we are in the 'escalation' phase rather than the 'climax' — meaning more downside is probable before a durable bottom forms. Investors should maintain elevated hedges and resist the temptation to 'buy the dip' until at least one of these indicators reaches a contrarian extreme.",
+      "options_strategy": "In the current high-volatility environment, we recommend a put-spread collar strategy on core equity holdings: buy the SPX 6,400 put (approximately 3.5% out-of-the-money) and sell the SPX 6,000 put (approximately 9.5% OTM), funded by selling the SPX 6,900 call (approximately 4.2% OTM). This structure provides downside protection between 6,400 and 6,000, caps upside at 6,900, and can be implemented at near-zero net premium given the elevated implied volatility. For income-oriented investors, selling cash-secured puts on high-quality stocks (e.g., Apple, Microsoft) at 10-15% below current prices captures rich premium while establishing positions at attractive levels if assigned.",
       "key_levels": [
         {
           "asset": "S&P 500",
-          "support": "5,400",
-          "resistance": "5,750",
-          "key_strike": "5,500"
+          "support": "6,450",
+          "resistance": "6,800",
+          "key_strike": "6,600"
+        },
+        {
+          "asset": "NASDAQ 100",
+          "support": "5,700",
+          "resistance": "6,150",
+          "key_strike": "5,900"
         },
         {
           "asset": "Gold",
-          "support": "2,880",
+          "support": "2,900",
           "resistance": "3,100",
           "key_strike": "3,000"
         },
         {
           "asset": "EUR/USD",
-          "support": "1.0650",
-          "resistance": "1.0950",
-          "key_strike": "1.0800"
+          "support": "1.0700",
+          "resistance": "1.1000",
+          "key_strike": "1.0850"
         },
         {
           "asset": "10Y Treasury Yield",
-          "support": "3.90%",
-          "resistance": "4.30%",
-          "key_strike": "4.12%"
-        },
-        {
-          "asset": "WTI Crude",
-          "support": "$66.00",
-          "resistance": "$74.00",
-          "key_strike": "$70.00"
+          "support": "4.05%",
+          "resistance": "4.45%",
+          "key_strike": "4.25%"
         }
       ]
     },
     "credit_defaults": {
-      "title": "Credit & Default Rates",
-      "macro_view": "The credit cycle is turning. High-yield spreads at 319 basis points have widened from the sub-280bp levels seen in late 2024, reflecting growing concern about default risk as the economy slows. While 319bps is not yet at 'stress' levels (which historically begin around 500bps), the direction is clearly toward wider spreads. The combination of higher interest rates on floating-rate debt, declining revenue growth, and tighter lending standards from banks is creating a vise that squeezes the most leveraged borrowers. Consumer credit metrics are deteriorating visibly: credit card delinquency rates have risen above 4%, auto loan delinquencies are climbing, and small business bankruptcies are accelerating.",
-      "why": "The fundamental driver is the lagged impact of the 2022-2024 tightening cycle. Many leveraged companies refinanced in the low-rate era (2020-2021) with floating-rate loans that have since reset 300-400bps higher. Private equity-backed LBO structures that assumed perpetually low rates and high growth are particularly vulnerable. Additionally, consumer balance sheets — while starting from a strong position post-COVID savings — have been gradually depleted by persistent inflation and stagnant real wage growth.",
-      "implies": "Credit investors should move up in quality, shifting from BB/B-rated high yield toward BBB-/BB+ investment-grade/crossover credits that offer reasonable spread with lower default risk. The dispersion within high yield will increase dramatically: strong B-rated credits with stable cash flows may be fine, while weak CCC-rated credits face existential risk. Index-level HY funds (HYG, JNK) will underperform carefully selected individual credits or actively managed funds.",
-      "strategy": "Reduce generic HY exposure by 50%. Overweight short-duration IG corporates (1-3Y) for carry with minimal duration risk. Use CDS indices (CDX HY) as hedging instruments rather than selling bonds (more liquid, tighter bid-ask). Avoid sectors with the highest leverage and cyclicality: commercial real estate, retail, and media.",
+      "title": "Credit & Default Rates — Stress Indicators Rising",
+      "macro_view": "The credit cycle is turning. After years of compressed spreads driven by abundant liquidity, rising rates and slowing growth are beginning to expose weaker borrowers. High-yield credit spreads at 317 bps (per FRED data) have widened approximately 50-70 bps since the tights of early 2025, and the direction of travel is clearly toward further widening. Default rates in leveraged loans have risen to approximately 3.5%, up from 2.0% at the cycle low. The transmission mechanism is straightforward: companies that refinanced at floating rates or with short-term maturities during the low-rate era are now facing significantly higher interest costs, squeezing margins and cash flows. The 'maturity wall' of 2026-2027 — when approximately $1.5 trillion of corporate debt needs to be refinanced — is the key vulnerability in the credit market.",
+      "why": "The dual pressure of slowing revenues (GDP at 0.7%) and elevated financing costs (despite Fed cuts, the average corporate borrowing rate remains well above 2020-2021 levels) is compressing corporate profit margins. Companies with leverage ratios above 4x EBITDA are particularly vulnerable. Consumer credit deterioration (credit card delinquencies, auto loan delinquencies) is adding a second dimension of stress that could feed back into bank earnings and lending conditions.",
+      "implies": "For fixed-income investors, the risk/reward in high-yield credit has deteriorated significantly. At 317 bps of spread, HY bonds are not offering sufficient compensation for the rising probability of a 4-5% default cycle. In a recession scenario, HY spreads could widen to 600-800 bps, generating 15-25% losses on long HY positions. Investment-grade credit is more resilient but spreads could widen 30-50 bps from current levels.",
+      "strategy": "Underweight high-yield credit and overweight investment-grade or Treasuries. Within IG, favor shorter-duration bonds (1-5 year maturity) to minimize spread duration risk. Consider CDS protection on HY index (CDX HY) as a portfolio hedge — the cost of protection is elevated but justified given the macro trajectory. Avoid bottom-fishing in distressed credits until spreads reach 500+ bps.",
       "data": [
         {
           "category": "US Investment Grade",
           "rate": "0.7",
           "trend": "stable",
-          "spread": "115",
-          "spread_trend": "slight widening"
+          "spread": "125",
+          "spread_trend": "widening"
         },
         {
           "category": "US High Yield",
-          "rate": "3.2",
+          "rate": "3.5",
           "trend": "rising",
-          "spread": "319",
+          "spread": "317",
           "spread_trend": "widening"
         },
         {
           "category": "EU Investment Grade",
           "rate": "0.5",
           "trend": "stable",
-          "spread": "92",
+          "spread": "98",
           "spread_trend": "stable"
         },
         {
           "category": "EU High Yield",
-          "rate": "2.6",
-          "trend": "rising slightly",
-          "spread": "335",
+          "rate": "2.9",
+          "trend": "rising",
+          "spread": "345",
           "spread_trend": "widening"
         },
         {
           "category": "EM Sovereigns",
           "rate": "4.3",
           "trend": "rising",
-          "spread": "420",
+          "spread": "460",
           "spread_trend": "widening"
         },
         {
           "category": "US Mortgages",
           "rate": "1.2",
           "trend": "stable",
-          "spread": "175",
+          "spread": "185",
           "spread_trend": "stable"
         },
         {
           "category": "US Auto Loans",
           "rate": "2.6",
           "trend": "rising",
-          "spread": "225",
+          "spread": "230",
           "spread_trend": "widening"
         },
         {
@@ -456,34 +473,34 @@
     "title": "Foreign Exchange Markets",
     "dollar_index": {
       "value": "103.8",
-      "change": "-0.4%",
-      "interpretation": "The Dollar Index (DXY) has weakened modestly this week, drifting to approximately 103.8, reflecting a combination of factors: the Fed's continued easing cycle (3.64% fed funds rate), deteriorating US growth data (unemployment at 4.4%, GDP at 1.4%), and capital rotation into European assets where the fiscal/monetary policy mix has become more attractive. The dollar remains structurally supported by the highest nominal yields among G10 countries, but the marginal direction is weaker as the rate differential narrows. A sustained move below 103.0 on DXY would signal a more significant dollar downtrend and would be bullish for commodities, emerging markets, and European equities."
+      "change": "-0.3%",
+      "interpretation": "The US Dollar Index (DXY) slipped 0.3% this week to approximately 103.8, continuing its gradual weakening trend that began in late 2025. The dollar's decline is driven by the Fed's easing cycle, which is narrowing interest rate differentials with other G10 currencies. However, the pace of dollar weakness has been moderate rather than dramatic, as the greenback retains safe-haven appeal during periods of risk aversion (like the current one), and the rate differential with Europe and Japan remains positive. The key tension for the dollar is between cyclical weakness (rate cuts, slowing growth) and structural support (relative economic outperformance, capital account inflows into US assets). We expect the DXY to trade in a 102-106 range through Q2 2026."
     },
-    "narrative": "The foreign exchange market in March 2026 is dominated by three themes: (1) Fed easing and US growth deceleration weakening the dollar at the margin, (2) European fiscal expansion (particularly Germany's defense/infrastructure spending) strengthening the euro, and (3) the BOJ's gradual tightening creating yen strength risk and threatening the massive global carry trade built on cheap yen funding. The carry trade dynamic is particularly important: for years, investors have borrowed in yen (at near-zero rates) and invested in higher-yielding currencies like the USD, AUD, and MXN. As the BOJ tightens, the cost of yen funding rises, reducing carry trade profitability and potentially forcing position liquidation. The last major carry trade unwind (August 2024) caused significant volatility across all asset classes. In emerging markets, the Chinese yuan remains managed by the PBOC within a tight range around 7.23 against the dollar, but faces structural depreciation pressure from capital outflows and the domestic economic slowdown. The Brazilian real has weakened (USD/BRL 5.85) despite high domestic interest rates, reflecting fiscal concerns and political uncertainty. The Mexican peso remains a carry trade favorite but is increasingly vulnerable to US trade policy risk. Overall, FX volatility has been suppressed relative to equity volatility, creating potential for a sharp catch-up move if any of the structural tensions — BOJ tightening, US-China trade escalation, European fiscal expansion — crystallize into a decisive directional catalyst.",
+    "narrative": "Global FX markets are navigating a complex landscape defined by central bank policy divergence, shifting growth differentials, and elevated geopolitical risk. The Federal Reserve's easing cycle (fed funds at 3.64%) has narrowed the rate gap with the ECB (deposit rate approximately 2.50%) and is beginning to undermine the carry advantage that supported the dollar through 2023-2024. However, the dollar's decline has been orderly because: (1) the growth differential still favors the US over Europe and Japan, even as US GDP decelerates; (2) capital account flows into US equities and tech remain significant; (3) the dollar's reserve currency status provides structural demand. The euro has been the primary beneficiary of dollar weakness, supported by Germany's fiscal pivot and ECB rate cuts that are reviving European growth expectations. The yen is strengthening on BOJ normalization, creating a two-front pressure on USD. In EM, the picture is mixed: commodity currencies (BRL, CLP) are under pressure from slowing global growth, while Asian currencies (CNY, INR) are benefiting from China stimulus and portfolio reallocation toward cheaper markets. Carry trades remain active but less crowded than in 2024, with the yen-funded carry (short JPY, long MXN/BRL) unwinding as JPY appreciation erodes returns. The key risk for FX markets is a disorderly unwinding of remaining carry positions if risk aversion spikes further.",
     "pairs": [
       {
         "pair": "EUR/USD",
-        "value": "1.0835",
+        "value": "1.0850",
         "change": "+0.4%",
         "change_num": 0.4,
         "direction": "up",
-        "analysis": "EUR/USD is benefiting from the most powerful tailwind since 2017: a genuine European fiscal expansion. Germany's decision to unlock massive defense and infrastructure spending has fundamentally altered the growth outlook for the eurozone, attracting capital flows that push the euro higher. Simultaneously, ECB rate cuts have been slower than expected as services inflation in Europe proves sticky, maintaining a less dovish-than-expected monetary stance. The pair is testing the upper end of its Q1 range and a sustained break above 1.0950 would target 1.1100. Key risk: US tariff threats against EU exports.",
-        "support": "1.0650",
+        "analysis": "EUR/USD continues its gradual ascent, supported by the narrowing Fed-ECB rate differential and improved eurozone growth expectations following Germany's fiscal stimulus announcement. The pair broke above the 1.0800 resistance level that had capped rallies for weeks, signaling a potential trend change. ECB officials have signaled a slower pace of cuts ahead, while the Fed is expected to accelerate, creating a rate convergence dynamic that favors further EUR appreciation. Technical momentum is constructive, with the 50-day moving average crossing above the 200-day for the first time since mid-2024.",
+        "support": "1.0700",
         "resistance": "1.0950",
-        "weekly_high": "1.0870",
-        "weekly_low": "1.0760"
+        "weekly_high": "1.0895",
+        "weekly_low": "1.0770"
       },
       {
         "pair": "GBP/USD",
-        "value": "1.2930",
-        "change": "-0.15%",
-        "change_num": -0.15,
+        "value": "1.2920",
+        "change": "-0.2%",
+        "change_num": -0.2,
         "direction": "down",
-        "analysis": "Sterling is in a difficult position: the UK economy is stagnating with growth near zero, the Bank of England is cautiously cutting rates, and post-Brexit structural challenges continue to weigh on investment. GBP/USD is range-bound between 1.28 and 1.31, lacking a clear directional catalyst. The cable pair is effectively a spread trade between US and UK recession risks, and currently both economies are decelerating at similar rates. The modest weakness this week reflects slightly hotter UK inflation data that paradoxically weighs on sterling by suggesting the BoE will cut slower, keeping financial conditions tighter for longer.",
+        "analysis": "Sterling edged lower as the UK economy continues to underperform relative to European peers. The Bank of England's cautious approach to rate cuts — holding rates at 4.25% while the Fed and ECB cut aggressively — has provided some yield support, but structural concerns about UK growth, productivity, and the lagging effects of Brexit trade frictions weigh on the currency. GBP/USD is stuck in a narrow 1.28-1.31 range with no clear catalyst for a breakout in either direction.",
         "support": "1.2800",
-        "resistance": "1.3100",
-        "weekly_high": "1.2975",
-        "weekly_low": "1.2880"
+        "resistance": "1.3050",
+        "weekly_high": "1.2965",
+        "weekly_low": "1.2885"
       },
       {
         "pair": "USD/JPY",
@@ -491,23 +508,23 @@
         "change": "-0.5%",
         "change_num": -0.5,
         "direction": "down",
-        "analysis": "USD/JPY is the most important cross to watch in 2026. The pair has been grinding lower from the 158 highs as the BOJ tightens and the Fed eases, compressing the rate differential that has supported the yen carry trade. Japanese inflation at 3.2% is well above the BOJ's 2% target, giving Governor Ueda cover to continue normalizing policy. Every 1% move in USD/JPY has enormous global implications: a stronger yen forces Japanese institutions to repatriate capital from overseas bonds and equities, potentially adding selling pressure to US Treasuries and risk assets. The key level is 145 — a break below would likely trigger a wave of carry trade unwinding and a potential 5-8% yen appreciation.",
-        "support": "145.50",
-        "resistance": "150.50",
-        "weekly_high": "149.20",
-        "weekly_low": "147.10"
+        "analysis": "The yen continued to strengthen as BOJ normalization expectations build. With Japanese core CPI running above 2.5% and the BOJ expected to hike to 0.75% by June, the interest rate differential between US and Japan is narrowing from both sides — US rates falling and Japanese rates rising. The unwinding of yen-funded carry trades is amplifying the move. Critically, Japanese institutional investors (lifers, pensions) are repatriating capital from foreign bond holdings as domestic yields become attractive, providing fundamental support for the yen beyond just rate differentials. USD/JPY could test 145 by Q2 if trends continue.",
+        "support": "146.00",
+        "resistance": "150.00",
+        "weekly_high": "149.10",
+        "weekly_low": "147.40"
       },
       {
         "pair": "USD/CHF",
-        "value": "0.8880",
-        "change": "-0.2%",
-        "change_num": -0.2,
+        "value": "0.8890",
+        "change": "-0.1%",
+        "change_num": -0.1,
         "direction": "down",
-        "analysis": "The Swiss franc continues to benefit from its safe-haven status in an environment of elevated geopolitical risk and macro uncertainty. The SNB has been cutting rates aggressively — the Swiss policy rate is now near zero — but the franc refuses to weaken, reflecting strong demand from global capital seeking safety. The pair is testing the lower end of its range, and further dollar weakness combined with persistent risk-off sentiment could push USD/CHF toward 0.8700. The franc's strength is creating deflation risk in Switzerland, which may force the SNB into more dramatic intervention.",
+        "analysis": "The Swiss franc held firm as the classic safe haven benefited from the risk-off global environment. The SNB's relatively neutral stance — neither hiking nor cutting aggressively — has maintained CHF's appeal as a parking currency during uncertainty. Swiss economic fundamentals remain solid with low unemployment and contained inflation. The pair is gravitating toward the 0.88-0.90 range, with limited volatility expected absent a major risk event.",
         "support": "0.8750",
-        "resistance": "0.9020",
+        "resistance": "0.8980",
         "weekly_high": "0.8930",
-        "weekly_low": "0.8845"
+        "weekly_low": "0.8855"
       },
       {
         "pair": "AUD/USD",
@@ -515,161 +532,157 @@
         "change": "-0.6%",
         "change_num": -0.6,
         "direction": "down",
-        "analysis": "The Aussie dollar has been underperforming due to China's uneven economic recovery — Australia's largest trading partner — and declining iron ore prices. While the RBA has been relatively hawkish (cutting later than the Fed), domestic housing market stress and rising unemployment are building the case for RBA easing. AUD is caught between the positive carry (still-high RBA rates) and the negative growth outlook (China, commodities). The pair looks vulnerable to a test of 0.6100 support if Chinese PMIs disappoint or iron ore breaks below $100/ton.",
+        "analysis": "The Australian dollar weakened as a high-beta commodity currency facing headwinds from slowing global growth expectations and China uncertainty. Despite iron ore prices holding relatively steady and the RBA maintaining a hawkish stance (with rates still at 4.10%), the AUD is being dragged lower by broad risk-off sentiment and concerns about the Australian housing market. The pair has failed repeatedly at the 0.6400 resistance and appears headed for a test of 0.6100-0.6150 support.",
         "support": "0.6100",
-        "resistance": "0.6400",
+        "resistance": "0.6380",
         "weekly_high": "0.6310",
-        "weekly_low": "0.6220"
+        "weekly_low": "0.6225"
       },
       {
         "pair": "USD/CNY",
-        "value": "7.2300",
-        "change": "+0.1%",
-        "change_num": 0.1,
-        "direction": "up",
-        "analysis": "The PBOC continues to manage the yuan in a tight range around 7.20-7.30, using daily fixings, state bank intervention, and capital flow controls to prevent sharp depreciation. The fundamental pressure is for a weaker yuan: China's domestic interest rates are well below US rates, the property market remains depressed, and capital outflows continue. However, allowing significant yuan weakness would risk accelerating outflows and inviting US political backlash (currency manipulation accusations). Expect the PBOC to maintain the 7.20-7.35 range unless external shocks force a reassessment.",
-        "support": "7.1800",
-        "resistance": "7.3200",
-        "weekly_high": "7.2450",
+        "value": "7.2200",
+        "change": "-0.2%",
+        "change_num": -0.2,
+        "direction": "down",
+        "analysis": "The yuan strengthened modestly as China stimulus measures and portfolio inflows into Hong Kong/Chinese equities provided support. The PBOC has been actively managing the fix rate to prevent excessive depreciation, while allowing gradual appreciation to signal confidence. However, the rate differential still heavily favors the USD, and capital outflows from China's property sector partially offset equity inflows. The PBOC's tolerance band appears to be 7.10-7.30, with intervention likely at the boundaries.",
+        "support": "7.1500",
+        "resistance": "7.3000",
+        "weekly_high": "7.2500",
         "weekly_low": "7.2100"
       },
       {
         "pair": "USD/BRL",
-        "value": "5.8600",
-        "change": "+0.9%",
-        "change_num": 0.9,
+        "value": "5.8200",
+        "change": "+0.6%",
+        "change_num": 0.6,
         "direction": "up",
-        "analysis": "The Brazilian real has weakened despite the BCB maintaining one of the highest real interest rates in the world (Selic at ~14.75% vs. ~4.5% inflation = ~10% real rate). The weakness reflects fiscal concerns: the Lula government's spending trajectory is deemed unsustainable by foreign investors, and the primary deficit continues to widen. Political uncertainty around potential policy shifts adds a risk premium. For carry trade investors, BRL offers attractive nominal returns but high political and fiscal tail risk. A break above 6.00 on USD/BRL would signal a more serious loss of confidence.",
+        "analysis": "The Brazilian real weakened despite the central bank's aggressive rate-hiking cycle (SELIC at 14.25%). Fiscal concerns remain the dominant driver, with the Lula government's spending plans raising debt sustainability questions. The BRL's high carry attracts inflows, but capital account volatility and political risk create a persistent discount. The currency is particularly vulnerable to global risk-off episodes, as foreign investors quickly unwind BRL carry positions when volatility spikes.",
         "support": "5.6500",
-        "resistance": "6.0000",
-        "weekly_high": "5.8800",
-        "weekly_low": "5.7500"
+        "resistance": "5.9500",
+        "weekly_high": "5.8400",
+        "weekly_low": "5.7600"
       },
       {
         "pair": "USD/MXN",
         "value": "17.15",
-        "change": "-0.3%",
-        "change_num": -0.3,
+        "change": "-0.4%",
+        "change_num": -0.4,
         "direction": "down",
-        "analysis": "The Mexican peso has been resilient in 2026, supported by Banxico's relatively high rates, strong remittance flows, and nearshoring FDI. However, the peso faces growing risk from US trade policy: any escalation in tariff threats against Mexican imports — particularly autos and agricultural products — could trigger a sharp repricing. The upcoming US political cycle adds uncertainty. For now, MXN offers attractive carry, but position sizing should be conservative given the binary trade policy risk. Support at 16.80 and resistance at 17.60 define the current range.",
+        "analysis": "The Mexican peso outperformed EM peers this week, supported by Banxico's high real rates (policy rate at 9.75% with inflation around 4.5%), near-shoring inflows boosting FDI, and relatively stable political conditions under the new administration. The peso continues to be a favored carry trade destination, though the premium is slowly eroding as Banxico begins its cutting cycle. Trade policy uncertainty (potential new US tariffs) remains a tail risk that could cause sudden peso weakness.",
         "support": "16.80",
-        "resistance": "17.60",
-        "weekly_high": "17.35",
+        "resistance": "17.50",
+        "weekly_high": "17.30",
         "weekly_low": "17.05"
       }
     ]
   },
   "section7_commodities": {
-    "title": "Commodities",
+    "title": "Commodities — Comprehensive Analysis",
     "energy": {
-      "narrative": "Energy markets remain caught between supply constraints and demand concerns. OPEC+ continues to manage production with voluntary cuts, particularly from Saudi Arabia and Russia, keeping approximately 5 million barrels per day off the market. However, compliance is increasingly questioned as some members (Iraq, Kazakhstan, Nigeria) exceed their quotas. On the demand side, the global economic slowdown — particularly the deceleration in China's industrial activity and US manufacturing — is capping upside for crude oil. Refining margins have compressed from the elevated levels of 2024 as refined product demand softens. The WTI futures curve remains in mild backwardation, indicating current supply tightness but not severe enough to trigger a sustained rally. Natural gas has recovered from extreme lows, with late-winter heating demand and growing LNG export volumes from the US Gulf Coast providing support. USO's +1.47% weekly gain reflects short-covering and geopolitical concerns (Iran, Red Sea shipping disruptions) rather than fundamental demand improvement. The key bearish risk for energy is a sharper-than-expected global slowdown that overwhelms OPEC+ cuts; the bullish risk is a major geopolitical supply disruption.",
+      "narrative": "Energy markets are navigating the tension between supply-side support (OPEC+ discipline, geopolitical risk premia) and demand-side headwinds (slowing global growth, China's uneven recovery, potential US recession). Crude oil found a bid this week, with USO gaining 1.27%, driven primarily by renewed concerns about Middle East supply disruptions and reports of stronger-than-expected OPEC+ compliance. Saudi Arabia continues to bear the burden of voluntary cuts, maintaining output roughly 1 million bpd below its quota, while Russia's compliance has improved amid logistical constraints from sanctions enforcement. On the demand side, the picture is more nuanced: Chinese refinery runs have picked up seasonally and the IEA maintains its 2026 demand growth forecast at approximately 1.0 million bpd, though this has been revised down twice. US gasoline demand is showing early signs of seasonal recovery as the driving season approaches, but the consumer spending slowdown could cap the usual spring/summer demand ramp. The oil futures curve is in mild backwardation in the front months (bullish structure), suggesting the physical market is tighter than the bearish macro narrative implies. Natural gas markets remain volatile as storage levels normalize and LNG export capacity additions create competing demand for US supply. We see WTI trading in a $65-78 range for Q2, with upside skew from geopolitical supply risk.",
       "items": [
         {
           "name": "WTI Crude",
-          "value": "69.80",
+          "value": "71.80",
           "unit": "$/bbl",
           "change": "+1.3%",
           "change_num": 1.3,
           "direction": "up",
-          "analysis": "WTI bounced from the $68 support level on geopolitical headline risk and short-covering, but the rally lacks conviction. US crude inventories continue to build seasonally, and demand indicators (driving miles, industrial diesel consumption) are soft. The $66-74 range is well-defined, and WTI is likely to remain range-bound until either OPEC+ deepens cuts or a recession decisively breaks demand.",
+          "analysis": "WTI rallied on renewed Middle East tensions and OPEC+ compliance holding firm. The $70 support level has been tested and held three times in 2026, establishing a strong technical floor. However, upside is capped by slowing US demand and the potential for OPEC+ to unwind cuts if prices rise above $80. The speculative positioning remains relatively light, suggesting room for further upside if geopolitical risks escalate.",
           "drivers": [
-            "OPEC+ compliance uncertainty",
-            "US SPR policy",
-            "China demand weakness",
-            "Geopolitical supply risk"
+            "OPEC+ compliance",
+            "Middle East geopolitical risk",
+            "Seasonal refinery ramp-up"
           ]
         },
         {
           "name": "Brent Crude",
-          "value": "73.50",
+          "value": "75.40",
           "unit": "$/bbl",
           "change": "+1.1%",
           "change_num": 1.1,
           "direction": "up",
-          "analysis": "Brent maintains its typical $3-4 premium over WTI, supported by tighter physical markets in the Atlantic basin and ongoing shipping disruptions in the Red Sea that increase freight costs for Middle Eastern crude heading to Europe. Brent's 12-month futures curve is in shallow backwardation, reflecting moderate physical tightness.",
+          "analysis": "Brent maintained its premium to WTI at approximately $3.60/bbl, consistent with global supply tightness relative to the US market where shale production continues to grow modestly. The Brent curve is in steeper backwardation than WTI, reflecting tighter Atlantic basin fundamentals and European refinery demand.",
           "drivers": [
-            "Red Sea shipping disruption",
-            "OPEC+ production policy",
-            "European refinery maintenance season"
+            "Atlantic basin tightness",
+            "European refinery demand",
+            "OPEC+ cuts"
           ]
         },
         {
-          "name": "Natural Gas (Henry Hub)",
-          "value": "2.65",
+          "name": "Natural Gas",
+          "value": "2.55",
           "unit": "$/MMBtu",
-          "change": "+3.8%",
-          "change_num": 3.8,
+          "change": "+3.5%",
+          "change_num": 3.5,
           "direction": "up",
-          "analysis": "Natural gas has rallied sharply as late-winter cold snaps in the Eastern US increased heating demand and drew down storage inventories. US LNG export terminal utilization rates remain near capacity, providing a structural bid for domestic gas. However, the approaching spring shoulder season (reduced heating demand) typically caps upside. Storage levels remain above the 5-year average, limiting the magnitude of any sustained rally.",
+          "analysis": "Henry Hub natural gas surged on late-season cold forecasts for the Eastern US and declining storage surplus versus the 5-year average. LNG feed gas demand at ~15.5 Bcf/d is near record levels as new export terminals ramp up. The structural story is bullish: growing LNG export capacity is creating a floor under US gas prices by connecting them to global pricing.",
           "drivers": [
-            "Late-winter heating demand",
-            "LNG export volumes",
-            "Storage draws",
-            "Power sector switching"
+            "Late winter cold snap",
+            "LNG export demand growth",
+            "Storage normalization"
           ]
         },
         {
           "name": "Heating Oil",
-          "value": "2.52",
+          "value": "2.55",
           "unit": "$/gal",
-          "change": "-0.6%",
-          "change_num": -0.6,
-          "direction": "down",
-          "analysis": "Heating oil is declining seasonally as the Northeast US moves past peak heating demand. Crack spreads (the refinery margin between crude and heating oil) have compressed to their lowest levels since 2023. Distillate inventories have rebuilt from critically low levels, removing the scarcity premium.",
+          "change": "+0.9%",
+          "change_num": 0.9,
+          "direction": "up",
+          "analysis": "Heating oil followed crude higher with seasonal support from lingering winter demand in the Northeast US. Distillate inventories remain below the 5-year average, providing fundamental support. Crack spreads are healthy, incentivizing refinery runs.",
           "drivers": [
-            "Seasonal demand decline",
-            "Inventory rebuilds",
-            "Compressed refinery margins"
+            "Seasonal demand",
+            "Low distillate inventories",
+            "Crude strength"
           ]
         },
         {
           "name": "Gasoline RBOB",
           "value": "2.18",
           "unit": "$/gal",
-          "change": "+0.7%",
-          "change_num": 0.7,
+          "change": "+1.4%",
+          "change_num": 1.4,
           "direction": "up",
-          "analysis": "Gasoline is firming as refineries enter seasonal turnaround (maintenance) periods, temporarily reducing supply just as the market looks ahead to the spring/summer driving season. The seasonal pattern typically supports gasoline from March through May. However, demand growth is tepid as high pump prices and EV adoption reduce incremental gasoline consumption.",
+          "analysis": "Gasoline prices rallied as refineries began the seasonal switch to summer-grade fuel, which is more expensive to produce. The crack spread (gasoline price minus crude) widened to approximately $22/bbl, well above the 5-year average, reflecting tight gasoline supply. Consumer demand will be the key variable — if the economic slowdown suppresses summer driving, gasoline could underperform.",
           "drivers": [
-            "Refinery turnaround season",
-            "Driving season anticipation",
-            "EV adoption headwind"
+            "Summer-blend transition",
+            "Healthy crack spreads",
+            "Pre-driving season positioning"
           ]
         },
         {
-          "name": "Uranium (U3O8)",
-          "value": "74.50",
+          "name": "Uranium",
+          "value": "73.50",
           "unit": "$/lb",
           "change": "+2.8%",
           "change_num": 2.8,
           "direction": "up",
-          "analysis": "Uranium continues its multi-year rally, driven by the global nuclear energy renaissance. Multiple countries (US, UK, France, Japan, China, India) have announced new reactor builds or lifetime extensions of existing plants as part of clean energy strategies. Supply remains constrained: Kazatomprom production challenges and Cameco's cautious expansion plans create a structural deficit. Data center AI power demand is an additional catalyst as hyperscalers sign nuclear power purchase agreements.",
+          "analysis": "Uranium continues its structural bull market, driven by the global nuclear energy renaissance. Over 30 countries have committed to tripling nuclear capacity by 2050 at COP28, while supply remains constrained by years of underinvestment and Kazakh production issues. Utilities are scrambling to secure long-term supply contracts, pushing spot prices higher.",
           "drivers": [
-            "Nuclear energy renaissance",
-            "AI data center power demand",
-            "Supply constraints from Kazakhstan",
-            "Government policy support"
+            "Nuclear renaissance",
+            "Supply constraints (Kazakhstan)",
+            "Utility contracting demand"
           ]
         }
       ]
     },
     "metals": {
-      "narrative": "Precious metals are in a secular bull market driven by the convergence of several powerful forces. Gold at approximately $2,970/oz (implied from GLD $477.86) is just shy of $3,000, a psychologically critical level that is attracting enormous attention from retail and institutional investors alike. Central bank gold buying — estimated at over 1,000 tonnes annually for the third consecutive year — represents a structural shift in global reserve management as countries diversify away from USD-denominated assets. Real interest rates, while positive in nominal terms, have been declining as the Fed cuts rates, reducing the opportunity cost of holding gold. Geopolitical risks (Russia-Ukraine, Middle East, US-China tensions) maintain a permanent safe-haven bid. Silver benefits from both its monetary role (gold correlation) and industrial demand from solar panel manufacturing, which now consumes over 15% of annual silver production. Copper remains the most important industrial metal, serving as the global economic barometer: its recent strength (+2.1% implied) reflects China stimulus optimism, but any disappointment in Chinese demand data could trigger a sharp pullback. Platinum and palladium are struggling: the transition from internal combustion engines (which use catalytic converters) to EVs (which don't) is reducing long-term demand, while South African and Russian supply faces its own challenges. Lithium continues its painful bear market as EV battery supply has caught up with and exceeded demand, compressing margins across the lithium value chain.",
+      "narrative": "Precious metals are in a unique macro position: structurally bullish due to central bank gold buying, dollar weakening, and real-rate-decline expectations, but facing near-term profit-taking after an extraordinary rally. Gold (GLD -1.29% this week) pulled back from near-record levels, a healthy correction after gaining approximately 15% over the past six months. The structural drivers remain firmly in place: central banks (led by China, India, Poland, and Turkey) continue to accumulate gold at a pace of 800-1,000 tonnes annually, far above the pre-2022 average of 400-500 tonnes. De-dollarization flows, while gradual, provide a persistent bid. Real yields, though still positive, are declining as the Fed cuts rates faster than inflation falls — and gold has historically outperformed when real rates are declining, regardless of their level. Silver is benefiting from both precious metal demand and industrial applications (solar panels, electronics), creating a dual demand driver. In base metals, copper remains the key barometer of global industrial activity. China's stimulus is supporting demand, but the global manufacturing PMI remains below 50 in most major economies, capping the upside. Aluminum is supported by Chinese production curtailments, while nickel and lithium continue to suffer from oversupply. Platinum and palladium face structural headwinds from the EV transition reducing catalytic converter demand, though hydrogen fuel cell applications offer a long-term offset.",
       "items": [
         {
           "name": "Gold",
-          "value": "2,970",
+          "value": "2,965",
           "unit": "$/oz",
-          "change": "+1.1%",
-          "change_num": 1.1,
-          "direction": "up",
-          "analysis": "Gold at $2,970 is within striking distance of the psychologically massive $3,000 level. The rally is supported by declining real yields (10Y at 4.12% minus breakeven inflation of ~2.6% = ~1.5% real rate, down from 2%+ last year), record central bank buying (China alone added 30+ tonnes in recent months), and persistent geopolitical risk premiums. A break above $3,000 could trigger momentum buying from trend-followers and retail investors, potentially pushing toward $3,100-3,200.",
+          "change": "-1.3%",
+          "change_num": -1.3,
+          "direction": "down",
+          "analysis": "Gold pulled back in a healthy profit-taking correction after approaching the $3,000 psychological barrier. The GLD ETF at $460.84 (-1.29%) reflects this consolidation. Despite the weekly decline, the fundamental case for gold remains the strongest in a decade: central bank buying, declining real rates, fiscal sustainability concerns, and de-dollarization flows. We view dips toward $2,900 as buying opportunities with a $3,200 target by Q3 2026.",
           "drivers": [
-            "Real yield compression",
-            "Central bank accumulation",
-            "Geopolitical safe haven",
-            "USD weakness",
-            "De-dollarization flows"
+            "Central bank buying (800+ tonnes/year)",
+            "Declining real yields",
+            "De-dollarization/reserve diversification",
+            "Geopolitical hedging"
           ]
         },
         {
@@ -679,197 +692,187 @@
           "change": "+1.5%",
           "change_num": 1.5,
           "direction": "up",
-          "analysis": "Silver at $33.20 is outperforming gold marginally as the gold/silver ratio compresses from elevated levels. Silver's dual identity — monetary metal (gold correlation) and industrial metal (solar, electronics) — gives it a unique risk profile. Solar panel demand now absorbs approximately 180 million ounces annually, creating a structural supply deficit. If gold breaks $3,000, silver could see an amplified move toward $36-38.",
+          "analysis": "Silver outperformed gold this week, compressing the gold/silver ratio from 92 toward 89. Silver's dual role as a monetary metal and industrial commodity (solar panel demand growing 20%+ annually) creates a unique demand profile. Supply is constrained as primary silver mines are scarce — most silver is produced as a byproduct of copper, zinc, and lead mining. The deficit in the physical silver market (demand exceeding mine supply) has persisted for three consecutive years.",
           "drivers": [
+            "Solar panel demand",
             "Gold correlation",
-            "Solar panel manufacturing demand",
-            "Structural supply deficit",
-            "Industrial recovery hopes"
+            "Physical market deficit",
+            "Industrial applications"
           ]
         },
         {
           "name": "Copper",
           "value": "4.38",
           "unit": "$/lb",
-          "change": "+2.3%",
-          "change_num": 2.3,
+          "change": "+1.8%",
+          "change_num": 1.8,
           "direction": "up",
-          "analysis": "Copper's rally this week reflects optimism around Chinese stimulus measures and the longer-term electrification/infrastructure story. 'Dr. Copper' is the world's best real-time economic indicator: its strength suggests the market believes China's stimulus will translate into actual construction and manufacturing activity. However, copper inventories on the LME have been building, suggesting the physical market is not yet tight. A failure of Chinese demand to materialize would make copper vulnerable to a pullback toward $4.00.",
+          "analysis": "Copper rallied on China stimulus optimism and expectations for global electrification demand (EVs, data centers, grid upgrades). The long-term supply outlook is constrained — major copper mines face declining ore grades and permitting challenges, while demand is expected to double by 2035 in decarbonization scenarios. Near-term, the global manufacturing slowdown provides a headwind, but copper is increasingly viewed as a strategic commodity.",
           "drivers": [
-            "China stimulus expectations",
-            "Electrification/EV demand",
-            "Green infrastructure spending",
-            "Constrained mine supply"
+            "China stimulus",
+            "Electrification/decarbonization demand",
+            "Supply constraints",
+            "Data center build-out"
           ]
         },
         {
           "name": "Platinum",
-          "value": "960",
+          "value": "972",
           "unit": "$/oz",
-          "change": "-0.4%",
-          "change_num": -0.4,
-          "direction": "down",
-          "analysis": "Platinum continues to trade at a historically unusual discount to gold (0.32x ratio vs. long-run average of ~0.8x). The structural problem is the ICE-to-EV transition, which reduces platinum demand for catalytic converters. However, platinum has industrial uses in hydrogen fuel cells, glass, and chemicals that provide a floor. South African mine production challenges (electricity shortages, labor unrest) constrain supply.",
+          "change": "+0.4%",
+          "change_num": 0.4,
+          "direction": "up",
+          "analysis": "Platinum edged higher on hopes that hydrogen fuel cell technology could offset declining auto catalyst demand. South African mine supply remains constrained by energy shortages (Eskom load-shedding) and rising costs. The platinum market is in a physical deficit for the second consecutive year, but ETF outflows have partially offset this support.",
           "drivers": [
-            "EV transition reducing catalytic converter demand",
-            "South African supply disruptions",
             "Hydrogen fuel cell potential",
-            "Wide discount to gold"
+            "South Africa supply constraints",
+            "Physical market deficit"
           ]
         },
         {
           "name": "Palladium",
-          "value": "940",
+          "value": "945",
           "unit": "$/oz",
-          "change": "-1.6%",
-          "change_num": -1.6,
+          "change": "-1.8%",
+          "change_num": -1.8,
           "direction": "down",
-          "analysis": "Palladium remains in a secular bear market, having collapsed from over $3,000 in 2022 to under $1,000. The primary driver is the decline in gasoline-powered vehicle production (palladium is used primarily in gasoline catalytic converters) combined with recycling and substitution toward platinum. Russian supply (40% of global production) creates geopolitical risk, but even this has not been enough to arrest the decline.",
+          "analysis": "Palladium continues its multi-year decline from the 2022 highs above $3,000. The EV transition is structurally reducing demand for gasoline engine catalytic converters (palladium's primary use), while Russian supply (40% of global) has proved more resilient than sanctions-related fears suggested. The metal is searching for a new equilibrium price, likely in the $800-1,000 range.",
           "drivers": [
-            "Declining gasoline vehicle production",
-            "Substitution to platinum in catalytic converters",
-            "Russian supply risk",
-            "Recycling growth"
+            "EV transition reducing catalyst demand",
+            "Russian supply resilience",
+            "Substitution toward platinum"
           ]
         },
         {
           "name": "Aluminum",
-          "value": "2,520",
+          "value": "2,480",
           "unit": "$/t",
           "change": "+1.2%",
           "change_num": 1.2,
           "direction": "up",
-          "analysis": "Aluminum has firmed on the back of Chinese production curtailments (environmental policies limiting smelter operations) and growing demand from the EV sector (lightweight vehicle bodies). European smelters remain offline or at reduced capacity due to high energy costs, constraining ex-China supply. The market is expected to remain in deficit through 2026.",
+          "analysis": "Aluminum gained on reports of Chinese production curtailments in Yunnan province due to hydropower shortages during the dry season. Global aluminum demand is supported by the EV transition (EVs use approximately 3x more aluminum than ICE vehicles for lightweighting). However, overcapacity in China remains a structural headwind, and ex-China demand is subdued.",
           "drivers": [
             "Chinese production curtailments",
             "EV lightweighting demand",
-            "European energy cost constraints",
-            "Structural supply deficit"
+            "Energy cost support"
           ]
         },
         {
           "name": "Nickel",
-          "value": "15,400",
+          "value": "15,350",
           "unit": "$/t",
-          "change": "-1.8%",
-          "change_num": -1.8,
+          "change": "-1.5%",
+          "change_num": -1.5,
           "direction": "down",
-          "analysis": "Nickel remains pressured by oversupply from Indonesia, the world's largest producer, which has aggressively expanded nickel pig iron and mixed hydroxide precipitate (MHP) production for the EV battery supply chain. The Indonesian supply surge has overwhelmed demand growth, pushing prices toward production cost levels for high-cost producers. Market consolidation and Indonesian export policy changes are needed to rebalance.",
+          "analysis": "Nickel remains under pressure from massive Indonesian supply growth, which has transformed the global market from deficit to surplus. Despite growing demand for battery-grade nickel in EV batteries, the Class 1/Class 2 nickel conversion technology from China has effectively connected the surplus in lower-grade nickel (NPI) to the battery-grade market, compressing the premium.",
           "drivers": [
-            "Indonesian production surplus",
-            "EV battery demand growth",
-            "LME inventory builds",
-            "Production cost floor"
+            "Indonesian supply surge",
+            "China conversion technology",
+            "Oversupply despite EV demand"
           ]
         },
         {
-          "name": "Lithium (Carbonate)",
+          "name": "Lithium",
           "value": "10.50",
           "unit": "$/kg",
-          "change": "-3.5%",
-          "change_num": -3.5,
+          "change": "-2.8%",
+          "change_num": -2.8,
           "direction": "down",
-          "analysis": "Lithium's bear market continues, with prices down approximately 85% from the 2022 peak of ~$80/kg. The supply response to the previous price spike has been enormous: Australian, Chilean, and Argentine lithium production has surged, while Chinese lepidolite (a lower-grade source) has added significant tonnage. EV sales growth, while still strong, has not been fast enough to absorb the supply wave. Some high-cost producers are curtailing output, which will eventually rebalance the market, but the bottom may still be 6-12 months away.",
+          "analysis": "Lithium carbonate prices continue their grind lower from the $80/kg peak of late 2022, currently trading at approximately $10.50/kg. The supply response to 2021-2022 high prices has been massive, with Australian, Chilean, and Chinese producers expanding capacity aggressively. EV demand growth, while still robust at 20%+ annually, has not been enough to absorb the supply wave. Prices may be approaching a floor as marginal producers become cash-flow negative below $10/kg.",
           "drivers": [
-            "Massive supply expansion from Australia/Chile/Argentina",
-            "Chinese lepidolite production",
-            "EV demand growth slower than expected",
-            "Producer curtailments beginning"
+            "Supply surplus",
+            "Australian/Chilean expansion",
+            "Slowing EV demand growth rate",
+            "Marginal cost floor approaching"
           ]
         }
       ]
     },
     "agricultural": {
-      "narrative": "Agricultural commodity markets are navigating a complex web of weather patterns, geopolitical supply risks, and evolving demand dynamics. The 2025-2026 crop year has been characterized by generally favorable growing conditions in the US and South America, keeping grain prices under pressure, but specific pockets of weather stress — particularly drought conditions in parts of Brazil and Argentina — are creating selective tightness. The Black Sea grain corridor continues to function but remains vulnerable to disruption from the Russia-Ukraine conflict; any escalation could quickly reverse the relatively comfortable supply situation for wheat. Biofuel mandates compete with food use for corn and soybeans, creating a structural floor under prices. The USDA's latest World Agricultural Supply and Demand Estimates (WASDE) showed modest increases in global ending stocks for corn and wheat but tighter-than-expected soybean inventories due to strong crush demand. Coffee has been the standout performer, surging on severe drought in Brazil (the world's largest producer) and supply chain disruptions from Vietnam (second-largest robusta producer). The food inflation outlook remains mixed: while grain prices are relatively benign, protein (beef, pork) and tropical commodity (coffee, cocoa, sugar) prices remain elevated, keeping grocery bills high for consumers globally.",
+      "narrative": "Agricultural commodity markets are navigating a complex interplay of weather patterns, geopolitical supply risks, and demand shifts. The La Niña pattern that dominated 2024-2025 is transitioning to neutral conditions, reducing the extreme weather risk but creating uncertainty about the 2026 growing season. The Black Sea grain corridor remains functional but fragile, with Ukrainian exports continuing below pre-war levels and Russian exports constrained by sanctions-adjacent logistics challenges. USDA's latest World Agricultural Supply and Demand Estimates (WASDE) showed global grain stocks-to-use ratios declining for the third consecutive year — a bullish structural signal that is being masked by the bearish demand outlook from the global economic slowdown. Coffee stands out as the most dramatic story in the complex, with arabica prices surging to multi-decade highs due to severe drought damage to Brazilian coffee trees in 2025, which will reduce the 2026/27 crop by an estimated 15-20%. The biofuel nexus continues to grow in importance: corn and soybean demand from ethanol and biodiesel production now accounts for approximately 30% and 35% of US production respectively, creating a direct linkage to energy policy. Water scarcity in the Western US, India, and parts of Brazil remains a structural risk that the market chronically underprices, as groundwater depletion trends are irreversible on human timescales.",
       "items": [
         {
-          "name": "Wheat (CBOT)",
+          "name": "Wheat",
           "value": "535",
           "unit": "¢/bu",
-          "change": "-1.1%",
-          "change_num": -1.1,
+          "change": "-1.2%",
+          "change_num": -1.2,
           "direction": "down",
-          "analysis": "Wheat declined modestly as favorable US winter wheat crop conditions and ample Black Sea exports eased supply concerns. Russia's wheat harvest was strong in 2025, and aggressive Russian export pricing continues to undercut Western suppliers. However, wheat remains vulnerable to weather events in the US Plains (spring drought risk) and any disruption to Black Sea shipping.",
+          "analysis": "Wheat declined on improved US winter wheat crop conditions following beneficial moisture across the Southern Plains. The USDA's weekly crop progress report showed good/excellent ratings rising to 42%, up from 38% the prior week. However, global wheat stocks remain tight, and any weather disruption during the critical April-June growing season could rapidly reverse the bearish narrative. Black Sea export flows are steady but logistically constrained.",
           "drivers": [
-            "Russia's large export volumes",
-            "Favorable US crop conditions",
-            "Black Sea corridor stability",
-            "USDA stock estimates"
+            "Improved US crop conditions",
+            "Black Sea supply steady",
+            "Global stocks declining"
           ]
         },
         {
-          "name": "Corn (CBOT)",
-          "value": "460",
+          "name": "Corn",
+          "value": "470",
           "unit": "¢/bu",
-          "change": "+0.5%",
-          "change_num": 0.5,
+          "change": "+0.6%",
+          "change_num": 0.6,
           "direction": "up",
-          "analysis": "Corn edged higher on South American weather concerns — dry conditions in Argentina are threatening the safrinha (second) corn crop, which is critical for global export supply. US ethanol mandate demand provides a steady consumption floor, absorbing roughly 35% of the US corn crop. Export demand from Japan and Mexico remains solid but price-sensitive at current levels.",
+          "analysis": "Corn firmed on strong ethanol demand and expectations for a potentially smaller US planted acreage in 2026, as some farmers signal intentions to shift toward soybeans which offer better margins. Brazilian safrinha (second crop) corn is developing well but faces dryness risk in Mato Grosso. Ethanol margins are healthy, supporting crush demand at approximately 5.4 billion bushels annually.",
           "drivers": [
-            "Argentina drought risk",
-            "US ethanol mandate",
-            "Export demand from Asia",
-            "Planting season outlook"
+            "Ethanol demand",
+            "Acreage competition with soybeans",
+            "Brazil safrinha weather risk"
           ]
         },
         {
-          "name": "Soybeans (CBOT)",
+          "name": "Soybeans",
           "value": "990",
           "unit": "¢/bu",
           "change": "+1.3%",
           "change_num": 1.3,
           "direction": "up",
-          "analysis": "Soybeans rallied on tighter-than-expected USDA stock estimates and strong crush demand (both for biodiesel and meal). Brazil's record soybean harvest is being partially offset by logistical bottlenecks (port congestion, trucking costs) that slow deliveries. Chinese import demand has been robust as hog herd expansion increases feed demand. The soybean/corn ratio is widening, which may incentivize US farmers to shift acres toward soybeans in the upcoming planting season.",
+          "analysis": "Soybeans rallied on Chinese import buying and a tightening old-crop supply picture. USDA ending stocks for the 2025/26 marketing year are projected at just 210 million bushels, the tightest in a decade. Chinese crush margins have improved, incentivizing increased purchases from the US and Brazil. The soy oil market is particularly strong due to renewable diesel demand.",
           "drivers": [
-            "Strong crush demand (biodiesel, meal)",
-            "Brazil logistics constraints",
-            "Chinese import recovery",
-            "Tight USDA stock estimates"
+            "Chinese buying",
+            "Tight ending stocks",
+            "Renewable diesel soy oil demand"
           ]
         },
         {
-          "name": "Coffee (Arabica)",
-          "value": "392",
+          "name": "Coffee",
+          "value": "390",
           "unit": "¢/lb",
           "change": "+4.8%",
           "change_num": 4.8,
           "direction": "up",
-          "analysis": "Coffee prices have surged to multi-decade highs driven by a severe drought in Brazil's key coffee-producing regions (Minas Gerais, São Paulo) that has damaged the 2026/27 crop. Brazil produces approximately 35% of the world's coffee, and any significant production shortfall has outsized market impact. Vietnam, the second-largest producer, is also experiencing weather-related supply issues. Certified exchange stocks are at their lowest levels in over a decade. The transmission to consumer prices is already visible: major roasters (Nestlé, Lavazza, Starbucks) have announced price increases of 10-20%.",
+          "analysis": "Coffee prices surged to their highest levels since 1977, driven by the devastating impact of 2025 drought on Brazilian arabica production. The 2026/27 Brazilian coffee crop is estimated at just 45-50 million bags, down from the normal 65-70 million, as coffee trees suffered irreversible damage to flowering and cherry development. Global stocks are at their lowest in 25 years, and the supply recovery will take 2-3 years as replanted trees require time to mature. This is a genuine supply crisis with limited near-term solutions.",
           "drivers": [
-            "Brazil drought damage to 2026/27 crop",
-            "Vietnam supply disruptions",
-            "Record-low exchange stocks",
-            "Roaster inventory rebuilding"
+            "Brazil drought damage",
+            "Record-low global stocks",
+            "Multi-year supply recovery needed"
           ]
         },
         {
-          "name": "Sugar (#11)",
+          "name": "Sugar",
           "value": "19.60",
           "unit": "¢/lb",
           "change": "-1.5%",
           "change_num": -1.5,
           "direction": "down",
-          "analysis": "Sugar prices pulled back as Brazil diverts more sugarcane to sugar production (vs. ethanol) due to favorable sugar/ethanol price ratios. Indian export volumes are also recovering after the government relaxed export restrictions. However, the structural picture remains somewhat tight due to El Niño-related droughts in Asia and growing biofuel demand in emerging markets.",
+          "analysis": "Sugar prices softened as improved weather conditions in India and Thailand raised expectations for larger 2026/27 harvests. However, the Indian government's export policy remains a wildcard — India has maintained export restrictions to ensure domestic supply, capping the global supply recovery. Brazil's sugar-ethanol mix is tilting toward ethanol production as oil prices rise, potentially constraining sugar exports.",
           "drivers": [
-            "Brazil sugarcane allocation to sugar vs ethanol",
-            "India export policy",
-            "Asian weather patterns",
-            "Biofuel demand"
+            "India/Thailand harvest expectations",
+            "Brazil sugar-ethanol mix",
+            "Indian export policy"
           ]
         },
         {
           "name": "Cotton",
-          "value": "67.80",
+          "value": "68.20",
           "unit": "¢/lb",
           "change": "-0.8%",
           "change_num": -0.8,
           "direction": "down",
-          "analysis": "Cotton is under pressure from weak textile demand as global consumers cut discretionary spending. Chinese mill demand has been disappointing despite stimulus measures, and Indian exports are rising as the local harvest expands. US cotton acreage is expected to decline in 2026 due to low profitability, which could eventually tighten supplies but is a medium-term story.",
+          "analysis": "Cotton prices declined on weak global textile demand, reflecting the consumer spending slowdown in the US and Europe. China's textile sector is operating below capacity, and the fashion industry's move toward sustainability is marginally reducing virgin cotton demand in favor of recycled materials. The US crop outlook for 2026 is average, with planted acreage expected to decline slightly.",
           "drivers": [
-            "Weak global textile demand",
-            "Indian production expansion",
-            "US acreage decline expected",
-            "Chinese mill consumption tepid"
+            "Weak textile demand",
+            "Consumer spending slowdown",
+            "Sustainability trends"
           ]
         },
         {
@@ -879,301 +882,311 @@
           "change": "+3.2%",
           "change_num": 3.2,
           "direction": "up",
-          "analysis": "Lumber prices have rebounded from depressed levels as spring building season approaches and some builders report improved order books despite the challenging mortgage rate environment. Canadian lumber production has been curtailed due to mill closures (beetle damage to forests, lower profitability), reducing supply. However, with 30-year mortgage rates at 6.0% and housing starts well below normalized levels, any lumber rally is likely capped.",
+          "analysis": "Lumber prices rose sharply on early-season building expectations and constrained Canadian supply following mill curtailments during the 2025 price downturn. Despite the weak housing market (30-year mortgage at 6.11%), renovation activity and commercial construction are providing demand support. The structural housing shortage in the US (estimated at 3-5 million units) means that any improvement in mortgage rates could unleash pent-up demand, sending lumber prices significantly higher.",
           "drivers": [
-            "Spring building season anticipation",
-            "Canadian mill closures",
-            "Housing starts improvement (marginal)",
-            "Mortgage rate headwind"
+            "Canadian mill curtailments",
+            "Renovation demand",
+            "Structural housing shortage"
           ]
         }
       ]
     }
   },
   "section8_synthesis": {
-    "title": "Strategic Synthesis",
-    "regime": "transition",
-    "regime_description": "The market is transitioning from a late-cycle deceleration into what may be the early stages of a mild recession. The yield curve has re-steepened (2s10s at +56bps), unemployment is rising (4.4%), GDP growth has slowed to 1.4%, and the Fed is actively cutting rates (3.64%). However, inflation remains above target, preventing aggressive easing. This creates a 'stagflation-lite' regime where growth weakens but the Fed cannot cut as fast as the economy needs. Asset class correlations are shifting: gold is rallying (safety), bonds are mixed (front-end up, back-end down), equities are range-bound, and credit spreads are widening. This transitional regime typically lasts 2-4 quarters before resolving into either a definitive recession or a policy-engineered soft landing.",
-    "global_view": "The global macro picture as of March 10, 2026 is characterized by a rare conjunction of forces that creates both significant risks and opportunities for well-positioned investors. The United States, the world's largest economy, is clearly decelerating: GDP growth at 1.4%, unemployment rising to 4.4%, and the Fed having already cut 175+ basis points from peak rates all confirm that the economic cycle is turning. Yet inflation, as measured by persistently elevated CPI readings, refuses to return to the 2% target, trapping the Fed in a dual-mandate dilemma that limits the speed and magnitude of further easing. The 10-year Treasury yield at 4.12% with the 2-year at 3.56% produces a positively-sloped curve for the first time in years, but this is the ominous type of steepening that historically presages recession onset rather than healthy expansion. European markets are the surprising bright spot: Germany's historic fiscal pivot toward defense and infrastructure spending, combined with ECB easing, has created the most favorable policy mix the continent has seen in a decade, driving DAX and EuroStoxx 50 to significant outperformance. This transatlantic rotation is a theme with potential to persist for quarters. In Asia, the divergence between China's stimulus-driven rally (Hang Seng +14.8% YTD) and Japan's BOJ-tightening-induced weakness (Nikkei -6.3% YTD) underscores how monetary policy divergence is the primary driver of cross-border capital flows. The VIX at 25.5 in backwardation, high-yield spreads widening to 319bps, and a put/call ratio of 0.92 collectively signal that institutional investors are de-risking but have not yet capitulated — meaning further downside is possible before a durable bottom forms. Gold's relentless march toward $3,000 is perhaps the single most important signal in global markets: it reflects declining confidence in fiat currencies, government fiscal sustainability, and the dollar-centric financial system. Central bank gold buying at 1,000+ tonnes annually is a structural shift that will not reverse. The energy complex remains range-bound, caught between OPEC+ supply management and weakening global demand, offering little directional edge. Agricultural commodities present selective opportunities, with coffee's supply-driven surge and soybeans' tight fundamentals standing out. The key tail risks for the coming weeks are: (1) a CRE-related bank failure that crystallizes the slow-motion commercial real estate crisis, (2) a disorderly BOJ move that triggers yen carry trade unwinding, (3) US tariff escalation against Europe or China that disrupts the tentative global trade equilibrium, and (4) an inflation surprise that forces the Fed to pause or reverse cuts. For portfolio construction, the message is clear: raise cash to 15-20%, overweight gold and quality fixed income, maintain equity exposure but hedge aggressively, favor European over US equities, and use the elevated volatility to sell premium on high-quality names. This is a market for capital preservation and selective opportunity, not for aggressive risk-taking.",
-    "macro_thesis": "The primary macro thesis for the next 4-8 weeks is that the US economy is entering a mild recession — or at minimum a significant growth scare — that will force the Fed to accelerate its easing pace while long-end rates remain elevated due to fiscal concerns. This environment favors duration over equities (eventually), gold over the dollar, quality over junk, and European equities over US equities. The key variable to watch is the unemployment rate: if March data (due early April) shows a further increase toward 4.6%, it will confirm the recessionary thesis and likely trigger a more aggressive Fed response. Conversely, any stabilization in labor data would support the soft-landing narrative and put a bid under risk assets. Credit markets will be the early warning system — watch HY spreads: a move above 400bps would signal genuine credit stress and would likely be accompanied by a sharp equity selloff.",
-    "upcoming_events": "Key events for the coming week and beyond: Wednesday March 12 brings the February CPI report, which is the single most important data point for Fed policy expectations — any upside surprise would hammer rate cut expectations and pressure both stocks and bonds. Thursday March 13 features PPI and weekly jobless claims. Friday March 14 delivers Michigan Consumer Sentiment, which has been trending lower and will provide a read on the consumer's reaction to rising unemployment and persistent inflation. Looking further ahead, the FOMC meeting on March 18-19 will be the week's capstone event, with the market pricing roughly a 40% probability of a 25bp cut (from 3.64% to ~3.39%). Fed Chair Powell's press conference will be scrutinized for any shift in tone regarding the growth-inflation trade-off.",
+    "title": "Strategic Synthesis — Investment Thesis for Week 11, 2026",
+    "regime": "risk_off",
+    "regime_description": "The current market regime is definitively risk-off with proto-recessionary characteristics. The constellation of signals — VIX at 27.29, GDP at 0.7%, unemployment at 4.4% and rising, credit spreads widening, equity markets in sustained decline, and the yield curve normalizing after inversion — collectively paint a picture of an economy transitioning from late-cycle deceleration to potential contraction. This is not yet a full recession regime (consumer spending has not collapsed, payrolls remain positive, and credit markets are stressed but not dislocated), but the direction of travel is clearly toward further deterioration absent a significant policy response.",
+    "global_view": "The global macro landscape as of mid-March 2026 presents one of the most complex and consequential investment environments since the 2022 rate shock. The US economy, which served as the locomotive of global growth for three years, is decelerating sharply — GDP growth of just 0.7% in Q4 2025 represents a dramatic slowdown from the 2.5-3.0% pace that prevailed through mid-2025, and leading indicators suggest Q1 2026 could be worse. The labor market, long the pillar of the 'no landing' thesis, has cracked: unemployment at 4.4% is approaching Sahm Rule territory, and the breadth of hiring weakness across sectors (tech, financials, manufacturing, now services) suggests this is not a sectoral rotation but a broad-based cooling. The Federal Reserve finds itself in an unenviable position: the fed funds rate at 3.64% is still restrictive in real terms (approximately 1.5-2.0% above inflation), the mortgage rate at 6.11% is crushing housing activity, and yet inflation has not convincingly returned to the 2% target. The CPI index at 327.46 implies year-over-year inflation in the 2.5-3.0% range, sticky enough to prevent the Fed from declaring victory and cutting aggressively to neutral. This creates a mini-stagflation risk where the economy weakens but the Fed cannot ease fast enough to prevent it. The bond market is pricing a resolution through further cuts (2Y at 3.76% implies 75-100 bps of additional easing), but the equity market is beginning to question whether the cuts will arrive in time — the VIX at 27.29 and put/call ratio at 1.15 signal genuine institutional anxiety, not mere retail nervousness. Meanwhile, the international picture adds both complexity and opportunity: Europe is enjoying an unexpected renaissance driven by Germany's historic fiscal pivot, creating a rare situation where European equities outperform US markets. The DAX up 15.3% YTD versus the S&P 500 down 3.8% is a 19-point divergence that almost never occurs. China's stimulus-driven recovery is lifting Hong Kong markets (Hang Seng +16.1% YTD) and providing a floor under commodity demand, but the property sector's structural decline remains unresolved. Japan is the odd one out — the BOJ's normalization is strengthening the yen and pressuring Japanese equities, while creating ripple effects through global bond markets as Japanese capital repatriates. In commodities, gold's approach toward $3,000 reflects the ultimate hedge demand in an uncertain world: central banks are buying, real yields are declining, fiscal sustainability concerns are growing, and geopolitical risks are elevated. Oil is range-bound between supply discipline and demand fears. The coffee market's supply crisis is a microcosm of the broader agricultural vulnerability to climate change — a risk the market chronically underprices. Credit markets are the canary in the coal mine: high-yield spreads at 317 bps have widened 50-70 bps from the tights, consumer credit delinquencies are at decade highs, and the 2026-2027 maturity wall creates refinancing risk for leveraged borrowers. The critical question for the next 4-8 weeks is whether the Fed will accelerate its easing cycle to 50 bps cuts (which would likely stabilize equity markets and support credit) or remain in 25 bps increments (which risks allowing the slowdown to gather momentum into a self-reinforcing downturn). History suggests that when the labor market deteriorates at this pace, the Fed eventually capitulates with aggressive cuts — but the lag between data deterioration and policy response is typically 3-6 months, during which significant market damage can occur. We position portfolios for a 'bumpy landing' scenario: not a deep recession, but 2-3 quarters of sub-1% growth, rising unemployment toward 5%, and an eventual aggressive Fed easing cycle that brings the funds rate to 2.5-3.0% by early 2027.",
+    "macro_thesis": "Our central macro thesis for the next 4-8 weeks is 'deterioration before stabilization.' The economic data flow will continue to weaken as the lagged effects of prior tightening work through the system — we expect March and April payrolls to disappoint, consumer spending to decelerate further, and CEO confidence surveys to hit new cycle lows. This will force the Fed to accelerate its easing path, likely delivering a 25 bps cut in March (bringing the rate to 3.39%) with forward guidance signaling readiness for 50 bps at the May meeting. The pivot in Fed rhetoric will be the catalyst for stabilization in risk assets — but not until the data has deteriorated enough to make the pivot undeniable. In the interim, we expect further equity weakness (5-8% additional downside from current levels), credit spread widening (HY to 375-400 bps), and a continued bid for duration (10Y yield toward 4.0%). The dollar will gradually weaken as rate cuts accelerate and growth differentials narrow.",
+    "upcoming_events": "The week of March 16-20 brings several critical events. The FOMC meeting on March 18-19 is the centerpiece — the market expects a 25 bps cut, and forward guidance will be dissected for signals about the pace of future cuts. Tuesday's Retail Sales report will test the consumer spending thesis. Wednesday's Housing Starts and Building Permits will reveal the state of the housing market under 6.11% mortgages. Thursday's Philadelphia Fed Manufacturing Index provides a real-time gauge of industrial activity. Friday's Existing Home Sales completes the housing picture. Additionally, the Bank of Japan meets on March 18-19, with potential for a rate hike that could further strengthen the yen and disrupt carry trades. European PMI flash estimates (Friday) will test the European outperformance narrative.",
     "strategy": [
       {
         "type": "Tactical Allocation",
-        "recommendation": "Reduce US equity exposure to benchmark-minus-5%, increase cash to 18%, overweight European equities (+3% vs benchmark), and maintain gold at 10% of portfolio.",
-        "rationale": "The US growth deceleration is accelerating while inflation remains sticky, creating a challenging environment for US equities that are priced for perfection (20x+ forward P/E). European equities offer better risk/reward with lower valuations, fiscal tailwinds, and ECB support. Cash at 18% provides dry powder for deploying into a potential Q2 selloff when VIX spikes above 30 and creates genuine buying opportunities. Gold at 10% serves as both an inflation hedge and a hedge against the dollar's secular decline as central banks diversify reserves. This allocation emphasizes capital preservation while maintaining enough exposure to participate in upside scenarios.",
+        "recommendation": "Shift to 40% equities / 40% fixed income / 10% commodities / 10% cash — underweight equities relative to a 60/40 benchmark, overweight duration and gold.",
+        "rationale": "The combination of decelerating GDP (0.7%), rising unemployment (4.4%), elevated VIX (27.29), and widening credit spreads (317 bps HY) argues for a defensive posture. Historical analysis shows that when these four indicators simultaneously deteriorate, equity markets decline an additional 8-15% before finding a bottom. Fixed income offers positive carry (10Y at 4.27%) with significant appreciation potential if the Fed accelerates cuts. Gold provides the best portfolio-level hedge against both recession (safe haven) and stagflation (inflation hedge). Cash provides optionality to deploy at lower prices. This allocation should be maintained until VIX falls below 20 or the Fed delivers a 50 bps cut.",
         "timeframe": "4-8 weeks",
         "conviction": "high"
       },
       {
         "type": "Hedging",
-        "recommendation": "Buy S&P 500 5,400/5,200 put spreads expiring April 17, partially financed by selling 5,800 calls. Estimated net cost: 0.3-0.5% of portfolio value.",
-        "rationale": "With VIX at 25.5, outright put buying is expensive, but the elevated skew makes put spreads relatively efficient. The 5,400-5,200 zone captures the most likely correction range (3-7% from current levels), which aligns with the 200-day moving average area where significant technical support exists. Selling the 5,800 calls finances the structure because the probability of a breakout rally above 5,800 in the current macro environment is low (estimated <15%). This structure provides asymmetric protection: maximum loss is the net premium paid, while maximum gain occurs at 5,200 for a ~5:1 payout ratio. Roll monthly if the macro picture remains uncertain.",
-        "timeframe": "1-6 weeks",
+        "recommendation": "Buy S&P 500 put spreads: long 6,400 puts / short 6,000 puts (April expiry) at approximately 1.5% of portfolio value.",
+        "rationale": "The current implied volatility environment makes outright put purchases expensive, but put spreads offer a favorable risk/reward by capping the maximum payout in exchange for a lower premium. The 6,400/6,000 spread provides protection against a 3.5-9.5% decline from current levels, covering the most likely adverse scenario of a 'hard data' disappointment around the FOMC meeting. The elevated VIX (27.29) means the spread is priced approximately 15% more than historical average, but the hedging need justifies the cost. This should be treated as insurance, not a speculative position. Roll monthly if the risk-off environment persists.",
+        "timeframe": "2-4 weeks",
         "conviction": "high"
       },
       {
         "type": "Long Opportunity",
-        "recommendation": "Go long European defense and infrastructure ETFs (ITA EU, or direct exposure via Rheinmetall, BAE Systems, Vinci, Bouygues) funded by underweighting US consumer discretionary.",
-        "rationale": "Germany's constitutional amendment allowing massive defense and infrastructure spending represents a once-in-a-generation fiscal pivot for Europe's largest economy. The estimated €500B+ in incremental spending will flow directly to defense contractors (Rheinmetall, BAE, Leonardo, Thales) and infrastructure companies (Vinci, Bouygues, Hochtief). This is not a speculative theme — it is a policy-mandated, multi-year spending program backed by sovereign balance sheets. European defense stocks have already rallied significantly but remain cheap relative to US defense peers (Lockheed, Raytheon) on a forward P/E basis. The US consumer discretionary sector is the natural funding source: rising unemployment, depleted savings, and persistent inflation are directly negative for discretionary spending.",
-        "timeframe": "3-6 months",
+        "recommendation": "Overweight intermediate-duration US Treasuries via IEF (7-10 year ETF) and add to gold positions (GLD) on dips toward $450.",
+        "rationale": "The 10-year Treasury at 4.27% offers the best risk-adjusted opportunity in the fixed income complex. If the Fed delivers 75-100 bps of additional cuts as the market prices, the 10Y could decline to 3.75-4.00%, generating 5-8% total return from the current entry point. Duration risk is limited because even in a 'higher for longer' scenario, the 10Y is unlikely to exceed 4.50% given the growth deceleration. Gold at $2,965 is approaching the $3,000 level and could consolidate, but the structural drivers (central bank buying, declining real yields, fiscal concerns) support a move to $3,200 by year-end. Any pullback toward $2,900 should be aggressively accumulated. European equities, particularly the DAX and defense sector, offer the best equity risk/reward given fiscal stimulus tailwinds.",
+        "timeframe": "4-12 weeks",
         "conviction": "high"
       },
       {
         "type": "Short Opportunity",
-        "recommendation": "Short regional bank ETF (KRE) or individual highly CRE-exposed regional banks via put options or direct short positions. Target 10-15% decline from current levels.",
-        "rationale": "Regional banks hold a disproportionate share of commercial real estate loans, and the CRE maturity wall hitting in Q2-Q3 2026 will force mark-to-market losses and loan write-downs. Office valuations are down 25-40% from peak, and refinancing at current rates (6%+) on reduced property values is mathematically impossible for many borrowers. The FDIC problem bank list has been growing quietly. Unlike the 2023 SVB crisis (which was about interest rate risk on bond portfolios), the coming CRE stress is about credit risk — loan losses that directly erode bank capital. The steepening yield curve provides some offset via improved net interest margins, but the credit losses are likely to overwhelm the NIM benefit for the most exposed institutions. Use put options with 3-month expiry to define risk.",
-        "timeframe": "2-4 months",
+        "recommendation": "Short US consumer discretionary (XLY) relative to consumer staples (XLP), and short high-yield credit via HYG puts or CDX HY CDS.",
+        "rationale": "Consumer discretionary stocks face a triple headwind: (1) rising unemployment reducing disposable income, (2) depleted excess savings removing the spending buffer, (3) elevated credit card delinquencies signaling consumer stress. The sector trades at a premium to historical valuations and has not yet fully priced in the earnings downside from a consumer spending slowdown. The long XLP / short XLY pair trade captures the defensive rotation without taking outright market directional risk. On the credit side, high-yield spreads at 317 bps are inadequate compensation for a potential recession scenario where defaults could reach 5-6% and spreads widen to 500-600 bps. Buying HYG April puts (strike $74) or paying for CDX HY CDS protection at current levels offers asymmetric upside if credit conditions deteriorate as we expect.",
+        "timeframe": "4-8 weeks",
         "conviction": "medium"
       },
       {
         "type": "Risk Management",
-        "recommendation": "Implement a portfolio-wide stress test for a '10Y Treasury to 4.5%' scenario combined with 'S&P 500 to 5,200' and 'HY spreads to 450bps'. Reduce any positions that would cause >3% portfolio drawdown in this scenario.",
-        "rationale": "The current risk environment is characterized by multiple simultaneous threats — inflation resurgence, CRE credit event, geopolitical escalation, BOJ-driven carry trade unwind — any of which could trigger correlated selloffs across multiple asset classes. The traditional portfolio diversification between stocks and bonds may fail in a scenario where inflation re-accelerates (both stocks and bonds sell off), as occurred in 2022. A disciplined stress-testing approach ensures that no single scenario can cause catastrophic portfolio damage. Key parameters to stress: duration exposure (10Y yield +40bps), equity beta (S&P -7%), credit exposure (HY spreads +130bps), and FX exposure (DXY -3%). Any position that generates outsized losses in these scenarios should be trimmed or hedged immediately.",
-        "timeframe": "Ongoing, review weekly",
+        "recommendation": "Reduce portfolio leverage to maximum 1.0x, increase cash allocation to 10%, set stop-losses at 2% portfolio drawdown on any individual position, and diversify across uncorrelated return streams.",
+        "rationale": "The current VIX level of 27.29 and backwardated term structure indicate that tail risks are elevated and the distribution of outcomes is negatively skewed. In this environment, the first priority is capital preservation. Reducing leverage eliminates the risk of forced selling during drawdowns, which is historically the single largest destroyer of long-term returns. The 10% cash allocation provides dry powder to deploy opportunistically if markets decline further — historically, the best entry points occur when VIX exceeds 35 and put/call ratios exceed 1.30. Stop-losses should be set at the position level (not portfolio level) to prevent any single trade from causing material damage. Diversification across asset classes (Treasuries, gold, equities, cash) and geographies (US, Europe, China) reduces correlation risk. Monitor the FOMC decision on March 19 as the key binary risk event — if the Fed disappoints (no cut or hawkish guidance), risk assets could sell off sharply.",
+        "timeframe": "Ongoing through Q2 2026",
         "conviction": "high"
       }
     ]
   },
   "section9_economic_calendar": {
-    "title": "Economic Calendar — Next Week",
-    "note": "Sources: Bloomberg, Consensus Economics, Federal Reserve. All times Eastern.",
+    "title": "Economic Calendar — Week of March 16–20, 2026",
+    "note": "Sources: Finnhub, Bloomberg consensus, Federal Reserve. All times ET.",
     "events": [
       {
-        "date": "Wednesday March 11",
+        "date": "Monday March 16",
         "time": "08:30",
         "country": "US",
         "flag": "🇺🇸",
-        "event": "JOLTS Job Openings (January)",
+        "event": "Empire State Manufacturing Index (March)",
         "impact": "medium",
-        "previous": "7.6M",
-        "forecast": "7.4M",
-        "context": "The Job Openings and Labor Turnover Survey is a critical indicator of labor market slack. The ratio of job openings to unemployed workers has been declining steadily, from 2:1 in 2022 to approximately 1.1:1 now, suggesting the labor market is normalizing — or potentially weakening. A reading below 7.0M would be a recessionary signal."
+        "previous": "-5.7",
+        "forecast": "-3.0",
+        "context": "The Empire State survey measures manufacturing activity in the New York Federal Reserve district. The prior reading of -5.7 indicated contraction, and a further negative print would confirm the industrial sector's weakness. This is a leading indicator that typically moves ahead of the broader ISM Manufacturing PMI."
       },
       {
-        "date": "Wednesday March 11",
-        "time": "14:00",
+        "date": "Monday March 16",
+        "time": "09:15",
         "country": "US",
         "flag": "🇺🇸",
-        "event": "Federal Budget Statement (February)",
-        "impact": "low",
-        "previous": "-$129B",
-        "forecast": "-$140B",
-        "context": "The monthly budget deficit reflects the ongoing fiscal expansion that is contributing to heavy Treasury supply and rising term premium on the long end of the curve. A larger-than-expected deficit would reinforce concerns about fiscal sustainability."
+        "event": "Industrial Production (February)",
+        "impact": "medium",
+        "previous": "+0.1%",
+        "forecast": "-0.2%",
+        "context": "Industrial production has been hovering near zero growth for several months, reflecting the manufacturing recession driven by high interest rates and weak global demand. A negative print would reinforce the GDP deceleration narrative and increase recession probability."
       },
       {
-        "date": "Wednesday March 12",
+        "date": "Tuesday March 17",
         "time": "08:30",
         "country": "US",
         "flag": "🇺🇸",
-        "event": "Consumer Price Index (CPI) — February YoY",
+        "event": "Retail Sales (February)",
         "impact": "high",
-        "previous": "3.0% (est.)",
-        "forecast": "2.9%",
-        "context": "This is the most important release of the week. The CPI report will determine whether the disinflation narrative remains intact or if inflation is re-accelerating. Core CPI (ex food and energy) is expected at ~3.2% YoY. Any upside surprise — particularly in shelter or services — would push back rate cut expectations and pressure both equities and bonds. The Fed has repeatedly stated it needs 'more evidence' of sustained disinflation before cutting further."
+        "previous": "+0.2%",
+        "forecast": "+0.1%",
+        "context": "Retail sales are the single most important indicator of consumer spending health, which constitutes 70% of GDP. The consensus for a meager +0.1% gain would represent the weakest reading in several months and confirm the consumer spending deceleration thesis. Any negative surprise could trigger significant equity market weakness ahead of the FOMC decision."
       },
       {
-        "date": "Wednesday March 12",
-        "time": "08:30",
-        "country": "US",
-        "flag": "🇺🇸",
-        "event": "CPI Core MoM (February)",
-        "impact": "high",
-        "previous": "0.3%",
-        "forecast": "0.3%",
-        "context": "The month-over-month core CPI reading is what the Fed watches most closely. Three consecutive 0.3% monthly readings would annualize to 3.6%, well above the 2% target. The market needs to see 0.2% or lower readings to sustain the 'disinflation' narrative. Shelter inflation has been the stickiest component, and any moderation here would be a significant positive."
-      },
-      {
-        "date": "Thursday March 13",
-        "time": "08:30",
-        "country": "US",
-        "flag": "🇺🇸",
-        "event": "Producer Price Index (PPI) — February",
-        "impact": "medium",
-        "previous": "0.4%",
-        "forecast": "0.3%",
-        "context": "PPI is a leading indicator for CPI, as it measures prices at the producer level before they are passed on to consumers. A hot PPI reading would compound concerns from any CPI upside surprise. Key focus areas: healthcare services PPI (which feeds directly into the PCE deflator, the Fed's preferred inflation measure) and food PPI (which impacts grocery prices)."
-      },
-      {
-        "date": "Thursday March 13",
-        "time": "08:30",
-        "country": "US",
-        "flag": "🇺🇸",
-        "event": "Initial Jobless Claims (Weekly)",
-        "impact": "medium",
-        "previous": "221K",
-        "forecast": "225K",
-        "context": "Weekly jobless claims are the most timely indicator of labor market health. A sustained move above 250K would signal accelerating layoffs and increase recession probability. Continuing claims, which measure the stock of unemployed workers receiving benefits, are equally important — rising continuing claims suggest it is taking longer for displaced workers to find new employment."
-      },
-      {
-        "date": "Friday March 14",
+        "date": "Tuesday March 17",
         "time": "10:00",
         "country": "US",
         "flag": "🇺🇸",
-        "event": "University of Michigan Consumer Sentiment (March Prelim)",
+        "event": "NAHB Housing Market Index (March)",
         "impact": "medium",
-        "previous": "64.7",
-        "forecast": "63.5",
-        "context": "Consumer sentiment has been trending lower, reflecting the impact of rising unemployment, persistent inflation, and general economic anxiety. The inflation expectations component (1-year and 5-year ahead) is closely watched by the Fed — any spike in inflation expectations could constrain the Fed's ability to cut rates. If 5-year expectations break above 3.5%, it would be a significant hawkish signal."
+        "previous": "42",
+        "forecast": "40",
+        "context": "The homebuilder confidence index has been depressed by the 6.11% mortgage rate and affordability crisis. Readings below 50 indicate more builders view conditions as poor than good. A decline to 40 would be the lowest since October 2023 and signal continued housing market distress."
       },
       {
-        "date": "Thursday March 13",
-        "time": "04:00",
-        "country": "UK",
-        "flag": "🇬🇧",
-        "event": "UK GDP (January MoM)",
+        "date": "Wednesday March 18",
+        "time": "08:30",
+        "country": "US",
+        "flag": "🇺🇸",
+        "event": "Housing Starts & Building Permits (February)",
         "impact": "medium",
-        "previous": "+0.1%",
-        "forecast": "0.0%",
-        "context": "The UK economy has been flirting with stagnation, with GDP growth near zero for several quarters. A negative reading would increase BoE rate cut expectations and weigh on sterling. The UK is caught between sticky inflation (which argues against cuts) and stagnant growth (which argues for cuts)."
+        "previous": "1.35M / 1.42M",
+        "forecast": "1.32M / 1.38M",
+        "context": "Housing starts have been trending lower due to elevated mortgage rates, labor shortages, and material costs. Building permits, a leading indicator, will signal whether the structural housing shortage is being addressed. Continued weakness would keep mortgage REITs under pressure and delay the housing recovery."
       },
       {
-        "date": "Thursday March 13",
-        "time": "07:45",
-        "country": "EU",
-        "flag": "🇪🇺",
-        "event": "ECB Economic Bulletin",
-        "impact": "low",
-        "previous": "N/A",
-        "forecast": "N/A",
-        "context": "The ECB's Economic Bulletin provides the detailed analysis behind the Governing Council's monetary policy decisions. Market participants will parse the bulletin for signals about the pace of future rate cuts and the ECB's assessment of whether the German fiscal expansion changes the eurozone growth outlook materially."
-      },
-      {
-        "date": "Monday March 10",
-        "time": "21:30",
-        "country": "CN",
-        "flag": "🇨🇳",
-        "event": "China CPI (February YoY)",
-        "impact": "medium",
-        "previous": "0.5%",
-        "forecast": "0.3%",
-        "context": "China's near-zero inflation (or deflation) reflects persistent demand weakness in the world's second-largest economy. A deflationary reading would increase pressure on the PBOC to cut rates further and on the government to expand fiscal stimulus. China's deflation also exports disinflationary pressure globally through lower manufactured goods prices."
-      },
-      {
-        "date": "Monday March 10",
-        "time": "21:30",
-        "country": "CN",
-        "flag": "🇨🇳",
-        "event": "China PPI (February YoY)",
-        "impact": "medium",
-        "previous": "-2.3%",
-        "forecast": "-2.1%",
-        "context": "China's PPI has been in deflation for over two years, reflecting excess industrial capacity, weak construction demand, and deflationary forces in the property sector. A persistent PPI deflation is negative for corporate profitability and creates a debt-deflation risk loop where real debt burdens increase as nominal revenues decline."
-      },
-      {
-        "date": "Tuesday March 11",
-        "time": "05:00",
-        "country": "DE",
-        "flag": "🇩🇪",
-        "event": "ZEW Economic Sentiment (March)",
-        "impact": "medium",
-        "previous": "26.0",
-        "forecast": "28.5",
-        "context": "The ZEW survey of financial market professionals has been improving as Germany's fiscal expansion plans boost confidence. A reading above 30 would be the highest since early 2024 and would confirm that the fiscal pivot is translating into improved growth expectations. This is a leading indicator for German industrial production and GDP."
-      },
-      {
-        "date": "Tuesday March 18",
+        "date": "Wednesday March 18",
         "time": "14:00",
         "country": "US",
         "flag": "🇺🇸",
         "event": "FOMC Rate Decision",
         "impact": "high",
         "previous": "3.64%",
-        "forecast": "3.39-3.64%",
-        "context": "While technically in the following week, the March 18-19 FOMC meeting is the dominant event on the horizon. Fed funds futures price approximately 40% probability of a 25bp cut. The dot plot will be updated, and any shift in the median 2026 year-end rate projection will move markets significantly. Powell's press conference language on the growth-inflation balance will be the key tell."
+        "forecast": "3.39% (25 bps cut)",
+        "context": "This is the week's most consequential event. The market prices an 85% probability of a 25 bps cut. The key focus will be on the updated dot plot (how many more cuts projected for 2026), the economic projection revisions (growth, unemployment, inflation forecasts), and Powell's press conference tone regarding the balance of risks. Any deviation from expectations could move markets 2-3%."
+      },
+      {
+        "date": "Wednesday March 18",
+        "time": "14:30",
+        "country": "US",
+        "flag": "🇺🇸",
+        "event": "Fed Chair Powell Press Conference",
+        "impact": "high",
+        "previous": "N/A",
+        "forecast": "Dovish tilt expected",
+        "context": "Powell's characterization of the labor market and growth outlook will be closely parsed. If he acknowledges the Sahm Rule territory risk and signals willingness to accelerate cuts if needed, equities could rally on the dovish pivot. Conversely, any focus on residual inflation concerns would be taken poorly."
+      },
+      {
+        "date": "Wednesday March 18",
+        "time": "23:00",
+        "country": "JP",
+        "flag": "🇯🇵",
+        "event": "Bank of Japan Rate Decision",
+        "impact": "high",
+        "previous": "0.50%",
+        "forecast": "0.50% (hold), but hawkish guidance expected",
+        "context": "The BOJ is expected to hold at 0.50% but signal a rate hike to 0.75% at the next meeting in April-May. Any surprise hike or significantly hawkish guidance could strengthen the yen sharply, disrupting carry trades and pressuring Japanese equities. Global bond markets would also react to the signal that another major central bank is tightening."
+      },
+      {
+        "date": "Thursday March 19",
+        "time": "08:30",
+        "country": "US",
+        "flag": "🇺🇸",
+        "event": "Initial Jobless Claims (week ending March 14)",
+        "impact": "medium",
+        "previous": "225K",
+        "forecast": "230K",
+        "context": "Weekly claims have been gradually drifting higher from the 200K cycle lows, consistent with the softening labor market. Any jump above 240K would be a significant warning sign and could amplify post-FOMC positioning adjustments."
+      },
+      {
+        "date": "Thursday March 19",
+        "time": "08:30",
+        "country": "US",
+        "flag": "🇺🇸",
+        "event": "Philadelphia Fed Manufacturing Index (March)",
+        "impact": "medium",
+        "previous": "-8.4",
+        "forecast": "-5.0",
+        "context": "The Philly Fed survey covers a broader geographic area than Empire State and provides valuable cross-validation. Persistent negative readings confirm the regional manufacturing recession is not isolated but broadly based across the industrial Northeast."
+      },
+      {
+        "date": "Thursday March 19",
+        "time": "10:00",
+        "country": "US",
+        "flag": "🇺🇸",
+        "event": "Existing Home Sales (February)",
+        "impact": "medium",
+        "previous": "4.08M",
+        "forecast": "4.00M",
+        "context": "Existing home sales remain stuck near 30-year lows as the 'lock-in effect' (homeowners refusing to sell and give up their 3% mortgage for a 6% replacement) continues to constrain inventory. A further decline below 4 million would underscore the housing market's frozen state."
+      },
+      {
+        "date": "Thursday March 19",
+        "time": "10:00",
+        "country": "US",
+        "flag": "🇺🇸",
+        "event": "Leading Economic Indicators (February)",
+        "impact": "medium",
+        "previous": "-0.5%",
+        "forecast": "-0.4%",
+        "context": "The Conference Board's LEI has been declining for nearly two years, one of the longest negative streaks on record. While the index has generated some 'false alarms' in recent cycles, the persistent decline combined with the actual GDP deceleration increases its signal value."
+      },
+      {
+        "date": "Friday March 20",
+        "time": "09:45",
+        "country": "US",
+        "flag": "🇺🇸",
+        "event": "S&P Global Flash PMI (March) — Manufacturing & Services",
+        "impact": "high",
+        "previous": "49.8 / 52.3",
+        "forecast": "49.5 / 51.8",
+        "context": "The flash PMIs provide the first real-time snapshot of March economic activity. Manufacturing remains below the 50 expansion threshold, while services barely holds above it. If services PMI drops below 50, it would mark the first time both sectors are simultaneously in contraction since mid-2020, a clear recession signal."
+      },
+      {
+        "date": "Friday March 20",
+        "time": "09:00",
+        "country": "EU",
+        "flag": "🇪🇺",
+        "event": "Eurozone Flash PMI (March) — Manufacturing & Services",
+        "impact": "high",
+        "previous": "47.6 / 51.2",
+        "forecast": "48.0 / 51.5",
+        "context": "European PMI data will test the thesis that Germany's fiscal expansion is translating into economic improvement. An upside surprise would reinforce European equity outperformance, while a miss would suggest that the fiscal impulse has not yet reached the real economy."
       }
     ]
   },
   "section10_earnings_calendar": {
-    "title": "Earnings Calendar — Next Two Weeks",
-    "note": "Sources: Finnhub, Bloomberg. Focus on notable upcoming reports. The week of March 10-16 is relatively quiet; the next significant cluster begins March 24.",
+    "title": "Earnings Calendar — Week of March 16–20, 2026",
+    "note": "Sources: Finnhub. This is an inter-season period with limited major corporate earnings. The Q4 2025 earnings season is largely concluded, and Q1 2026 season begins mid-April. The coming weeks feature primarily small-cap and specialty companies.",
     "earnings": [
       {
-        "date": "Monday March 24",
-        "symbol": "CNXC",
-        "company": "Concentrix Corporation",
-        "sector": "Technology Services / BPO",
+        "date": "Thursday March 27",
+        "symbol": "AFYA",
+        "company": "Afya Ltd (Brazilian Education)",
+        "sector": "Education/Healthcare",
         "timing": "after close",
-        "eps_estimate": "$2.70",
-        "revenue_estimate": "$2.54B",
-        "context": "Concentrix, a major business process outsourcing and technology services firm, reports its fiscal Q1 2026. The market is watching for AI-driven automation's impact on traditional BPO revenues, client spending trends amid the economic slowdown, and margin expansion from the Webhelp integration. Revenue guidance will be critical given the macro deceleration.",
-        "impact_potential": "medium"
+        "eps_estimate": "$1.88",
+        "revenue_estimate": "$943.4M",
+        "context": "Afya, Brazil's leading medical education company, reports Q4 2025 results. The market is watching enrollment trends, tuition pricing power, and the impact of the weaker BRL on dollar-reported revenues. As a healthcare education play in an emerging market, Afya offers insight into Brazil's domestic consumption trends.",
+        "impact_potential": "low"
       },
       {
-        "date": "Monday March 24",
-        "symbol": "SFD",
-        "company": "Smithfield Foods",
-        "sector": "Consumer Staples / Food Processing",
+        "date": "Thursday March 27",
+        "symbol": "LGN",
+        "company": "Logon SA",
+        "sector": "Technology/Services",
         "timing": "before open",
-        "eps_estimate": "$0.68",
-        "revenue_estimate": "$4.18B",
-        "context": "Smithfield Foods, one of the world's largest pork producers, reports Q4 2025 results. Key focus areas include pork pricing trends (which have been volatile due to African swine fever concerns in Asia), feed cost inflation, and consumer trade-down from beef to pork in a recessionary environment. As a defensive consumer staples name, Smithfield's results will provide a read on the health of the value-oriented consumer.",
-        "impact_potential": "medium"
-      },
-      {
-        "date": "Monday March 24",
-        "symbol": "SCS",
-        "company": "Steelcase Inc.",
-        "sector": "Industrials / Office Furniture",
-        "timing": "after close",
-        "eps_estimate": "$0.22",
-        "revenue_estimate": "$806M",
-        "context": "Steelcase is a bellwether for commercial office demand. With return-to-office trends stabilizing but office vacancy rates at record highs in many markets, Steelcase's order book provides a real-time read on whether companies are investing in physical office space or continuing to downsize. Weak orders would reinforce the bearish CRE narrative.",
-        "impact_potential": "medium"
-      },
-      {
-        "date": "Monday March 24",
-        "symbol": "BRZE",
-        "company": "Braze Inc.",
-        "sector": "Technology / Customer Engagement",
-        "timing": "after close",
-        "eps_estimate": "$0.14",
-        "revenue_estimate": "$202M",
-        "context": "Braze, a cloud-based customer engagement platform, reports Q4 FY2026. As a SaaS company in the marketing technology space, Braze's results reflect enterprise software spending trends. The market is watching for net revenue retention rates (which indicate customer expansion), new logo wins, and any commentary on AI integration into customer engagement workflows. Profitable SaaS companies like Braze have outperformed in the current environment.",
-        "impact_potential": "medium"
-      },
-      {
-        "date": "Monday March 24",
-        "symbol": "DTIL",
-        "company": "Precision BioSciences",
-        "sector": "Healthcare / Gene Editing",
-        "timing": "after close",
-        "eps_estimate": "-$0.55",
-        "revenue_estimate": "$9.3M",
-        "context": "Precision BioSciences is a clinical-stage biotech developing gene editing therapies using its proprietary ARCUS platform. As with most clinical-stage biotechs, the focus is on clinical trial data readouts, cash runway (how long until they need to raise capital), and partnership/licensing deal potential. The biotech sector has been depressed in 2026, making partnership announcements particularly impactful.",
+        "eps_estimate": "$0.07",
+        "revenue_estimate": "$626.5M",
+        "context": "Logon reports Q4 2025 earnings with the market focused on margin trajectory and revenue growth sustainability. As a mid-cap services company, the results will provide color on enterprise spending trends and IT services demand in the current economic slowdown.",
         "impact_potential": "low"
       },
       {
-        "date": "Monday March 24",
-        "symbol": "ABSI",
-        "company": "Absci Corporation",
-        "sector": "Healthcare / AI Drug Discovery",
+        "date": "Thursday March 27",
+        "symbol": "ELTX",
+        "company": "Elicio Therapeutics",
+        "sector": "Biotechnology",
         "timing": "after close",
-        "eps_estimate": "-$0.20",
-        "revenue_estimate": "$1.1M",
-        "context": "Absci operates at the intersection of AI and drug discovery, using generative AI to design novel therapeutic antibodies. The stock is speculative and pre-revenue in any meaningful sense. The market is watching for new partnership announcements, progress on its AI-designed drug candidates, and cash burn rate. As an AI-biotech crossover name, it attracts attention from both healthcare and AI-focused investors.",
+        "eps_estimate": "-$0.45",
+        "revenue_estimate": "$0",
+        "context": "Elicio, a clinical-stage biotech focused on cancer immunotherapy, reports with zero revenue expectations. The market focuses entirely on clinical pipeline updates and cash runway. With an expected loss of $0.45/share, burn rate and timeline to key data readouts are the critical metrics.",
         "impact_potential": "low"
       },
       {
-        "date": "Monday March 24",
-        "symbol": "SMTI",
-        "company": "Sanara MedTech",
-        "sector": "Healthcare / Wound Care",
+        "date": "Thursday March 27",
+        "symbol": "SCWO",
+        "company": "374Water Inc.",
+        "sector": "Clean Technology/Water",
         "timing": "after close",
-        "eps_estimate": "$0.11",
-        "revenue_estimate": "$28M",
-        "context": "Sanara MedTech is a small-cap medical technology company focused on advanced wound care and tissue regeneration products. Revenue growth has been strong as the company expands its distribution network and gains formulary acceptance at major health systems. The stock is under-followed by sell-side analysts, creating potential for surprise-driven price moves.",
+        "eps_estimate": "-$0.01",
+        "revenue_estimate": "$10.8M",
+        "context": "374Water, a clean technology company specializing in supercritical water oxidation for waste destruction, reports Q4 results. As a small-cap ESG play, the market is watching revenue ramp and commercial deployment progress. The water treatment sector is seeing increased attention due to PFAS regulation.",
         "impact_potential": "low"
       },
       {
-        "date": "Monday March 24",
-        "symbol": "HOFV",
-        "company": "Hall of Fame Resort & Entertainment",
-        "sector": "Consumer Discretionary / Entertainment",
-        "timing": "after close",
-        "eps_estimate": "-$1.66",
-        "revenue_estimate": "$6.6M",
-        "context": "HOFV is a highly speculative company developing a football-themed resort and entertainment complex in Canton, Ohio. The company has been burning cash at a rapid rate and faces significant funding challenges. The expected -$1.66 EPS loss highlights the precarious financial position. This is relevant primarily as a cautionary tale about leveraged development-stage companies in a rising-rate environment.",
+        "date": "Thursday March 27",
+        "symbol": "ALTS",
+        "company": "Altus Healthcare",
+        "sector": "Healthcare",
+        "timing": "before open",
+        "eps_estimate": "-$0.18",
+        "revenue_estimate": "$15.9M",
+        "context": "Altus Healthcare reports amid a challenging environment for small-cap healthcare companies. The market will focus on the path to profitability, cash position, and whether revenue growth can accelerate to justify the valuation. This is representative of the broader small-cap healthcare sector's struggle to achieve scale.",
+        "impact_potential": "low"
+      },
+      {
+        "date": "Thursday March 27",
+        "symbol": "MLSS",
+        "company": "Milestone Scientific",
+        "sector": "Medical Devices",
+        "timing": "before open",
+        "eps_estimate": "-$0.02",
+        "revenue_estimate": "$2.4M",
+        "context": "Milestone Scientific, a developer of computer-controlled injection technology for dental and medical applications, reports Q4 results. The market is watching for FDA clearance progress on new applications and sales traction in the dental market.",
+        "impact_potential": "low"
+      },
+      {
+        "date": "Thursday March 27",
+        "symbol": "SBC",
+        "company": "SBC Communications",
+        "sector": "Telecommunications",
+        "timing": "before open",
+        "eps_estimate": "$0.12",
+        "revenue_estimate": "$45.9M",
+        "context": "SBC reports with the market focused on subscriber trends and ARPU metrics. The telecom sector faces structural challenges from market saturation but benefits from defensive characteristics during economic slowdowns. Cash flow generation and dividend sustainability are key investor concerns.",
+        "impact_potential": "low"
+      },
+      {
+        "date": "Thursday March 27",
+        "symbol": "HCWC",
+        "company": "HCW Biologics",
+        "sector": "Biotechnology",
+        "timing": "before open",
+        "eps_estimate": "-$0.05",
+        "revenue_estimate": "$21.4M",
+        "context": "HCW Biologics reports Q4 results with the market focused on their immunotherapy pipeline progress and partnership revenue. The company's TOBI platform for cancer treatment represents a novel approach, and clinical trial data updates will be the key focus rather than financial metrics.",
         "impact_potential": "low"
       }
     ]
@@ -1191,27 +1204,27 @@
         "series": "UNRATE"
       },
       "cpi_yoy": {
-        "value": "326.588",
-        "date": "2026-01-01",
+        "value": "327.460",
+        "date": "2026-02-01",
         "series": "CPIAUCSL"
       },
       "10y_treasury": {
-        "value": "4.12",
-        "date": "2026-03-09",
+        "value": "4.27",
+        "date": "2026-03-12",
         "series": "DGS10"
       },
       "2y_treasury": {
-        "value": "3.56",
-        "date": "2026-03-09",
+        "value": "3.76",
+        "date": "2026-03-12",
         "series": "DGS2"
       },
       "30y_mortgage": {
-        "value": "6.0",
-        "date": "2026-03-05",
+        "value": "6.11",
+        "date": "2026-03-12",
         "series": "MORTGAGE30US"
       },
       "gdp_growth": {
-        "value": "1.4",
+        "value": "0.7",
         "date": "2025-10-01",
         "series": "A191RL1Q225SBEA"
       },
@@ -1221,64 +1234,64 @@
         "series": "M2SL"
       },
       "credit_spreads_hy": {
-        "value": "3.19",
-        "date": "2026-03-09",
+        "value": "3.17",
+        "date": "2026-03-12",
         "series": "BAMLH0A0HYM2"
       },
       "vix": {
-        "value": "25.5",
-        "date": "2026-03-09",
+        "value": "27.29",
+        "date": "2026-03-12",
         "series": "VIXCLS"
       }
     },
     "etf_quotes": {
       "SPY": {
-        "price": 677.18,
-        "change": -1.09,
-        "pct": -0.1607,
-        "high": 683.36,
-        "low": 674.76,
-        "prev": 678.27
+        "price": 662.29,
+        "change": -3.77,
+        "pct": -0.566,
+        "high": 672.335,
+        "low": 661.36,
+        "prev": 666.06
       },
       "QQQ": {
-        "price": 607.77,
-        "change": 0.01,
-        "pct": 0.0016,
-        "high": 613.29,
-        "low": 605.42,
-        "prev": 607.76
+        "price": 593.72,
+        "change": -3.54,
+        "pct": -0.5927,
+        "high": 603.5999,
+        "low": 592.57,
+        "prev": 597.26
       },
       "IWM": {
-        "price": 253.36,
-        "change": -0.26,
-        "pct": -0.1025,
-        "high": 257.65,
-        "low": 252.4,
-        "prev": 253.62
+        "price": 246.59,
+        "change": -0.82,
+        "pct": -0.3314,
+        "high": 250.61,
+        "low": 245.535,
+        "prev": 247.41
       },
       "GLD": {
-        "price": 477.86,
-        "change": 5.33,
-        "pct": 1.128,
-        "high": 481.31,
-        "low": 474.21,
-        "prev": 472.53
+        "price": 460.84,
+        "change": -6.04,
+        "pct": -1.2937,
+        "high": 470.102,
+        "low": 460.22,
+        "prev": 466.88
       },
       "TLT": {
-        "price": 88.28,
-        "change": -0.95,
-        "pct": -1.0647,
-        "high": 88.95,
-        "low": 88.27,
-        "prev": 89.23
+        "price": 86.54,
+        "change": -0.43,
+        "pct": -0.4944,
+        "high": 87.145,
+        "low": 86.47,
+        "prev": 86.97
       },
       "USO": {
-        "price": 105.86,
-        "change": 1.53,
-        "pct": 1.4665,
-        "high": 107.56,
-        "low": 94.23,
-        "prev": 104.33
+        "price": 119.89,
+        "change": 1.5,
+        "pct": 1.267,
+        "high": 121.15,
+        "low": 114.56,
+        "prev": 118.39
       }
     }
   }
