@@ -410,25 +410,42 @@ def fetch_daily_briefs_from_gmail(access_token: str) -> str:
 
     messages = []
     for query in queries:
-        resp = requests.get(
-            "https://gmail.googleapis.com/gmail/v1/users/me/messages",
-            headers=headers,
-            params={"q": query, "maxResults": 10},
-            timeout=15,
-        )
-        if resp.status_code == 200:
-            found = resp.json().get("messages", [])
-            if found:
-                print(f"  Found {len(found)} emails with query: {query[:60]}")
-                messages = found
+        # Paginate through ALL results — no artificial cap
+        page_token = None
+        page_messages = []
+        while True:
+            params = {"q": query, "maxResults": 500}
+            if page_token:
+                params["pageToken"] = page_token
+            resp = requests.get(
+                "https://gmail.googleapis.com/gmail/v1/users/me/messages",
+                headers=headers, params=params, timeout=15,
+            )
+            if resp.status_code != 200:
                 break
+            data = resp.json()
+            page_messages.extend(data.get("messages", []))
+            page_token = data.get("nextPageToken")
+            if not page_token:
+                break
+        if page_messages:
+            print(f"  Found {len(page_messages)} emails with query: {query[:60]}")
+            messages = page_messages
+            break
 
     if not messages:
         print("  ⚠️ No Daily Market Watch emails found — continuing without them")
         return ""
 
+    print(f"  Fetching full content for {len(messages)} emails...")
     briefs = []
-    for msg_ref in messages[:7]:  # max 7 emails (one per day)
+    total_chars = 0
+    MAX_TOTAL_CHARS = 150000  # ~37k tokens — enough for all emails, safe for context window
+
+    for msg_ref in messages:
+        if total_chars >= MAX_TOTAL_CHARS:
+            print(f"  Context limit reached — stopping at {len(briefs)} emails")
+            break
         try:
             msg_resp = requests.get(
                 f"https://gmail.googleapis.com/gmail/v1/users/me/messages/{msg_ref['id']}",
@@ -440,7 +457,6 @@ def fetch_daily_briefs_from_gmail(access_token: str) -> str:
                 continue
             msg = msg_resp.json()
 
-            # Extract headers
             subject = date_str = ""
             for h in msg.get("payload", {}).get("headers", []):
                 if h["name"] == "Subject": subject  = h["value"]
@@ -448,10 +464,12 @@ def fetch_daily_briefs_from_gmail(access_token: str) -> str:
 
             body = extract_email_text(msg.get("payload", {}))
             if body:
-                # Truncate to ~3000 chars per email to avoid token overload
-                body_trunc = body[:3000] + ("..." if len(body) > 3000 else "")
-                briefs.append(f"--- {subject} ({date_str}) ---\n{body_trunc}")
-                print(f"  ✓ {subject[:60]} ({len(body)} chars)")
+                # Truncate individual emails at 8000 chars to keep diversity
+                body_trunc = body[:8000] + ("...[truncated]" if len(body) > 8000 else "")
+                entry = f"--- {subject} ({date_str}) ---\n{body_trunc}"
+                briefs.append(entry)
+                total_chars += len(entry)
+                print(f"  ✓ {subject[:70]} ({len(body)} chars)")
         except Exception as e:
             print(f"  ⚠️ Error reading email: {e}")
             continue
@@ -460,7 +478,7 @@ def fetch_daily_briefs_from_gmail(access_token: str) -> str:
         return ""
 
     result = "\n\n".join(briefs)
-    print(f"[1b/6] ✅ {len(briefs)} daily briefs loaded ({len(result)} chars total)")
+    print(f"[1b/6] ✅ {len(briefs)} emails loaded ({len(result):,} chars total)")
     return result
 
 
@@ -795,30 +813,37 @@ def generate_report_json(real_data: dict, daily_briefs: str = "") -> dict:
     yield_block  = "\n".join(yield_lines)  or "  (no data)"
     fred_block   = "\n".join(fred_lines)   or "  (no data)"
 
-    system = (
-        f"You are a senior financial analyst (ex-Goldman Sachs, global macro hedge fund). "
-        f"Date: {DATE_FR} (Week {WEEK_N}, {NOW.year}). "
-        f"You are given REAL market data fetched live this week. "
-        f"Your job: write ONLY the analytical TEXT fields (narratives, analysis, body text, headlines, strategies). "
-        f"The numerical values (prices, percentages) are already handled — focus on explaining WHY markets moved, "
-        f"WHAT the implications are, and WHAT investors should do. "
-        f"Your text must directly reference the real numbers provided (e.g. 'the S&P 500 gained X% this week...'). "
-        f"ALL output must be in ENGLISH. "
-        f"Reply ONLY with valid JSON, no markdown fences."
-    )
+    has_briefs = bool(daily_briefs and daily_briefs.strip())
 
     briefs_section = f"""
 ══════════════════════════════════════════════════════
 DAILY MARKET WATCH EMAILS — Past 7 days
-(Use these as primary source for market events and news)
+(Use these as your PRIMARY source for events and news)
 ══════════════════════════════════════════════════════
 {daily_briefs}
 """ if has_briefs else """
 ══════════════════════════════════════════════════════
-NOTE: No daily briefs available — use web_search tool
-to look up this week's key market events before writing.
+NOTE: No daily briefs available this week.
+Use the web_search tool to find this week's key market
+events, central bank decisions, earnings, and macro news.
 ══════════════════════════════════════════════════════
 """
+
+    system = (
+        f"You are a senior financial analyst (ex-Goldman Sachs, global macro hedge fund). "
+        f"Date: {DATE_FR} (Week {WEEK_N}, {NOW.year}). "
+        f"You have three sources to work from: "
+        f"(1) real live market data (prices, % moves), "
+        f"(2) {'daily market briefing emails from the past 7 days as your primary event source' if has_briefs else 'no daily briefs — use web_search for this week events'}, "
+        f"(3) the web_search tool — use it freely to verify facts, find news, and fill gaps. "
+        f"STRICT RULES: "
+        f"Do NOT invent events, figures or facts. "
+        f"Every event you mention must come from the emails or a web search. "
+        f"Write ONLY text/narrative fields — numerical values are injected separately. "
+        f"Reference real numbers in your prose. "
+        f"ALL output in ENGLISH. "
+        f"Reply ONLY with valid JSON, no markdown fences."
+    )
 
     user = f"""Write an in-depth weekly market report based on the sources below.
 
