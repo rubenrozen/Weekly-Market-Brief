@@ -23,7 +23,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install anthropic reportlab requests
+        run: pip install anthropic reportlab requests yfinance
 
       - name: Generate report, PDF and send email
         env:
@@ -47,4 +47,4 @@ jobs:
           git push
 
       - name: Done
-        run: echo "✅ Weekly Market Brief v3 généré, envoyé et publié !"
+        run: echo "✅ Weekly Market Brief — generated, sent and published!"
