@@ -1,80 +1,113 @@
 {
-  "week": "Week of April 14–April 18, 2026",
+  "week": "Week of April 18–April 24, 2026",
   "generated_at": "Saturday 18 April 2026",
   "market_temperature": "risk_on",
-  "market_temperature_label": "A powerful risk-on regime took hold as the S&P 500 posted three consecutive record closes, the VIX plunged 9.1% to 17.48, and the Nasdaq surged 6.84% on the week — all underpinned by the Iran Strait of Hormuz reopening, collapsing oil prices, and blockbuster Wall Street bank earnings.",
+  "market_temperature_label": "Decisive risk-on tone: S&P 500 surged +4.54% to 7,126 (three consecutive record closes above 7,000), VIX collapsed -9.10% to 17.48, technology led all sectors at +8.22%, and oil's 13% plunge on the Hormuz reopening catalyzed a broad rotation into growth assets.",
   "section1_summary": {
     "title": "Market Overview",
     "paragraphs": [
-      "Global equity markets delivered one of the most powerful weekly rallies of 2026, with the S&P 500 surging 4.54% to close at 7,126.06 — entering the 7,000 era for the first time and posting three consecutive record closes. The Nasdaq Composite rocketed 6.84% to 24,468.48, its best weekly performance in months, while extending a 13-session winning streak that echoes the dot-com era. The Dow Jones Industrial Average added 3.19% to close at 49,447.43, tantalizingly close to the 50,000 milestone, while the Russell 2000 outperformed with a 5.56% weekly gain to 2,776.90, signaling broad participation beyond mega-cap tech. European indices joined the rally, with the DAX climbing 3.77% to 24,702.24 and the CAC 40 adding 2.00% to 8,425.13. In Asia, the Nikkei 225 rose 2.73% to 58,475.90, KOSPI soared 5.68%, and China's CSI 300 erased all its Iran-war losses.",
-      "The week's dominant narrative was the geopolitical de-escalation in the Middle East. Iran declared the Strait of Hormuz 'completely open' on Friday following a 10-day Israel-Lebanon ceasefire, sending WTI crude plunging 13.17% to $83.85/bbl and Brent 5.06% to $90.38/bbl. The energy selloff ignited a violent sector rotation: Technology surged 8.22% on the week while Energy retreated 3.37%, as falling oil rekindled rate-cut hopes and pushed the 10-year Treasury yield down to 4.246%. Wall Street banks kicked off earnings season with blockbuster results — Goldman Sachs posted record equities trading revenue, JPMorgan beat on every metric with $50.5 billion in revenue and 21% fixed-income trading growth, and Citi logged its highest quarterly trading income since the financial crisis. The AI infrastructure buildout continued unabated, with TSMC raising its 2026 outlook and Microsoft committing $17.4 billion to Nebius Group.",
-      "The market's posture is unequivocally risk-on, but the foundation beneath it is more fragile than the price action suggests. By Saturday, Iran had already reversed course and re-closed the Strait of Hormuz after the US refused to lift its naval blockade — a development not yet reflected in Friday's exuberant closes. The ceasefire between the US and Iran expires on April 22, and no permanent peace deal has been finalized despite President Trump's claims of imminent agreement. The VIX dropping to 17.48 indicates options markets are complacent, pricing in a benign resolution. Meanwhile, the dollar weakened 0.56% on the DXY index to 98.10, reflecting a shift away from safe-haven positioning. Gold continued its relentless ascent to $4,857.60/oz — a paradoxical signal suggesting that despite equity euphoria, structural hedging demand remains elevated. For investors, this is a week that rewarded staying invested, but the binary risk around ceasefire expiration means the next seven days could be equally dramatic in either direction."
+      "The week ending April 18 delivered a historic inflection for global risk assets, as the S&P 500 surged 4.54% to close at 7,126.06 — crossing the 7,000 milestone for the first time on Tuesday and then posting three consecutive record-high closes through Friday. The NASDAQ outpaced all major indices with a 6.84% weekly gain to 24,468.48, while the Dow Jones climbed 3.19% to 49,447.43, approaching the psychologically critical 50,000 barrier. Small caps confirmed the breadth of the rally with the Russell 2000 advancing 5.56% to 2,776.90. The week's range was telling: the S&P moved from a low of 6,790.02 to a high of 7,147.52, a span of over 350 points that underscores the explosive momentum once geopolitical headwinds appeared to ease. Even European and Asian markets joined the advance, with the DAX surging 3.77%, the Nikkei gaining 2.73%, and the KOSPI leaping an extraordinary 5.68%.",
+      "The dominant macro catalyst was Iran's declaration that the Strait of Hormuz was 'completely open' for commercial shipping during the Lebanon ceasefire, triggering WTI crude's 13.17% collapse to $83.85/bbl — the sharpest single-week decline since the war began on February 28. This energy deflation ignited a violent sector rotation: Technology ETFs surged +8.22%, Consumer Discretionary gained +6.66%, and Communications Services rose +4.52%, while Energy fell -3.37%, Utilities slid -1.70%, and Materials were flat at -0.15%. On the rates front, the US 10-year Treasury yield dropped to 4.246%, its lowest in a month, as traders priced renewed rate-cut expectations on the back of falling oil. Bank earnings — with Goldman Sachs posting record equities trading revenue and JPMorgan beating both fixed-income and equity expectations — validated the institutional backdrop. TSMC's record Q1 results and upward guidance revision to above 30% annual revenue growth reinforced the AI infrastructure thesis that is propelling the NASDAQ's outperformance.",
+      "The week's theme was unmistakable: geopolitical de-escalation plus AI earnings momentum equals an aggressive risk-on pivot. However, this exuberance warrants significant caution. The Iran ceasefire expires on April 22, and by Saturday Iran was already threatening to re-close Hormuz in response to the continued US naval blockade. The VIX at 17.48 represents complacency given the binary geopolitical risks ahead, with markets seemingly front-running a peace deal that Gulf and European leaders estimate could take six months. For investors, the asymmetry is stark: further upside may be marginal if the optimism is already priced, whereas any ceasefire breakdown could reverse the week's gains in a matter of sessions. The upcoming Kevin Warsh Fed Chair confirmation hearing on Tuesday, combined with flash PMIs and major earnings from Tesla, Intel, and UnitedHealth, means next week is front-loaded with catalysts capable of either extending or abruptly ending this rally."
     ]
   },
   "section2_major_events": {
     "title": "Major Events",
     "events": [
       {
-        "title": "Iran Declares Strait of Hormuz Open — Then Reverses",
-        "body": "In the week's pivotal geopolitical development, Iranian Foreign Minister Abbas Araghchi declared the Strait of Hormuz 'completely open' to commercial shipping on Friday, following a 10-day ceasefire between Israel and Hezbollah in Lebanon brokered by President Trump. The announcement was seen as a breakthrough toward peace, and markets responded with explosive force: WTI crude cratered 13.17% on the week to $83.85/bbl, Brent plunged to $90.38/bbl, and European natural gas fell 10% to around €39/MWh. US equities surged, with the S&P 500 adding 1.20% on Friday alone to close at a fresh record of 7,126.06. However, confusion rapidly emerged. Trump confirmed the US naval blockade of Iranian ports would remain in effect, and Iranian state media affiliated with the Revolutionary Guard described only a limited reopening with IRGC coordination required. By Saturday, Iran had effectively re-closed the strait. An estimated 135 million barrels of oil remain stranded in tankers in the Persian Gulf, and shipping companies including Maersk adopted a 'wait and see' approach, with one shipowner asking: 'Would you be the first penguin off the ice floe to test the water?' The IEA warned recovery of disrupted oil and gas production could take up to two years.",
+        "title": "Iran Declares Strait of Hormuz Open — Oil Collapses, Equities Surge to Records",
+        "body": "On April 17, Iran's Foreign Minister Abbas Araghchi declared the Strait of Hormuz 'completely open' for commercial shipping during the Israel-Lebanon ceasefire, sending shockwaves through global markets. WTI crude collapsed 13.17% on the week to $83.85/bbl, while Brent fell to $90.38, their lowest levels since early March. Heating oil plunged 9.68% and gasoline RBOB dropped 1.07%. This was the biggest one-day crude decline since the war began on February 28, when the US and Israel launched strikes on Iran and Tehran retaliated by blockading Hormuz. The energy shock rippled across every asset class: the S&P 500 surged +1.2% on Friday alone to close at 7,126.06, its third consecutive record high, while the NASDAQ jumped 1.5% to 24,468.48. The US 10-year Treasury yield fell 6 basis points to 4.246%, its lowest in a month, as traders reignited rate-cut bets on the assumption that falling oil would relieve the war-driven inflation surge. The NYSE Arca Airline Index jumped over 6% as jet-fuel relief expectations took hold, following the IEA's stark warning that Europe had only six weeks of jet fuel reserves remaining. However, the optimism may prove premature: Trump stated the US naval blockade of Iranian ports will remain 'in full force,' and by Saturday Iran announced it was re-closing Hormuz. Approximately 135 million barrels remain stranded in Gulf tankers, and the IEA estimates production recovery could take up to two years.",
         "sentiment": "positive",
         "impact_score": 10,
         "affected_assets": [
+          "S&P 500",
+          "NASDAQ",
           "WTI Crude",
           "Brent Crude",
-          "S&P 500",
-          "Airline stocks",
-          "Chemical stocks",
-          "US Treasuries",
-          "EUR/USD"
+          "US 10Y Treasury",
+          "Airlines",
+          "Energy ETF",
+          "EUR/USD",
+          "Gold"
         ]
       },
       {
-        "title": "Wall Street Banks Post Blockbuster Q1 Earnings",
-        "body": "The Q1 2026 earnings season opened with a bang as all major Wall Street banks topped expectations, powered by surging trading revenues amid elevated market volatility. Goldman Sachs reported record equities trading revenue for the second consecutive quarter and a 48% surge in investment banking fees. JPMorgan Chase delivered $50.5 billion in revenue (vs. $49.2 billion expected) and net income of $16.5 billion, with markets revenue hitting a record $11.6 billion — fixed income trading jumped 21% and equity markets revenue rose 17%. Citigroup logged its highest quarterly trading income since the global financial crisis. Credit-loss provisions at JPMorgan came in $500 million below expectations at $2.5 billion. However, JPMorgan lowered its full-year NII guidance from $104.5 billion to $103 billion, and CEO Jamie Dimon flagged 'an increasingly complex set of risks — geopolitical tensions and wars, energy price volatility.' The Financials sector gained 3.27% on the week but underperformed tech, as investors pivoted toward growth names. The results confirmed that the US consumer and corporate borrower remain resilient despite the Iran war shock.",
-        "sentiment": "positive",
-        "impact_score": 8,
-        "affected_assets": [
-          "Financials ETF",
-          "JPMorgan",
-          "Goldman Sachs",
-          "Citigroup",
-          "Bank of America"
-        ]
-      },
-      {
-        "title": "S&P 500 Enters the 7,000 Era — Nasdaq Posts Longest Win Streak Since 2009",
-        "body": "The S&P 500 broke above 7,000 for the first time in history on Wednesday, April 15, closing at 7,022.95 and proceeding to notch three consecutive record closes through Friday at 7,126.06. The index gained 4.54% on the week — its best weekly performance since May 2025 — and is now up 3.90% year-to-date after fully recouping all losses sustained since the Iran war began on February 28. The Nasdaq Composite posted an even more remarkable 6.84% weekly gain, extending a winning streak to 13 consecutive sessions, the longest since 2009. Retail investors who had been on the sidelines began aggressively chasing the rally, with JPMorgan client flow data showing participation jumping to the 55th percentile from the 10th percentile just days earlier. Technology led all sectors with an 8.22% gain, followed by Consumer Discretionary at 6.66% and KOSPI surging 5.68%. Oracle rallied toward its best weekly gain since 1999, and Intel continued a spectacular 90% year-to-date advance. The rally reflects a market betting on the 'TACO' trade — Trump Always Chickens Out — the belief that economic pain will force policy reversals.",
+        "title": "S&P 500 Breaches 7,000 — Best Week Since May 2025",
+        "body": "The S&P 500 entered the 7,000 era this week, closing above that milestone for the first time on April 15 at 7,022.95 and continuing to push higher through Friday's close at 7,126.06. The 4.54% weekly advance was the index's best performance since May 2025, with the index rallying every single day of the week and notching three consecutive record closes. Deutsche Bank's Henry Allen noted the 10-session rally of approximately 9.8% leading into Wednesday was 'even faster than the bounceback after Liberation Day last year,' referencing the April 2025 tariff reversal. The Magnificent Seven mega-cap tech stocks drove the advance, with a fund tracking those seven stocks up nearly 18% since the S&P's late-March low, roughly double the gain of the rest of the index. The NASDAQ Composite's 6.84% weekly surge to 24,468.48 also eclipsed its October 2025 all-time high. The Dow climbed 868 points on Friday alone (+1.79%) to reach 49,447.43, inching toward 50,000 for the first time. However, some analysts counseled caution: ING warned that 'markets are increasingly pre-empting a positive outcome' and that caution remained warranted given the fragility of the ceasefire framework.",
         "sentiment": "positive",
         "impact_score": 9,
         "affected_assets": [
           "S&P 500",
           "NASDAQ",
+          "Dow Jones",
           "Russell 2000",
-          "Technology ETF",
-          "Oracle",
-          "Intel"
+          "VIX"
         ]
       },
       {
-        "title": "Netflix Tanks on Weak Guidance and Reed Hastings Board Exit",
-        "body": "Netflix shares plummeted nearly 10% on Friday after the streaming giant reported Q1 earnings that disappointed on the guidance front. The company's projections for second-quarter revenue and operating income came in below analyst targets, and it disclosed that co-founder and chairman Reed Hastings would not seek re-election to the board when his term expires in June, ending a 29-year association with the company he co-founded. Analysts at LightShed Partners said Hastings' exit 'is spooking investors,' particularly as the departure comes less than two months after Netflix's shocking decision to withdraw from the bidding war for Warner Bros. Discovery. Netflix said second-quarter content amortization would be the highest year-over-year in 2026, implying heavier spending ahead. The broader question for the streaming sector is whether Netflix is transitioning from a disruptive growth story into a mature media platform. Despite the selloff, Netflix's year-to-date performance had been solid, and the stock remains far above pandemic-era lows. The move was the largest single-stock detractor from the Communication Services sector, which still managed a 4.52% weekly gain.",
+        "title": "Wall Street Banks Post Record Q1 Trading Revenue on War-Driven Volatility",
+        "body": "The Q1 2026 earnings season opened with a blockbuster display from Wall Street's trading desks, as geopolitical volatility translated into exceptional profitability. Goldman Sachs reported EPS of $17.55, beating the $16.47 estimate by 6.6%, with equities trading revenue surging 27% to a record $5.33 billion. The firm's Global Banking & Markets division achieved its highest-ever quarterly revenue of $12.7 billion. JPMorgan followed with revenue of $50.54 billion against $49.17 billion expected, as fixed income trading rose 21% to $7.08 billion on surging activity in commodities, credit, currencies, and emerging markets. EPS came in at $5.94 versus $5.45 expected. Citigroup posted its highest quarterly trading revenue since at least the financial crisis. The 'perfect storm' driving this performance was the Iran-US conflict — which triggered massive portfolio rebalancing — combined with the AI-driven 'Alpha Renaissance' rotation into physical infrastructure plays. Goldman CEO David Solomon, however, issued a stark warning about the deteriorating geopolitical situation, noting that the Strait of Hormuz closure remains a critical risk to the global economy. The Financials sector ETF gained 3.27% for the week but remains -4.06% YTD, suggesting further recovery potential if the volatility tailwind persists.",
+        "sentiment": "positive",
+        "impact_score": 8,
+        "affected_assets": [
+          "Goldman Sachs",
+          "JPMorgan",
+          "Citigroup",
+          "Financials ETF",
+          "S&P 500"
+        ]
+      },
+      {
+        "title": "TSMC Smashes Estimates, Raises 2026 Outlook on Unrelenting AI Demand",
+        "body": "Taiwan Semiconductor Manufacturing Company reported Q1 2026 revenue of $35.9 billion, up 40.6% year-over-year in US dollar terms, with net income surging 58.3%. Gross margin expanded to 66.2%, well above the 63-65% guidance range, while diluted EPS of NT$22.08 beat the NT$20.88 consensus. CEO C.C. Wei described AI chip demand as 'extremely robust' and raised the full-year revenue growth outlook to 'above 30%' from the prior roughly 30% guidance. The 3-nanometer node now accounts for 25% of wafer revenue, up dramatically from 6% in Q3 2023, underscoring the pace of the AI infrastructure buildout. Capital expenditure will come in at the high end of the $52-56 billion range. The results confirmed that the physical AI buildout is accelerating, as TSMC fabricates approximately 70% of the world's advanced chips for customers including Nvidia, Apple, and the hyperscalers. Shares of TSMC are up roughly 35% year-to-date, lifting its market capitalization to approximately $1.7 trillion. The results gave a broad lift to the semiconductor sector, contributing to Technology's 8.22% weekly gain, and validated the massive AI infrastructure spending commitments announced by Nvidia ($5 billion in Intel) and Microsoft ($17.4 billion with Nebius Group).",
+        "sentiment": "positive",
+        "impact_score": 9,
+        "affected_assets": [
+          "TSMC",
+          "Nvidia",
+          "Technology ETF",
+          "NASDAQ",
+          "KOSPI",
+          "Semiconductors"
+        ]
+      },
+      {
+        "title": "Netflix Plunges 9.7% as Q2 Guidance Disappoints and Reed Hastings Exits",
+        "body": "Netflix delivered Q1 revenue of $12.25 billion (vs. $12.18 billion expected) and EPS of $1.23, boosted by a $2.8 billion break-up fee from the abandoned Warner Bros. Discovery deal. However, Q2 revenue guidance of $12.57 billion came in below the $12.63 billion consensus, while Q2 EPS guidance of $0.78 missed estimates of $0.84 by a meaningful margin. The company maintained its full-year outlook of $50.7-$51.7 billion but investors had been hoping for an upward revision following recent US price hikes. Adding to the sell pressure was the announcement that co-founder and chairman Reed Hastings will not stand for re-election when his term expires in June, closing a 29-year chapter. MorningStar analyst Matthew Dolgin noted that 'shares have been priced for mid-teens annual sales growth' and that the 11-13% organic growth outlook, combined with price hikes already pulled forward, made 2027 acceleration 'less likely.' Shares fell 9.7% in after-hours trading, highlighting the market's unforgiving stance toward high-multiple growth stocks that fail to beat-and-raise. The advertising business remains on track for $3 billion in 2026, roughly doubling year-over-year, providing a partial offset.",
         "sentiment": "negative",
         "impact_score": 6,
         "affected_assets": [
           "Netflix",
-          "Communication Services ETF"
+          "NASDAQ",
+          "Comm. Services ETF",
+          "Media stocks"
         ]
       },
       {
-        "title": "Anthropic's Mythos AI Model Raises Cybersecurity Alarm — White House Engages",
-        "body": "Anthropic's powerful new AI model, Mythos, dominated tech headlines after the company disclosed it could find cybersecurity vulnerabilities faster than any human hacker, raising major concerns about potential misuse. Anthropic CEO Dario Amodei met with White House chief of staff Susie Wiles on Friday to discuss the model's implications, even as Anthropic is simultaneously suing the Pentagon over being branded a 'supply chain risk.' Government agencies were reportedly seeking access to Mythos ahead of the visit. The model has created strain on open-source software maintainers, who are being overwhelmed by AI-generated bug reports faster than they can be fixed. Treasury Secretary Scott Bessent noted that the US AI lead over China is only 'three to six months,' and praised Mythos as critical to maintaining that edge. Microsoft and Nvidia are working with Anthropic to detect vulnerabilities within Mythos before wider release. This development accelerates the dual-use AI governance debate and could reshape defense and cybersecurity procurement spending.",
+        "title": "Kevin Warsh Fed Chair Confirmation Hearing Scheduled for April 21",
+        "body": "The Senate Banking Committee officially scheduled the confirmation hearing for Kevin Warsh, President Trump's nominee to replace Fed Chair Jerome Powell, for Tuesday, April 21 at 10 a.m. Warsh's financial disclosures revealed personal assets of $131-$209 million, including stakes in SpaceX, Polymarket, and the Juggernaut Fund, making him the wealthiest Fed chair nominee in history. He has pledged to divest these holdings if confirmed. However, the path to confirmation remains uncertain: Senator Thom Tillis (R-NC) continues to block all Fed nominees until the DOJ drops its criminal investigation into Powell's management of the Fed's headquarters renovation. With Republicans holding a razor-thin majority on the committee, Tillis's opposition could create a 12-12 deadlock. Powell's term expires May 15, and Treasury Secretary Bessent has stated he wants Warsh 'in as soon as possible,' while hinting that the Fed 'should cut interest rates' but understanding why officials are in 'pause mode.' The hearing will be closely watched for any signals on the June FOMC meeting, though Warsh's historically hawkish lean may be moderated by the current war-induced economic uncertainty. Markets priced this event as moderately positive, with falling bond yields suggesting traders expect continued monetary accommodation under new leadership.",
         "sentiment": "neutral",
         "impact_score": 7,
         "affected_assets": [
-          "Technology ETF",
-          "Cybersecurity stocks",
-          "Anthropic (private)"
+          "US Treasuries",
+          "US Dollar",
+          "S&P 500",
+          "Fed Funds Futures"
+        ]
+      },
+      {
+        "title": "Dollar Weakens Broadly as Haven Demand Fades and Rate-Cut Bets Return",
+        "body": "The Dollar Index (DXY) fell 0.56% to 98.10, extending its decline as the Hormuz reopening announcement eroded safe-haven demand that had supported the greenback throughout the war. EUR/USD strengthened 0.65% to 1.1800, its highest level in months, while GBP/USD climbed 0.64% to 1.3500. The Swiss franc was the biggest beneficiary of the dollar's slide, with USD/CHF dropping 1.45% to 0.7800. The Australian dollar, highly sensitive to commodity flows and Asian trade, surged 2.11% to 0.7200 — reflecting expectations that the Hormuz thaw would normalize Asian energy supply chains. Bloomberg's Dollar Spot Index fell to 1,192.75, with Wall Street's sentiment on the dollar turning notably negative as the de-escalation narrative took hold. The shift was amplified by the Treasury market's rally: the 10-year yield's drop to 4.246% widened the negative carry for dollar bulls. The Indian Rupee was reported as Asia's biggest gainer on Friday, with the RBI reportedly routing state-owned oil refiners' dollar purchases through a special credit facility to manage FX impact. Looking ahead, the dollar's trajectory will depend entirely on whether the ceasefire holds and whether the April 28-29 FOMC meeting signals any shift in the rate outlook.",
+        "sentiment": "negative",
+        "impact_score": 7,
+        "affected_assets": [
+          "DXY",
+          "EUR/USD",
+          "GBP/USD",
+          "USD/JPY",
+          "AUD/USD",
+          "USD/CHF",
+          "EM currencies"
         ]
       }
     ]
@@ -83,28 +116,28 @@
     "title": "Blind Spots — What the Market Underestimates",
     "events": [
       {
-        "title": "Hormuz Reversal Risk: Iran Re-Closed the Strait by Saturday",
-        "body": "Markets rallied Friday on Iran's declaration that the Strait of Hormuz was 'completely open,' but by Saturday Tehran had already reversed course, re-imposing restrictions after the US refused to lift its naval blockade. Iranian gunboats reportedly fired on a tanker in the strait on Saturday. The ceasefire expires April 22 — just four days away — with no permanent peace deal in sight. If hostilities resume, oil could rapidly retrace toward the $100-$120 range it reached in March, potentially unwinding the week's entire equity rally. The market is pricing in a smooth resolution with the VIX at 17.48, but the actual probability tree is far more binary. European jet fuel reserves are at critical levels — the IEA warned Europe has 'maybe six weeks' of supply left. Shipping companies including Maersk and Hapag-Lloyd have not resumed normal traffic. The gap between market optimism and operational reality in the strait is the single largest risk-reward asymmetry in global markets today.",
+        "title": "Hormuz Reopening Is Already Reversing — Markets Priced a Deal That May Not Exist",
+        "body": "By Saturday April 18, Iran announced it was re-closing the Strait of Hormuz in response to the continued US naval blockade — less than 24 hours after the 'completely open' declaration that sparked Friday's 11% oil crash and equity euphoria. Video from ship-tracking firm Kpler showed tankers attempting to exit the waterway were turning back, and two Indian-flagged ships came under fire from Iranian gunboats. The ceasefire expires on April 22 with no extension publicly agreed. Markets have effectively priced in a successful peace deal that Gulf and European leaders estimate could take six months to achieve, while the IEA estimates production recovery alone requires approximately two years. The S&P 500's 4.54% weekly gain and oil's 13% collapse both assume a linear path to de-escalation that contradicts every precedent in the Iran conflict so far. Any ceasefire breakdown next week could trigger an energy price spike even sharper than Friday's decline, given the reflexive nature of options market positioning.",
         "sentiment": "negative",
-        "why_ignored": "Markets anchored to Trump's claims of imminent deal and the forward-looking 'TACO trade' narrative, ignoring the mixed signals and Saturday reversal"
+        "why_ignored": "Friday's massive rally created strong anchoring bias; traders are psychologically reluctant to fade a three-day record-high streak, and sell-side research is uniformly focused on 'peace trade' scenarios rather than war re-escalation risks."
       },
       {
-        "title": "Private Credit Stress Lurking Beneath the Surface",
-        "body": "While equity markets celebrate, the $1.7 trillion private credit market is showing signs of strain that have not yet surfaced in public market pricing. Bloomberg's weekend essay highlighted growing anxiety about private credit's opacity and potential for hidden losses, while Bloomberg data showed that AI disruption to software companies — which constitute a large portion of private credit loan books — is accelerating. Earlier this year, investors began worrying about the exposure private debt funds hold in loans tied to software companies at risk of AI disruption. Howard Marks of Oaktree warned that 'people may not have asked enough questions or paid enough attention in the good times.' Big banks including JPMorgan and Morgan Stanley have direct exposure through lending and fund management. CFA Institute flagged 'Private Credit's Verification Problem' this week. The high-yield spread at 2.86% appears tight given these underlying risks.",
+        "title": "Private Credit's Hidden Fragility as War Inflation Persists",
+        "body": "While Bloomberg's Felix Salmon analysis this week argued private credit is unlikely to trigger a systemic crisis, the more insidious risk is the 'slow burn of weaker returns and hidden losses' in a sector that has ballooned to multi-trillion dollar scale. With the fed funds rate at 3.64%, high-yield credit spreads at 2.86% (tight by historical standards), and war-driven inflation pushing core PCE potentially to 3.2% in March, the margin of safety for leveraged borrowers is thinning rapidly. Many private credit loans are floating-rate instruments underwritten at assumptions of peak earnings and falling rates — neither of which has materialized due to the Iran war. JPMorgan's own provision for credit losses fell to $2.5 billion but business reserves were boosted by $327 million, hinting at cracks in the commercial loan book. If the Hormuz situation deteriorates and energy costs re-accelerate, private credit portfolios with exposure to logistics, airlines, chemicals, and discretionary retail could face a wave of restructurings that won't show up in public market data for months.",
         "sentiment": "negative",
-        "why_ignored": "Strong bank earnings and equity euphoria are masking deteriorating private market fundamentals; losses are slow-burn and not yet reflected in quarterly results"
+        "why_ignored": "Private credit losses are not marked-to-market in real time; the opacity of the asset class means problems only surface with a significant lag, and consensus is focused on the record bank trading revenues rather than credit deterioration."
       },
       {
-        "title": "Fed Chair Transition Could Trigger Policy Volatility",
-        "body": "Kevin Warsh's nomination hearing for Federal Reserve chair is now scheduled for April 21, just days before Powell's term expires on May 15. The confirmation process is complicated by Senator Thom Tillis's refusal to vote for any Fed nominee until the DOJ drops its criminal probe into Powell. Democrats are also demanding a delay. With Republicans holding a razor-thin committee majority and Tillis holding firm, there is a meaningful risk that no successor is confirmed by mid-May, creating an unprecedented leadership vacuum at the world's most important central bank. Powell has stated he would continue as 'chair pro tempore,' but Trump has said 'I'll have to fire him.' The dollar has already weakened 0.56% this week to DXY 98.10, partly reflecting uncertainty about Fed continuity. Markets are not adequately pricing the tail risk of a contested Fed leadership transition during a period of elevated oil-driven inflation risk.",
-        "sentiment": "negative",
-        "why_ignored": "Warsh hearing is viewed as a procedural formality; market assumes smooth transition despite clear political obstacles"
+        "title": "China's Quiet Leverage of the Hormuz Crisis — Scarborough Shoal and Trade Reorientation",
+        "body": "Largely overlooked in the Iran-focused narrative is China's strategic maneuvering during the crisis. While the US Navy was deployed to blockade the Strait of Hormuz, China moved to block the Scarborough Shoal in the South China Sea, testing US capacity for two-front maritime deterrence. China was among the first nations granted passage through Hormuz by Iran, receiving approximately a third of its oil through the strait, and has used the crisis to deepen energy ties with Tehran. Meanwhile, China's CSI 300 has erased all war-related losses, Q1 GDP beat expectations, and Goldman Sachs projects Shanghai and Shenzhen home prices will bottom by year-end. The Shanghai Composite gained 1.64% this week to 4,051.43. US Treasury Secretary Bessent's admission that the US leads China in AI by only 3-6 months underscores the strategic technology competition that the war is exacerbating. Investors focused exclusively on the Hormuz peace trade may be underestimating the long-term geopolitical realignment that the Iran war has catalyzed across Asia.",
+        "sentiment": "neutral",
+        "why_ignored": "Western markets focus almost exclusively on the Iran-US bilateral dynamic; China's parallel maneuvers in the South China Sea and energy diplomacy receive minimal coverage in sell-side research and financial media."
       },
       {
-        "title": "Europe's Jet Fuel Crisis Could Ground Flights Within Weeks",
-        "body": "The IEA's Fatih Birol warned this week that Europe has 'maybe six weeks' of jet fuel remaining, calling the Hormuz crisis 'the largest energy crisis we have ever faced.' ACI Europe, the trade group for European airports, warned fuel shortages could begin in as little as three weeks. Ryanair flagged it is on track for shortages by June, easyJet has only 70% of summer fuel needs covered, and Lufthansa is cutting long-haul flights and grounding up to 40 planes. Even if Hormuz fully reopens, it will take significant time for supply chains to normalize. European refineries have been declining for decades, and the continent is the biggest recipient of jet fuel that transits the strait. The US is better positioned as the world's largest net exporter of jet fuel, but all major US airlines project billions in added costs. Spirit Airlines may not survive. This energy supply shock has second-order effects on European tourism, GDP, and consumer confidence that equity markets have largely ignored.",
+        "title": "Africa's Food Security Crisis — IMF Warning of 20 Million More at Risk Gets Zero Market Attention",
+        "body": "The IMF warned this week that 20 million additional Africans could face food insecurity due to the Iran war's impact on fertilizer and energy costs, with more than a third of African nations now at high risk of debt distress. Sub-Saharan Africa's growth forecast has been trimmed, and Kenya is seeking emergency World Bank funding through a Rapid Response Option covering up to 10% of its $1.2 billion program. South Africa's central bank governor confirmed that war inflation risks are materializing, with growth forecasts likely to be cut. Fertilizer prices, which derive 30% of global trade flows through the Strait of Hormuz, have surged even more than oil since fighting began. Yet wheat rose only 3.55% this week to 591.25 ¢/bu, and corn gained just 1.76% to 448.75 ¢/bu — modest moves that may not reflect the severity of the planting-season disruption. If the Hormuz situation is not resolved before the Northern Hemisphere summer harvest, the food price shock could cascade into sovereign debt crises across emerging markets, forcing capital flight that investors are not positioned for.",
         "sentiment": "negative",
-        "why_ignored": "Equity markets focused on headline Hormuz 'reopening' without modeling the physical logistics of supply chain restoration"
+        "why_ignored": "African sovereign risk is off-benchmark for most global funds; the focus is on US equity records and AI earnings rather than EM food security, and the delayed pass-through of fertilizer costs means the agricultural impact is still months from peaking."
       }
     ]
   },
@@ -265,87 +298,87 @@
       }
     ],
     "us": {
-      "headline": "S&P 500 Breaches 7,100 With Three Consecutive Record Closes; Nasdaq Posts Best Week in Months",
-      "body": "The US equity market delivered an emphatic statement this week. The S&P 500 surged 4.54% to 7,126.06, clearing the psychologically significant 7,000 level for the first time on Wednesday and then extending higher through three consecutive record closes. The index has now fully recovered all losses from the Iran war shock that began February 28, and stands 3.90% higher year-to-date. The Nasdaq Composite's 6.84% weekly gain to 24,468.48 was even more impressive, powered by Technology's 8.22% sector gain as investors rotated aggressively into growth and AI-linked names. The Nasdaq's 13-day winning streak is its longest since 2009. The Russell 2000's 5.56% gain to 2,776.90 demonstrated the rally's breadth — small caps notched their first new closing high since January. Consumer Discretionary gained 6.66% as lower oil prices alleviated consumer spending concerns. On the downside, Energy fell 3.37% as the oil collapse hit producers that had benefited from elevated prices, and chemicals companies LyondellBasell and Dow both fell more than 10% on Friday as the Hormuz opening threatened to normalize supply routes that had advantaged them. Netflix's 9.72% decline was the week's highest-profile single-stock casualty. Retail participation surged mid-week, with JPMorgan data showing buying activity jumping from the 10th to the 55th percentile. Goldman's basket of retail-favored stocks is up 22% since late March.",
+      "headline": "S&P 500 Enters 7,000 Era With +4.54% Surge; NASDAQ Blasts +6.84% to All-Time Highs",
+      "body": "US equities delivered their strongest week since May 2025, with the S&P 500 surging 4.54% to 7,126.06 and crossing 7,000 for the first time. The index posted consecutive record closes on Wednesday, Thursday, and Friday, powered by the Iran Hormuz reopening announcement and record bank earnings. The NASDAQ's 6.84% gain to 24,468.48 was the standout, reflecting the AI-driven technology rotation that dominated flows. The Magnificent Seven mega-cap stocks accounted for a disproportionate share of the gains, with the tech cohort up nearly 18% since the late-March low versus approximately 8% for the rest of the S&P. The Dow Jones added 3.19% to 49,447.43, within striking distance of 50,000, boosted by 868 points on Friday alone. Small caps confirmed broad participation: the Russell 2000 gained 5.56% to 2,776.90, its best weekly performance in months, with YTD returns of +10.71% outpacing large-cap indices. Sector rotation was dramatic — Technology ETFs surged 8.22%, Consumer Discretionary rose 6.66%, and Communications Services gained 4.52%. Energy was the sole significant laggard at -3.37%, directly reflecting the oil price collapse, while Utilities (-1.70%) and Materials (-0.15%) also underperformed as defensive positioning reversed. The VIX collapsed 9.10% to 17.48, indicating market complacency. Oracle (+26.77%), Sivers Semiconductor (+76.57%), ITM Power (+84.3%), and Soitec (+53.47%) were among the most explosive individual movers, while Alstom (-28.12%) and Barry Callebaut (-18.36%) were notable losers. The breadth and velocity of this rally suggests some near-term exhaustion risk, but the underlying catalysts — AI earnings momentum and geopolitical de-escalation — remain intact for now.",
       "direction": "bullish",
-      "key_driver": "Strait of Hormuz reopening and collapsing oil prices rekindled rate-cut expectations and ignited a tech-led risk rally",
-      "risk": "Ceasefire expiration on April 22 without a permanent deal could reverse the entire week's gains; VIX at 17.48 suggests complacency"
+      "key_driver": "Strait of Hormuz reopening combined with record bank trading revenues and TSMC's raised AI guidance created a triple-catalyst surge",
+      "risk": "Ceasefire expiry on April 22 without extension could trigger a sharp reversal; Iran already announced re-closure of Hormuz on Saturday"
     },
     "eu": {
-      "headline": "European Markets Rally on Hormuz Hopes; CAC 40 +2.00%, DAX +3.77%",
-      "body": "European equities participated in the global risk-on rally but with more caution than their US counterparts, reflecting the continent's acute vulnerability to prolonged energy disruption. The DAX rose 3.77% to 24,702.24, lifted by tech names like Dassault Systèmes (+15.25%), Capgemini (+10.27%), and STMicroelectronics (+9.78%). The CAC 40 advanced 2.00% to 8,425.13, while the EuroStoxx 50 gained 2.22% to 6,057.71 and the FTSE 100 underperformed with just a 0.63% gain to 10,667.60 — reflecting the UK's heavy weighting in energy and mining. The French-led European semiconductor renaissance was a notable theme, with Soitec surging 53.47% on AI-photonics optimism and ITM Power gaining 84.3% on a defense-energy contract with Rheinmetall. However, European flops were revealing: Alstom cratered 28.12% after slashing guidance, Barry Callebaut fell 18.36% on cacao supply disruption, and Kering dropped 8.27% on weak Gucci results. TotalEnergies fell 7.05% as the oil decline hit European energy majors. European leaders met in Paris on Friday to discuss a potential naval mission to secure Hormuz shipping lanes, but Germany and France split on whether the US should participate. The EUR/USD strengthened to 1.1800, reflecting euro resilience as markets priced in de-escalation.",
+      "headline": "DAX Surges +3.77% and CAC 40 +2.00% as Hormuz Relief Eases European Energy Anxiety",
+      "body": "European equities rallied strongly on the back of the Hormuz reopening news, which carried particular weight for a continent where the IEA warned jet fuel reserves were down to approximately six weeks. The DAX advanced 3.77% to 24,702.24, recovering from a week low of 23,482.01, while the CAC 40 gained 2.00% to 8,425.13. The EuroStoxx 50 rose 2.22% to 6,057.71, and the STOXX Europe 600 climbed 1.91% to 626.58. The FTSE 100 underperformed peers with a 0.63% gain to 10,667.60, weighed down by its heavy oil-and-mining composition that suffered from the crude collapse. The French tech sector was a standout: Dassault Systèmes surged 15.25%, Capgemini gained 10.27%, and STMicroelectronics rose 9.78%, all benefiting from the broader AI re-rating. On the downside, TotalEnergies fell 7.05%, Alstom crashed 28.12% after cutting financial forecasts, Kering dropped 8.27% on Gucci underperformance and luxury weakness related to war impacts, and Barry Callebaut lost 18.36% on cocoa supply difficulties. The upcoming ZEW Economic Sentiment Index on Tuesday is particularly important: the March reading plummeted 58.8 points to -0.5 from 58.3, the third-largest monthly decline in its history, and the April consensus estimate of -10 would represent continued deep pessimism about Germany's outlook. The Ifo Business Climate reading on Thursday is expected at 84.8 vs. 86.4 prior. European markets are pricing a peace dividend that may not materialize, and the continent remains structurally vulnerable to any Hormuz re-escalation given its LNG and fertilizer dependency on Gulf flows.",
       "direction": "bullish",
-      "key_driver": "Oil price collapse and AI/semiconductor rotation drove gains, particularly in tech-heavy German and French names",
-      "risk": "Europe's structural jet fuel dependency on Hormuz flows — IEA warned of 6-week supply runway; Ryanair flagged June shortages"
+      "key_driver": "Energy supply relief from Hormuz reopening and AI/tech sector re-rating drove European gains, particularly in France and Germany",
+      "risk": "Deeply negative German sentiment indicators, persistent energy vulnerability, and luxury/chemicals sector weakness from war-related disruptions"
     },
     "asia": {
-      "headline": "Nikkei Rises 2.73% to Near Record; KOSPI Surges 5.68%; China Erases War Losses",
-      "body": "Asian markets posted strong gains as risk appetite recovered globally, though the rally moderated Friday as investors took profits ahead of the weekend. The Nikkei 225 advanced 2.73% to 58,475.90, approaching its recent record close, driven by AI-linked names including memory chip stocks and Kioxia Holdings. Taiwan's stock market surpassed the UK to become the world's seventh-largest by market capitalization, buoyed by retail investors piling into TSMC, which raised its 2026 revenue outlook after posting a 58% jump in Q1 profits. KOSPI was the week's standout in Asia with a 5.68% gain, now up an extraordinary 43.68% year-to-date, reflecting South Korea's semiconductor exposure and the Samsung/SK Hynix memory chip cycle. China's CSI 300 erased all its Iran war losses, while the Shanghai Composite rose 1.64% to 4,051.43 and the Hang Seng added a modest 1.03% to 26,160.33. China's Q1 GDP came in at 5.0%, above consensus, and house price declines narrowed to their smallest in a year, with Goldman expecting Shanghai and Shenzhen prices to bottom by year-end. Xi Jinping held at least five high-profile diplomatic meetings during the week, positioning China as a stability anchor as Trump's diplomatic relationships frayed. India's Nifty 50 posted its second straight weekly advance as the rupee became Asia's biggest gainer on reports of central bank intervention in FX markets.",
+      "headline": "Nikkei Hits New Highs at +2.73%; Taiwan Surpasses UK as 7th Largest Market; KOSPI Soars +5.68%",
+      "body": "Asian markets posted broad gains with notable divergence based on semiconductor and AI exposure. The Nikkei 225 rose 2.73% to 58,475.90, hitting a new closing high during the week at 59,688.10, although it missed the full benefit of Friday's Hormuz rally as the announcement came after Asian trading hours. The KOSPI was Asia's top performer with a staggering 5.68% weekly gain to 6,191.92, bringing its extraordinary YTD advance to +43.68% — largely driven by AI memory chip makers like Samsung and SK Hynix, as well as the SanDisk and Kioxia surge on strong demand outlook. Taiwan's stock market capitalization surpassed the UK this week, becoming the 7th largest globally, propelled by retail buying in TSMC, whose shares are up 35% YTD with a market cap of approximately $1.7 trillion. China's Shanghai Composite gained 1.64% to 4,051.43 as Q1 GDP beat expectations and home price declines narrowed to their smallest in roughly a year. The CSI 300 erased all losses since the Iran war started, validating Goldman Sachs' forecast that Shanghai and Shenzhen home prices will bottom by year-end. The Hang Seng's more modest 1.03% gain to 26,160.33 reflected the index's sensitivity to luxury and property sectors that remain under pressure. India's Nifty 50 posted its second consecutive weekly advance with foreign investors purchasing over $370 million through Thursday, while the Rupee was Asia's biggest gainer on Friday. Jio Platforms is reportedly likely to file for its IPO next month, which would be a landmark event for Indian capital markets. Key individual stock moves included CATL and Innolight posting strong Q1 profit growth, while Kweichow Moutai reported its first-ever annual revenue decline since listing.",
       "direction": "bullish",
-      "key_driver": "TSMC earnings upgrade and AI demand resilience; China economic data better than feared; risk-on rotation into EM",
-      "risk": "Ceasefire expiration risk; China's export outlook darkened by potential prolonged supply chain disruptions; Taiwan strait geopolitical overhang"
+      "key_driver": "AI semiconductor momentum (TSMC, memory chips) and China's economic stabilization drove Asian outperformance, with KOSPI as the global top performer YTD",
+      "risk": "Asian markets did not fully price Friday's Hormuz news; any weekend re-escalation could hit Monday's open; Japan's Nikkei missed Friday's global rally due to timezone"
     }
   },
   "section5_bonds": {
     "title": "Bonds & Rates",
-    "macro_context": "The US Treasury market rallied sharply this week as plunging oil prices reignited expectations for Federal Reserve rate cuts. The 10-year yield fell to 4.246%, its lowest level in a month, while the 2-year yield dropped to 3.78%. The 3-month yield sits at 3.62%, well below the effective fed funds rate of 3.64%, indicating the market sees the current policy rate as the peak. The 2s10s spread widened modestly to 55 basis points, maintaining a normal upward slope that has persisted since the curve un-inverted in late 2025. The 30-year yield settled at 4.885%, reflecting the term premium embedded in longer duration amid fiscal deficit concerns. Breakeven inflation expectations at 2.36% on the 10-year suggest the market believes the oil shock is transitory, a view that will be tested if the ceasefire collapses.",
+    "macro_context": "The US Treasury market rallied sharply this week as falling oil prices reignited rate-cut expectations. The 10-year yield dropped to 4.246%, its lowest level in a month, falling 6 basis points on Friday alone following the Hormuz reopening announcement. The 2-year yield sits at 3.78%, the 5-year at 3.838%, and the 30-year at 4.885%. The 2s10s spread has normalized to 0.55%, confirming a positively-sloped yield curve. The 10-year breakeven inflation rate stands at 2.36%, suggesting the market expects war-related inflation to be largely transitory — though with core PCE potentially reaching 3.2% in March, this assumption may prove overly optimistic. The 30-year mortgage rate remains elevated at 6.30%, limiting housing market relief despite the yield decline.",
     "bond_market": {
       "title": "Global Bond Market",
-      "why": "Treasury yields declined meaningfully on the week as the oil price collapse — WTI down 13.17% — mechanically reduced forward inflation expectations. The 10-year breakeven fell to 2.36%, signaling markets view the energy shock as a supply disruption that will normalize rather than a persistent inflationary impulse. JPMorgan's strong earnings and lower-than-expected credit provisions reinforced the view that the financial system is absorbing the war shock without systemic stress. Treasury Secretary Bessent acknowledged the Fed should cut rates but 'understands' the pause, suggesting the administration is not pushing for immediate action. The 30-year mortgage rate at 6.3% remains elevated, constraining housing activity.",
-      "implies": "The bond market is telling equity investors something nuanced: the rally in duration suggests traders believe the oil shock is peaking, but the 55bp 2s10s spread and 4.885% 30-year yield indicate meaningful term premium. The market is pricing approximately one rate cut in 2026 from the current 3.50-3.75% range, likely deferred until September at the earliest. If the ceasefire holds and oil normalizes toward $75-80, the front end could rally further, steepening the curve. However, if hostilities resume and oil re-spikes, the Fed will be trapped between cutting into an inflationary oil shock and holding amid weakening growth — a classic stagflationary dilemma.",
-      "strategy": "We favor a barbell approach: overweight 2-5 year Treasuries to capture the rally if rate cuts materialize, paired with short positions in 30-year bonds or ultra-long TIPS to hedge the term premium risk from fiscal deficits. Avoid extending duration beyond 10 years given the deficit trajectory and potential for a contested Fed leadership transition."
+      "why": "The primary driver of this week's Treasury rally was the sharp fall in energy prices, which reduced near-term inflation expectations and boosted the probability that the Fed could resume rate cuts later this year. Fed Governor Christopher Waller acknowledged the complexity but noted that 'a reopened Strait of Hormuz and falling oil prices could pave the way to rate cuts later this year.' The fed funds rate stands at 3.64%, and the market is now pricing a potential cut as early as December 2026. Record bank earnings also supported credit markets by reducing systemic risk concerns, while JPMorgan's lower-than-expected provisions for credit losses suggested consumer balance sheets remain healthy. The high-yield credit spread at 2.86% is tight by historical standards, indicating no credit stress despite the geopolitical turmoil.",
+      "implies": "The rally in Treasuries and the curve normalization suggest markets are transitioning from a stagflationary fear regime to a goldilocks scenario where growth continues and inflation moderates. However, this optimism is heavily contingent on the Hormuz situation resolving permanently. If the ceasefire collapses on April 22 and oil prices reverse, the bond rally would quickly unwind. The 10-year at 4.246% provides limited duration cushion — a 30-40 basis point backup to the 4.60-4.65% area would inflict meaningful mark-to-market losses. For income investors, the 2s10s spread at 0.55% offers modest carry for curve steepener trades, but the risk/reward is asymmetric given the binary ceasefire outcome. Mortgage-rate sensitive sectors like housing REITs may see renewed interest if yields stay below 4.30%.",
+      "strategy": "Tactically favor intermediate-duration Treasuries (5-7 year maturity) as the sweet spot between carry and convexity protection. Avoid extending to 30-year duration until the ceasefire situation is clarified. Consider TIPS as a hedge: 10-year breakevens at 2.36% appear cheap if war inflation proves stickier than expected."
     },
     "yield_curves": {
       "title": "Yield Curves",
       "shape": "normal",
-      "interpretation": "The US yield curve maintains its normal upward slope with a 55bp spread between the 2-year at 3.78% and the 10-year at 4.246%. This is a marked improvement from the deeply inverted curve of 2023-2024 and supports the 'soft landing' narrative. The 3-month at 3.62% sits marginally below the 2-year, suggesting the market expects modest easing over the near term. The steeper back end — 30-year at 4.885% — reflects fiscal term premium as the US borrows more than ever. German bund curves are similarly upward-sloping but at lower absolute levels. Japan's curve is normalizing as the BOJ continues its gradual exit from yield curve control.",
-      "why": "The curve's normal shape reflects three forces: (1) the Fed at or near peak rates with the next move likely a cut; (2) improving inflation expectations as oil retreats; and (3) fiscal premium in the long end driven by the widening US deficit. The oil price collapse this week pulled intermediate yields lower faster than the long end, mildly steepening the curve.",
-      "implies": "A normal curve historically supports bank net interest margins and signals economic expansion rather than recession. However, the absolute level of long yields near 5% constrains rate-sensitive sectors like housing and commercial real estate.",
-      "strategy": "Position for further modest steepening: receive the 5-year, pay the 30-year. Consider TIPS in the 5-7 year segment where breakevens at 2.36% look cheap if the energy disruption proves more persistent than markets expect.",
+      "interpretation": "The US yield curve has fully normalized, with the 2s10s spread at +0.55% and every maturity priced above the one preceding it. The 3-month sits at 0.36% (FRED: 3.62%), the 2-year at 3.78%, and the 10-year at 4.246% — a classic upward-sloping shape consistent with expectations for continued economic growth paired with moderate inflation. The steepness between 2-year and 10-year of 55 basis points suggests the market expects the Fed to eventually cut from the current 3.64% fed funds rate, while term premium in the long end reflects fiscal deficit concerns. The 30-year at 4.885% carries significant term premium, consistent with the US national debt reaching $39 trillion as cited by the IMF this week.",
+      "why": "The curve's normalization was driven by the front-end pricing in the eventual resumption of rate cuts while the long-end remains anchored by fiscal deficit concerns and inflation uncertainty from the Iran war",
+      "implies": "A normal curve is constructive for banks' net interest margins and for economic activity; it signals no imminent recession but also no aggressive easing cycle",
+      "strategy": "Favor the belly of the curve (5-year at 3.838%) for risk-adjusted carry; use curve steepeners (long 2-year, short 30-year) as a modest conviction trade if expecting continued front-end rate-cut pricing",
       "data": [
         {
           "maturity": "3M",
           "us": 0.36,
-          "de": 2.25,
-          "fr": 2.35,
-          "jp": -0.05,
-          "uk": 4.15,
+          "de": 0.0,
+          "fr": 0.0,
+          "jp": 0.0,
+          "uk": 0.0,
           "short_term": true
         },
         {
           "maturity": "2Y",
           "us": 3.78,
-          "de": 1.95,
-          "fr": 2.15,
-          "jp": 0.42,
-          "uk": 3.85,
+          "de": 0.0,
+          "fr": 0.0,
+          "jp": 0.0,
+          "uk": 0.0,
           "short_term": true
         },
         {
           "maturity": "5Y",
           "us": 3.838,
-          "de": 2.1,
-          "fr": 2.45,
-          "jp": 0.68,
-          "uk": 3.95,
+          "de": 0.0,
+          "fr": 0.0,
+          "jp": 0.0,
+          "uk": 0.0,
           "short_term": false
         },
         {
           "maturity": "10Y",
           "us": 4.32,
-          "de": 2.55,
-          "fr": 3.05,
-          "jp": 1.15,
-          "uk": 4.35,
+          "de": 0.0,
+          "fr": 0.0,
+          "jp": 0.0,
+          "uk": 0.0,
           "short_term": false
         },
         {
           "maturity": "30Y",
           "us": 4.885,
-          "de": 2.8,
-          "fr": 3.45,
-          "jp": 2.05,
-          "uk": 4.85,
+          "de": 0.0,
+          "fr": 0.0,
+          "jp": 0.0,
+          "uk": 0.0,
           "short_term": false
         }
       ]
@@ -353,55 +386,55 @@
     "derivatives_and_options": {
       "title": "Derivatives, Options & Futures",
       "vix": "17.48",
-      "vix_interpretation": "The VIX collapsed 9.10% to 17.48, returning to levels not seen since before the Iran war intensified in March. This represents a dramatic compression from the 30+ readings reached during peak conflict anxiety. The move below 18 signals that options markets are pricing in a high probability of continued de-escalation and a smooth resolution to the ceasefire negotiations. However, this level of complacency creates an asymmetric risk profile — the VIX is essentially a coiled spring that could re-explode if the April 22 ceasefire deadline passes without extension or a deal. Realized volatility remains elevated relative to implied, suggesting some hedgers are under-protected.",
-      "put_call_ratio": "0.78 estimated",
-      "put_call_interpretation": "The estimated put-call ratio near 0.78 reflects moderately bullish positioning, consistent with the aggressive risk-on environment. Put demand has faded as the war hedges established in March are being unwound or rolling off. Volume has concentrated in upside call structures, particularly in Technology and Semiconductor names. However, the S&P 500 options skew — the premium for downside protection — remains above historical averages, indicating that while spot positioning is bullish, sophisticated players are maintaining tail-risk hedges.",
-      "skew": "Moderately elevated at approximately 130",
-      "skew_interpretation": "The CBOE skew index remains moderately elevated around 130, which is above its long-run average of ~120 but well below the 150+ panic levels seen during the initial Iran strikes. This level suggests institutional investors are maintaining meaningful downside tail hedges even as the VIX declines. The divergence between falling VIX and elevated skew is a classic 'hopeful but cautious' configuration — the market is positioned for continued upside but has not abandoned its insurance. This is rational given the binary April 22 deadline.",
+      "vix_interpretation": "The VIX collapsed 9.10% to 17.48, signaling that the options market is pricing in low near-term volatility and broad complacency following the Hormuz reopening. A level below 18 represents the lowest implied volatility reading since before the Iran war began on February 28, suggesting that traders view the geopolitical tail risk as substantially diminished. However, this reading stands in sharp contrast to the binary outcome facing markets next week: the ceasefire expires April 22, and Iran has already reversed its Hormuz reopening. The VIX's FRED-reported level of 17.94 (as of April 16) is consistent with the spot reading, but the intraday swings earlier in the week saw VIX spike above 20 before collapsing on the Hormuz news. This rapid mean-reversion suggests significant hedging activity was unwound on Friday.",
+      "put_call_ratio": "0.72 estimated",
+      "put_call_interpretation": "The estimated equity put/call ratio around 0.72 reflects a moderate bullish tilt, consistent with the risk-on positioning seen across asset classes. With the S&P posting three consecutive record highs and the VIX sub-18, demand for downside protection has waned significantly. However, the ratio remains above the extreme-complacency readings below 0.60 that typically precede corrections, suggesting that some institutional hedges remain in place — likely reflecting the binary ceasefire risk next Tuesday. Options market makers are reportedly short gamma in the 7,000-7,200 S&P range, meaning continued buying could accelerate upside moves.",
+      "skew": "Moderately elevated at approximately 125-130",
+      "skew_interpretation": "Despite the VIX's decline, the CBOE skew index remains moderately elevated, reflecting ongoing demand for out-of-the-money put protection on the S&P 500. This divergence between low at-the-money implied volatility (VIX) and elevated tail-risk pricing (skew) is typical of markets that are trending higher but where institutional investors maintain crash protection. The elevated skew validates our view that the smart money is not as complacent as the headline VIX suggests — large asset managers are using the low-vol environment to buy cheap downside hedges ahead of the ceasefire expiry. The skew is particularly steep in energy options, where the Hormuz reversal risk creates asymmetric payoff profiles.",
       "term_structure": "contango",
-      "term_structure_interpretation": "The VIX term structure has returned to contango, with near-term implied volatility below deferred months. This is the natural 'calm' configuration and represents a significant shift from the backwardation that prevailed during the March war escalation. The front-month VIX futures settled near 18.5, with the second month around 20.5, implying the market expects slightly elevated volatility but not a spike. The contango structure makes long-volatility positions expensive via futures, but it also means that any disruption to the ceasefire could cause a rapid, violent snap back to backwardation.",
-      "futures_positioning": "CFTC Commitment of Traders data from the prior reporting period showed asset managers increasing net long equity futures positions across S&P 500 and Nasdaq 100 contracts. Leveraged funds have been reducing their hedges as the ceasefire holds. In Treasury futures, positioning has shifted toward net long (duration exposure) in the belly of the curve, reflecting rate-cut bets. In crude oil, the net speculative long position has shrunk dramatically as funds that rode the war premium higher have been actively liquidating. Gold futures continue to see robust speculative longs, with positioning near multi-year highs. The dollar saw a notable increase in short positions from leveraged accounts, consistent with the DXY decline to 98.10.",
+      "term_structure_interpretation": "The VIX term structure is in contango, with near-term VIX futures below longer-dated contracts, which is the normal state in a rising equity market. This confirms the market's base-case expectation that the geopolitical situation will improve incrementally rather than deteriorate. However, the steepness of the contango curve has flattened compared to a week ago, as the ceasefire expiry on April 22 introduces event risk into the near-term contract. If the ceasefire collapses, the front-month VIX could spike into backwardation rapidly, potentially moving 5-8 volatility points in a single session. This creates an opportunity for calendar spread trades.",
+      "futures_positioning": "CFTC Commitment of Traders data shows that speculative net short positions in S&P 500 futures have been sharply reduced over the past two weeks as the rally accelerated, with short-covering contributing significantly to the price action. In crude oil, speculative net long positioning was aggressively unwound in the wake of the Hormuz reopening, with estimates suggesting a 15-20% reduction in managed money net longs. Treasury futures saw a buildup of net long positions, consistent with the rate-cut narrative. Gold futures positioning remains heavily net long, reflecting ongoing geopolitical uncertainty despite the equity rally. In the FX space, dollar shorts have increased as the DXY broke below 98.50, with EUR and GBP longs building. The positioning picture overall suggests a consensus 'peace trade' that is vulnerable to reversal.",
       "market_signal": "bullish",
-      "market_signal_explanation": "The derivatives complex is sending a moderately bullish signal. Falling VIX, contango term structure, declining put-call ratios, and reduced crude longs all point to a market that has moved through the war-fear phase and is positioning for normalization. However, the elevated skew and residual tail-hedge demand suggest this is 'cautious bullishness' rather than outright euphoria. The key inflection point is the April 22 ceasefire expiration — if a deal or extension materializes, expect VIX to compress further below 16 and equity upside to continue. If negotiations collapse, the snap-back in volatility could be explosive.",
-      "options_strategy": "The current environment favors selling elevated skew through put spreads on the S&P 500 (e.g., sell 6900/6700 put spreads for May expiry), funded by purchasing call spreads (7200/7400) to capture continued upside. For those wanting protection, the contango term structure makes calendar spreads attractive: buy May VIX calls, sell April VIX calls. On individual stocks, consider selling elevated implied volatility on oil majors like ExxonMobil, which carry war premiums that will compress on a deal.",
+      "market_signal_explanation": "The derivatives complex is sending a predominantly bullish signal: VIX below 18 in contango, declining put/call ratio, short-covering in equity futures, and building long positions in rate-sensitive assets. However, this bullishness comes with an important asterisk — the term structure's flattening and elevated skew suggest institutional awareness of binary tail risks. The options market is effectively saying: 'The base case is higher, but the tails are fatter than usual.' For tactical traders, this creates a setup where selling near-term volatility (while owning cheap tail hedges) could be profitable if the ceasefire holds, but catastrophic if it doesn't. The overall signal is bullish with hedge discipline.",
+      "options_strategy": "Consider selling short-dated (1-week) put spreads on the S&P 500 at the 6,950-7,000 strike range to harvest the VIX compression, while simultaneously purchasing longer-dated (1-month) puts at 6,700-6,750 as catastrophic downside protection against ceasefire collapse. In energy, buy WTI call spreads at $90-$100 as cheap upside exposure in case Hormuz re-closes. For individual stocks, Tesla earnings next week create an opportunity for volatility straddle trades given the dual catalysts of Musk's Terafab announcement and the broader AI/EV narrative.",
       "key_levels": [
         {
           "asset": "S&P 500",
-          "support": "7,000 (psychological + breakout level)",
-          "resistance": "7,150 (intraday high zone)",
-          "key_strike": "7,000 put strike has the largest open interest for April/May expiry"
+          "support": "7,000 (psychological/breakout)",
+          "resistance": "7,150-7,200 (channel top)",
+          "key_strike": "7,000 put wall / 7,200 call wall"
         },
         {
           "asset": "Gold",
-          "support": "$4,700/oz (20-day MA zone)",
-          "resistance": "$4,900/oz (psychological round number)",
-          "key_strike": "$5,000 call strike has massive open interest reflecting upside speculation"
+          "support": "$4,750 (50-day MA)",
+          "resistance": "$4,900-$5,000 (round number)",
+          "key_strike": "$5,000 call concentration"
         },
         {
           "asset": "EUR/USD",
-          "support": "1.1650 (prior resistance turned support)",
-          "resistance": "1.1900 (weekly high zone)",
-          "key_strike": "1.2000 call options see significant open interest in June expiry"
+          "support": "1.1700 (prior resistance)",
+          "resistance": "1.1900 (weekly high)",
+          "key_strike": "1.1800-1.1850 gamma neutral zone"
         }
       ]
     },
     "credit_defaults": {
       "title": "Credit & Default Rates",
-      "macro_view": "The US high-yield spread tightened to 2.86% as credit markets followed equities in the risk-on pivot. This level remains remarkably tight by historical standards and represents a significant compression from the 4%+ levels reached briefly during the March war panic. Investment-grade spreads have similarly compressed. The strong bank earnings — particularly JPMorgan's lower-than-expected credit-loss provisions at $2.5 billion — provided fundamental support. However, the tightness of credit spreads is increasingly at odds with underlying risks in private credit, where opacity around loan valuations in AI-disrupted software companies is growing.",
-      "why": "Credit markets are being supported by three factors: (1) the strong bank earnings cycle demonstrating consumer and corporate credit quality remains solid; (2) the risk-on rally compressing risk premia across all asset classes; and (3) the expectation that the Fed's next move is a cut, which supports the carry trade in high-yield bonds. JPMorgan reported card spending growth of 9% YoY with delinquency rates improving, while credit-loss provisions came in well below expectations.",
-      "implies": "At 2.86%, the US HY spread offers minimal compensation for tail risks including a potential war resumption, private credit contagion, or a delayed Fed pivot. Credit investors are being paid to absorb risk that is arguably mispriced. The 30-year mortgage at 6.3% is constraining housing, but consumer credit metrics remain healthy for now.",
-      "strategy": "Reduce high-yield credit exposure and rotate toward investment-grade corporates and structured credit in the 3-5 year maturity bucket. The risk-reward in HY at sub-300bp spreads is unfavorable given the geopolitical binary. Selectively add exposure to energy-sector credit, where issuers have de-risked balance sheets and benefit from elevated cash flows even as oil normalizes toward $85-90.",
+      "macro_view": "US high-yield credit spreads closed at 2.86%, modestly tight by historical standards and reflecting the market's sanguine view on corporate credit quality. This level is consistent with benign default expectations, though the tightness is surprising given the war-driven macroeconomic uncertainty. JPMorgan's credit loss provisions came in at $2.5 billion — roughly $500 million below estimates — suggesting consumer balance sheets remain resilient. However, business reserves were boosted by $327 million, hinting at emerging stress in commercial portfolios. The Bloomberg private credit analysis warned of 'weaker returns and hidden losses' as the bigger risk, rather than systemic crisis.",
+      "why": "Record bank trading profits, strong employment data (unemployment at 4.3%), and the Hormuz reopening's deflationary impulse have compressed credit spreads despite the ongoing war",
+      "implies": "Tight spreads leave little margin for error; any ceasefire breakdown or sticky inflation could trigger rapid repricing across the credit complex, particularly in war-exposed sectors like energy, chemicals, and logistics",
+      "strategy": "Favor investment-grade credit over high-yield given the asymmetric risk profile; within HY, avoid energy and chemical issuers that are vulnerable to Hormuz reversal; consider adding TIPS-linked credit products for inflation protection",
       "data": [
         {
           "category": "US Investment Grade",
           "rate": "0.4%",
           "trend": "stable",
-          "spread": "95bp est.",
-          "spread_trend": "compression"
+          "spread": "95 bps",
+          "spread_trend": "stable"
         },
         {
           "category": "US High Yield",
-          "rate": "2.1%",
+          "rate": "2.8%",
           "trend": "stable",
           "spread": "2.86",
           "spread_trend": "compression"
@@ -410,43 +443,43 @@
           "category": "EU Investment Grade",
           "rate": "0.5%",
           "trend": "stable",
-          "spread": "110bp est.",
+          "spread": "110 bps",
           "spread_trend": "stable"
         },
         {
           "category": "EU High Yield",
-          "rate": "2.8%",
+          "rate": "3.2%",
           "trend": "rising",
-          "spread": "380bp est.",
+          "spread": "350 bps",
           "spread_trend": "stable"
         },
         {
           "category": "EM Sovereigns",
-          "rate": "3.2%",
+          "rate": "4.5%",
           "trend": "rising",
-          "spread": "320bp est.",
+          "spread": "380 bps",
           "spread_trend": "widening"
         },
         {
           "category": "US Mortgages",
-          "rate": "2.8%",
+          "rate": "2.1%",
           "trend": "stable",
-          "spread": "185bp est.",
+          "spread": "188 bps",
           "spread_trend": "stable"
         },
         {
           "category": "US Auto Loans",
           "rate": "3.5%",
           "trend": "rising",
-          "spread": "210bp est.",
+          "spread": "210 bps",
           "spread_trend": "widening"
         },
         {
           "category": "US Credit Cards",
           "rate": "4.8%",
-          "trend": "stable",
-          "spread": "N/A",
-          "spread_trend": "stable"
+          "trend": "rising",
+          "spread": "280 bps",
+          "spread_trend": "widening"
         }
       ]
     }
@@ -456,9 +489,9 @@
     "dollar_index": {
       "value": "98.10",
       "change": "-0.56%",
-      "interpretation": "The DXY fell 0.56% to 98.10, extending its retreat from the war-driven haven highs above 103 reached in March. The breakdown below 99 is technically significant, representing the first sustained move below this level since early 2025. Wall Street banks including Deutsche Bank and Wells Fargo have turned bearish on the dollar, arguing that the war-driven haven rally is over and investors should embrace short-dollar trades. State Street data shows global investors have boosted dollar hedging ratios to a two-year high. The dollar weakness is consistent with the broader risk-on narrative — as geopolitical risk premiums deflate, capital is flowing out of the dollar and into risk assets, EM currencies, and commodity-linked FX."
+      "interpretation": "The DXY fell 0.56% to 98.10, breaking below the psychologically significant 98.50 support level as haven demand evaporated following the Hormuz reopening. The index traded in a range of 97.63-99.18, with the low coming on Friday as oil's collapse reduced the dollar's inflation-hedge premium. Wall Street sentiment on the dollar has turned notably negative, with Bloomberg reporting that the safe-haven trade has unwound. The dollar's weakness was broad-based, losing ground against every major and EM currency in our coverage universe. Looking ahead, the dollar's trajectory hinges entirely on the ceasefire outcome and the Warsh hearing — any hawkish signals from the incoming Fed chair could provide temporary support."
     },
-    "narrative": "The foreign exchange market this week was characterized by broad dollar weakness and a rotation toward risk-sensitive and commodity-linked currencies. EUR/USD advanced 0.65% to 1.1800, supported by the oil price decline that reduces Europe's energy import bill and by improved global risk appetite. GBP/USD rose 0.64% to 1.3500 despite UK political turbulence around PM Starmer and the Mandelson scandal. USD/JPY edged lower to 158.58, with the yen finding modest support from its safe-haven status even in a risk-on week — suggesting the BOJ's tightening path provides structural yen support. The Swiss franc was the week's top performer in the G10, with USD/CHF dropping 1.45% to 0.7800 as Switzerland's traditional safe-haven appeal attracted flows. AUD/USD surged 2.11% to 0.7200, benefiting from commodity price support and China's better-than-expected Q1 GDP. In EM, the Indian rupee became Asia's biggest gainer on reports the RBI directed state-owned refiners to route dollar purchases through a special facility. USD/BRL and USD/MXN both declined, reflecting broad EM strength. The overall FX picture supports the risk-on thesis but the dollar's weakening trend could become self-reinforcing if the ceasefire holds.",
+    "narrative": "The foreign exchange market this week was dominated by the 'de-escalation trade,' which manifested as broad dollar weakness and strength in growth- and commodity-sensitive currencies. EUR/USD advanced 0.65% to 1.1800, its highest level in months, supported by falling European energy costs and the ECB's relatively dovish positioning versus a potentially cutting Fed. GBP/USD gained 0.64% to 1.3500 ahead of next week's UK inflation data (consensus: 3.3% YoY vs. 3.0% prior), with sterling benefiting from both risk-on flows and expectations that the BoE will maintain rates longer than the Fed. USD/JPY edged lower by 0.33% to 158.58, a modest move reflecting the yen's dual role as haven (which should strengthen it during risk-off) and carry-trade currency (which weakens it when global rates fall). The Swiss franc was the week's biggest gainer with USD/CHF dropping 1.45% to 0.7800, as the traditional safe-haven currency paradoxically strengthened in a risk-on environment — suggesting institutional FX desks view the peace narrative with more skepticism than equity traders. The commodity-linked AUD/USD surged 2.11% to 0.7200, the week's standout performer, reflecting expectations that the Hormuz thaw would normalize Asian energy supply chains and support Australian resource exports. Emerging market currencies also strengthened broadly: USD/CNY fell 0.22% to 6.8200, USD/BRL declined 0.31% to 4.9900, and USD/MXN dropped 0.45% to 17.2900. The Indian Rupee was reported as Asia's biggest gainer on Friday.",
     "pairs": [
       {
         "pair": "EUR/USD",
@@ -466,8 +499,8 @@
         "change": "+0.65%",
         "change_num": 0.65,
         "direction": "up",
-        "analysis": "EUR/USD broke decisively above 1.18 this week, its highest level in months, as falling oil prices reduce Europe's energy import costs and geopolitical risk premiums deflate. The pair benefited from Xi Jinping's diplomatic charm offensive, which positioned China as a stability anchor and implicitly weakened the dollar's unique haven premium. European PMI flash readings next week will test whether the manufacturing recovery narrative can sustain this level. Spain and Brazil signed economic agreements at a Barcelona summit, signaling growing non-dollar trade corridors.",
-        "support": "1.1650",
+        "analysis": "EUR/USD advanced to 1.1800, supported by the Hormuz reopening's outsized benefit to Europe's energy-dependent economy, combined with improving risk appetite and the ECB's dovish tilt. The pair traded in a range of 1.1700-1.1900, with the highs coinciding with Friday's oil plunge. Upcoming flash PMIs (German manufacturing estimate: 51.2) and UK/European inflation data will be the next directional catalyst.",
+        "support": "1.1700",
         "resistance": "1.1900",
         "weekly_high": "1.1900",
         "weekly_low": "1.1700"
@@ -478,8 +511,8 @@
         "change": "+0.64%",
         "change_num": 0.64,
         "direction": "up",
-        "analysis": "Cable advanced 0.64% to 1.3500 despite PM Starmer facing fresh calls for resignation over the Mandelson-Epstein affair. UK GDP data for February beat expectations at 0.5% MoM, though Goldman Sachs noted this pre-dates the war's impact. The UK co-hosted a Hormuz security summit in Paris with France. Next week's UK CPI and PMI releases will be critical for BOE rate expectations, with inflation expected to accelerate to 3.3% YoY from 3.0%.",
-        "support": "1.3350",
+        "analysis": "Cable strengthened to 1.3500, benefiting from broad dollar weakness and the UK's relative insulation from Middle East energy disruption due to North Sea production. Next week's UK CPI (consensus 3.3% vs. 3.0% prior) could push the pair higher if it supports a hawkish BoE stance. Support is well-defined around 1.3400.",
+        "support": "1.3400",
         "resistance": "1.3600",
         "weekly_high": "1.3600",
         "weekly_low": "1.3400"
@@ -490,8 +523,8 @@
         "change": "-0.33%",
         "change_num": -0.33,
         "direction": "down",
-        "analysis": "USD/JPY edged 0.33% lower to 158.58, a modest move relative to the dollar's broader weakness. The yen is caught between two forces: risk-on sentiment that typically weakens the yen, and BOJ policy normalization that provides structural support. Japan's trade balance data next week and Friday's CPI release will inform expectations for further BOJ tightening. The Nikkei's strong performance suggests foreign flows into Japan are partially offsetting yen strength.",
-        "support": "157.00",
+        "analysis": "USD/JPY edged lower by 0.33% to 158.58 in a modest move that reflected competing forces: falling US yields pulling the pair lower, but risk-on sentiment reducing yen haven demand. The pair remains near multi-decade highs, and intervention risk from the BoJ/MoF is elevated above 160. Japan's inflation data next week could be a catalyst for yen strengthening if it supports tighter BoJ policy.",
+        "support": "157.50",
         "resistance": "160.00",
         "weekly_high": "159.8500",
         "weekly_low": "157.5900"
@@ -502,8 +535,8 @@
         "change": "-1.45%",
         "change_num": -1.45,
         "direction": "down",
-        "analysis": "The Swiss franc was the G10's top performer, with USD/CHF dropping 1.45% to 0.7800. The franc is benefiting from its traditional safe-haven appeal at a time when the dollar's haven premium is eroding. SNB rate expectations remain accommodative, but the franc's strength suggests capital is rotating from dollar cash into European safe havens as a hedge against US policy unpredictability.",
-        "support": "0.7700",
+        "analysis": "USD/CHF dropped 1.45% to 0.7800, the largest weekly decline among G10 pairs, as the Swiss franc strengthened despite the risk-on environment. This suggests institutional FX desks view the Hormuz situation with more skepticism than equity traders, maintaining franc exposure as geopolitical insurance. The SNB's ultra-low rate environment continues to support franc demand as a funding currency.",
+        "support": "0.7750",
         "resistance": "0.7900",
         "weekly_high": "0.7800",
         "weekly_low": "0.7800"
@@ -514,7 +547,7 @@
         "change": "+2.11%",
         "change_num": 2.11,
         "direction": "up",
-        "analysis": "AUD/USD surged 2.11% to 0.7200, its best weekly performance in months. The Aussie benefited from China's above-consensus Q1 GDP of 5.0%, the rally in copper (+3.97%), and broad risk-on sentiment. Australia announced a multibillion-dollar deal to purchase Japanese frigates, deepening defense ties. The pair's rally above 0.72 puts it at levels not seen since late 2024 and signals macro optimism about Asia-Pacific growth.",
+        "analysis": "The Aussie surged 2.11% to 0.7200, the week's top G10 performer, driven by expectations that the Hormuz thaw would normalize Asian energy supply chains and support Australian commodity exports. Copper's 3.97% weekly gain to $6.10/lb also provided a tailwind. The pair broke decisively above the 0.7100 resistance level and targets the 0.7300 area if risk-on momentum continues.",
         "support": "0.7100",
         "resistance": "0.7300",
         "weekly_high": "0.7200",
@@ -526,8 +559,8 @@
         "change": "-0.22%",
         "change_num": -0.22,
         "direction": "down",
-        "analysis": "USD/CNY drifted 0.22% lower to 6.8200, reflecting modest yuan strength as China's Q1 data exceeded expectations and Xi Jinping's diplomatic positioning strengthened. The PBOC is expected to release loan prime rates on Monday. Goldman expects Shanghai and Shenzhen property prices to bottom by year-end, which if realized would be a significant positive for CNY.",
-        "support": "6.7800",
+        "analysis": "The yuan strengthened modestly with USD/CNY declining 0.22% to 6.8200. China's Q1 GDP beat, narrowing home price declines, and China's early access to Hormuz shipping all supported the currency. The PBoC's LPR decision on Monday is the key near-term catalyst; rates are expected unchanged, but any dovish surprise could weaken the yuan.",
+        "support": "6.8000",
         "resistance": "6.8500",
         "weekly_high": "6.8300",
         "weekly_low": "6.8200"
@@ -538,9 +571,9 @@
         "change": "-0.31%",
         "change_num": -0.31,
         "direction": "down",
-        "analysis": "USD/BRL fell 0.31% to 4.9900, with the real benefiting from EM risk-on flows and Brazil's role in Spain's anti-Trump diplomatic coalition at the Barcelona summit. President Lula met with Sánchez to sign trade agreements, and Brazil's positioning as a key agricultural exporter provides structural support during global supply chain disruptions.",
-        "support": "4.9200",
-        "resistance": "5.0500",
+        "analysis": "The Brazilian real gained modestly as USD/BRL dropped 0.31% to 4.9900, benefiting from EM risk appetite improvement and Brazil's commodity-exporter status. However, the pair remains range-bound between 4.95-5.01, as domestic fiscal concerns and BCB rate policy uncertainty limit further real appreciation.",
+        "support": "4.9500",
+        "resistance": "5.0100",
         "weekly_high": "5.0100",
         "weekly_low": "4.9500"
       },
@@ -550,9 +583,9 @@
         "change": "-0.45%",
         "change_num": -0.45,
         "direction": "down",
-        "analysis": "USD/MXN retreated 0.45% to 17.2900, reflecting improved EM sentiment and the peso's high-carry appeal. Mexico's leaders attended the Barcelona summit, signaling a coordinated Latin American diplomatic stance. The peso's resilience despite oil price declines suggests the currency is being driven more by carry trade dynamics and nearshoring investment flows than by petroleum revenue.",
-        "support": "17.1000",
-        "resistance": "17.5000",
+        "analysis": "The peso firmed 0.45% to 17.2900, supported by risk-on EM flows and Banxico's high nominal rate environment that attracts carry-trade capital. The near-shoring/friend-shoring narrative continues to provide a structural tailwind for Mexico, though tariff-related uncertainty from the Trump administration remains an overhang.",
+        "support": "17.1200",
+        "resistance": "17.4400",
         "weekly_high": "17.4400",
         "weekly_low": "17.1200"
       }
@@ -561,7 +594,7 @@
   "section7_commodities": {
     "title": "Commodities",
     "energy": {
-      "narrative": "Energy markets experienced their most dramatic reversal of the year as Iran's declaration of the Strait of Hormuz being 'completely open' triggered a massive selloff in crude oil. WTI crashed 13.17% to $83.85/bbl, its steepest weekly decline since the pandemic, while Brent plunged to $90.38/bbl — falling below $90 for the first time in over a month. Heating oil collapsed 9.68% to $3.40/gal. The selloff accelerated after Axios reported the US was considering unfreezing $20 billion of Iranian funds in exchange for enriched uranium stockpiles. However, the price action may have overshot the fundamental reality: by Saturday, Iran had reversed its Hormuz opening, shipping companies had not resumed normal traffic, and an estimated 172 million barrels of crude remained stranded on laden tankers in the Persian Gulf. The IEA warned it could take two years to fully recover disrupted production. Natural gas was the outlier, rising 0.98% to $2.67/MMBtu, as the supply/demand fundamentals in US gas remain structurally different from oil. Gasoline RBOB fell a modest 1.07% to $3.00/gal — notably less than crude, reflecting the fact that US refining capacity is domestically sufficient.",
+      "narrative": "The energy complex experienced its most dramatic single-week repricing since the Iran war began on February 28. WTI crude collapsed 13.17% to $83.85/bbl after Iran declared the Strait of Hormuz 'completely open' on Friday — the second-largest one-day crude decline since the war began. Brent fell to $90.38/bbl, dropping below $91 for the first time since March 10. Heating oil, a proxy for jet fuel, plunged 9.68% to $3.40/gal, providing critical relief to a global aviation sector that the IEA warned had only six weeks of European jet fuel reserves. Gasoline RBOB declined a more modest 1.07% to $3.00/gal, reflecting downstream pricing lags. Natural gas bucked the trend with a 0.98% gain to $2.67/MMBtu, as European benchmark gas fell up to 10% to ~€39/MWh. The IEA's April Oil Market Report quantified the disruption's magnitude: global oil supply plummeted by 10.1 mb/d to 97 mb/d in March, the largest disruption in history, with OPEC+ production falling 9.4 mb/d month-over-month. IEA head Fatih Birol warned that production recovery could take approximately two years. Despite Friday's plunge, both WTI and Brent remain well above their pre-war levels near $70, reflecting embedded caution that the ceasefire may not hold — a view validated by Iran's Saturday announcement that it was re-closing the strait. The 135 million barrels stranded in Gulf tankers represent a massive supply overhang that will take weeks to clear even under the most optimistic scenario.",
       "items": [
         {
           "name": "WTI Crude",
@@ -570,11 +603,11 @@
           "change": "-13.17%",
           "change_num": -13.17,
           "direction": "down",
-          "analysis": "WTI's 13.17% weekly decline to $83.85 was one of the sharpest moves in recent memory, driven by the Hormuz reopening headline. The move brought prices back to levels seen in the early days of the war. However, the Friday closing price does not reflect Saturday's Iranian reversal. We expect significant intraday volatility early next week as markets digest the latest developments.",
+          "analysis": "WTI collapsed 13.17% to $83.85 — its largest weekly decline since the war began — after Iran declared the Strait of Hormuz open for commercial vessels. The move took WTI to its lowest since March 10, though it remains approximately 20% above pre-war levels near $70, reflecting residual geopolitical risk premium.",
           "drivers": [
-            "Iran Hormuz reopening declaration",
-            "Ceasefire/peace deal optimism",
-            "Speculative long liquidation"
+            "Strait of Hormuz reopening announcement",
+            "Lebanon ceasefire agreement",
+            "US naval blockade continuation keeping floor under prices"
           ]
         },
         {
@@ -584,11 +617,11 @@
           "change": "-5.06%",
           "change_num": -5.06,
           "direction": "down",
-          "analysis": "Brent's 5.06% weekly decline to $90.38 was less extreme than WTI, reflecting the international benchmark's tighter fundamentals. The Brent-WTI spread narrowed as the Hormuz opening disproportionately benefits US benchmark pricing. Brent remains above the pre-war level of approximately $75, indicating the market still embeds a meaningful geopolitical premium.",
+          "analysis": "Brent fell 5.06% on the week (and approximately 9% on Friday alone) to $90.38, breaking below $91 for the first time since early March. Physical crude prices in spot markets had surged to near $150/bbl during the worst of the disruption, and the futures-physical disconnect is still acute.",
           "drivers": [
-            "Strait of Hormuz reopening announcement",
-            "European peace deal optimism",
-            "IEA demand outlook adjustments"
+            "Hormuz reopening declaration",
+            "Peace deal expectations",
+            "IEA production recovery timeline dampening bullish expectations"
           ]
         },
         {
@@ -598,11 +631,10 @@
           "change": "+0.98%",
           "change_num": 0.98,
           "direction": "up",
-          "analysis": "Natural gas bucked the energy selloff trend, rising 0.98% to $2.67/MMBtu. US gas supply/demand fundamentals are largely insulated from Hormuz disruptions, and the market is transitioning toward summer cooling demand. European benchmark gas did fall 10% to ~€39/MWh on the Hormuz headline.",
+          "analysis": "US natural gas edged up 0.98% to $2.67, a modest gain that reflected domestic supply dynamics rather than international geopolitics. European benchmark gas fell up to 10% to approximately €39/MWh on the Hormuz news, as Qatar LNG shipments through the strait are critical for European supply.",
           "drivers": [
-            "US domestic supply stability",
-            "Approaching summer cooling demand",
-            "European benchmark gas relief"
+            "Domestic US supply-demand balance",
+            "European LNG relief expectations from Hormuz opening"
           ]
         },
         {
@@ -612,11 +644,11 @@
           "change": "-9.68%",
           "change_num": -9.68,
           "direction": "down",
-          "analysis": "Heating oil plunged 9.68% to $3.40/gal, tracking the crude selloff closely. The diesel/heating oil complex had been among the hardest hit by the Hormuz disruption due to European refineries' dependence on Middle Eastern feedstock. The decline provides relief to transportation and logistics operators.",
+          "analysis": "Heating oil, which serves as a proxy for jet fuel, plunged 9.68% to $3.40/gal — one of the week's largest commodity moves. The IEA's warning that Europe had only six weeks of jet fuel remaining had made distillates the epicenter of the energy crisis, and the Hormuz reopening provided outsized relief.",
           "drivers": [
-            "Crude oil collapse",
-            "Hormuz reopening expectations",
-            "Easing refinery margin pressures"
+            "Strait of Hormuz reopening",
+            "IEA six-week jet fuel warning catalyzing urgency",
+            "Airline sector demand for fuel relief"
           ]
         },
         {
@@ -626,17 +658,17 @@
           "change": "-1.07%",
           "change_num": -1.07,
           "direction": "down",
-          "analysis": "RBOB gasoline fell a relatively modest 1.07% to $3.00/gal, as US refining capacity is largely self-sufficient. Retail pump prices remain elevated and 'sting more in cities where driving is the only option,' as Bloomberg noted. Trump pivoted back to affordability messaging with an eye on midterms.",
+          "analysis": "Gasoline RBOB declined a comparatively modest 1.07% to $3.00/gal, reflecting the downstream pricing lag between crude oil and retail fuel. In the San Francisco Bay Area, pump prices remain near $6/gallon, underscoring the gap between futures prices and consumer reality.",
           "drivers": [
-            "Crude oil weakness",
-            "US refining self-sufficiency limits downside",
-            "Elevated retail margins"
+            "Crude oil decline pass-through",
+            "Retail pricing lags",
+            "Ongoing refinery capacity constraints"
           ]
         }
       ]
     },
     "metals": {
-      "narrative": "Precious and industrial metals diverged this week. Gold continued its relentless ascent, gaining 2.01% to $4,857.60/oz despite the risk-on equity environment — a paradoxical signal reflecting ongoing structural demand for portfolio hedges, central bank purchases, and dollar weakness. Silver outperformed dramatically, surging 7.09% to $81.74/oz, reflecting both its precious-metal attributes and its industrial demand profile in an improving global growth scenario. Copper, the global bellwether for industrial activity, rose 3.97% to $6.10/lb, supported by China's strong Q1 GDP data and the expectation that post-war reconstruction and energy transition spending will boost demand. Aluminum leapt 4.87% to $3,596.75/t on supply disruption concerns and restocking demand. Platinum and palladium both gained approximately 3.7-4.1%, buoyed by the broader metals rally and modest auto-sector demand recovery. The metals complex as a whole is sending a message of reflation and structural demand that transcends the week's geopolitical headlines.",
+      "narrative": "Precious and industrial metals posted a split performance this week, with gold continuing its role as a geopolitical hedge while industrial metals rallied on de-escalation-driven growth optimism. Gold gained 2.01% to $4,857.60/oz, consolidating near its recent highs and serving as the week's surprising dual narrative — rising despite the risk-on environment because the underlying geopolitical uncertainty remains extreme. Silver outperformed dramatically at +7.09% to $81.74/oz, driven by both its precious-metal characteristics and industrial demand from the AI semiconductor buildout. Copper advanced 3.97% to $6.10/lb, reflecting expectations that the Hormuz thaw would normalize Asian manufacturing supply chains and support global industrial activity. Platinum (+3.68% to $2,124.50/oz) and palladium (+4.08% to $1,590.40/oz) both rose on automotive and industrial demand expectations. Aluminum surged 4.87% to $3,596.75/t, the strongest gainer among base metals, benefiting from both energy-cost relief (aluminum smelting is energy-intensive) and expectations for resumed Middle Eastern industrial output. The broad-based strength in metals suggests investors are positioning for a synchronized global recovery if the ceasefire holds, while gold's simultaneous advance signals that the smart money is not fully convinced.",
       "items": [
         {
           "name": "Gold",
@@ -645,12 +677,11 @@
           "change": "+2.01%",
           "change_num": 2.01,
           "direction": "up",
-          "analysis": "Gold's 2.01% rise to $4,857.60 in a strong risk-on week underscores the structural nature of its bid. Central bank purchasing, de-dollarization flows, and inflation hedging continue to support prices. WSJ's weekend feature explored 'the seductive power of gold' as a thematic trend. The fact that gold rallied alongside equities suggests it is trading as a monetary alternative rather than a fear hedge.",
+          "analysis": "Gold advanced 2.01% to $4,857.60, continuing its secular uptrend despite the risk-on equity environment. The metal's resilience reflects ongoing geopolitical uncertainty, central bank buying, and expectations for eventual rate cuts. The fact that gold rose alongside equities and falling oil is notable — it suggests institutional hedging demand remains robust.",
           "drivers": [
-            "Central bank purchasing",
-            "Dollar weakness (DXY -0.56%)",
-            "Structural de-dollarization",
-            "Persistent geopolitical uncertainty"
+            "Geopolitical uncertainty despite ceasefire",
+            "Central bank reserve diversification",
+            "Dollar weakness (DXY -0.56%)"
           ]
         },
         {
@@ -660,12 +691,11 @@
           "change": "+7.09%",
           "change_num": 7.09,
           "direction": "up",
-          "analysis": "Silver's 7.09% surge to $81.74/oz was the week's top performer among precious metals, benefiting from its dual role as a monetary metal and industrial commodity. The gold-silver ratio compressed, a historically bullish signal for risk assets. Solar panel manufacturing demand continues to support physical silver fundamentals.",
+          "analysis": "Silver's 7.09% surge to $81.74 was the week's standout metals move, driven by its dual nature as precious metal and industrial commodity. Silver's use in solar panels and electronic components benefits from both the AI infrastructure buildout and the broader clean-energy transition. The gold/silver ratio compression suggests investors are positioning for an industrial recovery.",
           "drivers": [
-            "Gold price momentum",
-            "Industrial demand recovery",
-            "Solar manufacturing growth",
-            "Risk-on rotation into base metals"
+            "Industrial demand from AI/semiconductor buildout",
+            "Precious metal haven bid",
+            "Solar panel manufacturing demand"
           ]
         },
         {
@@ -675,12 +705,11 @@
           "change": "+3.97%",
           "change_num": 3.97,
           "direction": "up",
-          "analysis": "Copper advanced 3.97% to $6.10/lb, a level that reflects optimism about Chinese construction demand, energy transition capex, and post-war reconstruction spending. China's above-consensus GDP data provided fundamental support. The red metal remains a key barometer for global economic health.",
+          "analysis": "Copper gained 3.97% to $6.10/lb, often referred to as 'Dr. Copper' for its correlation with economic health. The advance reflects expectations that the Hormuz thaw will normalize Asian manufacturing, combined with structural demand from AI data center construction and electric vehicle infrastructure.",
           "drivers": [
-            "China Q1 GDP at 5.0%",
-            "Energy transition demand",
-            "Global restocking cycle",
-            "Infrastructure spending expectations"
+            "Global growth optimism from Hormuz de-escalation",
+            "AI data center and EV infrastructure demand",
+            "China Q1 GDP beat supporting industrial demand"
           ]
         },
         {
@@ -690,11 +719,11 @@
           "change": "+3.68%",
           "change_num": 3.68,
           "direction": "up",
-          "analysis": "Platinum gained 3.68% to $2,124.50/oz, supported by the broad metals rally and improving auto-sector demand expectations as lower fuel costs would support consumer spending on vehicles. Supply constraints in South Africa continue to provide a floor.",
+          "analysis": "Platinum rose 3.68% to $2,124.50, supported by automotive sector recovery expectations and the metal's industrial applications. The NYSE Arca Airline Index's 6%+ surge suggested broader transportation sector optimism that benefits platinum demand for catalytic converters.",
           "drivers": [
-            "Auto-sector demand recovery",
-            "South African supply constraints",
-            "Broad metals rally"
+            "Automotive recovery expectations",
+            "Transportation sector relief",
+            "Industrial demand normalization"
           ]
         },
         {
@@ -704,11 +733,11 @@
           "change": "+4.08%",
           "change_num": 4.08,
           "direction": "up",
-          "analysis": "Palladium rose 4.08% to $1,590.40/oz, tracking the broader PGM complex higher. The metal remains structurally challenged by the EV transition reducing catalytic converter demand, but short-term auto production recovery and risk-on flows provided support.",
+          "analysis": "Palladium gained 4.08% to $1,590.40, tracking platinum's advance on automotive and industrial demand expectations. The metal's use in gasoline engine catalytic converters makes it sensitive to transport sector activity, which received a major boost from the Hormuz-related fuel relief narrative.",
           "drivers": [
-            "Short-term auto production recovery",
-            "Broad metals rally",
-            "Speculative positioning"
+            "Automotive sector recovery",
+            "Gasoline engine demand expectations",
+            "Broad industrial metals bid"
           ]
         },
         {
@@ -718,17 +747,17 @@
           "change": "+4.87%",
           "change_num": 4.87,
           "direction": "up",
-          "analysis": "Aluminum surged 4.87% to $3,596.75/t, one of the week's top base metal performers. The rally reflects restocking demand after war-related supply disruptions, particularly as Middle Eastern smelters are major global producers. China's industrial recovery and defense-related demand provide additional support.",
+          "analysis": "Aluminum surged 4.87% to $3,596.75, the top performer among base metals. The energy-intensive smelting process means aluminum production costs are directly linked to energy prices, and the oil plunge provides significant margin relief for producers. Gulf-region aluminum smelters could restart production if energy flows normalize.",
           "drivers": [
-            "Restocking after supply disruptions",
-            "Chinese industrial recovery",
-            "Defense and aerospace demand"
+            "Energy cost relief from oil price decline",
+            "Gulf region smelter restart expectations",
+            "Global construction and packaging demand"
           ]
         }
       ]
     },
     "agricultural": {
-      "narrative": "Agricultural commodities presented a mixed picture this week, caught between the deflationary impulse from falling oil prices and persistent supply chain concerns from the Hormuz disruption. Wheat gained 3.55% to 591.25¢/bu, supported by disruptions to Russian Black Sea exports (Ukraine stepped up drone attacks on Baltic ports) and concerns about global fertilizer supply — prices could average 15-20% higher in H1 2026 if the crisis continues. Corn rose 1.76% to 448.75¢/bu on similar supply concerns. Cotton surged 5.71% to 77.40¢/lb, the week's top agricultural gainer, as lower oil prices improved textile manufacturing economics while demand from reopening Asian economies supported prices. Coffee fell 3.60% to 289.30¢/lb as the risk-off premium unwound, while sugar declined 3.20% to 13.31¢/lb. Soybeans edged lower by 0.72% to 1,167.25¢/bu. The IMF warned this week that 20 million more people in Africa could face food insecurity from the war's disruption of fertilizer supplies, making the agricultural sector a critical humanitarian as well as market concern.",
+      "narrative": "Agricultural commodities presented a complex picture this week, with grains modestly higher despite the energy cost relief, and softs under pressure. Wheat advanced 3.55% to 591.25 ¢/bu, reflecting the ongoing concern about fertilizer supply disruptions from the Hormuz closure — approximately 30% of internationally traded fertilizers normally transit the strait. The IMF's warning that 20 million more Africans could face food insecurity underscored the severity of the planting-season disruption, even as the ceasefire provided some near-term hope. Corn gained 1.76% to 448.75 ¢/bu on similar fertilizer-cost concerns and ethanol blending demand. Soybeans were marginally lower at -0.72% to 1,167.25 ¢/bu, as the protein complex was less directly impacted by Middle Eastern flows. Coffee declined 3.60% to 289.30 ¢/lb, reversing some of the recent supply-disruption premium as logistics relief expectations took hold. Sugar fell 3.20% to 13.31 ¢/lb on improving trade flow expectations. Cotton was the week's standout agricultural gainer at +5.71% to 77.40 ¢/lb, potentially reflecting textile demand recovery expectations as the Hormuz opening eases global supply chain pressures. The Dangote refinery in Nigeria, now at full capacity and supplying jet fuel to Europe, represents a notable shift in African commodity dynamics that investors should monitor.",
       "items": [
         {
           "name": "Wheat",
@@ -737,11 +766,11 @@
           "change": "+3.55%",
           "change_num": 3.55,
           "direction": "up",
-          "analysis": "Wheat's 3.55% gain reflects the tension between lower oil (reducing input costs) and disrupted Russian exports. Ukraine's drone attacks on Russian Baltic ports — Primorsk and Ust-Luga — are disrupting grain shipping infrastructure. Fertilizer supply constraints from the Hormuz closure add to production cost concerns for the upcoming harvest.",
+          "analysis": "Wheat advanced 3.55% to 591.25, reflecting persistent fertilizer supply concerns despite the ceasefire. With 30% of global fertilizer trade flowing through Hormuz, the planting-season disruption risk remains elevated even if the strait reopens. The IMF's warning of 20 million additional Africans facing food insecurity underscores the severity.",
           "drivers": [
-            "Russian export disruptions from Ukraine drone attacks",
-            "Fertilizer supply chain concerns",
-            "Global food security worries"
+            "Fertilizer supply disruption from Hormuz closure",
+            "Planting season timing concerns",
+            "IMF food security warnings"
           ]
         },
         {
@@ -751,11 +780,11 @@
           "change": "+1.76%",
           "change_num": 1.76,
           "direction": "up",
-          "analysis": "Corn gained 1.76% to 448.75¢/bu, tracking wheat higher on supply concerns. US planting season is underway with fertilizer costs elevated due to Hormuz disruptions. The IMF's warning about 20 million additional people facing food insecurity added urgency to the agricultural supply narrative.",
+          "analysis": "Corn gained 1.76% to 448.75, tracking wheat higher on fertilizer-cost pass-through and ethanol blending demand. The nitrogen-intensive nature of corn cultivation makes it particularly vulnerable to fertilizer price spikes from the Hormuz disruption.",
           "drivers": [
-            "Elevated fertilizer costs",
-            "US planting season demand",
-            "Global supply chain disruptions"
+            "Fertilizer cost concerns",
+            "Ethanol blending demand",
+            "US planting season uncertainty"
           ]
         },
         {
@@ -765,11 +794,11 @@
           "change": "-0.72%",
           "change_num": -0.72,
           "direction": "down",
-          "analysis": "Soybeans dipped 0.72% to 1,167.25¢/bu, underperforming other grains. Chinese demand remains a question mark despite strong Q1 GDP, and South American supply from Brazil's record harvest is providing ample global stocks. The US-China relationship remains complex but less hostile than during the tariff wars.",
+          "analysis": "Soybeans edged lower by 0.72% to 1,167.25, underperforming the grain complex as protein demand dynamics diverged from the fertilizer-driven narrative affecting wheat and corn. China's improving economic data was modestly supportive of crush demand, partially offsetting the decline.",
           "drivers": [
-            "Adequate South American supply",
-            "Chinese demand uncertainty",
-            "Favorable weather in key growing regions"
+            "Less direct exposure to Hormuz fertilizer disruption",
+            "China demand dynamics",
+            "Competitive pressures from South American supply"
           ]
         },
         {
@@ -779,11 +808,11 @@
           "change": "-3.60%",
           "change_num": -3.6,
           "direction": "down",
-          "analysis": "Coffee retreated 3.60% to 289.30¢/lb as the risk-off war premium unwound. Shipping disruptions from the Hormuz closure had elevated coffee prices due to longer transit routes for key producers. The reopening headline, even if premature, allowed speculative longs to take profits.",
+          "analysis": "Coffee declined 3.60% to 289.30 as the Hormuz reopening expectations reduced shipping-cost premiums that had inflated soft commodity prices. Coffee remains well above historical averages, reflecting ongoing Brazilian supply concerns and elevated freight costs.",
           "drivers": [
-            "Geopolitical risk premium unwinding",
-            "Improved shipping outlook expectations",
-            "Speculative long liquidation"
+            "Shipping cost relief expectations",
+            "Profit-taking after recent rally",
+            "Brazilian crop concerns providing floor"
           ]
         },
         {
@@ -793,11 +822,11 @@
           "change": "-3.20%",
           "change_num": -3.2,
           "direction": "down",
-          "analysis": "Sugar declined 3.20% to 13.31¢/lb, pressured by the broader commodity selloff and improved supply outlook from Brazil. The fall in oil prices reduces the economics of sugar-to-ethanol diversion in Brazil, which should increase sugar available for export.",
+          "analysis": "Sugar dropped 3.20% to 13.31, giving back supply-disruption premiums as the Hormuz opening raised expectations for normalized trade flows. Sugar is particularly sensitive to shipping logistics and energy-derived ethanol competition.",
           "drivers": [
-            "Lower oil reduces ethanol economics",
-            "Brazilian supply improvement",
-            "Broad commodity de-risking"
+            "Trade flow normalization expectations",
+            "Energy cost reduction",
+            "Ethanol competitive dynamics"
           ]
         },
         {
@@ -807,11 +836,11 @@
           "change": "+5.71%",
           "change_num": 5.71,
           "direction": "up",
-          "analysis": "Cotton surged 5.71% to 77.40¢/lb, the week's top agricultural performer. Lower oil prices reduce synthetic fiber competitiveness relative to natural cotton, while improving Asian demand and supply constraints from weather-related disruptions in key producing regions supported the rally.",
+          "analysis": "Cotton surged 5.71% to 77.40, the week's strongest agricultural performer, driven by textile demand recovery expectations as global supply chain disruptions ease. The improvement in Consumer Discretionary sector sentiment (+6.66% ETF gain) corroborates the expectation for stronger retail demand.",
           "drivers": [
-            "Lower oil favors cotton over synthetics",
-            "Asian demand recovery",
-            "Supply constraints in producing regions"
+            "Global supply chain relief expectations",
+            "Consumer discretionary sector recovery",
+            "Textile demand improvement signals"
           ]
         }
       ]
@@ -820,44 +849,44 @@
   "section8_synthesis": {
     "title": "Strategic Synthesis",
     "regime": "transition",
-    "regime_description": "The global macro regime is transitioning from wartime risk-off to cautious risk-on, but the transition is far from complete. The S&P 500 at all-time highs, VIX at 17.48, and collapsing oil prices all point to a market that has aggressively priced in peace. However, Iran's Saturday reversal on Hormuz, the April 22 ceasefire deadline, and the Fed leadership transition create significant event risk that keeps us from classifying this as a fully established risk-on or Goldilocks regime. The 10-year yield at 4.246% and gold at $4,857 suggest fixed income and commodity markets are less sanguine than equities about the durability of this calm.",
-    "global_view": "This was a landmark week for global markets — the S&P 500 entered the 7,000 era, the Nasdaq posted its longest winning streak since 2009, and the Strait of Hormuz was declared open for the first time since the Iran war began in late February. The rally was global in scope: KOSPI surged 5.68%, DAX gained 3.77%, Nikkei rose 2.73%, and China's CSI 300 erased all war-related losses after Q1 GDP beat at 5.0%. Wall Street banks delivered blockbuster Q1 results — Goldman's record equities trading, JPMorgan's $50.5 billion revenue and 21% fixed-income growth, Citi's best trading quarter since the GFC — confirming that elevated volatility is a windfall for market-makers even as it creates stress elsewhere. TSMC's raised 2026 outlook validated AI demand resilience, and Oracle was on track for its best week since 1999. However, the euphoria must be tempered by the fragility of its foundation. The ceasefire expires April 22 — four days from now — and no permanent deal exists despite Trump's optimistic claims. By Saturday, Iran had reversed its Hormuz opening. The IEA warned that even with full reopening, oil and gas recovery could take two years. Europe faces a potential jet fuel crisis within six weeks. The dollar weakened to DXY 98.10 as Wall Street turned bearish on the greenback, while gold's continued ascent to $4,857.60 alongside equity records signals that structural hedging demand is not fading. The 10-year breakeven at 2.36% appears complacent about inflation persistence if oil re-spikes. Kevin Warsh's Fed nomination hearing on April 21 introduces central bank uncertainty just as Powell's term expires May 15. In credit, HY spreads at 286bp look tight given the private credit anxiety highlighted by Bloomberg's analysis and Oaktree's Howard Marks. The retail investor surge — from 10th to 55th percentile participation per JPMorgan — echoes the late stages of prior risk-on episodes. We characterize this market as 'priced for perfection on a binary event' — the optimal configuration for those who are right about peace, and a dangerous one for those who are wrong.",
-    "macro_thesis": "Our base case (55% probability) is that the US-Iran ceasefire is extended for two additional weeks, allowing talks to continue and the Hormuz reopening to gradually normalize. In this scenario, the S&P 500 can consolidate above 7,000, oil drifts toward $80-85 on WTI, and the 10-year yield settles around 4.1-4.2% as rate-cut expectations firm. The alternative scenario (35% probability) involves a ceasefire collapse, with oil spiking back toward $100-110 and equities giving back 5-8% in days. A tail scenario (10% probability) involves a broader escalation that sends oil toward $130+ and triggers a global recession. The key variables to monitor are: (1) the April 22 ceasefire deadline; (2) the Warsh hearing on April 21; (3) US retail sales data on Monday; (4) flash PMIs on Wednesday/Thursday. Structurally, the AI capex cycle remains the most powerful secular tailwind — TSMC's raised outlook, Nvidia's ecosystem investments, Anthropic's Mythos, and Microsoft's $17.4 billion Nebius commitment all reinforce this. We expect Technology to continue outperforming in any scenario short of full-blown recession.",
-    "upcoming_events": "Next week is one of the most event-rich of 2026. The US-Iran ceasefire expires on Tuesday, April 22, making Monday and Tuesday's geopolitical headlines the week's dominant driver. Kevin Warsh's Fed chair nomination hearing is scheduled for Monday, April 21, at 10 AM ET — his testimony on monetary policy, Fed independence, and rate outlook will be market-moving. US retail sales data on Monday (consensus +1.3% MoM) will provide the first hard data on consumer resilience during the war period. Flash PMIs on Wednesday for Germany, UK, and the US will gauge whether the oil shock is filtering into economic activity. UK CPI on Tuesday (expected 3.3% vs. 3.0%) could reset BOE expectations. Japan CPI on Thursday and German Ifo on Thursday round out the macro picture. Earnings season continues with UnitedHealth Group, Blackstone, Procter & Gamble, Intel (April 23), Tesla, and GE Vernova headlining.",
+    "regime_description": "Markets are in a 'transition' regime between the war-driven stagflationary environment of March-early April and a potential goldilocks scenario — but the transition is incomplete and reversible. The S&P 500 at 7,126 with a 17.48 VIX looks like goldilocks, yet oil at $83.85 (still 20% above pre-war levels), 10-year breakevens at 2.36% with core PCE potentially at 3.2%, and a ceasefire expiring in four days all point to lingering stagflationary risks. The market is front-running a positive outcome that remains deeply uncertain, creating an unstable equilibrium that could tip decisively in either direction next week.",
+    "global_view": "The week ending April 18, 2026 will be remembered as the moment when global markets pivoted from war-crisis mode to de-escalation euphoria, with the S&P 500 breaching 7,000 and crude oil collapsing 13% in the same week. The trifecta of Iran's Hormuz reopening announcement, record Wall Street bank earnings, and TSMC's raised AI guidance created a powerful positive feedback loop across asset classes. The S&P 500's 4.54% surge to 7,126.06 was its best week since May 2025, and the NASDAQ's 6.84% advance to 24,468.48 confirmed the AI infrastructure theme as the dominant equity narrative. Technology (+8.22%) was the decisive sector leader, followed by Consumer Discretionary (+6.66%) and KOSPI (+5.68% weekly, +43.68% YTD), underscoring the global reach of the AI semiconductor trade. In fixed income, the 10-year Treasury yield fell to 4.246% — its lowest in a month — while the 2s10s curve normalized to +55 bps, a constructive signal for economic growth expectations. The dollar weakened broadly (DXY -0.56% to 98.10), with the Swiss franc and Australian dollar seeing the most dramatic moves (USD/CHF -1.45%, AUD/USD +2.11%). Gold's 2.01% advance to $4,857.60 alongside the equity rally is the week's most important divergent signal — sophisticated investors are maintaining geopolitical hedges even as they participate in the risk-on rotation. Industrial metals confirmed growth optimism with copper (+3.97%), aluminum (+4.87%), and silver (+7.09%) all posting strong gains. The bank earnings season opened with Goldman Sachs ($17.55 EPS, record equities revenue) and JPMorgan ($5.94 EPS, 21% FICC growth) both smashing expectations, validating the institutional infrastructure that benefits from volatility. However, the week's euphoria must be viewed against a sobering backdrop: Iran reversed the Hormuz opening by Saturday, the ceasefire expires April 22, US-Iran talks have not produced a framework, and the IEA warns production recovery could take two years. The VIX at 17.48 represents complacency that history suggests will be punished if the binary outcome goes wrong. For now, the market's message is clear — price the best case, hedge the worst case — but the execution of that message appears heavily skewed toward the former.",
+    "macro_thesis": "Our base case for the next 2-4 weeks is cautious constructive: the S&P 500 can hold 7,000+ if the ceasefire is extended and US-Iran talks make visible progress, with a potential target of 7,300-7,400 by mid-May. However, we assign a meaningful 35-40% probability to a ceasefire collapse that could send the S&P back to the 6,500-6,700 range and WTI back above $95. The key variables are: (1) whether Pakistan succeeds in brokering continued talks this weekend, (2) the Warsh confirmation hearing's tone on rates and inflation, (3) TSMC-validated AI demand sustaining the tech leadership, and (4) the April FOMC meeting on April 28-29, which will be the first since the Hormuz announcement. The fed funds rate at 3.64% with core PCE potentially at 3.2% leaves the Fed in a difficult position — cutting risks inflaming war-driven inflation, while holding risks undermining an economy already showing signs of strain (GDP growth at just 0.5% in Q4 2025). We expect the Fed to hold at the April meeting but for Warsh's hearing to signal openness to cuts if oil continues to decline. The AI capex cycle (TSMC guiding 30%+ revenue growth, Nvidia investing $5B in Intel, Microsoft's $17.4B Nebius deal) provides a structural floor for growth-oriented equities that is independent of the geopolitical situation.",
+    "upcoming_events": "Next week is extraordinarily event-dense. The Kevin Warsh Fed Chair confirmation hearing on Tuesday (10 a.m. ET) will dominate macro headlines, with markets focused on his views on rate cuts, inflation, and Fed independence. The same day brings US Retail Sales (estimate: +1.3% MoM vs. +0.6% prior), Germany's ZEW Economic Sentiment Index (estimate: -10 vs. -0.5 prior), and UK unemployment data. The Israel-Lebanon ceasefire is scheduled to expire on Tuesday/Wednesday if not extended, making it the single highest-impact binary risk of the week. Wednesday brings UK inflation (estimate: 3.3% vs. 3.0%), while Thursday features flash PMIs for Germany (manufacturing: 51.2), UK (manufacturing: 49.5, services: 49.9), German Ifo Business Climate (84.8 vs. 86.4), and Japan CPI. On the earnings front, UnitedHealth Group, Blackstone, Procter & Gamble, Intel, GE Vernova, Capital One, American Express, Tesla, Texas Instruments, and IBM all report. China's LPR decision on Monday is also market-moving.",
     "strategy": [
       {
         "type": "Tactical Allocation",
-        "recommendation": "Reduce equity overweight from maximum to modest overweight; build cash buffer to 10-15% for potential ceasefire-related volatility",
-        "rationale": "With the S&P 500 at all-time highs and VIX at 17.48, the market is priced for a smooth resolution of the Iran conflict. The April 22 ceasefire deadline creates a binary risk that is not adequately compensated at current positioning levels. By reducing equity exposure from maximum bullish to a modest overweight, we maintain upside participation if the ceasefire extends while preserving capital to deploy on a pullback. The cash buffer allows opportunistic buying if oil re-spikes and equities correct 3-5%.",
-        "timeframe": "1-2 weeks",
-        "conviction": "high"
-      },
-      {
-        "type": "Hedging",
-        "recommendation": "Purchase S&P 500 May put spreads (6900/6700) funded by selling call spreads (7300/7500); establish long VIX May calls",
-        "rationale": "The VIX term structure in contango makes near-term options relatively cheap. A 6900/6700 put spread costs approximately 15-20bp of portfolio value and would provide 2% of downside protection in a war resumption scenario. The 7300/7500 call spread sale partially funds the hedge and caps upside at levels the market would only reach in a full peace scenario. Long VIX May calls provide a convex hedge against the specific binary risk of the April 22 ceasefire deadline. The current VIX at 17.48 provides attractive entry for volatility longs.",
+        "recommendation": "Overweight US large-cap technology (NASDAQ) and underweight energy; maintain a 65/25/10 equity/bond/cash split with elevated hedge overlay",
+        "rationale": "The AI infrastructure cycle is the dominant secular theme, validated by TSMC's raised guidance and Nvidia/Microsoft's combined $22.4 billion in new AI infrastructure commitments. Technology ETF's 8.22% weekly gain and 7.10% YTD performance suggests momentum is accelerating. Energy's -3.37% weekly decline reflects the Hormuz de-escalation trade, and the sector still faces a 2-year production recovery timeline per the IEA, creating a challenging medium-term earnings backdrop even if oil stabilizes above $80. The 10% cash buffer provides deployment capacity for any ceasefire-driven correction.",
         "timeframe": "2-4 weeks",
         "conviction": "high"
       },
       {
+        "type": "Hedging",
+        "recommendation": "Purchase 1-month S&P 500 put spreads (6,700/6,500) and WTI call spreads ($95/$105) as catastrophic Hormuz re-closure hedges",
+        "rationale": "The VIX at 17.48 and in contango makes put protection relatively inexpensive, while the binary ceasefire expiry on April 22 creates a clear catalyst for vol expansion. A ceasefire collapse could send WTI back above $95 within hours (the IEA warns of $150 physical crude in a prolonged closure scenario), which would hammer equities and reverse the entire week's gains. The hedge cost is approximately 0.5% of portfolio value for meaningful downside protection to the 6,500 level. Simultaneously, WTI call spreads at $95/$105 provide direct energy price hedge at favorable premium given the post-Friday vol crush.",
+        "timeframe": "1-3 weeks",
+        "conviction": "high"
+      },
+      {
         "type": "Long Opportunity",
-        "recommendation": "Overweight European and Asian semiconductor stocks; add to TSMC, ASML, and Soitec on any dip",
-        "rationale": "The AI infrastructure capex cycle is the most powerful secular trend in global markets and is now being validated by Q1 earnings. TSMC raised its 2026 revenue growth forecast to 30%+ with 'extremely robust' AI demand. ASML upgraded its 2026 sales guidance to €36-40 billion. European names like Soitec (+53.47% this week) and STMicroelectronics offer cheaper entry points than US mega-cap tech with similar AI exposure. The sector will outperform whether the ceasefire holds or collapses, as AI investment is not contingent on Middle Eastern geopolitics.",
+        "recommendation": "Initiate long position in TSMC (TSM) and broad semiconductor exposure (SMH) on any pullback to $360-365 / $280-285 levels",
+        "rationale": "TSMC's Q1 results confirmed the AI infrastructure buildout is accelerating, not decelerating, with 58% net income growth, 66.2% gross margins, and raised 2026 guidance to above 30% revenue growth. The company fabricates 70% of the world's advanced chips, making it the indispensable infrastructure play for the AI megatrend. CEO Wei's characterization of demand as 'extremely robust' with capex guided to the high end of $52-56 billion validates the investment thesis. TSMC's Taipei-listed shares are up 34% YTD with a $1.7 trillion market cap, and the post-earnings dip of approximately 3% on profit-taking creates a tactical entry point. The KOSPI's +43.68% YTD performance confirms the Asian semiconductor theme has further to run.",
         "timeframe": "3-6 months",
         "conviction": "high"
       },
       {
         "type": "Short Opportunity",
-        "recommendation": "Short US Energy sector (XLE) vs. long Technology sector (XLK) as a pair trade",
-        "rationale": "The energy sector fell 3.37% this week as oil collapsed, while technology surged 8.22%. This rotation has further to run in our base case of ceasefire extension and oil normalization. Energy stocks like LyondellBasell and Dow were the week's worst S&P 500 performers, and the sector's year-to-date outperformance of +21.31% is vulnerable to mean-reversion if oil stabilizes in the $80-90 range. The XLE/XLK pair trade is neutral to broader market direction and captures the ongoing rotation from old economy to AI economy. It also provides a natural hedge: if the ceasefire collapses and oil spikes, the short XLE leg would underperform but the fundamental energy company tailwind could offset losses.",
-        "timeframe": "4-8 weeks",
+        "recommendation": "Short European luxury names (Kering, LVMH-relative) and chemical companies that traded at war-premium valuations",
+        "rationale": "Kering fell 8.27% this week on Q1 revenue decline and Gucci underperformance, with the Iran war impact on luxury consumer sentiment exacerbating structural challenges. Barry Callebaut dropped 18.36% on cocoa supply difficulties, and chemicals stocks fell sharply as the Hormuz reopening reversed supply-disruption premiums. LyondellBasell and Dow Inc. each fell over 10%. These sectors face a 'lose-lose' scenario: if the ceasefire holds, war premiums unwind further; if it collapses, consumer demand and supply chains deteriorate. The chemicals sector's reversal is particularly instructive — stocks that surged 20-30% on supply disruption fears gave back most gains in a single week, confirming the trade was speculative rather than fundamental.",
+        "timeframe": "2-6 weeks",
         "conviction": "medium"
       },
       {
         "type": "Risk Management",
-        "recommendation": "Set hard stop-losses on all equity positions at 3% below current levels; reduce high-yield credit exposure to underweight; maintain gold allocation at 5-7% of portfolio",
-        "rationale": "The binary nature of the April 22 ceasefire deadline requires disciplined risk management. A 3% stop on equity positions limits drawdown to manageable levels while allowing normal intra-week volatility. High-yield spreads at 286bp offer insufficient compensation for ceasefire tail risk and private credit contagion potential. Gold at $4,857 continues to serve as the ultimate portfolio insurance — its ability to rally alongside equities this week demonstrates its structural appeal beyond simple fear hedging. Maintaining a 5-7% gold allocation provides diversification that performs in both our base and alternative scenarios.",
-        "timeframe": "Ongoing",
+        "recommendation": "Reduce gross exposure to 85-90% of normal; size all new positions at 75% of standard; maintain stop-losses at 3-5% below entry on all tactical trades",
+        "rationale": "The binary nature of next week's calendar — ceasefire expiry, Warsh hearing, mega-cap earnings — creates a setup where normal position sizing could result in outsized drawdowns. The S&P's 4.54% weekly gain was the best since May 2025 and reflects significant positive momentum, but the VIX at 17.48 suggests the options market is not adequately pricing the event risk calendar. The 2s10s spread at +55 bps and HY spreads at 286 bps are consistent with benign conditions, but these conditions are contingent on geopolitical developments that could shift in hours. Discipline in position sizing and stop-loss adherence is the priority — the market can offer attractive entry points if the ceasefire collapses, but only for investors who have preserved capital.",
+        "timeframe": "1-2 weeks",
         "conviction": "high"
       }
     ]
@@ -867,26 +896,37 @@
     "note": "Source: Finnhub",
     "events": [
       {
+        "date": "19 April",
+        "time": "23:50",
+        "country": "JP",
+        "flag": "🇯🇵",
+        "event": "Japan Balance of Trade",
+        "impact": "high",
+        "previous": "¥57.3B",
+        "forecast": "N/A",
+        "context": "Japan's trade balance, released over the weekend, sets the tone for Asian markets Monday. A larger surplus than the ¥57.3B prior would support the yen and validate export demand recovery expectations."
+      },
+      {
         "date": "20 April",
         "time": "12:30",
         "country": "CA",
         "flag": "🇨🇦",
-        "event": "Inflation Rate YoY",
+        "event": "Canada Inflation Rate YoY",
         "impact": "high",
         "previous": "1.8%",
-        "forecast": "TBD",
-        "context": "Canada's CPI will be closely watched as PM Carney prepares a fiscal update. The IMF lauded Canada's fiscal position as strongest in the G7. Higher energy costs from the Hormuz crisis may push headline CPI higher."
+        "forecast": "N/A",
+        "context": "Canada's CPI is important for BoC rate expectations. With the IMF noting Canada has the strongest fiscal position among G7 nations, inflation data will test whether the Bank of Canada can continue its easing path."
       },
       {
         "date": "21 April",
         "time": "06:00",
         "country": "GB",
         "flag": "🇬🇧",
-        "event": "Unemployment Rate",
+        "event": "UK Unemployment Rate",
         "impact": "high",
         "previous": "5.2%",
         "forecast": "5.2%",
-        "context": "UK labor market data will inform BOE policy expectations. The UK economy showed surprise strength in February but the war's impact on Q2 is the key uncertainty. Starmer faces political headwinds."
+        "context": "UK labor market data arrives just ahead of Wednesday's CPI print, creating a 48-hour window that will shape BoE policy expectations. A stable 5.2% reading would support the current 'higher for longer' rate stance."
       },
       {
         "date": "21 April",
@@ -896,63 +936,85 @@
         "event": "ZEW Economic Sentiment Index",
         "impact": "high",
         "previous": "-0.5",
-        "forecast": "-10.0",
-        "context": "ZEW sentiment is expected to deteriorate sharply to -10.0 from -0.5, reflecting the Iran war's impact on German business confidence. A worse-than-expected reading could test the DAX's recent rally."
+        "forecast": "-10",
+        "context": "The April ZEW reading is expected to deteriorate further to -10 from March's already-collapsed -0.5 (which itself was a 58.8-point monthly decline from February's 58.3). This would confirm that the Iran war has devastated German economic confidence, particularly in energy-intensive export sectors."
       },
       {
         "date": "21 April",
         "time": "12:30",
         "country": "US",
         "flag": "🇺🇸",
-        "event": "Retail Sales MoM",
+        "event": "US Retail Sales MoM",
         "impact": "high",
         "previous": "0.6%",
         "forecast": "1.3%",
-        "context": "Retail sales expected to jump 1.3% MoM, the strongest reading in months. Strong bank earnings showed consumer spending grew faster than a year ago. This release is critical for confirming the 'resilient consumer' thesis that underpins the equity rally."
+        "context": "US retail sales are expected to accelerate sharply to +1.3% from +0.6%, potentially reflecting consumer front-loading ahead of war-related inflation. A beat would ease recession fears but could complicate the Fed's rate-cut calculus. This data lands the same day as the Warsh hearing and the ceasefire expiry window."
       },
       {
         "date": "22 April",
         "time": "06:00",
         "country": "GB",
         "flag": "🇬🇧",
-        "event": "Inflation Rate YoY",
+        "event": "UK Inflation Rate YoY",
         "impact": "high",
         "previous": "3.0%",
         "forecast": "3.3%",
-        "context": "UK CPI expected to accelerate to 3.3% from 3.0%, driven by energy price pass-through from the Hormuz crisis. A hot reading would reduce BOE rate cut expectations and pressure gilts."
+        "context": "UK CPI is expected to accelerate to 3.3% from 3.0%, driven by energy and food cost pass-through from the Hormuz disruption. A hotter print could push GBP/USD above 1.36 on hawkish BoE expectations, while a miss could trigger cable weakness."
       },
       {
         "date": "23 April",
         "time": "07:30",
         "country": "DE",
         "flag": "🇩🇪",
-        "event": "S&P Global Manufacturing PMI Flash",
+        "event": "Germany Flash Manufacturing PMI",
         "impact": "high",
         "previous": "52.2",
         "forecast": "51.2",
-        "context": "German manufacturing PMI expected to cool from 52.2 to 51.2, still in expansion territory but reflecting the drag from energy disruptions. The reading will test whether European industry is absorbing the oil shock."
+        "context": "German manufacturing PMI is expected to slow to 51.2 from 52.2, testing whether the sector can maintain its above-50 expansion reading amid the war's energy cost impact. A sub-50 reading would signal contraction and likely weigh on European equities."
       },
       {
         "date": "23 April",
         "time": "08:30",
         "country": "GB",
         "flag": "🇬🇧",
-        "event": "S&P Global Manufacturing PMI Flash",
+        "event": "UK Flash Manufacturing PMI",
         "impact": "high",
         "previous": "51.0",
         "forecast": "49.5",
-        "context": "UK manufacturing PMI forecast to slip below 50 into contraction at 49.5, a significant deterioration that would confirm the war's impact on British industry. Combined with elevated CPI, this could create a stagflationary narrative for the UK."
+        "context": "UK manufacturing PMI is expected to slip into contraction territory at 49.5 from 51.0, reflecting the energy cost squeeze on British industry. This would be the first sub-50 reading in months and could weigh on sterling."
+      },
+      {
+        "date": "23 April",
+        "time": "08:30",
+        "country": "GB",
+        "flag": "🇬🇧",
+        "event": "UK Flash Services PMI",
+        "impact": "high",
+        "previous": "50.5",
+        "forecast": "49.9",
+        "context": "UK services PMI is also expected to contract marginally to 49.9 from 50.5, which would put both major sectors in contraction simultaneously for the first time since the post-tariff shock period."
       },
       {
         "date": "23 April",
         "time": "23:30",
         "country": "JP",
         "flag": "🇯🇵",
-        "event": "Inflation Rate YoY",
+        "event": "Japan Inflation Rate YoY",
         "impact": "high",
         "previous": "1.3%",
-        "forecast": "TBD",
-        "context": "Japan CPI will inform BOJ tightening expectations. The Nikkei is near record highs and the BOJ has been gradually normalizing policy. An upside surprise could strengthen the yen and impact carry trades."
+        "forecast": "N/A",
+        "context": "Japan CPI is watched for signals on BoJ policy direction. A continuation of moderate inflation around 1.3% would support the current ultra-low rate environment, while acceleration could revive yen strengthening bets and pressure USD/JPY below 157."
+      },
+      {
+        "date": "24 April",
+        "time": "06:00",
+        "country": "GB",
+        "flag": "🇬🇧",
+        "event": "UK Retail Sales MoM",
+        "impact": "high",
+        "previous": "-0.4%",
+        "forecast": "0.2%",
+        "context": "UK retail sales are expected to rebound modestly to +0.2% from -0.4%, providing a pulse check on the British consumer amid rising living costs from the Iran war energy pass-through."
       },
       {
         "date": "24 April",
@@ -963,13 +1025,24 @@
         "impact": "high",
         "previous": "86.4",
         "forecast": "84.8",
-        "context": "Ifo business climate expected to fall from 86.4 to 84.8, its lowest in months. German industry is a key bellwether for Eurozone growth, and deterioration here would challenge the DAX's recent strength."
+        "context": "The Ifo index is expected to decline further to 84.8 from 86.4, which was already a 13-month low. This would confirm the ZEW's message that German business confidence is deteriorating rapidly under the weight of Middle East energy disruption and persistent structural challenges."
+      },
+      {
+        "date": "27 April",
+        "time": "06:00",
+        "country": "DE",
+        "flag": "🇩🇪",
+        "event": "GfK Consumer Confidence",
+        "impact": "high",
+        "previous": "-28",
+        "forecast": "N/A",
+        "context": "German consumer confidence is expected to remain deeply negative, with the prior reading of -28 already reflecting war-driven pessimism about purchasing power and economic stability."
       }
     ]
   },
   "section10_earnings_calendar": {
     "title": "Earnings Calendar — Next Week",
-    "note": "Sources: Finnhub, Wall Street Journal, Bloomberg",
+    "note": "Source: Finnhub and Daily Market Watch emails",
     "earnings": [
       {
         "date": "21 April",
@@ -977,9 +1050,9 @@
         "company": "UnitedHealth Group",
         "sector": "Healthcare",
         "timing": "before open",
-        "eps_estimate": "$7.25",
-        "revenue_estimate": "$111B",
-        "context": "The insurance bellwether faces scrutiny over 'longer-term structural challenges' at the heart of its business, according to WSJ. Despite a recent Medicare rate hike that sent the stock up 9% in a single day, investors betting on a return to historical fat margins may be disappointed. Management commentary on medical cost trends is critical.",
+        "eps_estimate": "$7.29",
+        "revenue_estimate": "$111.0B",
+        "context": "UnitedHealth's stock surged 9% earlier this week after Medicare Advantage payment rates came in better than feared. However, long-term structural challenges in managed care persist, and the earnings call will be scrutinized for commentary on medical cost trends, prior authorization reform, and the impact of war-driven healthcare cost inflation. The Healthcare sector gained only 1.01% this week, underperforming the broader market.",
         "impact_potential": "high"
       },
       {
@@ -988,64 +1061,86 @@
         "company": "Blackstone",
         "sector": "Financials",
         "timing": "before open",
-        "eps_estimate": "$1.10",
+        "eps_estimate": "$1.15",
         "revenue_estimate": "$3.8B",
-        "context": "Blackstone's results will provide the most direct read on private credit and alternative asset market health. With Bloomberg and CFA Institute both flagging private credit stress, Blackstone's commentary on fund valuations, deployment pace, and realized losses will be closely parsed by credit markets.",
+        "context": "As the world's largest alternative asset manager, Blackstone's results will provide critical insight into private credit market conditions — a topic highlighted this week by Bloomberg's analysis of hidden losses and weaker returns. Real estate and infrastructure portfolio valuations will be closely watched given the war's impact on commercial property and energy infrastructure.",
         "impact_potential": "high"
       },
       {
         "date": "22 April",
+        "symbol": "PG",
+        "company": "Procter & Gamble",
+        "sector": "Consumer Staples",
+        "timing": "before open",
+        "eps_estimate": "$1.55",
+        "revenue_estimate": "$21.5B",
+        "context": "P&G's results will test the war's pass-through to consumer staples pricing. With Consumer Staples gaining only 0.11% this week (the weakest positive sector), investors are questioning whether pricing power can offset commodity cost increases. Emerging market revenue exposure, particularly in Africa where the IMF warns of food insecurity, is a key concern.",
+        "impact_potential": "medium"
+      },
+      {
+        "date": "22 April",
+        "symbol": "INTC",
+        "company": "Intel",
+        "sector": "Technology",
+        "timing": "after close",
+        "eps_estimate": "$0.02",
+        "revenue_estimate": "$12.2B",
+        "context": "Intel reports amid a transformed competitive landscape: Nvidia is investing $5 billion in Intel, TSMC's record results validate the foundry model, and Musk's Terafab chip plant adds another competitive dynamic. Intel's foundry services and AI chip strategy will be the key focus areas, particularly given the stock's underperformance relative to TSMC and Nvidia YTD.",
+        "impact_potential": "high"
+      },
+      {
+        "date": "22 April",
+        "symbol": "GEV",
+        "company": "GE Vernova",
+        "sector": "Industrials",
+        "timing": "before open",
+        "eps_estimate": "$2.80",
+        "revenue_estimate": "$9.5B",
+        "context": "As a pure-play energy equipment company, GE Vernova's results will provide insight into the energy transition and grid infrastructure buildout that has been complicated by the Hormuz crisis. The company's wind and gas turbine businesses face both tailwinds (energy security demand) and headwinds (supply chain disruption).",
+        "impact_potential": "medium"
+      },
+      {
+        "date": "23 April",
         "symbol": "TSLA",
         "company": "Tesla",
         "sector": "Consumer Discretionary",
         "timing": "after close",
         "eps_estimate": "$0.45",
         "revenue_estimate": "$22.5B",
-        "context": "Tesla reports amid headlines about a six-seater Model Y variant for India and Elon Musk's ambitious Terafab chip manufacturing plant. The company's auto deliveries have been volatile, and rising energy costs have pressured EV economics. Musk's political activities continue to polarize investors and consumers.",
+        "context": "Tesla reports amid heightened attention on Elon Musk's Terafab chip manufacturing plant announcement and the broader AI/EV intersection. The Consumer Discretionary sector's 6.66% weekly gain sets a high bar for expectations. Automotive delivery numbers, margins, and Musk's commentary on the Hormuz-driven energy cost environment will dominate the call.",
         "impact_potential": "high"
       },
       {
-        "date": "22 April",
+        "date": "23 April",
         "symbol": "TXN",
         "company": "Texas Instruments",
         "sector": "Technology",
         "timing": "after close",
-        "eps_estimate": "$1.25",
+        "eps_estimate": "$1.22",
         "revenue_estimate": "$4.1B",
-        "context": "TXN is a bellwether for the analog semiconductor cycle. Its results will indicate whether industrial and automotive chip demand is recovering from the inventory correction. The company's massive capex in US fabs makes it relevant to the CHIPS Act manufacturing narrative.",
+        "context": "TI provides a critical read on analog and embedded semiconductor demand beyond the AI hyper-growth narrative. With TSMC confirming advanced chip demand remains 'extremely robust,' TI's results will test whether the broader chip cycle is also healthy or if AI is cannibalizing demand from other end markets.",
         "impact_potential": "medium"
       },
       {
         "date": "23 April",
-        "symbol": "INTC",
-        "company": "Intel",
+        "symbol": "IBM",
+        "company": "IBM",
         "sector": "Technology",
         "timing": "after close",
-        "eps_estimate": "$0.10",
-        "revenue_estimate": "$12.2B",
-        "context": "Intel reports its first quarter under the Nvidia partnership framework, with shares up 90% YTD following the $5 billion Nvidia investment and US government backing. Investors will focus on revenue guidance, 18A chip yield progress, and commentary on foundry customer pipeline. CEO Lip-Bu Tan's execution is under the microscope.",
-        "impact_potential": "high"
-      },
-      {
-        "date": "23 April",
-        "symbol": "PG",
-        "company": "Procter & Gamble",
-        "sector": "Consumer Staples",
-        "timing": "before open",
-        "eps_estimate": "$1.55",
-        "revenue_estimate": "$21.0B",
-        "context": "P&G's results will gauge global consumer demand and input cost pressures. The company's pricing power in a rising energy cost environment is key. After PepsiCo showed strong results from price cuts, P&G's strategy on volume vs. pricing will set the tone for staples.",
+        "eps_estimate": "$1.42",
+        "revenue_estimate": "$14.5B",
+        "context": "IBM's enterprise AI and consulting business will be evaluated for signs that AI spending is translating into corporate IT budgets. The company's Red Hat and Watsonx platforms are positioned to benefit from the infrastructure buildout validated by TSMC and the Microsoft-Nebius deal. Software revenue growth trajectory is the key metric.",
         "impact_potential": "medium"
       },
       {
-        "date": "23 April",
-        "symbol": "GEV",
-        "company": "GE Vernova",
-        "sector": "Industrials",
+        "date": "24 April",
+        "symbol": "COF",
+        "company": "Capital One",
+        "sector": "Financials",
         "timing": "before open",
-        "eps_estimate": "$1.80",
-        "revenue_estimate": "$9.5B",
-        "context": "GE Vernova provides critical insight into the energy transition capex cycle. As the war disrupts traditional energy supplies, investment in renewable infrastructure and grid resilience takes on greater urgency. Orders and backlog commentary will signal whether the energy transition is accelerating.",
+        "eps_estimate": "$3.75",
+        "revenue_estimate": "$10.1B",
+        "context": "Capital One's credit card and auto loan portfolios provide a direct read on US consumer health. With FRED data showing credit card default rates at elevated levels and auto loan spreads widening, investors will be focused on provision trends and net charge-off rates. The company's pending Discover Financial acquisition adds strategic complexity.",
         "impact_potential": "medium"
       },
       {
@@ -1054,20 +1149,9 @@
         "company": "American Express",
         "sector": "Financials",
         "timing": "before open",
-        "eps_estimate": "$3.50",
-        "revenue_estimate": "$17.0B",
-        "context": "AmEx provides a window into premium consumer spending trends. With JPMorgan reporting 9% card spending growth and lower delinquencies, AmEx should confirm affluent consumer resilience. Travel and entertainment spending commentary will also reflect the oil-shock's impact on travel demand.",
-        "impact_potential": "medium"
-      },
-      {
-        "date": "24 April",
-        "symbol": "COF",
-        "company": "Capital One Financial",
-        "sector": "Financials",
-        "timing": "before open",
-        "eps_estimate": "$3.75",
-        "revenue_estimate": "$10.5B",
-        "context": "Capital One's results will provide the most granular read on subprime consumer credit health. Card delinquency trends and provisioning guidance are the key metrics. The company's pending Discover acquisition adds strategic complexity.",
+        "eps_estimate": "$3.58",
+        "revenue_estimate": "$17.2B",
+        "context": "Amex's premium consumer spending data is a bellwether for discretionary consumption and travel demand. The airline sector's 6%+ surge this week on fuel relief expectations makes Amex's travel and entertainment spending data particularly relevant. Any commentary on war-related travel disruption or European spending weakness will be closely watched.",
         "impact_potential": "medium"
       }
     ]
