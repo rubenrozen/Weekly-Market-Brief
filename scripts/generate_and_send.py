@@ -26,6 +26,7 @@ from reportlab.lib.enums import TA_CENTER
 # ─── Secrets ──────────────────────────────────────────────────────────────────
 ANTHROPIC_API_KEY   = os.environ["ANTHROPIC_API_KEY"]
 ANTHROPIC_MODEL     = os.environ.get("ANTHROPIC_MODEL", "claude-opus-4-6")
+SUMMARIZER_MODEL    = "claude-sonnet-4-6"  # Sonnet for email summarization, Opus for main report
 GMAIL_REFRESH_TOKEN = os.environ["GMAIL_REFRESH_TOKEN"]
 GMAIL_CLIENT_ID     = os.environ["GMAIL_CLIENT_ID"]
 GMAIL_CLIENT_SECRET = os.environ["GMAIL_CLIENT_SECRET"]
@@ -480,6 +481,54 @@ def fetch_daily_briefs_from_gmail(access_token: str) -> str:
     result = "\n\n".join(briefs)
     print(f"[1b/6] ✅ {len(briefs)} emails loaded ({len(result):,} chars total)")
     return result
+
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  EMAIL SUMMARIZER — Haiku compresses raw emails into financial intelligence
+# ══════════════════════════════════════════════════════════════════════════════
+def summarize_briefs_with_haiku(raw_briefs: str) -> str:
+    """Use Haiku (cheap) to extract only financially relevant content from emails.
+    Reduces token count by ~80% before passing to the main model."""
+    if not raw_briefs or not raw_briefs.strip():
+        return ""
+
+    print("[1c/6] Summarizing emails with Haiku (cost optimization)...")
+    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+
+    # Truncate raw input to Haiku context limit
+    raw_trunc = raw_briefs[:120000]
+
+    try:
+        msg = client.messages.create(
+            model=SUMMARIZER_MODEL,
+            max_tokens=6000,
+            system=(
+                "You are a financial analyst assistant. Extract and summarize ONLY the "
+                "financially relevant information from these market emails. "
+                "Focus on: market moves, central bank decisions, economic data releases, "
+                "earnings results, geopolitical events affecting markets, sector trends, "
+                "commodity moves, currency moves, and analyst views. "
+                "Discard: ads, unsubscribe links, general commentary, non-financial content. "
+                "Output a clean structured summary organized by topic. Be concise but complete. "
+                "ALL output in English."
+            ),
+            messages=[{
+                "role": "user",
+                "content": f"Extract all financially relevant information from these emails:\n\n{raw_trunc}"
+            }]
+        )
+        summary = msg.content[0].text
+        input_tok  = msg.usage.input_tokens
+        output_tok = msg.usage.output_tokens
+        cost = (input_tok / 1_000_000 * 1.0) + (output_tok / 1_000_000 * 5.0)
+        print(f"[1c/6] ✅ Summarized {len(raw_briefs):,} → {len(summary):,} chars "
+              f"({input_tok:,} in / {output_tok:,} out / ${cost:.3f})")
+        return summary
+    except Exception as e:
+        print(f"[1c/6] ⚠️ Haiku summarization failed ({e}) — using raw briefs")
+        # Fallback: truncate raw briefs to 20k chars
+        return raw_briefs[:20000]
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -1128,7 +1177,7 @@ Write detailed, professional analyses. Total must exceed 20,000 characters.
             ) as stream:
                 for text in stream.text_stream:
                     raw += text
-            print(f"[2/6] Streaming complete — {len(raw)} characters")
+            print(f"[2/6] Streaming complete — {len(raw):,} characters")
             match = re.search(r'\{[\s\S]*\}', raw)
             if not match:
                 print(f"[2/6] ⚠️ No JSON found (attempt {attempt+1}/3)")
@@ -1766,7 +1815,9 @@ if __name__ == '__main__':
     token        = get_fresh_access_token()
     real_data    = collect_real_data()
     # Read last 7 days of Daily Market Watch emails
-    daily_briefs = fetch_daily_briefs_from_gmail(token)
+    raw_briefs   = fetch_daily_briefs_from_gmail(token)
+    # Summarize with Haiku to cut tokens before passing to main model
+    daily_briefs = summarize_briefs_with_haiku(raw_briefs) if raw_briefs else ""
     # Build numerical skeleton BEFORE calling Claude
     skeleton     = build_real_data_skeleton(real_data)
     # Claude generates text/narratives — grounded in real emails + web search
