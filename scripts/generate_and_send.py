@@ -487,13 +487,13 @@ def fetch_daily_briefs_from_gmail(access_token: str) -> str:
 # ══════════════════════════════════════════════════════════════════════════════
 #  EMAIL SUMMARIZER — Haiku compresses raw emails into financial intelligence
 # ══════════════════════════════════════════════════════════════════════════════
-def summarize_briefs_with_haiku(raw_briefs: str) -> str:
-    """Use Haiku (cheap) to extract only financially relevant content from emails.
+def summarize_briefs_with_sonnet(raw_briefs: str) -> str:
+    """Use Sonnet to extract only financially relevant content from emails.
     Reduces token count by ~80% before passing to the main model."""
     if not raw_briefs or not raw_briefs.strip():
         return ""
 
-    print("[1c/6] Summarizing emails with Haiku (cost optimization)...")
+    print("[1c/6] Summarizing emails with Sonnet...")
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
     # Truncate raw input to Haiku context limit
@@ -521,14 +521,64 @@ def summarize_briefs_with_haiku(raw_briefs: str) -> str:
         summary = msg.content[0].text
         input_tok  = msg.usage.input_tokens
         output_tok = msg.usage.output_tokens
-        cost = (input_tok / 1_000_000 * 1.0) + (output_tok / 1_000_000 * 5.0)
+        cost = (input_tok / 1_000_000 * 3.0) + (output_tok / 1_000_000 * 15.0)
         print(f"[1c/6] ✅ Summarized {len(raw_briefs):,} → {len(summary):,} chars "
               f"({input_tok:,} in / {output_tok:,} out / ${cost:.3f})")
         return summary
     except Exception as e:
-        print(f"[1c/6] ⚠️ Haiku summarization failed ({e}) — using raw briefs")
+        print(f"[1c/6] ⚠️ Sonnet summarization failed ({e}) — using raw briefs")
         # Fallback: truncate raw briefs to 20k chars
         return raw_briefs[:20000]
+
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  WEB RESEARCHER — Sonnet searches the web and returns a research brief
+# ══════════════════════════════════════════════════════════════════════════════
+def research_with_sonnet(market_context: str) -> str:
+    """Sonnet performs targeted web searches based on market moves,
+    returns a structured research brief for Opus to use."""
+    print("[1d/6] Sonnet researching web for market context...")
+    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+
+    try:
+        msg = client.messages.create(
+            model=SUMMARIZER_MODEL,  # Sonnet
+            max_tokens=8000,
+            system=(
+                "You are a financial research assistant. Based on the market data provided, "
+                "identify the 8-10 most important questions to answer about WHY markets moved "
+                "this week, then use web_search to find the answers. "
+                "Search for: key macro events, central bank decisions, earnings surprises, "
+                "geopolitical drivers, sector-specific news. "
+                "Compile all findings into a structured MARKET RESEARCH BRIEF. "
+                "Be factual, cite sources, include dates. ALL output in English."
+            ),
+            messages=[{
+                "role": "user",
+                "content": (
+                    f"Based on these market moves this week, search the web to find "
+                    f"the causes and key events:\n\n{market_context[:3000]}\n\n"
+                    f"Search for the key drivers behind each major move and compile a "
+                    f"comprehensive research brief."
+                )
+            }],
+            tools=[{"type": "web_search_20250305", "name": "web_search"}],
+        )
+        # Extract all text from response (including after tool use)
+        research = " ".join(
+            block.text for block in msg.content
+            if hasattr(block, "text") and block.text
+        )
+        input_tok  = msg.usage.input_tokens
+        output_tok = msg.usage.output_tokens
+        cost = (input_tok / 1_000_000 * 3.0) + (output_tok / 1_000_000 * 15.0)
+        print(f"[1d/6] ✅ Research complete — {len(research):,} chars "
+              f"({input_tok:,} in / {output_tok:,} out / ${cost:.3f})")
+        return research
+    except Exception as e:
+        print(f"[1d/6] ⚠️ Sonnet research failed ({e}) — continuing without web research")
+        return ""
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -783,7 +833,7 @@ def inject_real_data(report: dict, skeleton: dict) -> dict:
     return result
 
 
-def generate_report_json(real_data: dict, daily_briefs: str = "") -> dict:
+def generate_report_json(real_data: dict, daily_briefs: str = "", web_research: str = "") -> dict:
     print(f"[2/6] Calling Claude ({ANTHROPIC_MODEL})...")
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
@@ -862,21 +912,24 @@ def generate_report_json(real_data: dict, daily_briefs: str = "") -> dict:
     yield_block  = "\n".join(yield_lines)  or "  (no data)"
     fred_block   = "\n".join(fred_lines)   or "  (no data)"
 
-    has_briefs = bool(daily_briefs and daily_briefs.strip())
+    has_briefs   = bool(daily_briefs  and daily_briefs.strip())
+    has_research = bool(web_research  and web_research.strip())
 
     briefs_section = f"""
 ══════════════════════════════════════════════════════
 DAILY MARKET WATCH EMAILS — Past 7 days
-(Use these as your PRIMARY source for events and news)
+(PRIMARY source for events and news)
 ══════════════════════════════════════════════════════
 {daily_briefs}
-""" if has_briefs else """
+""" if has_briefs else "No daily briefs available this week.\n"
+
+    research_section = f"""
 ══════════════════════════════════════════════════════
-NOTE: No daily briefs available this week.
-Use the web_search tool to find this week's key market
-events, central bank decisions, earnings, and macro news.
+WEB RESEARCH BRIEF — Current week context
+(Compiled via web searches — use as factual source)
 ══════════════════════════════════════════════════════
-"""
+{web_research}
+""" if has_research else ""
 
     system = (
         f"You are a senior financial analyst (ex-Goldman Sachs, global macro hedge fund). "
@@ -884,10 +937,10 @@ events, central bank decisions, earnings, and macro news.
         f"You have three sources to work from: "
         f"(1) real live market data (prices, % moves), "
         f"(2) {'daily market briefing emails from the past 7 days as your primary event source' if has_briefs else 'no daily briefs — use web_search for this week events'}, "
-        f"(3) the web_search tool — use it freely to verify facts, find news, and fill gaps. "
+        f"(3) a web research brief compiled by a research assistant. "
         f"STRICT RULES: "
-        f"Do NOT invent events, figures or facts. "
-        f"Every event you mention must come from the emails or a web search. "
+        f"Do NOT invent events, figures or facts — rely strictly on the sources provided. "
+        f"Every event you cite must come from the daily emails or the web research brief. "
         f"Write ONLY text/narrative fields — numerical values are injected separately. "
         f"Reference real numbers in your prose. "
         f"ALL output in ENGLISH. "
@@ -896,11 +949,11 @@ events, central bank decisions, earnings, and macro news.
 
     user = f"""Write an in-depth weekly market report based on the sources below.
 
-IMPORTANT: Do NOT invent events or news. Base your analysis on:
+IMPORTANT: Do NOT invent events or news. Base your analysis ONLY on:
 1. The Daily Market Watch emails below (primary source for events)
-2. The real market data (primary source for prices/levels)  
-3. Web searches you perform for any gaps or additional context
-{briefs_section}
+2. The web research brief below (secondary source — verified facts)
+3. The real market data (prices and percentages)
+{briefs_section}{research_section}
 
 ══════════════════════════════════════════════════════
 REAL MARKET DATA — THIS WEEK (fetched live via yfinance)
@@ -1173,7 +1226,6 @@ Write detailed, professional analyses. Total must exceed 20,000 characters.
                 model=ANTHROPIC_MODEL, max_tokens=32000,
                 system=system,
                 messages=[{"role":"user","content":user}],
-                tools=[{"type": "web_search_20250305", "name": "web_search"}],
             ) as stream:
                 for text in stream.text_stream:
                     raw += text
@@ -1816,12 +1868,18 @@ if __name__ == '__main__':
     real_data    = collect_real_data()
     # Read last 7 days of Daily Market Watch emails
     raw_briefs   = fetch_daily_briefs_from_gmail(token)
-    # Summarize with Haiku to cut tokens before passing to main model
-    daily_briefs = summarize_briefs_with_haiku(raw_briefs) if raw_briefs else ""
+    # Sonnet ① — compress emails (cheap, fast)
+    daily_briefs = summarize_briefs_with_sonnet(raw_briefs) if raw_briefs else ""
     # Build numerical skeleton BEFORE calling Claude
     skeleton     = build_real_data_skeleton(real_data)
-    # Claude generates text/narratives — grounded in real emails + web search
-    report       = generate_report_json(real_data, daily_briefs)
+    # Sonnet ② — research the web for this week's market drivers (cheap)
+    market_ctx   = "\n".join([
+        f"{name}: {d['close']} weekly={d['weekly_pct']:+.2f}%"
+        for name, d in real_data.get("yf", {}).get("indices", {}).items()
+    ])
+    web_research = research_with_sonnet(market_ctx)
+    # Opus — write full report using emails + web research + real data (no tool calls)
+    report       = generate_report_json(real_data, daily_briefs, web_research)
     # Overwrite ALL Claude numbers with real fetched values (no hallucinated prices)
     report       = inject_real_data(report, skeleton)
     save_json(report, real_data)
