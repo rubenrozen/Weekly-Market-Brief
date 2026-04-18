@@ -81,15 +81,206 @@ def fetch_fred(series_id: str) -> dict:
         print(f"  ⚠️ FRED {series_id}: {e}")
     return {}
 
+def fetch_yfinance_data() -> dict:
+    """Fetch real market data via yfinance — no API key required."""
+    import yfinance as yf
+    from datetime import date
+    results = {}
+
+    def safe_fetch(ticker_sym, period="5d", interval="1d"):
+        try:
+            t = yf.Ticker(ticker_sym)
+            hist = t.history(period=period, interval=interval, auto_adjust=True)
+            if hist.empty:
+                return None
+            return hist
+        except Exception as e:
+            print(f"  ⚠️ yfinance {ticker_sym}: {e}")
+            return None
+
+    def weekly_stats(ticker_sym, label):
+        """Get last close, weekly change, YTD change."""
+        try:
+            t = yf.Ticker(ticker_sym)
+            # Get 1 year of data to compute YTD
+            hist = t.history(period="1y", interval="1d", auto_adjust=True)
+            if hist.empty:
+                return None
+            last_close = hist['Close'].iloc[-1]
+            # Weekly change: vs 5 trading days ago
+            prev_close = hist['Close'].iloc[-6] if len(hist) >= 6 else hist['Close'].iloc[0]
+            weekly_chg = (last_close - prev_close) / prev_close * 100
+            # YTD change: vs first trading day of the year
+            year_start = date(NOW.year, 1, 1)
+            ytd_hist = hist[hist.index.date >= year_start]
+            if len(ytd_hist) > 1:
+                ytd_start = ytd_hist['Close'].iloc[0]
+                ytd_chg = (last_close - ytd_start) / ytd_start * 100
+            else:
+                ytd_chg = 0.0
+            # Weekly high/low
+            week_data = hist.iloc[-5:] if len(hist) >= 5 else hist
+            return {
+                "label":      label,
+                "ticker":     ticker_sym,
+                "close":      round(last_close, 2),
+                "weekly_pct": round(weekly_chg, 2),
+                "ytd_pct":    round(ytd_chg, 2),
+                "week_high":  round(week_data['High'].max(), 2),
+                "week_low":   round(week_data['Low'].min(), 2),
+                "date":       str(hist.index[-1].date()),
+            }
+        except Exception as e:
+            print(f"  ⚠️ yfinance weekly_stats {ticker_sym}: {e}")
+            return None
+
+    # ── Equity indices
+    print("  [yf] Fetching equity indices...")
+    indices_map = {
+        "^GSPC":   "S&P 500",
+        "^IXIC":   "NASDAQ",
+        "^DJI":    "Dow Jones",
+        "^RUT":    "Russell 2000",
+        "^FCHI":   "CAC 40",
+        "^GDAXI":  "DAX",
+        "^FTSE":   "FTSE 100",
+        "^STOXX50E":"EuroStoxx 50",
+        "^N225":   "Nikkei 225",
+        "^HSI":    "Hang Seng",
+        "000001.SS":"Shanghai Comp.",
+        "^KS11":   "KOSPI",
+    }
+    indices_data = {}
+    for ticker, name in indices_map.items():
+        d = weekly_stats(ticker, name)
+        if d:
+            indices_data[name] = d
+            print(f"    ✓ {name}: {d['close']} ({d['weekly_pct']:+.2f}%w / {d['ytd_pct']:+.2f}%ytd)")
+    results["indices"] = indices_data
+
+    # ── US Sector ETFs
+    print("  [yf] Fetching US sector ETFs...")
+    sector_map = {
+        "XLK":  "Technology",
+        "XLF":  "Financials",
+        "XLE":  "Energy",
+        "XLV":  "Healthcare",
+        "XLI":  "Industrials",
+        "XLY":  "Consumer Discr.",
+        "XLB":  "Materials",
+        "XLU":  "Utilities",
+        "XLRE": "Real Estate",
+        "XLC":  "Comm. Services",
+        "XLP":  "Cons. Staples",
+    }
+    sectors_data = {}
+    for ticker, name in sector_map.items():
+        d = weekly_stats(ticker, name)
+        if d:
+            sectors_data[name] = d
+            print(f"    ✓ {name}: {d['weekly_pct']:+.2f}%")
+    results["sectors"] = sectors_data
+
+    # ── Forex pairs
+    print("  [yf] Fetching forex pairs...")
+    forex_map = {
+        "EURUSD=X":  "EUR/USD",
+        "GBPUSD=X":  "GBP/USD",
+        "JPY=X":     "USD/JPY",
+        "CHF=X":     "USD/CHF",
+        "AUDUSD=X":  "AUD/USD",
+        "CNY=X":     "USD/CNY",
+        "BRL=X":     "USD/BRL",
+        "MXN=X":     "USD/MXN",
+        "DX-Y.NYB":  "DXY",
+    }
+    forex_data = {}
+    for ticker, name in forex_map.items():
+        d = weekly_stats(ticker, name)
+        if d:
+            forex_data[name] = d
+            print(f"    ✓ {name}: {d['close']} ({d['weekly_pct']:+.2f}%)")
+    results["forex"] = forex_data
+
+    # ── Commodities
+    print("  [yf] Fetching commodities...")
+    commo_map = {
+        # Energy
+        "CL=F":   ("WTI Crude",    "$/bbl",  "energy"),
+        "BZ=F":   ("Brent Crude",  "$/bbl",  "energy"),
+        "NG=F":   ("Natural Gas",  "$/MMBtu","energy"),
+        "HO=F":   ("Heating Oil",  "$/gal",  "energy"),
+        "RB=F":   ("Gasoline RBOB","$/gal",  "energy"),
+        # Metals
+        "GC=F":   ("Gold",         "$/oz",   "metals"),
+        "SI=F":   ("Silver",       "$/oz",   "metals"),
+        "HG=F":   ("Copper",       "$/lb",   "metals"),
+        "PL=F":   ("Platinum",     "$/oz",   "metals"),
+        "PA=F":   ("Palladium",    "$/oz",   "metals"),
+        "ALI=F":  ("Aluminum",     "$/t",    "metals"),
+        # Agricultural
+        "ZW=F":   ("Wheat",        "¢/bu",   "agricultural"),
+        "ZC=F":   ("Corn",         "¢/bu",   "agricultural"),
+        "ZS=F":   ("Soybeans",     "¢/bu",   "agricultural"),
+        "KC=F":   ("Coffee",       "¢/lb",   "agricultural"),
+        "SB=F":   ("Sugar",        "¢/lb",   "agricultural"),
+        "CT=F":   ("Cotton",       "¢/lb",   "agricultural"),
+    }
+    commo_data = {"energy": {}, "metals": {}, "agricultural": {}}
+    for ticker, (name, unit, cat) in commo_map.items():
+        d = weekly_stats(ticker, name)
+        if d:
+            d["unit"] = unit
+            commo_data[cat][name] = d
+            print(f"    ✓ {name}: {d['close']} {unit} ({d['weekly_pct']:+.2f}%)")
+    results["commodities"] = commo_data
+
+    # ── VIX real value
+    print("  [yf] Fetching VIX...")
+    vix_d = weekly_stats("^VIX", "VIX")
+    if vix_d:
+        results["vix"] = vix_d
+        print(f"    ✓ VIX: {vix_d['close']} ({vix_d['weekly_pct']:+.2f}%)")
+
+    # ── Yield curve via yfinance (Treasury ETFs for shape context)
+    print("  [yf] Fetching yield data...")
+    yield_map = {
+        "^IRX": "3M",   # 13-week T-bill
+        "^FVX": "5Y",
+        "^TNX": "10Y",
+        "^TYX": "30Y",
+    }
+    yield_data = {}
+    for ticker, mat in yield_map.items():
+        try:
+            t = yf.Ticker(ticker)
+            hist = t.history(period="5d", interval="1d", auto_adjust=True)
+            if not hist.empty:
+                val = round(hist['Close'].iloc[-1] / 10, 3) if ticker == "^IRX" else round(hist['Close'].iloc[-1], 3)
+                yield_data[mat] = val
+                print(f"    ✓ US {mat}: {val}%")
+        except Exception as e:
+            print(f"  ⚠️ yield {ticker}: {e}")
+    results["us_yields"] = yield_data
+
+    return results
+
+
 def collect_real_data() -> dict:
-    print("[1/6] Collecte des données réelles (Finnhub + FRED)...")
+    print("[1/6] Collecting real market data (yfinance + Finnhub + FRED)...")
     data = {}
 
-    # ── Calendrier économique (semaine prochaine)
+    # ── yfinance: equity indices, sectors, forex, commodities, VIX, yields
+    try:
+        data["yf"] = fetch_yfinance_data()
+    except Exception as e:
+        print(f"  ⚠️ yfinance global error: {e}")
+        data["yf"] = {}
+
+    # ── Finnhub: economic calendar
     next_week_end = (NOW + timedelta(days=14)).strftime("%Y-%m-%d")
     eco_cal = fetch_finnhub("calendar/economic", {"from": TODAY, "to": next_week_end})
     events = eco_cal.get("economicCalendar", [])
-    # Filtrer les événements à fort impact
     high_impact = [e for e in events if e.get("impact") in ("high", "3", 3)][:20]
     all_events  = events[:40]
     data["economic_calendar"] = {
@@ -98,10 +289,9 @@ def collect_real_data() -> dict:
         "count": len(events)
     }
 
-    # ── Calendrier des résultats d'entreprises
+    # ── Finnhub: earnings calendar
     earnings = fetch_finnhub("calendar/earnings", {"from": TODAY, "to": next_week_end})
     earning_list = earnings.get("earningsCalendar", [])
-    # Trier par symbol connu (grandes caps)
     majors = ["AAPL","MSFT","AMZN","GOOGL","META","NVDA","TSLA","JPM","GS","MS",
               "BAC","WMT","HD","V","MA","UNH","JNJ","PFE","XOM","CVX",
               "LVMH.PA","MC.PA","SAP","ASML","TTE.PA","SAN.MC","BNP.PA"]
@@ -112,19 +302,22 @@ def collect_real_data() -> dict:
         "count": len(earning_list)
     }
 
-    # ── Données FRED (macro US)
-    print("  Fetching FRED macro data...")
+    # ── FRED: macro US
+    print("  [FRED] Fetching macro data...")
     fred_series = {
-        "fed_funds_rate":   "FEDFUNDS",
-        "unemployment":     "UNRATE",
-        "cpi_yoy":          "CPIAUCSL",
-        "10y_treasury":     "DGS10",
-        "2y_treasury":      "DGS2",
-        "30y_mortgage":     "MORTGAGE30US",
-        "gdp_growth":       "A191RL1Q225SBEA",
-        "m2_money_supply":  "M2SL",
-        "credit_spreads_hy":"BAMLH0A0HYM2",
-        "vix":              "VIXCLS",
+        "fed_funds_rate":    "FEDFUNDS",
+        "unemployment":      "UNRATE",
+        "cpi_yoy":           "CPIAUCSL",
+        "10y_treasury":      "DGS10",
+        "2y_treasury":       "DGS2",
+        "3m_treasury":       "DTB3",
+        "30y_mortgage":      "MORTGAGE30US",
+        "gdp_growth":        "A191RL1Q225SBEA",
+        "m2_money_supply":   "M2SL",
+        "credit_spreads_hy": "BAMLH0A0HYM2",
+        "vix_fred":          "VIXCLS",
+        "10y_breakeven":     "T10YIE",
+        "yield_spread_2s10s":"T10Y2Y",
     }
     fred_data = {}
     for name, series_id in fred_series.items():
@@ -137,28 +330,32 @@ def collect_real_data() -> dict:
             }
     data["fred"] = fred_data
 
-    # ── Options market data (via Finnhub quotes pour indices)
-    print("  Fetching options/market sentiment data...")
+    # ── Finnhub: 6 US ETF quotes (for sentiment check)
     symbols_quotes = {}
     for sym in ["SPY", "QQQ", "IWM", "GLD", "TLT", "USO"]:
         q = fetch_finnhub("quote", {"symbol": sym})
         if q.get("c"):
             symbols_quotes[sym] = {
-                "price":   q.get("c"),
-                "change":  q.get("d"),
-                "pct":     q.get("dp"),
-                "high":    q.get("h"),
-                "low":     q.get("l"),
-                "prev":    q.get("pc")
+                "price":  q.get("c"),
+                "change": q.get("d"),
+                "pct":    q.get("dp"),
+                "prev":   q.get("pc")
             }
     data["etf_quotes"] = symbols_quotes
 
-    # ── Sentiment du marché
-    sentiment = fetch_finnhub("news-sentiment", {"symbol": "SPY"})
-    data["market_sentiment"] = sentiment
+    # ── Finnhub: news sentiment
+    data["market_sentiment"] = fetch_finnhub("news-sentiment", {"symbol": "SPY"})
 
-    print(f"[1/6] ✅ Données collectées — {len(all_events)} événements éco, {len(earning_list)} résultats, {len(fred_data)} séries FRED")
+    yf_keys = list(data.get("yf", {}).keys())
+    print(f"[1/6] ✅ Data collected — indices:{len(data['yf'].get('indices',{}))}, "
+          f"sectors:{len(data['yf'].get('sectors',{}))}, "
+          f"forex:{len(data['yf'].get('forex',{}))}, "
+          f"commo:{sum(len(v) for v in data['yf'].get('commodities',{}).values())}, "
+          f"FRED:{len(data['fred'])}, "
+          f"eco_cal:{data['economic_calendar']['count']}, "
+          f"earnings:{data['earnings_calendar']['count']}")
     return data
+
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -1002,4 +1199,321 @@ if __name__ == '__main__':
     save_json(report, real_data)
     pdf       = generate_pdf(report)
     send_email(report, pdf, token)
-    print(f"\n[6/6] ✅ Brief complet envoyé !\n{'='*60}\n")
+    print(f"\n[6/6] ✅ Brief complet envoyé !\n{'='*60}\n")    fred     = real_data.get("fred", {})
+    eco_cal  = real_data.get("economic_calendar", {})
+    earnings = real_data.get("earnings_calendar", {})
+    yf       = real_data.get("yf", {})
+
+    # ── Format real indices for prompt
+    def fmt_pct(v): return f"{v:+.2f}%" if isinstance(v, (int,float)) else str(v)
+
+    indices_lines = []
+    for name, d in yf.get("indices", {}).items():
+        indices_lines.append(f"  {name}: close={d['close']}, weekly={fmt_pct(d['weekly_pct'])}, ytd={fmt_pct(d['ytd_pct'])}, date={d['date']}")
+
+    sectors_lines = []
+    for name, d in yf.get("sectors", {}).items():
+        sectors_lines.append(f"  {name}: weekly={fmt_pct(d['weekly_pct'])}, ytd={fmt_pct(d['ytd_pct'])}")
+
+    forex_lines = []
+    for name, d in yf.get("forex", {}).items():
+        forex_lines.append(f"  {name}: close={d['close']}, weekly={fmt_pct(d['weekly_pct'])}, week_high={d['week_high']}, week_low={d['week_low']}")
+
+    commo_lines = {"energy": [], "metals": [], "agricultural": []}
+    for cat, items in yf.get("commodities", {}).items():
+        for name, d in items.items():
+            commo_lines[cat].append(f"  {name} ({d['unit']}): close={d['close']}, weekly={fmt_pct(d['weekly_pct'])}")
+
+    vix_real = yf.get("vix", {})
+    vix_line = f"VIX: {vix_real.get('close','n/a')} (weekly {fmt_pct(vix_real.get('weekly_pct',0))})" if vix_real else "VIX: n/a"
+
+    yields = yf.get("us_yields", {})
+    yield_lines = [f"  US {m}: {v}%" for m, v in yields.items()]
+
+    fred_lines = [f"  {k}: {v['value']} ({v['date']})" for k, v in fred.items()]
+    fred_context = "\n".join(fred_lines)
+
+    eco_events_context = json.dumps(eco_cal.get("high_impact", [])[:15], ensure_ascii=False)
+    earnings_context   = json.dumps(earnings.get("all", [])[:20], ensure_ascii=False)
+
+    indices_block    = "\n".join(indices_lines)    or "  (no data)"
+    sectors_block    = "\n".join(sectors_lines)    or "  (no data)"
+    forex_block      = "\n".join(forex_lines)      or "  (no data)"
+    energy_block     = "\n".join(commo_lines["energy"])      or "  (no data)"
+    metals_block     = "\n".join(commo_lines["metals"])      or "  (no data)"
+    agri_block       = "\n".join(commo_lines["agricultural"])or "  (no data)"
+    yields_block     = "\n".join(yield_lines)      or "  (no data)"
+
+    system = (
+        f"You are a senior financial analyst (ex-Goldman Sachs, global macro hedge fund). "
+        f"You produce an ultra-professional, dense, educational, and actionable weekly market report. "
+        f"Date: {DATE_FR} (Week {WEEK_N}, {NOW.year}). "
+        f"CRITICAL: You have REAL market data below fetched live from yfinance and FRED. "
+        f"You MUST use these EXACT numbers in the JSON output — do NOT change, round differently, or invent any price, percentage, or value. "
+        f"Your job is to write analysis and narrative around these real numbers, NOT to generate new numbers. "
+        f"If a data point is missing (no data), write 'N/A' for that value. "
+        f"ALL text in the JSON must be in ENGLISH. "
+        f"Reply ONLY with valid JSON, no surrounding text, no markdown fences."
+    )
+
+    user = f"""Generate a COMPLETE and IN-DEPTH weekly financial markets report in ENGLISH.
+
+═══════════════════════════════════════════════════════
+REAL MARKET DATA — USE THESE EXACT NUMBERS, DO NOT INVENT
+═══════════════════════════════════════════════════════
+
+=== EQUITY INDICES (real closes + weekly/YTD changes) ===
+{indices_block}
+
+=== US SECTOR ETFs (real weekly performance) ===
+{sectors_block}
+
+=== FOREX (real closes + weekly changes) ===
+{forex_block}
+
+=== COMMODITIES — ENERGY ===
+{energy_block}
+
+=== COMMODITIES — METALS ===
+{metals_block}
+
+=== COMMODITIES — AGRICULTURAL ===
+{agri_block}
+
+=== US TREASURY YIELDS (real) ===
+{yields_block}
+
+=== FRED MACRO DATA ===
+{fred_context}
+
+=== {vix_line} ===
+
+=== ECONOMIC CALENDAR (next week, real Finnhub data) ===
+{eco_events_context}
+
+=== EARNINGS CALENDAR (next week, real Finnhub data) ===
+{earnings_context}
+
+═══════════════════════════════════════════════════════
+STRICT RULES:
+1. For every price/value/percentage shown above: copy it EXACTLY into the JSON
+2. Do NOT round differently, do NOT use memory values, do NOT invent numbers
+3. For missing data (no data above): use "N/A"
+4. Write rich, educational ANALYSIS around these real numbers
+5. Minimum 20,000 characters total
+6. ALL TEXT IN ENGLISH
+═══════════════════════════════════════════════════════
+
+Expected JSON structure (ALL keys mandatory):
+{{
+  "week": "Week of {NOW.strftime('%B %d')}–{(NOW + timedelta(days=6)).strftime('%B %d, %Y')}",
+  "generated_at": "{DATE_FR}",
+  "market_temperature": "risk_on|risk_off|neutral",
+  "market_temperature_label": "one sentence explanation based on the real data above",
+
+  "section1_summary": {{
+    "title": "Market Overview",
+    "paragraphs": ["§1 dense 5-6 lines", "§2 long", "§3 tone and synthesis — all referencing real data above"]
+  }},
+
+  "section2_major_events": {{
+    "title": "Major Events",
+    "events": [
+      {{
+        "title": "...",
+        "body": "8-10 lines: causes, mechanisms, implications",
+        "sentiment": "positive|negative|neutral",
+        "impact_score": 8,
+        "affected_assets": ["S&P 500", "US Treasuries"]
+      }}
+    ]
+  }},
+
+  "section3_blind_spots": {{
+    "title": "Blind Spots — What the Market Underestimates",
+    "events": [
+      {{
+        "title": "...",
+        "body": "6-8 lines",
+        "sentiment": "neutral",
+        "why_ignored": "reason this is under-covered"
+      }}
+    ]
+  }},
+
+  "section4_equities": {{
+    "title": "Equity Markets",
+    "indices": [
+      {{"name":"S&P 500",      "value":"USE REAL VALUE FROM DATA ABOVE","change":"USE REAL WEEKLY PCT","ytd":"USE REAL YTD PCT"}},
+      {{"name":"NASDAQ",       "value":"USE REAL","change":"USE REAL","ytd":"USE REAL"}},
+      {{"name":"Dow Jones",    "value":"USE REAL","change":"USE REAL","ytd":"USE REAL"}},
+      {{"name":"Russell 2000", "value":"USE REAL","change":"USE REAL","ytd":"USE REAL"}},
+      {{"name":"CAC 40",       "value":"USE REAL","change":"USE REAL","ytd":"USE REAL"}},
+      {{"name":"DAX",          "value":"USE REAL","change":"USE REAL","ytd":"USE REAL"}},
+      {{"name":"FTSE 100",     "value":"USE REAL","change":"USE REAL","ytd":"USE REAL"}},
+      {{"name":"EuroStoxx 50", "value":"USE REAL","change":"USE REAL","ytd":"USE REAL"}},
+      {{"name":"Nikkei 225",   "value":"USE REAL","change":"USE REAL","ytd":"USE REAL"}},
+      {{"name":"Hang Seng",    "value":"USE REAL","change":"USE REAL","ytd":"USE REAL"}},
+      {{"name":"Shanghai Comp.","value":"USE REAL","change":"USE REAL","ytd":"USE REAL"}},
+      {{"name":"KOSPI",        "value":"USE REAL","change":"USE REAL","ytd":"USE REAL"}}
+    ],
+    "sector_performance": [
+      {{"sector":"Technology",     "change":"USE REAL WEEKLY PCT FROM XLK","direction":"up|down","change_num": 0.0}},
+      {{"sector":"Financials",     "change":"USE REAL FROM XLF","direction":"up|down","change_num": 0.0}},
+      {{"sector":"Energy",         "change":"USE REAL FROM XLE","direction":"up|down","change_num": 0.0}},
+      {{"sector":"Healthcare",     "change":"USE REAL FROM XLV","direction":"up|down","change_num": 0.0}},
+      {{"sector":"Industrials",    "change":"USE REAL FROM XLI","direction":"up|down","change_num": 0.0}},
+      {{"sector":"Consumer Discr.","change":"USE REAL FROM XLY","direction":"up|down","change_num": 0.0}},
+      {{"sector":"Materials",      "change":"USE REAL FROM XLB","direction":"up|down","change_num": 0.0}},
+      {{"sector":"Utilities",      "change":"USE REAL FROM XLU","direction":"up|down","change_num": 0.0}},
+      {{"sector":"Real Estate",    "change":"USE REAL FROM XLRE","direction":"up|down","change_num": 0.0}},
+      {{"sector":"Comm. Services", "change":"USE REAL FROM XLC","direction":"up|down","change_num": 0.0}},
+      {{"sector":"Cons. Staples",  "change":"USE REAL FROM XLP","direction":"up|down","change_num": 0.0}}
+    ],
+    "us":   {{"headline":"...","body":"10-12 lines using real index values","direction":"bullish|bearish|neutral","key_driver":"...","risk":"..."}},
+    "eu":   {{"headline":"...","body":"10-12 lines using real CAC/DAX values","direction":"bullish|bearish|neutral","key_driver":"...","risk":"..."}},
+    "asia": {{"headline":"...","body":"10-12 lines using real Nikkei/Hang Seng values","direction":"bullish|bearish|neutral","key_driver":"...","risk":"..."}}
+  }},
+
+  "section5_bonds": {{
+    "title": "Bonds & Rates",
+    "macro_context": "5-6 lines using real FRED yield data",
+    "bond_market": {{"title":"Global Bond Market","why":"5-6 lines","implies":"5-6 lines","strategy":"3-4 lines"}},
+    "yield_curves": {{
+      "title": "Yield Curves",
+      "shape": "normal|inverted|flat|humped",
+      "interpretation": "4-5 lines interpreting the real yield data above",
+      "why": "...", "implies": "...", "strategy": "...",
+      "data": [
+        {{"maturity":"3M","us": 0.0,"de": 0.0,"fr": 0.0,"jp": 0.0,"uk": 0.0,"short_term":true}},
+        {{"maturity":"6M","us": 0.0,"de": 0.0,"fr": 0.0,"jp": 0.0,"uk": 0.0,"short_term":true}},
+        {{"maturity":"1Y","us": 0.0,"de": 0.0,"fr": 0.0,"jp": 0.0,"uk": 0.0,"short_term":true}},
+        {{"maturity":"2Y","us": 0.0,"de": 0.0,"fr": 0.0,"jp": 0.0,"uk": 0.0,"short_term":true}},
+        {{"maturity":"5Y","us": 0.0,"de": 0.0,"fr": 0.0,"jp": 0.0,"uk": 0.0,"short_term":false}},
+        {{"maturity":"10Y","us": 0.0,"de": 0.0,"fr": 0.0,"jp": 0.0,"uk": 0.0,"short_term":false}},
+        {{"maturity":"30Y","us": 0.0,"de": 0.0,"fr": 0.0,"jp": 0.0,"uk": 0.0,"short_term":false}}
+      ]
+    }},
+    "derivatives_and_options": {{
+      "title": "Derivatives, Options & Futures",
+      "vix": "USE REAL VIX VALUE FROM DATA ABOVE",
+      "vix_interpretation": "4-5 lines",
+      "put_call_ratio": "estimate based on real VIX level and market context",
+      "put_call_interpretation": "4-5 lines",
+      "skew": "estimate based on real VIX and market direction",
+      "skew_interpretation": "4-5 lines",
+      "term_structure": "contango|backwardation|flat",
+      "term_structure_interpretation": "4-5 lines",
+      "futures_positioning": "5-6 lines (COT context)",
+      "market_signal": "bullish|bearish|neutral",
+      "market_signal_explanation": "5-6 lines",
+      "options_strategy": "4-5 lines",
+      "key_levels": [
+        {{"asset":"S&P 500","support":"...","resistance":"...","key_strike":"..."}},
+        {{"asset":"Gold",   "support":"...","resistance":"...","key_strike":"..."}},
+        {{"asset":"EUR/USD","support":"...","resistance":"...","key_strike":"..."}}
+      ]
+    }},
+    "credit_defaults": {{
+      "title": "Credit & Default Rates",
+      "macro_view": "4-5 lines using real FRED HY spread data",
+      "why": "...", "implies": "...", "strategy": "...",
+      "data": [
+        {{"category":"US Investment Grade","rate":"...","trend":"stable|rising|falling","spread":"...","spread_trend":"compression|widening|stable"}},
+        {{"category":"US High Yield","rate":"...","trend":"...","spread":"USE REAL FRED BAMLH0A0HYM2 VALUE","spread_trend":"..."}},
+        {{"category":"EU Investment Grade","rate":"...","trend":"...","spread":"...","spread_trend":"..."}},
+        {{"category":"EU High Yield","rate":"...","trend":"...","spread":"...","spread_trend":"..."}},
+        {{"category":"EM Sovereigns","rate":"...","trend":"...","spread":"...","spread_trend":"..."}},
+        {{"category":"US Mortgages","rate":"...","trend":"...","spread":"...","spread_trend":"..."}},
+        {{"category":"US Auto Loans","rate":"...","trend":"...","spread":"...","spread_trend":"..."}},
+        {{"category":"US Credit Cards","rate":"...","trend":"...","spread":"...","spread_trend":"..."}}
+      ]
+    }}
+  }},
+
+  "section6_forex": {{
+    "title": "Foreign Exchange Markets",
+    "dollar_index": {{"value":"USE REAL DXY VALUE","change":"USE REAL DXY WEEKLY PCT","interpretation":"4-5 lines"}},
+    "narrative": "8-10 lines using the real FX data above",
+    "pairs": [
+      {{"pair":"EUR/USD","value":"USE REAL","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"3-4 lines","support":"...","resistance":"...","weekly_high":"USE REAL","weekly_low":"USE REAL"}},
+      {{"pair":"GBP/USD","value":"USE REAL","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","support":"...","resistance":"...","weekly_high":"USE REAL","weekly_low":"USE REAL"}},
+      {{"pair":"USD/JPY","value":"USE REAL","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","support":"...","resistance":"...","weekly_high":"USE REAL","weekly_low":"USE REAL"}},
+      {{"pair":"USD/CHF","value":"USE REAL","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","support":"...","resistance":"...","weekly_high":"USE REAL","weekly_low":"USE REAL"}},
+      {{"pair":"AUD/USD","value":"USE REAL","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","support":"...","resistance":"...","weekly_high":"USE REAL","weekly_low":"USE REAL"}},
+      {{"pair":"USD/CNY","value":"USE REAL","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","support":"...","resistance":"...","weekly_high":"USE REAL","weekly_low":"USE REAL"}},
+      {{"pair":"USD/BRL","value":"USE REAL","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","support":"...","resistance":"...","weekly_high":"USE REAL","weekly_low":"USE REAL"}},
+      {{"pair":"USD/MXN","value":"USE REAL","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","support":"...","resistance":"...","weekly_high":"USE REAL","weekly_low":"USE REAL"}}
+    ]
+  }},
+
+  "section7_commodities": {{
+    "title": "Commodities",
+    "energy": {{
+      "narrative": "8-10 lines using real energy prices above",
+      "items": [
+        {{"name":"WTI Crude",    "value":"USE REAL","unit":"$/bbl",  "change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"3-4 lines","drivers":["...","..."]}},
+        {{"name":"Brent Crude",  "value":"USE REAL","unit":"$/bbl",  "change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Natural Gas",  "value":"USE REAL","unit":"$/MMBtu","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Heating Oil",  "value":"USE REAL","unit":"$/gal",  "change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Gasoline RBOB","value":"USE REAL","unit":"$/gal",  "change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","drivers":["...","..."]}}
+      ]
+    }},
+    "metals": {{
+      "narrative": "8-10 lines using real metal prices above",
+      "items": [
+        {{"name":"Gold",     "value":"USE REAL","unit":"$/oz","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"3-4 lines","drivers":["...","..."]}},
+        {{"name":"Silver",   "value":"USE REAL","unit":"$/oz","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Copper",   "value":"USE REAL","unit":"$/lb","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Platinum", "value":"USE REAL","unit":"$/oz","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Palladium","value":"USE REAL","unit":"$/oz","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Aluminum", "value":"USE REAL","unit":"$/t", "change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","drivers":["...","..."]}}
+      ]
+    }},
+    "agricultural": {{
+      "narrative": "8-10 lines using real agricultural prices above",
+      "items": [
+        {{"name":"Wheat",   "value":"USE REAL","unit":"¢/bu","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"3-4 lines","drivers":["...","..."]}},
+        {{"name":"Corn",    "value":"USE REAL","unit":"¢/bu","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Soybeans","value":"USE REAL","unit":"¢/bu","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Coffee",  "value":"USE REAL","unit":"¢/lb","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Sugar",   "value":"USE REAL","unit":"¢/lb","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","drivers":["...","..."]}},
+        {{"name":"Cotton",  "value":"USE REAL","unit":"¢/lb","change":"USE REAL","change_num": 0.0,"direction":"up|down","analysis":"...","drivers":["...","..."]}}
+      ]
+    }}
+  }},
+
+  "section8_synthesis": {{
+    "title": "Strategic Synthesis",
+    "regime": "risk_on|risk_off|transition|stagflation|goldilocks",
+    "regime_description": "5-6 lines based on real data above",
+    "global_view": "MINIMUM 15 sentences: interconnection between rates/equities/dollar/commodities using all the real numbers above",
+    "macro_thesis": "6-8 lines forward-looking thesis",
+    "upcoming_events": "5-6 lines on next week's key events",
+    "strategy": [
+      {{"type":"Tactical Allocation","recommendation":"...","rationale":"5-6 lines","timeframe":"1-4 weeks","conviction":"high|medium|low"}},
+      {{"type":"Hedging","recommendation":"...","rationale":"5-6 lines","timeframe":"...","conviction":"..."}},
+      {{"type":"Long Opportunity","recommendation":"...","rationale":"5-6 lines","timeframe":"...","conviction":"..."}},
+      {{"type":"Short Opportunity","recommendation":"...","rationale":"5-6 lines","timeframe":"...","conviction":"..."}},
+      {{"type":"Risk Management","recommendation":"...","rationale":"5-6 lines","timeframe":"...","conviction":"..."}}
+    ]
+  }},
+
+  "section9_economic_calendar": {{
+    "title": "Economic Calendar — Next Week",
+    "note": "Sources: Finnhub real data",
+    "events": [
+      {{"date":"...","time":"...","country":"...","flag":"...","event":"...","impact":"high|medium|low","previous":"...","forecast":"...","context":"2-3 lines"}}
+    ]
+  }},
+
+  "section10_earnings_calendar": {{
+    "title": "Earnings Calendar — Next Week",
+    "note": "Sources: Finnhub real data",
+    "earnings": [
+      {{"date":"...","symbol":"...","company":"...","sector":"...","timing":"before open|after close","eps_estimate":"...","revenue_estimate":"...","context":"2-3 lines","impact_potential":"high|medium|low"}}
+    ]
+  }}
+}}
+
+REMEMBER: Copy EXACT values from the real data section above. Your value for S&P 500 must match exactly what is shown above. Same for every single price and percentage."""
